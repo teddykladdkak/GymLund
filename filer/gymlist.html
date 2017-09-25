@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gym - Lund</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="yes" name="mobile-web-app-capable" />
+	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<link rel="shortcut icon" href="ico/gymlund/icon.ico" />
+	<link rel="icon" type="image/vnd.microsoft.icon" href="ico/gymlund/icon.ico" />
+	<link rel="icon" type="image/png" href="ico/gymlund/icon196x196.png" />
+	<link rel="apple-touch-icon-precomposed" href="ico/gymlund/icon180x180.png"/>
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="ico/gymlund/icon76x76.png">
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="ico/gymlund/icon120x120.png">
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="ico/gymlund/icon152x152.png">
+
+	<link rel="stylesheet" type="text/css" href="gymstyle.css">
+	<script src="library/gym.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var lon = '0';
+		var lat = '0';
+		function getLocation() {
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				//setTimeout(function(){ getLocation(); }, 3000);
+			};
+		};
+		function showPosition(position) {
+			window['lat'] = position.coords.latitude;
+			window['lon'] = position.coords.longitude;
+			uppdateDistance();
+		};
+		function uppdateDistance(){
+			var allines = document.getElementById('wrapper').getElementsByTagName('tr');
+			for (var i = allines.length - 1; i >= 0; i--) {
+				var km = Math.round(getDistanceFromLatLonInKm(allines[i].getAttribute('data-lon'),allines[i].getAttribute('data-lat')) * 10) / 10;
+				var text = allines[i].getElementsByTagName('td')[1];
+					var nytext = document.createTextNode(text.innerText + ' (' + km + ' km)');
+				while (text.hasChildNodes()) {text.removeChild(text.firstChild);};
+					text.appendChild(nytext);
+			};
+		};
+		function getDistanceFromLatLonInKm(lat2,lon2) {
+			var lat1 = window['lat'];
+			var lon1 = window['lon'];
+			if(lat1 == '0'){}else{
+				var R = 6371; // Radius of the earth in km
+				var dLat = deg2rad(lat2-lat1);  // deg2rad below
+				var dLon = deg2rad(lon2-lon1); 
+				var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * Math.sin(dLon/2) * Math.sin(dLon/2);
+				var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+				var d = R * c; // Distance in km
+				//console.log(lat1 + '-' + lon1 + '|' + lat2 + '-' + lon2 + '|' + d + ' km');
+				return d;
+			};
+		};
+
+		function deg2rad(deg) {
+			return deg * (Math.PI/180)
+		};
+
+		function load(){
+			getLocation();
+			var gymarray = [];
+			for (var i = gyms.length - 1; i >= 0; i--) {
+				gymarray.push(gyms[i].namn);
+			};
+			gymarray.sort();
+			var gymsorted = [];
+			for (var i = gymarray.length - 1; i >= 0; i--) {
+				for (var a = gyms.length - 1; a >= 0; a--) {
+					if(gyms[a].namn == gymarray[i]){
+						gymsorted.push(gyms[a]);
+					};
+				};
+			};
+			var wrapper = document.getElementById('wrapper');
+			var table = document.createElement('table');
+				for (var i = gymsorted.length - 1; i >= 0; i--) {
+					var line = document.createElement('tr');
+						line.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + gymsorted[i].location.longitud + ',' + gymsorted[i].location.latitud + '")');
+						line.setAttribute('data-lon', gymsorted[i].location.longitud);
+						line.setAttribute('data-lat', gymsorted[i].location.latitud);
+						line.setAttribute('class', gymsorted[i].namn.split('')[0]);
+						var iconbox = document.createElement('td');
+							var icon = document.createElement('i');
+								icon.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
+							iconbox.appendChild(icon);
+						line.appendChild(iconbox);
+						var textbox = document.createElement('td');
+							var linktext = document.createTextNode(gymsorted[i].namn);
+							textbox.appendChild(linktext);
+						line.appendChild(textbox);
+					table.appendChild(line);
+				};
+				wrapper.appendChild(table);
+			sidemenu();
+			marklistelem('A');
+		};
+		function sidemenu(){
+			var allletters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö'].reverse();
+			var wrapper = document.getElementById('list-navigation');
+				var li = document.createElement('li');
+				for (var i = allletters.length - 1; i >= 0; i--) {
+					var fisrtelement = document.getElementsByClassName(allletters[i])[0];
+					if(!fisrtelement){}else{
+						var p = document.createElement('p');
+							p.setAttribute('data-letter', allletters[i]);
+							p.setAttribute('onclick', 'scrollToSelected(this);');
+							var ptext = document.createTextNode(allletters[i]);
+							p.appendChild(ptext);
+						li.appendChild(p);
+					};
+				};
+				wrapper.appendChild(li);
+		};
+		function scrollToSelected(element){
+			var letter = element.getAttribute('data-letter');
+			var firstelement = document.getElementsByClassName(letter)[0];
+			if (!!firstelement && firstelement.scrollIntoView) {
+				firstelement.scrollIntoView();
+			};
+		};
+		var scrollTimer = -1;
+		function getTopElement(){
+			if (scrollTimer != -1)
+	            clearTimeout(scrollTimer);
+	        scrollTimer = window.setTimeout("scrollFinished()", 100);
+		};
+		function scrollFinished() {
+	        var alllines = document.getElementById('wrapper').getElementsByTagName('tr');
+			for (var i = 0; i < alllines.length; i++){
+				if(isVisible(alllines[i])){
+					marklistelem(alllines[i].getAttribute('class'))
+					break;
+				};
+			};
+	    };
+	    function marklistelem(letter){
+	    	var allmenuitem = document.getElementById('list-navigation').getElementsByTagName('p');
+	    	for (var i = allmenuitem.length - 1; i >= 0; i--) {
+	    		allmenuitem[i].removeAttribute('style');
+	    		if(allmenuitem[i].getAttribute('data-letter') == letter){
+	    			allmenuitem[i].setAttribute('style', 'color: #000;font-weight: bold;');
+	    		};
+	    	};
+	    };
+		function isVisible(elem) {
+			if (!(elem instanceof Element)) throw Error('DomUtil: elem is not an element.');
+			const style = getComputedStyle(elem);
+			if (style.display === 'none') return false;
+			if (style.visibility !== 'visible') return false;
+			if (style.opacity < 0.1) return false;
+			if (elem.offsetWidth + elem.offsetHeight + elem.getBoundingClientRect().height +
+			    elem.getBoundingClientRect().width === 0) {
+			    return false;
+			}
+			const elemCenter   = {
+			    x: elem.getBoundingClientRect().left + elem.offsetWidth / 2,
+			    y: elem.getBoundingClientRect().top + elem.offsetHeight / 2
+			};
+			if (elemCenter.x < 0) return false;
+			if (elemCenter.x > (document.documentElement.clientWidth || window.innerWidth)) return false;
+			if (elemCenter.y < 0) return false;
+			if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
+			let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+			do {
+			    if (pointContainer === elem) return true;
+			} while (pointContainer = pointContainer.parentNode);
+			return false;
+		}
+	</script>
+	<style type="text/css">
+		body {
+			font-family: verdana;
+			margin-right: 0px;
+			margin-left: 0px;
+			margin-top: 0px;
+			margin-bottom: 0px;
+		}
+		table, td {
+			border-collapse: collapse;
+			font-size: 1.2em;
+		}
+		td:nth-child(2){
+			width: 100%;
+		}
+		tr:nth-child(odd){
+			background-color: lightgray;
+		}
+		table {
+			width: 100%;
+			border-top: solid #000 4px;
+		}
+		table tr{
+			cursor:pointer;
+		}
+		#footer{
+			font-size:10px!important;
+			text-align: center;
+			padding-top: 40px;
+		}
+		#footer a{
+			color:#000;
+		}
+		#footer a:hover{
+			color: #E87600;
+			text-decoration: overline underline;
+		}
+		#list-navigation {
+			color:#696969;
+			position:fixed;
+			right:0px;
+			top:0px;
+			z-index:200;
+			list-style: none;
+			background-color: #FFF;
+			border-radius: 25px;
+			padding: 5px 0px 5px 0px;
+			text-align: center;
+		}
+		#list-navigation p{
+			margin: 0px 10px 0px 10px;
+			padding: 0px;
+			font-size: 0.9em;
+			cursor:pointer;
+		}
+		.link{
+			border-radius: 25px;
+			background-color: lightgreen;
+			padding: 7px;
+			margin: 0px;
+			color: #000;
+			text-decoration: none;
+		}
+		#head{
+			margin: 0px;
+			padding: 0px;
+		}
+		#footer{
+			padding-bottom: 10px;
+		}
+		#head, #footer {
+			background-image: -webkit-linear-gradient(315deg, hsla(0, 0%, 100%, .95), rgba(174, 254, 158, .99));
+    		background-image: linear-gradient(135deg, hsla(0, 0%, 100%, .95), rgba(174, 254, 158, .99));
+		}
+		h1 img{
+			padding-top: 5px;
+		}
+		h1{
+			margin-top: 0px;
+			text-align: center;
+		}
+		p{
+			margin-bottom: 0px;
+			padding-bottom: 10px;
+		}
+
+	</style>
+</head>
+<body onload="load()" onscroll="getTopElement()">
+<div id="head">
+	<h1>Gym i Lund</h1>
+	<p>Klicka på önskat gym för att se var den är på kartan.</p>
+	<p>Instruktioner för att installera denna webappen: <a href="http://www.teddyprojekt.tk/manualer/iphone.html" class="link" target="_blank">iOS</a> <a href="http://www.teddyprojekt.tk/manualer/android.html" class="link" target="_blank">Android</a></p>
+</div>
+<div id="wrapper"></div>
+<div id="footer"><span id="logg">[]</span>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="https://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
+<ul data-role="none" id="list-navigation">
+	
+</ul>
+</body>
+</html>

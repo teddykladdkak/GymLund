@@ -1,0 +1,629 @@
+.sprite {
+    background-image: url(img/gym/gym.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-Accordion-Kerub {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -5px;
+}
+
+.sprite-Afrodite {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -5px;
+}
+
+.sprite-Allhelgonakyrkan {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -5px;
+}
+
+.sprite-Annehems-G_rd {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -5px;
+}
+
+.sprite-Battle-at-Lund-Monument {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -5px;
+}
+
+.sprite-Bird-Tower {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -5px;
+}
+
+.sprite-Bird-Village {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -5px;
+}
+
+.sprite-Bj_rredsparken-Amfiteater {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -5px;
+}
+
+.sprite-Borgarparken-Fountain {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -5px;
+}
+
+.sprite-Botaniska-Tr_dg_rden {
+    width: 72px;
+    height: 100px;
+    background-position: -743px -5px;
+}
+
+.sprite-Dangerous-Tilter {
+    width: 72px;
+    height: 100px;
+    background-position: -825px -5px;
+}
+
+.sprite-Demona-the-Gargoyle {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -115px;
+}
+
+.sprite-Djur-Att-Leka-Med {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -115px;
+}
+
+.sprite-Domkyrka {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -115px;
+}
+
+.sprite-EOS-Hallen {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -115px;
+}
+
+.sprite-Energy-Swing {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -115px;
+}
+
+.sprite-Environmental-Engineering-W {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -115px;
+}
+
+.sprite-Flackarps-m_lla {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -115px;
+}
+
+.sprite-Font_nen-Bakom-Stationen {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -115px;
+}
+
+.sprite-Font_nen-Vid-Stadsparken {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -115px;
+}
+
+.sprite-Forntid {
+    width: 72px;
+    height: 100px;
+    background-position: -743px -115px;
+}
+
+.sprite-Forrest-Siluette {
+    width: 72px;
+    height: 100px;
+    background-position: -825px -115px;
+}
+
+.sprite-Fountain {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -225px;
+}
+
+.sprite-Framtidsvandring {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -225px;
+}
+
+.sprite-Freedom {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -225px;
+}
+
+.sprite-Fyrkl_verns-Tr_dg_rd {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -225px;
+}
+
+.sprite-G_md-Helig-Plats {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -225px;
+}
+
+.sprite-Giant-Lion {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -225px;
+}
+
+.sprite-Golden-Arch {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -225px;
+}
+
+.sprite-Gunnesbo-Station-Norrg_ende {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -225px;
+}
+
+.sprite-HG-Spaceship {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -225px;
+}
+
+.sprite-H_je_dalen {
+    width: 72px;
+    height: 100px;
+    background-position: -743px -225px;
+}
+
+.sprite-Hallands-Nations-Salmon {
+    width: 72px;
+    height: 100px;
+    background-position: -825px -225px;
+}
+
+.sprite-Horsey {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -335px;
+}
+
+.sprite-Ideon-Gateway {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -335px;
+}
+
+.sprite-Inaequalis-Lacus {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -335px;
+}
+
+.sprite-Informationdesk-Lund-East {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -335px;
+}
+
+.sprite-Institutionen-f_r-Psykologi {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -335px;
+}
+
+.sprite-Intermodal-Nexus {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -335px;
+}
+
+.sprite-Kapitalet {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -335px;
+}
+
+.sprite-Katt-med-Blomma {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -335px;
+}
+
+.sprite-Kl_tterst_llning {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -335px;
+}
+
+.sprite-Kosmos-Budb_rare {
+    width: 72px;
+    height: 100px;
+    background-position: -743px -335px;
+}
+
+.sprite-Litet-Kapell {
+    width: 72px;
+    height: 100px;
+    background-position: -825px -335px;
+}
+
+.sprite-Lund-Sk8-Spot {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -445px;
+}
+
+.sprite-Lund-University-Main-Library {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -445px;
+}
+
+.sprite-Lundag_rd-Fountain {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -445px;
+}
+
+.sprite-M_rke-_ke-Hans {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -445px;
+}
+
+.sprite-Metal-Swirl {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -445px;
+}
+
+.sprite-Monkey-Statue {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -445px;
+}
+
+.sprite-Museum-Wall-Art {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -445px;
+}
+
+.sprite-N_bbel_v-Bridge {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -445px;
+}
+
+.sprite-Narrow-Slide {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -445px;
+}
+
+.sprite-Netto-Park {
+    width: 72px;
+    height: 100px;
+    background-position: -743px -445px;
+}
+
+.sprite-Norra-N_bel_vs-Kyrka {
+    width: 72px;
+    height: 100px;
+    background-position: -825px -445px;
+}
+
+.sprite-Northern-Information-Plaque {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -555px;
+}
+
+.sprite-Olika-Stenar {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -555px;
+}
+
+.sprite-Pencil {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -555px;
+}
+
+.sprite-Petersg_rden {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -555px;
+}
+
+.sprite-Plaskdammen {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -555px;
+}
+
+.sprite-Play-Boat {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -555px;
+}
+
+.sprite-QlikView-Obelisk {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -555px;
+}
+
+.sprite-Rinneb_cksravinen {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -555px;
+}
+
+.sprite-Rosa-Ansiktet {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -555px;
+}
+
+.sprite-Rymdskeppet {
+    width: 72px;
+    height: 100px;
+    background-position: -743px -555px;
+}
+
+.sprite-Sankt-Lars-Torn {
+    width: 72px;
+    height: 100px;
+    background-position: -825px -555px;
+}
+
+.sprite-Saturnushuset {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -665px;
+}
+
+.sprite-Security-Man-Statue {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -665px;
+}
+
+.sprite-Sheet-of-Power {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -665px;
+}
+
+.sprite-Skorsten {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -665px;
+}
+
+.sprite-Sm_lands {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -665px;
+}
+
+.sprite-Small-Fountain {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -665px;
+}
+
+.sprite-Solbjer {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -665px;
+}
+
+.sprite-Sorgen {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -665px;
+}
+
+.sprite-Spyken {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -665px;
+}
+
+.sprite-Square-Church {
+    width: 73px;
+    height: 100px;
+    background-position: -743px -665px;
+}
+
+.sprite-Stensvamp {
+    width: 72px;
+    height: 100px;
+    background-position: -826px -665px;
+}
+
+.sprite-Strand-P_-V_gg {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -775px;
+}
+
+.sprite-Swing-It {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -775px;
+}
+
+.sprite-Tetra-Pak-Circle {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -775px;
+}
+
+.sprite-The-Dead-Fountain {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -775px;
+}
+
+.sprite-The-Round-Playground {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -775px;
+}
+
+.sprite-The-Spider-Web {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -775px;
+}
+
+.sprite-The-Wood-Throne {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -775px;
+}
+
+.sprite-Toolgate {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -775px;
+}
+
+.sprite-Top-of-the-Hill {
+    width: 72px;
+    height: 100px;
+    background-position: -661px -775px;
+}
+
+.sprite-Totem {
+    width: 72px;
+    height: 100px;
+    background-position: -743px -775px;
+}
+
+.sprite-Tre-H_gar {
+    width: 72px;
+    height: 100px;
+    background-position: -825px -775px;
+}
+
+.sprite-Tree-of-Pacifiers {
+    width: 72px;
+    height: 100px;
+    background-position: -907px -5px;
+}
+
+.sprite-Tunnelm_lning-Polhem {
+    width: 72px;
+    height: 100px;
+    background-position: -907px -115px;
+}
+
+.sprite-Twin-Tower-Hill {
+    width: 72px;
+    height: 100px;
+    background-position: -907px -225px;
+}
+
+.sprite-UARDA-Akademin {
+    width: 72px;
+    height: 100px;
+    background-position: -907px -335px;
+}
+
+.sprite-Underground-Painting---Lund {
+    width: 72px;
+    height: 100px;
+    background-position: -907px -445px;
+}
+
+.sprite-Utomhusscen {
+    width: 72px;
+    height: 100px;
+    background-position: -907px -555px;
+}
+
+.sprite-Vattenfigur {
+    width: 72px;
+    height: 100px;
+    background-position: -908px -665px;
+}
+
+.sprite-Victoriastadion {
+    width: 72px;
+    height: 100px;
+    background-position: -907px -775px;
+}
+
+.sprite-Vind {
+    width: 72px;
+    height: 100px;
+    background-position: -5px -885px;
+}
+
+.sprite-Wall-Statue {
+    width: 72px;
+    height: 100px;
+    background-position: -87px -885px;
+}
+
+.sprite-Wallmire-Cross {
+    width: 72px;
+    height: 100px;
+    background-position: -169px -885px;
+}
+
+.sprite-Water-Stone {
+    width: 72px;
+    height: 100px;
+    background-position: -251px -885px;
+}
+
+.sprite-Web {
+    width: 72px;
+    height: 100px;
+    background-position: -333px -885px;
+}
+
+.sprite-X-Marks-the-Spot {
+    width: 72px;
+    height: 100px;
+    background-position: -415px -885px;
+}
+
+.sprite-Yellow-Horse {
+    width: 72px;
+    height: 100px;
+    background-position: -497px -885px;
+}
+
+.sprite-_resundsv_gens-Information-Plaque {
+    width: 72px;
+    height: 100px;
+    background-position: -579px -885px;
+}

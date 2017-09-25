@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PokeTime</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script type="text/javascript" src="achivements.js"></script>
+	<script type="text/javascript" src="levels.js"></script>
+	<script type="text/javascript">
+		var extraelement = ['startdate', 'totalxp', 'rattata', 'magicarp'];
+		var antalpokemonattfanga = 251;
+		function load(){
+			var wrapper = document.getElementById('inputs');
+			var table = document.createElement('table');
+			for (var i = 0; i < achivements.length; i++){
+					var tr = document.createElement('tr');
+						var tdinput = document.createElement('td');
+							tdinput.setAttribute('width', '100%');
+							var head = document.createElement('p');
+								var headtext = document.createTextNode(achivements[i].namn);
+								head.appendChild(headtext);
+							tdinput.appendChild(head);
+							var input = document.createElement('input');
+								input.setAttribute('id', achivements[i].id);
+								input.setAttribute('onchange', 'save(this)');
+								input.setAttribute('type', 'number');
+								if(!localStorage.getItem('poketime' + achivements[i].id)){}else{
+									input.setAttribute('value', localStorage.getItem('poketime' + achivements[i].id));
+								};
+							tdinput.appendChild(input);
+						tr.appendChild(tdinput);
+						var tdimg = document.createElement('td');
+							tdimg.setAttribute('class', 'tdimg');
+							var img = document.createElement('img');
+								img.setAttribute('src', 'achivements/50/' + achivements[i].id + '.png');
+								img.setAttribute('height', '50px');
+							tdimg.appendChild(img);
+						tr.appendChild(tdimg);
+					table.appendChild(tr);
+			};
+			wrapper.appendChild(table);
+			for (var i = extraelement.length - 1; i >= 0; i--) {
+				if(!localStorage.getItem('poketime' + extraelement[i])){}else{
+					document.getElementById(extraelement[i]).value = localStorage.getItem('poketime' + extraelement[i]);
+				};
+			};
+			
+			
+			printcalc();
+		};
+		function printcalc(){
+			var alldata = getvalues();
+			console.log(alldata);
+			var wrapper = document.getElementById('resultat');
+			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
+				var h = document.createElement('h2');
+					var htext = document.createTextNode('Resultat');
+					h.appendChild(htext);
+				wrapper.appendChild(h);
+			print('Du har nu fångat ' + pokedex(alldata) + ' olika Pokemon, du har ' + (antalpokemonattfanga - pokedex(alldata)) + ' st Pokemon kvar att hitta.');
+			print('Du har nu spelat i sammanlagt ' + dagarspelat(alldata) + ' dagar.');
+			print('Du har hittills vandrat ' + gattjordenrunt(alldata) + '% runt jorden.');
+			print('Du har evolvat ' + percentfangaoevolve(alldata) + '% av alla Pokemon du fångat.');
+			printrubrik('I genomsnitt har du:');
+			print('- Vandrat: ' + genomsnittgattdag(alldata) + ' km/dag.');
+			print('- Kläckt dina ägg var ' + genomsnittgafaragg(alldata) + ' km.');
+			print('- På en kilometer fångar du ' + pokemonperkm(alldata) + ' st pokemon.');
+			print('- Besöker dagligen ' + pokestopperdag(alldata) + ' pokestop.');
+			print('- Införskaffar dig dagligen ' + xpperdag(alldata) + ' XP.');
+			printrubrik('Level:');
+			print('Din level är nu ' + nuvarandelvl(alldata).nuvarande.nr + ' och XP till nästa level är ' + nastalevel(alldata) + '.');
+			print(precentnastalevel(alldata) + '% är avklarat mot nästa level.');
+			print('Det är ' + dagartillnastalvl(alldata) + ' dagar kvar innan du levlar nästa gång.');
+			printrubrik('För att levla behöver du antingen:');
+			print('- Besöka ' + antaltolvl(alldata, 50) + ' st pokestop.');
+			print('- Ta dig till en ny stad/område besöka ' + antaltolvl(alldata, 250) + ' st nya pokestop.');
+			print('- Fånga ' + antaltolvl(alldata, 100) + ' st pokemon.');
+			print('- Evolva ' + antaltolvl(alldata, 500) + ' st pokemon.');
+			print('- Delta i ' + antaltolvl(alldata, 3000) + ' st raider.');
+			print('- Genomföra ' + antaltolvl(alldata, 85000) + ' st powerevolves.');
+			printrubrik('Resan mot level 40:');
+			print('Det är ca ' + daystoforty(alldata) + ' dagar kvar innan du når level 40');
+			print('Du måste genomföra ' + powerevolvetoforty(alldata) + ' st powerevolves för att nå level 40.');
+			printrubrik('Du har ungefär fått stardust från:');
+			print('- ' + startdustforberry(alldata) + ' stardust av att ge bär till Pokemon i gym.');
+			print('- ' + stardustforpokemon(alldata) + ' stardust från att fånga pokemon.');
+			print('- ' + stadustforegg(alldata) + ' stardust från att kläcka egg.');
+			printrubrik('Gym:');
+			print('Du har förlorat ' + raidpasslost(alldata) + ' st gratis raidpass ensålänge.');
+			print('Du har försvarat gym i sammanlagt ' + daysdefending(alldata) + ' dagar.');
+			print('Timmar sedan senaste gym uppdateringen du inte försvarat ett gym: ' + hoursnotdefending(alldata) + ' timmar');
+			printrubrik('Vad som krävs för achivements:');
+			print('Du behöver fånga ' + youngster(alldata) + ' st Rattata till, för att få guld i Youngster');
+			print('Du behöver fånga ' + fisherman(alldata) + ' st Magicarp till, för att få guld i Fisherman');
+			printrubrik('Om du varit med sedan starten:');
+			print('Om du hade börjat spela när Pokemon Go lanserades, skulle du idag fått ihop ' + xpfrombegining(alldata) + ' XP och varit level ' + levelfrombegining(alldata));
+		};
+		function printrubrik(text){
+			var wrapper = document.getElementById('resultat');
+				var p = document.createElement('h3');
+					var ptext = document.createTextNode(text);
+					p.appendChild(ptext);
+				wrapper.appendChild(p);
+		};
+		function print(text){
+			console.log(text);
+			var wrapper = document.getElementById('resultat');
+				var p = document.createElement('p');
+					var ptext = document.createTextNode(text);
+					p.appendChild(ptext);
+				wrapper.appendChild(p);
+		};
+		function save(element){if(element.value == ''){localStorage.removeItem('poketime' + element.getAttribute('id'));}else{localStorage.setItem('poketime' + element.getAttribute('id'), element.value);};printcalc();};
+		function getvalues(){
+			var resultarray = {};
+			for (var i = 0; i < achivements.length; i++){
+				var input = document.getElementById(achivements[i].id).value;
+				resultarray[achivements[i].id] = input;
+			};
+			for (var i = extraelement.length - 1; i >= 0; i--) {
+				resultarray[extraelement[i]] = document.getElementById(extraelement[i]).value;
+			};
+			return resultarray;
+		};
+		function dateDiff(str1) {var str2 = new Date();var diff = Date.parse( str2 ) - Date.parse( str1 );return isNaN( diff ) ? NaN : {diff : diff,ms : Math.floor(diff%1000),s : Math.floor(diff/1000%60),m : Math.floor(diff/60000%60),h : Math.floor(diff/3600000%24),d : Math.floor(diff/86400000)};};
+		function avrunda(number){return Math.round((number)*10)/10};
+		function genomsnitt(val1, val2){
+			return avrunda(parseInt(val1) / parseInt(val2));
+		};
+		function nuvarandelvl(data){for(i=0;i<levels.length;i++){if(parseInt(levels[i].totalxp) >= parseInt(data.totalxp)){var array = {"nuvarande": levels[i-1], "nasta": levels[i]};return array;break;};};};
+		function precent(val1, val2){
+			return Math.round((parseInt(val1) / parseInt(val2)) * 100);
+		};
+
+
+		
+		function pokedex(data){
+			if(data.kanto == ''){return '?';};
+			if(data.johto == ''){return '?';};
+			//Antal olika pokemon sammanlagt personen fångat
+			return parseInt(data.kanto) + parseInt(data.johto);
+		};
+		function dagarspelat(data){
+			if(data.startdate == ''){return '?';};
+			//Antal dagar spelat
+			return dateDiff(data.startdate).d;
+		};
+		function genomsnittgattdag(data){
+			if(data.jogger == ''){return '?';};
+			if(data.startdate == ''){return '?';};
+			//I gneomsnitt km per dag
+			return genomsnitt(data.jogger, dagarspelat(data));
+		};
+		function genomsnittgafaragg(data){
+			if(data.jogger == ''){return '?';};
+			if(data.breeder == ''){return '?';};
+			//I genomsnitt hur många km man måste gå för att kläcka ägg
+			return genomsnitt(data.jogger, data.breeder);
+		};
+		function pokemonperkm(data){
+			if(data.collector == ''){return '?';};
+			if(data.jogger == ''){return '?';};
+			//Pokemon du fångar per km
+			return genomsnitt(data.collector, data.jogger)
+		};
+		function pokestopperdag(data){
+			if(data.backpacker == ''){return '?';};
+			if(data.startdate == ''){return '?';};
+			//Pokestop i genomsnitt besökt per dag
+			return genomsnitt(data.backpacker, dagarspelat(data));
+		};
+		function xpperdag(data){
+			if(data.totalxp == ''){return '?';};
+			if(data.startdate == ''){return '?';};
+			//Räknar ut hur mycket XP som införtjänas per dag
+			return genomsnitt(data.totalxp, dagarspelat(data));
+		};
+		function nastalevel(data){
+			if(data.totalxp == ''){return '?';};
+			return parseInt(nuvarandelvl(data).nasta.totalxp) - parseInt(data.totalxp);
+		};
+		function precentnastalevel(data){
+			if(data.totalxp == ''){return '?';};
+			var aktuellxp = nuvarandelvl(data);
+			return precent((data.totalxp - aktuellxp.nuvarande.totalxp), (aktuellxp.nasta.totalxp - aktuellxp.nuvarande.totalxp));
+		};
+		function dagartillnastalvl(data){
+			if(data.totalxp == ''){return '?';};
+			if(data.startdate == ''){return '?';};
+			//([samanlagd XP till nästa level] - [samanlagd XP]) / ([samanlagd XP] / [dagarspelat])
+			return Math.round(nastalevel(data) / (data.totalxp / dagarspelat(data)));
+		};
+		function antaltolvl(data, number){
+			if(data.totalxp == ''){return '?';};
+			return Math.round(nastalevel(data) / number);
+		};
+		function daystoforty(data){
+			if(data.totalxp == ''){return '?';};
+			if(data.startdate == ''){return '?';};
+			return Math.round((20000000 / (data.totalxp / dagarspelat(data))) - dagarspelat(data));
+		};
+		function powerevolvetoforty(data){
+			if(data.totalxp == ''){return '?';};
+			return Math.round((20000000 - data.totalxp) / 85000);
+		};
+		function startdustforberry(data){
+			if(data['berry-master'] == ''){return '?';};
+			return data['berry-master'] * 20;
+		};
+		function stardustforpokemon(data){
+			if(data.collector == ''){return '?';};
+			return data.collector * 100;
+		};
+		function stadustforegg(data){
+			if(data.breeder == ''){return '?';};
+			return data.breeder * 1400;
+		};
+		function gattjordenrunt(data){
+			if(data.jogger == ''){return '?';};
+			return precent(data.jogger, 40075);
+		};
+		function percentfangaoevolve(data){
+			if(data.scientist == ''){return '?';};
+			if(data.collector == ''){return '?';};
+			return precent(data.scientist, data.collector);
+		};
+		function raidpasslost(data){
+			if(data.champion == ''){return '?';};
+			if(data['legendary-pokemon'] == ''){return '?';};
+			var raidstartdate = new Date('2017-06-23');
+			return dateDiff(raidstartdate).d - (parseInt(data['legendary-pokemon']) + parseInt(data.champion));
+		};
+		function daysdefending(data){
+			if(data['gym-leader'] == ''){return '?';};
+			return Math.round(data['gym-leader'] / 24);
+		};
+		function hoursnotdefending(data){
+			if(data['gym-leader'] == ''){return '?';};
+			var raidstartdate = new Date('2017-06-20');
+			var utrakning = (dateDiff(raidstartdate).d * 24) - parseInt(data['gym-leader']);
+			if(utrakning < 0){
+				var utrakning = 0;
+			}
+			return utrakning;
+		};
+		function youngster(data){
+			if(data.rattata == ''){return '?';};
+			if(data.youngster == ''){return '?';};
+			return Math.round(((data.rattata / data.youngster) * 300) - data.rattata);
+		};
+		function fisherman(data){
+			if(data.magicarp == ''){return '?';};
+			if(data.fisherman == ''){return '?';};
+			return Math.round(((data.magicarp / data.fisherman) * 300) - data.magicarp);
+		};
+		function xpfrombegining(data){
+			if(data.totalxp == ''){return '?';};
+			if(data.startdate == ''){return '?';};
+			var lanseringsdatum = new Date('2016-06-06');
+			return Math.round(dateDiff(lanseringsdatum).d * xpperdag(data))
+		};
+		function levelfrombegining(data){
+			if(data.totalxp == ''){return '?';};
+			if(data.startdate == ''){return '?';};
+			var nyxp = {"totalxp": xpfrombegining(data)};
+			return nuvarandelvl(nyxp).nuvarande.nr;
+		};
+		function send(element){
+			console.log(element.value);
+			console.log(element.files);
+		};
+	</script>
+	<style type="text/css">
+		*{
+			padding:0px;
+			margin:0px;
+		}
+		#wrapper{
+			background: #fcffff;
+			background: -moz-linear-gradient(-45deg,  #fcffff 0%, #d0fbca 47%, #b8fea5 100%);
+			background: -webkit-linear-gradient(-45deg,  #fcffff 0%,#d0fbca 47%,#b8fea5 100%);
+			background: linear-gradient(135deg,  #fcffff 0%,#d0fbca 47%,#b8fea5 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcffff', endColorstr='#b8fea5',GradientType=1 );
+			padding:5px;
+			max-width: 500px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+		body, html{
+			background: #000000;
+		}
+		input{
+			width:98.5%;
+			zoom:1.5;
+		}
+		input[type=button]{
+			width:100%;
+		}
+		#resultat p {
+			margin-bottom: 5px;
+		}
+		h2 {
+			margin-top: 10px;
+			border-top: solid 4px #000;
+		}
+		.tdimg {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+	</style>
+</head>
+<body onload="load();">
+<div id="wrapper">
+	<h1>PokeTime</h1>
+	<p>Genom att skriva in stats från achivements i Pokemon Go, kan detta verktyg räkna ut statistik.</p>
+	<div id="inputs">
+		<h2>Klistra in via screenshot</h2>
+		<p>Välj bild att analysera</p>
+		<input type="file" onchange="send(this)" disabled>
+		<h2>Skriv in manuellt</h2>
+		<p>Start datum</p>
+		<input type="date" id="startdate" onchange="save(this)">
+		<p>Totalt införskaffad XP</p>
+		<input type="number" id="totalxp" onchange="save(this)">
+		<p>Fångade Magicarp</p>
+		<input type="number" id="magicarp" onchange="save(this)">
+		<p>Fångade Rattata</p>
+		<input type="number" id="rattata" onchange="save(this)">
+	</div>
+	<div id="resultat"></div>
+</div>
+</body>
+</html>
