@@ -68,7 +68,7 @@
 			var gymarray = [];
 			for (var i = gyms.length - 1; i >= 0; i--) {
 				var id = makeid(gyms[i].namn);
-				gyms[i]['id'] = id;
+				gyms[i]['nyid'] = id;
 				gymarray.push(id);
 			};
 			gymarray.sort();
@@ -76,8 +76,7 @@
 			console.log(gymarray)
 			for (var i = gymarray.length - 1; i >= 0; i--) {
 				for (var a = gyms.length - 1; a >= 0; a--) {
-					if(gyms[a].id == gymarray[i]){
-						console.log(gyms[a].id + ' - ' + gymarray[i])
+					if(gyms[a].nyid == gymarray[i]){
 						gymsorted.push(gyms[a]);
 					};
 				};
@@ -92,11 +91,19 @@
 						line.setAttribute('class', gymsorted[i].namn.split('')[0]);
 						var iconbox = document.createElement('td');
 							/*var icon = document.createElement('i');
-								icon.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
-							iconbox.appendChild(icon);*/
-							var icon = document.createElement('i');
+							if(gymsorted[i].id == ''){
 								icon.setAttribute('class', 'sprite sprite-Battle-at-Lund-Monument');
-							iconbox.appendChild(icon);
+							}else{
+								icon.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
+							};
+							iconbox.appendChild(icon);*/
+							var gymimg = document.createElement('img');
+							if(!gymsorted[i].id){
+								gymimg.setAttribute('src', 'img/gym/mini/battle-at-lund-monument.png');
+							}else{
+								gymimg.setAttribute('src', 'img/gymmalmo/mini/' + gymsorted[i].id + '.png');
+							};
+							iconbox.appendChild(gymimg);
 						line.appendChild(iconbox);
 						var textbox = document.createElement('td');
 							var linktext = document.createTextNode(gymsorted[i].namn);

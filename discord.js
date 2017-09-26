@@ -86,7 +86,7 @@ bot.on('message', (message) => {
 					}else{
 						var imgklocka = 'filer/img/klocka/' + klocka.replace(':', '-') + '.gif';
 					};
-					var imggym = 'filer/img/gym/id/' + infotosend.id.toLowerCase() + '.png'
+					var imggym = 'filer/img/gym/mini/' + infotosend.id.toLowerCase() + '.png'
 					var embed = new Discord.RichEmbed();
 						embed.setImage(imglink, 128, 128);
 						embed.setColor(8888888);

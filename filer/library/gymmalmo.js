@@ -1,11 +1,4 @@
 var gyms = [{
-	namn: 'Lunds Akademiska Golfklubb',
-	id: 'Battle-at-Lund-Monument',
-	location: {
-		longitud: '55.712638',
-		latitud: '13.275641'
-	}
-},{
 	namn: 'Solsil - Berith Lindfeldt',
 	id: '',
 	location: {
@@ -301,7 +294,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Almgården',
-	id: '',
+	id: 'almg_rden',
 	location: {
 		longitud: '55.577978',
 		latitud: '13.061002'
@@ -595,7 +588,7 @@ var gyms = [{
 	}
 },{
 	namn: 'The Space Between Yin and Yang Statue',
-	id: '',
+	id: 'the-space-between-yin-and-yang-statue',
 	location: {
 		longitud: '55.598301',
 		latitud: '13.024109'
@@ -700,7 +693,7 @@ var gyms = [{
 	}
 },{
 	namn: 'St. Pauli Church',
-	id: '',
+	id: 'st_-pauli_church',
 	location: {
 		longitud: '55.603166',
 		latitud: '13.014205'
@@ -735,14 +728,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Flora, Malmö',
-	id: '',
+	id: 'flora_-malm_',
 	location: {
 		longitud: '55.601335',
 		latitud: '13.00939'
 	}
 },{
 	namn: 'Spectral Self Container  ',
-	id: '',
+	id: 'spectral-self-container',
 	location: {
 		longitud: '55.609359',
 		latitud: '12.996909'
@@ -784,7 +777,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Petribron',
-	id: '',
+	id: 'petribron',
 	location: {
 		longitud: '55.608456',
 		latitud: '13.002207'
@@ -798,7 +791,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Royal',
-	id: '',
+	id: 'royal',
 	location: {
 		longitud: '55.601645',
 		latitud: '13.00081'
@@ -819,7 +812,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Fountain (Stortorget)',
-	id: '',
+	id: 'fountain-_stortorget_',
 	location: {
 		longitud: '55.606475',
 		latitud: '13.000624'
@@ -840,7 +833,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Above ',
-	id: '',
+	id: 'above',
 	location: {
 		longitud: '55.570991',
 		latitud: '12.983753'
@@ -882,7 +875,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Mosaique',
-	id: '',
+	id: 'mosaique',
 	location: {
 		longitud: '55.565799',
 		latitud: '12.979945'
@@ -903,7 +896,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Svängom',
-	id: '',
+	id: 'sv_ngom',
 	location: {
 		longitud: '55.579781',
 		latitud: '12.995474'
@@ -931,7 +924,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Malmömässan',
-	id: '',
+	id: 'malm_m_ssan',
 	location: {
 		longitud: '55.566327',
 		latitud: '12.976168'
@@ -973,7 +966,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Emporia',
-	id: '',
+	id: 'emporia',
 	location: {
 		longitud: '55.563515',
 		latitud: '12.97503'
@@ -994,7 +987,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Butterflies',
-	id: '',
+	id: 'butterflies',
 	location: {
 		longitud: '55.562978',
 		latitud: '12.973077'
@@ -1036,7 +1029,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Förgrenad',
-	id: '',
+	id: 'f_rgrenad',
 	location: {
 		longitud: '55.585905',
 		latitud: '12.996465'
@@ -1106,7 +1099,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Sea of Love',
-	id: '',
+	id: 'sea-of-love',
 	location: {
 		longitud: '55.558408',
 		latitud: '13.012986'
@@ -1169,14 +1162,14 @@ var gyms = [{
 	}
 },{
 	namn: 'T-stone',
-	id: '',
+	id: 't-stone',
 	location: {
 		longitud: '55.560589',
 		latitud: '13.020736'
 	}
 },{
 	namn: 'Old Fountain',
-	id: '',
+	id: 'old-fountain',
 	location: {
 		longitud: '55.588231',
 		latitud: '13.008146'
@@ -1260,7 +1253,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Exclamation Mark!',
-	id: '',
+	id: 'exclamation-mark_',
 	location: {
 		longitud: '55.592',
 		latitud: '13.011583'
@@ -1288,7 +1281,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Mural',
-	id: '',
+	id: 'mural',
 	location: {
 		longitud: '55.594826',
 		latitud: '13.006925'
@@ -1309,7 +1302,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Moriskan',
-	id: '',
+	id: 'moriskan',
 	location: {
 		longitud: '55.59364',
 		latitud: '13.013544'
@@ -1337,7 +1330,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Grävlingstrappa',
-	id: '',
+	id: 'gr_vlingstrappa',
 	location: {
 		longitud: '55.595366',
 		latitud: '13.008166'
@@ -1386,7 +1379,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Folkets Park',
-	id: '',
+	id: 'folkets-park',
 	location: {
 		longitud: '55.595284',
 		latitud: '13.013443'
@@ -1414,7 +1407,7 @@ var gyms = [{
 	}
 },{
 	namn: 'St knuts torg',
-	id: '',
+	id: 'st-knuts-torg',
 	location: {
 		longitud: '55.596623',
 		latitud: '13.012684'
@@ -1442,7 +1435,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Konserthuset',
-	id: '',
+	id: 'konserthuset',
 	location: {
 		longitud: '55.599033',
 		latitud: '13.007959'
