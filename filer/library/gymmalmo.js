@@ -763,7 +763,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Non Violence',
-	id: '',
+	id: 'non-violence',
 	location: {
 		longitud: '55.60877',
 		latitud: '12.997382'
@@ -784,7 +784,7 @@ var gyms = [{
 	}
 },{
 	namn: 'TACOS',
-	id: '',
+	id: 'tacos',
 	location: {
 		longitud: '55.60622',
 		latitud: '12.995541'
@@ -798,7 +798,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Octopus ',
-	id: '',
+	id: 'octopus',
 	location: {
 		longitud: '55.603747',
 		latitud: '12.995948'
@@ -819,7 +819,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Lampan',
-	id: '',
+	id: 'lampan',
 	location: {
 		longitud: '55.605098',
 		latitud: '12.998883'
@@ -840,7 +840,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Plockepinn',
-	id: '',
+	id: 'plockepinn',
 	location: {
 		longitud: '55.576498',
 		latitud: '12.990068'
@@ -952,14 +952,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Fjärde Relationen',
-	id: '',
+	id: 'fj_rde-relationen',
 	location: {
 		longitud: '55.582407',
 		latitud: '12.996872'
 	}
 },{
 	namn: 'Stadionkyrkan',
-	id: '',
+	id: 'stadionkyrkan',
 	location: {
 		longitud: '55.581967',
 		latitud: '12.983212'
@@ -1008,7 +1008,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Walk of Fame Plaque',
-	id: '',
+	id: 'walk-of-fame-plaque',
 	location: {
 		longitud: '55.584528',
 		latitud: '12.988735'
@@ -1022,7 +1022,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Sfär',
-	id: '',
+	id: 'sf_r',
 	location: {
 		longitud: '55.584574',
 		latitud: '12.98119'
@@ -1057,7 +1057,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Target',
-	id: '',
+	id: 'target',
 	location: {
 		longitud: '55.584351',
 		latitud: '12.975725'
@@ -1071,7 +1071,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Wickedly Weird Flower Pots',
-	id: '',
+	id: 'wickedly-weird-flower-pots',
 	location: {
 		longitud: '55.586531',
 		latitud: '12.982408'
@@ -1106,7 +1106,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Paviljongen (Pildammsparken)',
-	id: '',
+	id: 'paviljongen-_pildammsparken_',
 	location: {
 		longitud: '55.588645',
 		latitud: '12.992871'
@@ -1127,7 +1127,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Avd 49',
-	id: '',
+	id: 'avd-49',
 	location: {
 		longitud: '55.589123',
 		latitud: '13.000843'
@@ -1141,7 +1141,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Flicka Med Fågel',
-	id: '',
+	id: 'flicka-med-f_gel',
 	location: {
 		longitud: '55.588752',
 		latitud: '13.00443'
@@ -1155,7 +1155,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Vattentornet i Pildammsparken',
-	id: '',
+	id: 'vattentornet-i-pildammsparken',
 	location: {
 		longitud: '55.590114',
 		latitud: '12.997212'
@@ -1183,7 +1183,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Margaretavägen',
-	id: '',
+	id: 'margaretav_gen',
 	location: {
 		longitud: '55.591064',
 		latitud: '12.990762'
@@ -1197,7 +1197,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Stukad Mås ',
-	id: '',
+	id: 'stukad-m_s',
 	location: {
 		longitud: '55.591587',
 		latitud: '12.985729'
@@ -1260,7 +1260,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Chokladstaden ',
-	id: '',
+	id: 'chokladstaden',
 	location: {
 		longitud: '55.593414',
 		latitud: '13.007212'
@@ -1295,7 +1295,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Tragos Fountain',
-	id: '',
+	id: 'tragos-fountain',
 	location: {
 		longitud: '55.596597',
 		latitud: '12.996254'
@@ -1309,7 +1309,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Horse On The Roof',
-	id: '',
+	id: 'horse-on-the-roof',
 	location: {
 		longitud: '55.596667',
 		latitud: '12.986794'
@@ -1323,7 +1323,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Ostra Rönneholmsvägen',
-	id: '',
+	id: 'ostra-r_nneholmsv_gen',
 	location: {
 		longitud: '55.596791',
 		latitud: '12.998049'
@@ -1337,7 +1337,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Scandic Hotel',
-	id: '',
+	id: 'scandic-hotel',
 	location: {
 		longitud: '55.596517',
 		latitud: '13.001416'
@@ -1358,7 +1358,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Katolska Kyrkan',
-	id: '',
+	id: 'katolska-kyrkan',
 	location: {
 		longitud: '55.597411',
 		latitud: '12.992401'
@@ -1372,7 +1372,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Zodiakens Tecken',
-	id: '',
+	id: 'zodiakens-tecken',
 	location: {
 		longitud: '55.597159',
 		latitud: '13.003784'
@@ -1393,14 +1393,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Kronprinsen',
-	id: '',
+	id: 'kronprinsen',
 	location: {
 		longitud: '55.598697',
 		latitud: '12.985148'
 	}
 },{
 	namn: 'The Black Horse',
-	id: '',
+	id: 'the-black-horse',
 	location: {
 		longitud: '55.598558',
 		latitud: '12.982344'
@@ -1456,14 +1456,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Eternal Umbrella ',
-	id: '',
+	id: 'eternal-umbrella',
 	location: {
 		longitud: '55.600559',
 		latitud: '12.987264'
 	}
 },{
 	namn: 'Malmö Stadsbibliotek',
-	id: '',
+	id: 'malm_-stadsbibliotek',
 	location: {
 		longitud: '55.600718',
 		latitud: '12.993371'
@@ -1484,14 +1484,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Wall Art',
-	id: '',
+	id: 'wall-art',
 	location: {
 		longitud: '55.600564',
 		latitud: '13.001791'
 	}
 },{
 	namn: 'Anna Lisa Fountain ',
-	id: '',
+	id: 'anna-lisa-fountain',
 	location: {
 		longitud: '55.601118',
 		latitud: '12.992619'
@@ -1505,14 +1505,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Eternal Blossom',
-	id: '',
+	id: 'eternal-blossom',
 	location: {
 		longitud: '55.601117',
 		latitud: '12.984872'
 	}
 },{
-	namn: 'Â«Gato en el canalÂ»',
-	id: '',
+	namn: '«Gato en el canal»',
+	id: '_gato-en-el-canal_',
 	location: {
 		longitud: '55.601147',
 		latitud: '13.000084'
