@@ -511,7 +511,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Watchtower',
-	id: '',
+	id: 'watchtower',
 	location: {
 		longitud: '55.616878',
 		latitud: '12.974357'
@@ -539,14 +539,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Eye in the Wall',
-	id: '',
+	id: 'eye-in-the-wall',
 	location: {
 		longitud: '55.613068',
 		latitud: '12.975783'
 	}
 },{
 	namn: 'Cycles  La Francaise',
-	id: '',
+	id: 'cycles-la-francaise',
 	location: {
 		longitud: '55.610177',
 		latitud: '12.973835'
@@ -560,28 +560,28 @@ var gyms = [{
 	}
 },{
 	namn: 'Drakrygg',
-	id: '',
+	id: 'drakrygg',
 	location: {
 		longitud: '55.608968',
 		latitud: '12.973285'
 	}
 },{
 	namn: 'Turning Torso',
-	id: '',
+	id: 'turning-torso',
 	location: {
 		longitud: '55.613172',
 		latitud: '12.976648'
 	}
 },{
 	namn: 'Klätternät',
-	id: '',
+	id: 'kl_ttern_t',
 	location: {
 		longitud: '55.61506',
 		latitud: '12.979105'
 	}
 },{
 	namn: 'Bridge Benches',
-	id: '',
+	id: 'bridge-benches',
 	location: {
 		longitud: '55.615041',
 		latitud: '12.980167'
@@ -595,7 +595,7 @@ var gyms = [{
 	}
 },{
 	namn: 'The Triangle',
-	id: '',
+	id: 'the-triangle',
 	location: {
 		longitud: '55.615847',
 		latitud: '12.985264'
@@ -609,21 +609,21 @@ var gyms = [{
 	}
 },{
 	namn: 'Dockan Lighthouse',
-	id: '',
+	id: 'dockan-lighthouse',
 	location: {
 		longitud: '55.61642',
 		latitud: '12.991588'
 	}
 },{
 	namn: 'Röda Hund',
-	id: '',
+	id: 'r_da-hund',
 	location: {
 		longitud: '55.609745',
 		latitud: '12.979955'
 	}
 },{
 	namn: 'Region Skåne HK',
-	id: '',
+	id: 'region-sk_ne-hk',
 	location: {
 		longitud: '55.614565',
 		latitud: '12.988468'
@@ -637,7 +637,7 @@ var gyms = [{
 	}
 },{
 	namn: 'The Bow',
-	id: '',
+	id: 'the-bow',
 	location: {
 		longitud: '55.614664',
 		latitud: '12.9903'
@@ -651,21 +651,21 @@ var gyms = [{
 	}
 },{
 	namn: 'World Trade Center ',
-	id: '',
+	id: 'world-trade-center',
 	location: {
 		longitud: '55.608256',
 		latitud: '12.981872'
 	}
 },{
 	namn: 'Kula På Pelare',
-	id: '',
+	id: 'kula-p_-pelare',
 	location: {
 		longitud: '55.608632',
 		latitud: '13.018772'
 	}
 },{
 	namn: 'Malmö Harbor',
-	id: '',
+	id: 'malm_-harbor',
 	location: {
 		longitud: '55.614654',
 		latitud: '12.996046'
@@ -679,14 +679,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Silver Square Boxes on Piedestal',
-	id: '',
+	id: 'silver-square-boxes-on-pidestal',
 	location: {
 		longitud: '55.606646',
 		latitud: '13.016275'
 	}
 },{
 	namn: 'Light House',
-	id: '',
+	id: 'light-house',
 	location: {
 		longitud: '55.612495',
 		latitud: '12.995878'
@@ -700,28 +700,28 @@ var gyms = [{
 	}
 },{
 	namn: 'Ghost Castle',
-	id: '',
+	id: 'ghost-castle',
 	location: {
 		longitud: '55.604969',
 		latitud: '12.986804'
 	}
 },{
 	namn: 'Schougens Bro',
-	id: '',
+	id: 'schougens-bro',
 	location: {
 		longitud: '55.608152',
 		latitud: '13.012977'
 	}
 },{
 	namn: 'Tower Of Malmoe Castle',
-	id: '',
+	id: 'tower-of-malmoe-castle',
 	location: {
 		longitud: '55.605509',
 		latitud: '12.988547'
 	}
 },{
 	namn: 'Fontän by Alfred Arwidius',
-	id: '',
+	id: 'font_n-by-alfred-arwidius',
 	location: {
 		longitud: '55.608299',
 		latitud: '13.009923'
@@ -742,21 +742,21 @@ var gyms = [{
 	}
 },{
 	namn: 'Standbeeld Diana in Kungsparke',
-	id: '',
+	id: 'standbeeld-diana-in-kungsparke',
 	location: {
 		longitud: '55.603259',
 		latitud: '12.992083'
 	}
 },{
 	namn: 'Yellow Bike',
-	id: '',
+	id: 'yellow-bike',
 	location: {
 		longitud: '55.609106',
 		latitud: '13.004678'
 	}
 },{
 	namn: 'Diana',
-	id: '',
+	id: 'diana',
 	location: {
 		longitud: '55.604378',
 		latitud: '12.992635'
@@ -770,7 +770,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Lampskog',
-	id: '',
+	id: 'lampskog',
 	location: {
 		longitud: '55.605662',
 		latitud: '13.007433'
@@ -805,7 +805,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Tunneln',
-	id: '',
+	id: 'tunneln',
 	location: {
 		longitud: '55.607319',
 		latitud: '13.001862'

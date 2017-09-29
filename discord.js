@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 const bot = new Discord.Client();
 var fs = require('fs');
 
-eval(fs.readFileSync('filer/library/gym.js')+'');
+eval(fs.readFileSync('filer/library/gymlund.js')+'');
 
 eval(fs.readFileSync('token.js')+'');
 eval(fs.readFileSync('filer/library/pokemon.js')+'');
