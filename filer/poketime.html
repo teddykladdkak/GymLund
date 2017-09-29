@@ -143,7 +143,16 @@
 		function genomsnitt(val1, val2){
 			return avrunda(parseInt(val1) / parseInt(val2));
 		};
-		function nuvarandelvl(data){for(i=0;i<levels.length;i++){if(parseInt(levels[i].totalxp) >= parseInt(data.totalxp)){var array = {"nuvarande": levels[i-1], "nasta": levels[i]};return array;break;};};};
+		function nuvarandelvl(data){
+			if(data.totalxp == ''){return {"nuvarande": "?", "nasta": "?"};};
+			for(i=0;i<levels.length;i++){
+				if(parseInt(levels[i].totalxp) >= parseInt(data.totalxp)){
+					var array = {"nuvarande": levels[i-1], "nasta": levels[i]};
+					return array;
+					break;
+				};
+			};
+		};
 		function precent(val1, val2){
 			return Math.round((parseInt(val1) / parseInt(val2)) * 100);
 		};
@@ -281,10 +290,6 @@
 			var nyxp = {"totalxp": xpfrombegining(data)};
 			return nuvarandelvl(nyxp).nuvarande.nr;
 		};
-		function send(element){
-			console.log(element.value);
-			console.log(element.files);
-		};
 	</script>
 	<style type="text/css">
 		*{
@@ -331,9 +336,6 @@
 	<h1>PokeTime</h1>
 	<p>Genom att skriva in stats från achivements i Pokemon Go, kan detta verktyg räkna ut statistik.</p>
 	<div id="inputs">
-		<h2>Klistra in via screenshot</h2>
-		<p>Välj bild att analysera</p>
-		<input type="file" onchange="send(this)" disabled>
 		<h2>Skriv in manuellt</h2>
 		<p>Start datum</p>
 		<input type="date" id="startdate" onchange="save(this)">
