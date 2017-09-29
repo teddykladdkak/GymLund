@@ -3,6 +3,9 @@
 <head>
 	<title>PokeTime</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="/socket.io/socket.io.js"></script>
+	<script type="text/javascript" src="delivery.js"></script>
 	<script type="text/javascript" src="achivements.js"></script>
 	<script type="text/javascript" src="levels.js"></script>
 	<script type="text/javascript">
@@ -46,6 +49,7 @@
 			
 			
 			printcalc();
+			loadsocket();
 		};
 		function printcalc(){
 			var alldata = getvalues();
@@ -126,7 +130,18 @@
 		function genomsnitt(val1, val2){
 			return avrunda(parseInt(val1) / parseInt(val2));
 		};
-		function nuvarandelvl(data){for(i=0;i<levels.length;i++){if(parseInt(levels[i].totalxp) >= parseInt(data.totalxp)){var array = {"nuvarande": levels[i-1], "nasta": levels[i]};return array;break;};};};
+		function nuvarandelvl(data){
+			if(data.startdate == ''){
+				return {"nuvarande": '?', "nasta": '?'};
+			};
+			for(i=0;i<levels.length;i++){
+				if(parseInt(levels[i].totalxp) >= parseInt(data.totalxp)){
+					var array = {"nuvarande": levels[i-1], "nasta": levels[i]};
+					return array;
+					break;
+				};
+			};
+		};
 		function precent(val1, val2){
 			return Math.round((parseInt(val1) / parseInt(val2)) * 100);
 		};
@@ -269,6 +284,45 @@
 			console.log(element.files);
 		};
 	</script>
+	<script type="text/javascript">
+		function loadsocket(){
+			//Tar server id enbart för att koppla till socket
+			var geturl = window.location.href.replace('http://', '').split('/')[0];
+			//Lyssnar om server säger något
+			var socket = io.connect(geturl);
+			//var socket = io.connect('http://0.0.0.0:5001');
+
+			socket.on('connect', function(){
+				var delivery = new Delivery(socket);
+
+				delivery.on('delivery.connect',function(delivery){
+					var input = document.getElementById('filuppladd');
+						input.removeAttribute('disabled');
+					$("#filuppladd").change(function(evt){
+						var file = $("#filuppladd")[0].files[0];
+						var extraParams = {foo: 'bar'};
+						delivery.send(file, extraParams);
+						evt.preventDefault();
+					});
+				});
+
+				delivery.on('send.success',function(fileUID){
+					console.log("file was successfully sent.");
+				});
+
+				/*delivery.on('receive.start',function(fileUID){
+					console.log('receiving a file!');
+				});
+
+				delivery.on('receive.success',function(file){
+					var params = file.params;
+					if (file.isImage()) {
+						$('img').attr('src', file.dataURL());
+					};
+				});*/
+			});
+		};
+	</script>
 	<style type="text/css">
 		*{
 			padding:0px;
@@ -316,7 +370,7 @@
 	<div id="inputs">
 		<h2>Klistra in via screenshot</h2>
 		<p>Välj bild att analysera</p>
-		<input type="file" onchange="send(this)" disabled>
+		<input type="file" id="filuppladd" onchange="send(this)" disabled>
 		<h2>Skriv in manuellt</h2>
 		<p>Start datum</p>
 		<input type="date" id="startdate" onchange="save(this)">

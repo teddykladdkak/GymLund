@@ -1,7 +1,14 @@
+var port = 4444;
+var index = 'index.html';
+
 var bild = 'screen.jpg';
 var small = 'ny/siffror.jpg'
 
+var http = require('http');
+var fs = require('fs');
 var Jimp = require("jimp");
+var dl  = require('delivery');
+var path = require('path');
 var imageToTextDecoder = require('image-to-text');
 
 //Your key registered from cloudsightapi @ https://cloudsightapi.com 
@@ -110,4 +117,97 @@ readrubrik(bild, small);
 
 
 
+//Startar server och tillåtna filer
+var server = http.createServer(function (request, response) {
+    var filePath = '.' + request.url;
+    if (filePath == './')
+        filePath = index;
+    //Här radas alla tillåtna filer
+    var extname = path.extname(filePath);
+    var contentType = 'text/html';
+    switch (extname) {
+        case '.js':
+            contentType = 'text/javascript';
+            break;
+        case '.css':
+            contentType = 'text/css';
+            break;
+        case '.json':
+            contentType = 'application/json';
+            break;
+        case '.png':
+            contentType = 'image/png';
+            break;      
+        case '.jpg':
+            contentType = 'image/jpg';
+            break;
+        case '.wav':
+            contentType = 'audio/wav';
+            break;
+    }
+    //Säger till server att läsa och skicka fil till klient (Möjlighet att lägga till felmeddelanden)
+    fs.readFile('./' + filePath, function(error, content) {
+        if (error) {
+            if(error.code == 'ENOENT'){
+                fs.readFile('./404.html', function(error, content) {
+                    response.writeHead(200, { 'Content-Type': contentType });
+                    response.end(content, 'utf-8');
+                });
+            }
+            else {
+                response.writeHead(500);
+                response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+                response.end(); 
+            }
+        }
+        else {
+            response.writeHead(200, { 'Content-Type': contentType });
+            response.end(content, 'utf-8');
+        }
+    });
 
+});
+
+// Loading socket.io
+var io = require('socket.io').listen(server);
+/*io.sockets.on('connection', function (socket, username) {
+	// When the client connects, they are sent a message
+	socket.emit('message', 'You are connected!');
+	// The other clients are told that someone new has arrived
+	socket.broadcast.emit('message', 'Another client has just connected!');
+	//Går igång när användare försöker logga in som admin
+	socket.on('savenewusers', function(data) {
+		//socket.emit('adminsparad', 'Ja!');
+	});
+});*/
+io.sockets.on('connection', function(socket){
+  var delivery = dl.listen(socket);
+  delivery.on('receive.success',function(file){
+    var params = file.params;
+    /*console.log(params);
+    console.log(file.name);
+    console.log(file.buffer);*/
+    fs.writeFile(bild,file.buffer, function(err){
+      if(err){
+        console.log('File could not be saved.');
+      }else{
+        console.log('File saved.');
+        readrubrik(bild, small);
+      };
+    });
+  });
+  /*delivery.on('delivery.connect',function(delivery){
+ 
+    delivery.send({
+      name: 'sample-image.jpg',
+      path : './sample-image.jpg',
+      params: {foo: 'bar'}
+    });
+ 
+    delivery.on('send.success',function(file){
+      console.log('File successfully sent to client!');
+    });
+ 
+  });*/
+});
+server.listen(port);
