@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RaidCounter</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta content="yes" name="apple-mobile-web-app-capable" />
+	<meta content="yes" name="mobile-web-app-capable" />
+	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	
+	<script src="library/raid.js" type="text/javascript"></script>
+	<script src="library/elements.js" type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="img/pokemon/sprite.css">
+	<script type="text/javascript">
+		function load(){
+			var wrapper = document.getElementById('wrapper');
+			for (var i = 0; i < raid.length; i++){
+				var table = document.createElement('table');
+					table.setAttribute('class', 'pkm level' + raid[i].level);
+					table.setAttribute('onclick', 'show("one", this);');
+					table.setAttribute('id', 'nummer' + i);
+				var line = document.createElement('tr');
+					var bossbox = document.createElement('td');
+						bossbox.setAttribute('rowspan', '2');
+						var bossimg = document.createElement('img');
+							bossimg.setAttribute('src', 'img/pokemon/bilder/' + raid[i].pokemon + '.png');
+						bossbox.appendChild(bossimg);
+					line.appendChild(bossbox);
+					var percent = 100 / raid[i].counters.length;
+					for (var a = 0; a < raid[i].counters.length; a++){
+						var counterbox = document.createElement('td');
+							counterbox.setAttribute('width', percent + '%');
+							var counterimg = document.createElement('i');
+								counterimg.setAttribute('class', 'sprite sprite-' + parseInt(raid[i].counters[a].pokemon, 10));
+						 	counterbox.appendChild(counterimg);
+						line.appendChild(counterbox);
+					};
+					
+				table.appendChild(line);
+				var elementline = document.createElement('tr');
+					for (var a = 0; a < raid[i].counters.length; a++){
+						var counterelementbox = document.createElement('td');
+						for (var b = 0; b < raid[i].counters[a].element.length; b++){
+							var counterelementimg = document.createElement('img');
+								counterelementimg.setAttribute('src', 'img/element/bilder/' + raid[i].counters[a].element[b].toLowerCase() + '.png');
+								counterelementimg.setAttribute('width', '30px');
+							counterelementbox.appendChild(counterelementimg);
+						};
+						elementline.appendChild(counterelementbox);
+					};
+				table.appendChild(elementline);
+				wrapper.appendChild(table);
+			};
+			if(!localStorage.getItem('countersid')){
+				var elementtoshow = '';
+			}else{
+				var elementtoshow = document.getElementById(localStorage.getItem('countersid'));
+			};
+			if(!localStorage.getItem('counters')){}else{
+				show(localStorage.getItem('counters'), elementtoshow);
+			};
+		};
+		function show(classname, element){
+			var alltables = document.getElementsByClassName('pkm');
+			if(classname == 'all'){
+				for (var i = alltables.length - 1; i >= 0; i--) {
+					alltables[i].removeAttribute('style');
+				};
+				localStorage.setItem('counters', classname);
+			}else if(classname == 'one'){
+				for (var i = alltables.length - 1; i >= 0; i--) {
+					alltables[i].setAttribute('style', 'display: none;');
+				};
+				element.removeAttribute('style');
+				localStorage.setItem('counters', classname);
+				localStorage.setItem('countersid', element.getAttribute('id'));
+			}else{
+				for (var i = alltables.length - 1; i >= 0; i--) {
+					alltables[i].setAttribute('style', 'display: none;');
+				};
+				var elemtoshow = document.getElementsByClassName('level' + classname);
+				for (var i = elemtoshow.length - 1; i >= 0; i--) {
+					elemtoshow[i].removeAttribute('style');
+				};
+				localStorage.setItem('counters', classname);
+			};
+		};
+	</script>
+	<style type="text/css">
+		table {
+			border-collapse: collapse;
+			width: 100%;
+			border: 3px solid #000;
+		}
+		td {
+			text-align: center;
+		}
+		.pkm tr:nth-child(odd) td:first-child {
+			border-right: 3px solid #000;
+		}
+		.meny td {
+			border: 3px solid #000;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		.meny td:hover {
+			background-color: #000;
+			color: #FFF;
+		}
+		#footer{
+			font-size:10px!important;
+			text-align: center;
+			padding-top: 40px;
+		}
+		#footer a{
+			color:#000;
+		}
+		#footer a:hover{
+			color: #E87600;
+			text-decoration: overline underline;
+		}
+	</style>
+</head>
+<body onload="load();">
+	<table class="meny">
+		<tr>
+			<td onclick="show('all')">Alla</td>
+			<td onclick="show('1')">1-raids</td>
+			<td onclick="show('2')">2-raids</td>
+			<td onclick="show('3')">3-raids</td>
+			<td onclick="show('4')">4-raids</td>
+			<td onclick="show('5')">5-raids</td>
+			<td onclick="show('ex')">EX-raids</td>
+		</tr>
+	</table>
+	<div id="wrapper"></div>
+	<div id="footer"><span id="logg">Info taget från: <a href="https://www.reddit.com/r/TheSilphRoad/comments/6k8a9v/raid_boss_chart_cp_range_weaknesses_best/">The SilphRoad</a>&nbsp;¦&nbsp;Bilder tagna från: <a href="http://theartificial.nl/pokemonicons/">The Artificial</a></span>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="https://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
+</body>
+</html>
