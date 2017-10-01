@@ -83,7 +83,7 @@ var gyms = [{
 		latitud: '12.918173'
 	}
 },{
-	namn: 'Ãns Ankare',
+	namn: 'Åns Ankare',
 	id: '',
 	location: {
 		longitud: '55.59065',
@@ -412,7 +412,7 @@ var gyms = [{
 		latitud: '13.054099'
 	}
 },{
-	namn: 'Vit Ãngel',
+	namn: 'Vit Ängel',
 	id: '',
 	location: {
 		longitud: '55.594699',
@@ -629,7 +629,7 @@ var gyms = [{
 		latitud: '12.988468'
 	}
 },{
-	namn: 'Ãngeln',
+	namn: 'Ängeln',
 	id: '',
 	location: {
 		longitud: '55.598662',
@@ -671,7 +671,7 @@ var gyms = [{
 		latitud: '12.996046'
 	}
 },{
-	namn: 'Ãngel och fåglar',
+	namn: 'Ängel och fåglar',
 	id: '',
 	location: {
 		longitud: '55.601481',
@@ -1091,7 +1091,7 @@ var gyms = [{
 		latitud: '13.022143'
 	}
 },{
-	namn: 'Bell Tower ',
+	namn: 'Bell Tower',
 	id: '',
 	location: {
 		longitud: '55.580087',
@@ -1196,7 +1196,7 @@ var gyms = [{
 		latitud: '13.024845'
 	}
 },{
-	namn: 'Stukad Mås ',
+	namn: 'Stukad Mås',
 	id: 'stukad-m_s',
 	location: {
 		longitud: '55.591587',
@@ -1273,7 +1273,7 @@ var gyms = [{
 		latitud: '13.020251'
 	}
 },{
-	namn: 'Fontänkar ',
+	namn: 'Fontänkar',
 	id: '',
 	location: {
 		longitud: '55.579983',
@@ -1385,7 +1385,7 @@ var gyms = [{
 		latitud: '13.013443'
 	}
 },{
-	namn: 'Zlatans Leende ',
+	namn: 'Zlatans Leende',
 	id: '',
 	location: {
 		longitud: '55.587961',
@@ -1455,7 +1455,7 @@ var gyms = [{
 		latitud: '13.035529'
 	}
 },{
-	namn: 'Eternal Umbrella ',
+	namn: 'Eternal Umbrella',
 	id: 'eternal-umbrella',
 	location: {
 		longitud: '55.600559',
@@ -1490,7 +1490,7 @@ var gyms = [{
 		latitud: '13.001791'
 	}
 },{
-	namn: 'Anna Lisa Fountain ',
+	namn: 'Anna Lisa Fountain',
 	id: 'anna-lisa-fountain',
 	location: {
 		longitud: '55.601118',
