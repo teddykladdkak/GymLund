@@ -4711,7 +4711,7 @@ var allpokemon = {
 		nummer: '245',
 		namn: 'Suicune',
 		type: ['Water'],
-		moves: ['Extrasensory', 'Snarl', 'Hydro Pump', 'Bubble Beam', 'Water Pulse'],
+		moves: ['Hidden Power', 'Extrasensory', 'Snarl', 'Hydro Pump', 'Bubble Beam', 'Water Pulse'],
 		attack: ['Extrasensory', 'Hydro Pump'],
 		defend: ['Hidden Power', 'Hydro Pump']
 	},{
