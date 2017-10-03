@@ -1042,11 +1042,11 @@ var gyms = [{
 		latitud: '13.006438'
 	}
 },{
-	namn: ' Waves',
+	namn: 'Waves',
 	id: '',
 	location: {
-		longitud: ' 55.56181',
-		latitud: ' 13.014387'
+		longitud: '55.56181',
+		latitud: '13.014387'
 	}
 },{
 	namn: 'Parts',

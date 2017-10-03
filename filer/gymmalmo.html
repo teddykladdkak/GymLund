@@ -26,61 +26,14 @@
 	<script src="library/gymmalmo.js" type="text/javascript"></script>
 	<script src="library/script.js" type="text/javascript"></script>
 	<link rel="stylesheet" type="text/css" href="library/style.css">
-	<script type="text/javascript">
-		function makeid(namn){return namn.replace(/\s/g,'').replace( /\W/g , '').toLowerCase();};
-		function load(){
-			getLocation();
-			var gymarray = [];
-			for (var i = gyms.length - 1; i >= 0; i--) {
-				var id = makeid(gyms[i].namn);
-				gyms[i]['nyid'] = id;
-				gymarray.push(id);
-			};
-			gymarray.sort();
-			var gymsorted = [];
-			for (var i = gymarray.length - 1; i >= 0; i--) {
-				for (var a = gyms.length - 1; a >= 0; a--) {
-					if(gyms[a].nyid == gymarray[i]){
-						gymsorted.push(gyms[a]);
-					};
-				};
-			};
-			var wrapper = document.getElementById('wrapper');
-			var table = document.createElement('table');
-				for (var i = gymsorted.length - 1; i >= 0; i--) {
-					var line = document.createElement('tr');
-						line.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + gymsorted[i].location.longitud + ',' + gymsorted[i].location.latitud + '")');
-						line.setAttribute('data-lon', gymsorted[i].location.longitud);
-						line.setAttribute('data-lat', gymsorted[i].location.latitud);
-						line.setAttribute('class', gymsorted[i].namn.split('')[0]);
-						var iconbox = document.createElement('td');
-							var gymimg = document.createElement('img');
-							if(!gymsorted[i].id){
-								gymimg.setAttribute('src', 'img/gymlund/mini/battle-at-lund-monument.png');
-							}else{
-								gymimg.setAttribute('src', 'img/gymmalmo/mini/' + gymsorted[i].id + '.png');
-							};
-							iconbox.appendChild(gymimg);
-						line.appendChild(iconbox);
-						var textbox = document.createElement('td');
-							var linktext = document.createTextNode(gymsorted[i].namn);
-							textbox.appendChild(linktext);
-						line.appendChild(textbox);
-					table.appendChild(line);
-				};
-				wrapper.appendChild(table);
-			sidemenu();
-			marklistelem('A');
-		};
-	</script>
 </head>
-<body onload="load()" onscroll="getTopElement()">
+<body onload="load('img', 'gymmalmo')" onscroll="getTopElement()">
 <div id="head">
 	<h1>Gym i Malmö</h1>
 	<p><b>OBS!!! Under konstruktion, ej kontrollerat att gym excisterar!!!</b></p>
 	<p>Klicka på önskat gym för att se var den är på kartan.</p>
 	<p>Instruktioner för att installera denna webappen:</p><p><a href="http://www.teddyprojekt.tk/manualer/iphone.html" class="link" target="_blank">iOS</a> <a href="http://www.teddyprojekt.tk/manualer/android.html" class="link" target="_blank">Android</a></p>
-	<p>Andra hjälpmedel:</p><p><a href="pokenamn.html" class="link" target="_blank">PokeNamn</a> <a href="poketime.html" class="link" target="_blank">PokeTime</a> <a href="raidcounter.html" class="link" target="_blank">RaidCounter</a>
+	<p>Andra hjälpmedel:</p><p><span id="andraplatser"></span></p>
 </div>
 <div id="wrapper"></div>
 <div id="footer"><span id="logg">[]</span>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="https://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>

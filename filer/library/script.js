@@ -1,3 +1,51 @@
+var allletters = ['1', '2', '3', '4', '5', '6', '7', '8', '9', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö'];
+var andraplatser = [{
+	namn: 'PokeNamn',
+	url: 'pokenamn.html'
+},{
+	namn: 'PokeTime',
+	url: 'poketime.html'
+},{
+	namn: 'RaidCounter',
+	url: 'raidcounter.html'
+},{
+	namn: 'GymMalmo',
+	url: 'gymmalmo.html'
+},{
+	namn: 'GymGbg',
+	url: 'gymgbg.html'
+}];
+function sortgym(data){
+	var gymarray = {};
+	for (var i = data.length - 1; i >= 0; i--) {
+		var firstletter = data[i].namn.charAt(0).toLowerCase();
+		if(gymarray[firstletter] == null){
+			gymarray[firstletter] = [];
+		};
+		gymarray[firstletter].push(data[i]);
+	};
+	var gymsorted = [];
+	var headletters = Object.keys(gymarray).sort();
+	window['allletters'] = headletters;
+	for (var i = 0; i < headletters.length; i++){
+		var undersorted = gymarray[headletters[i]].sort();
+		console.log(gymarray[headletters[i]]);
+
+		var namearray = [];
+		for (var a = 0; a < gymarray[headletters[i]].length; a++){
+			namearray.push(gymarray[headletters[i]][a].namn.toLowerCase())
+		};
+		namearray.sort();
+		for (var a = 0; a < namearray.length; a++){
+			for (var b = 0; b < gymarray[headletters[i]].length; b++){
+				if(namearray[a].toLowerCase() == gymarray[headletters[i]][b].namn.toLowerCase()){
+					gymsorted.push(gymarray[headletters[i]][b]);
+				};
+			};
+		};
+	};
+	return gymsorted;
+}
 var lon = '0';
 var lat = '0';
 function getLocation() {
@@ -40,34 +88,52 @@ function getDistanceFromLatLonInKm(lat2,lon2) {
 function deg2rad(deg) {
 	return deg * (Math.PI/180)
 };
-
-function load(){
+function addandraplatser(){
+	var wrapper = document.getElementById('andraplatser');
+	for (var i = 0; i < andraplatser.length; i++){
+		//var p = document.createElement('p');
+			var a = document.createElement('a');
+				a.setAttribute('href', andraplatser[i].url);
+				a.setAttribute('class', 'link');
+				a.setAttribute('target', '_blank');
+				var text = document.createTextNode(andraplatser[i].namn);
+				a.appendChild(text);
+		//	p.appendChild(a);
+		//wrapper.appendChild(p);
+		wrapper.appendChild(a);
+		var space = document.createTextNode(' ');
+		wrapper.appendChild(space);
+	};
+};
+function load(spriteorimg, folder){
 	getLocation();
-	var gymarray = [];
-	for (var i = gyms.length - 1; i >= 0; i--) {
-		gymarray.push(gyms[i].namn);
-	};
-	gymarray.sort();
-	var gymsorted = [];
-	for (var i = gymarray.length - 1; i >= 0; i--) {
-		for (var a = gyms.length - 1; a >= 0; a--) {
-			if(gyms[a].namn == gymarray[i]){
-				gymsorted.push(gyms[a]);
-			};
-		};
-	};
+	addandraplatser();
+	var gymsorted = sortgym(gyms);
 	var wrapper = document.getElementById('wrapper');
 	var table = document.createElement('table');
-		for (var i = gymsorted.length - 1; i >= 0; i--) {
+		for (var i = 0; i < gymsorted.length; i++){
 			var line = document.createElement('tr');
 				line.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + gymsorted[i].location.longitud + ',' + gymsorted[i].location.latitud + '")');
 				line.setAttribute('data-lon', gymsorted[i].location.longitud);
 				line.setAttribute('data-lat', gymsorted[i].location.latitud);
-				line.setAttribute('class', gymsorted[i].namn.split('')[0]);
+				line.setAttribute('class', gymsorted[i].namn.split('')[0].toUpperCase());
 				var iconbox = document.createElement('td');
-					var icon = document.createElement('i');
-						icon.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
-					iconbox.appendChild(icon);
+					if(spriteorimg == 'sprite'){
+						var gymimg = document.createElement('i');
+						if(!gymsorted[i].id){
+							gymimg.setAttribute('class', 'sprite sprite-battle-at-lund-monument');
+						}else{
+							gymimg.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
+						};
+					}else if(spriteorimg == 'img'){
+						var gymimg = document.createElement('img');
+						if(!gymsorted[i].id){
+							gymimg.setAttribute('src', 'img/gymlund/mini/battle-at-lund-monument.png');
+						}else{
+							gymimg.setAttribute('src', 'img/' + folder + '/mini/' + gymsorted[i].id + '.png');
+						};
+					};
+					iconbox.appendChild(gymimg);
 				line.appendChild(iconbox);
 				var textbox = document.createElement('td');
 					var linktext = document.createTextNode(gymsorted[i].namn);
@@ -80,19 +146,18 @@ function load(){
 	marklistelem('A');
 };
 function sidemenu(){
-	var allletters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'Å', 'Ä', 'Ö'].reverse();
 	var wrapper = document.getElementById('list-navigation');
 		var li = document.createElement('li');
-		for (var i = allletters.length - 1; i >= 0; i--) {
-			var fisrtelement = document.getElementsByClassName(allletters[i])[0];
-			if(!fisrtelement){}else{
+		for (var i = 0; i < allletters.length; i++){
+			/*var fisrtelement = document.getElementsByClassName(allletters[i])[0];
+			if(!fisrtelement){}else{*/
 				var p = document.createElement('p');
-					p.setAttribute('data-letter', allletters[i]);
+					p.setAttribute('data-letter', allletters[i].toUpperCase());
 					p.setAttribute('onclick', 'scrollToSelected(this);');
-					var ptext = document.createTextNode(allletters[i]);
+					var ptext = document.createTextNode(allletters[i].toUpperCase());
 					p.appendChild(ptext);
 				li.appendChild(p);
-			};
+			/*};*/
 		};
 		wrapper.appendChild(li);
 };
