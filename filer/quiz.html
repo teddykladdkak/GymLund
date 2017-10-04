@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!--
+
+	Skapa så antingen en gymbild eller karta visas. Skulle även kunna mixa kartstilarna. Några med 3d och några vanliga och några med satelit.
+
+	-->
+	<title>GymQuiz</title>
+	<script src='https://maps.googleapis.com/maps/api/js?v=3.exp'></script>
+	<script src="library/gymlund.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		var allrandomnumbers = [];
+		function init_map(location){
+			var myOptions = {
+				zoom: 18,
+				center: new google.maps.LatLng(location.longitud,location.latitud),
+				mapTypeId: 'satellite'
+			};
+			map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+			marker = new google.maps.Marker({
+				map: map,position: new google.maps.LatLng(location.longitud,location.latitud)
+			});
+		};
+		function Shuffle(o) {
+			for(var j, x, i = o.length; i; j = parseInt(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+			return o;
+		};
+		function loadrandomnumbers(){
+			var numberofarrays = [];
+			for (var i = gyms.length - 1; i >= 0; i--) {
+				numberofarrays.push(i);
+			};
+			var valuesshuffled = Shuffle(numberofarrays);
+			window['allrandomnumbers'] = valuesshuffled;
+		};
+		function startgame(){
+			document.getElementById('startbutton').setAttribute('style', 'display: none;');
+			var firstnumber = window['allrandomnumbers'][0];
+			console.log(firstnumber);
+			var buttonarray = [{namn: gyms[firstnumber].namn, todo: 'right'}];
+			for (var i = 3 - 1; i >= 0; i--) {
+				var x = Math.floor((Math.random() * gyms.length));
+				buttonarray.push({namn: gyms[x].namn, todo: 'wrong'});
+			}
+			var buttonshuffled = Shuffle(buttonarray);
+			var wrapper = document.getElementById('answers');
+			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
+			for (var i = buttonshuffled.length - 1; i >= 0; i--) {
+				answerbutton(buttonshuffled[i].namn, buttonshuffled[i].todo);
+			}
+			//answerbutton(gyms[firstnumber].namn, 'wrong');
+			init_map(gyms[firstnumber].location);
+			window['allrandomnumbers'].shift();
+		};
+		function answerbutton(text, right){
+			var wrapper = document.getElementById('answers');
+				var span = document.createElement('span');
+					span.setAttribute('class', 'button');
+					span.setAttribute('onclick', 'checkanswer(this, "' + right + '")');
+					var textelem = document.createTextNode(text);
+					span.appendChild(textelem);
+				wrapper.appendChild(span);
+		};
+		function checkanswer(element, todo){
+			if(todo == 'wrong'){
+				element.setAttribute('style', 'background-color: red;');
+			}else{
+				startgame();
+			};
+		};
+		function load(){
+			loadrandomnumbers();
+		};
+	</script>
+	<style type="text/css">
+		body {
+			background-image: -webkit-linear-gradient(315deg, hsla(0, 0%, 100%, .95), rgba(174, 254, 158, .99));
+			background-image: linear-gradient(135deg, hsla(0, 0%, 100%, .95), rgba(174, 254, 158, .99));
+		}
+		.button{
+			border-radius: 25px;
+			background-color: lightgreen;
+			padding: 7px;
+			display: inline-block;
+			margin: 5px;
+			color: #000;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+		}
+		#gmap_canvas img{
+			max-width:none!important;
+			background:none!important
+		}
+		#stuffwrapper{
+			text-align: center;
+		}
+		h2, p {
+			padding-top: 0px;
+			padding-bottom: 5px;
+			margin-top: 0px;
+			margin-bottom: 5px;
+		}
+	</style>
+</head>
+<body onload="load();">
+<h2>Gym Quiz</h2>
+<p>Det finns 104 Pokemon Go gym i Lund. Säker på att du vet vilka alla är?</p>
+<div id="stuffwrapper">
+<span class="button" onclick="startgame();" id="startbutton">Starta!</span>
+<span id="answers"></span>
+<div style='overflow:hidden;height:440px;width:100%;'>
+	<div id='gmap_canvas' style='height:440px;width:100%;'></div>
+</div>
+</div>
+</body>
+</html>
