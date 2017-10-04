@@ -14,6 +14,12 @@ var andraplatser = [{
 },{
 	namn: 'GymGbg',
 	url: 'gymgbg.html'
+},{
+	namn: 'GymQuiz',
+	url: 'quiz.html'
+},{
+	namn: 'RandomGym',
+	url: 'randomgym.html'
 }];
 function sortgym(data){
 	var gymarray = {};
