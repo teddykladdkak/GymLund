@@ -15,30 +15,57 @@
 			return o;
 		};
 		function loadrandomnumbers(){
+			window['allrandomnumbers'] = makerandomnumbers();
+		};
+		function makerandomnumbers(){
 			var numberofarrays = [];
 			for (var i = gyms.length - 1; i >= 0; i--) {
 				numberofarrays.push(i);
 			};
-			var valuesshuffled = Shuffle(numberofarrays);
-			window['allrandomnumbers'] = valuesshuffled;
+			return Shuffle(numberofarrays);
 		};
 		function startgame(){
 			document.getElementById('startbutton').setAttribute('style', 'display: none;');
-			var firstnumber = window['allrandomnumbers'][0];
-			console.log(firstnumber);
-			var buttonarray = [{namn: gyms[firstnumber].namn, todo: 'right'}];
-			for (var i = 3 - 1; i >= 0; i--) {
-				var x = Math.floor((Math.random() * gyms.length));
-				buttonarray.push({namn: gyms[x].namn, todo: 'wrong'});
-			}
-			var buttonshuffled = Shuffle(buttonarray);
-			var wrapper = document.getElementById('answers');
-			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
-			for (var i = buttonshuffled.length - 1; i >= 0; i--) {
-				answerbutton(buttonshuffled[i].namn, buttonshuffled[i].todo);
-			}
-			karta(gyms[firstnumber].location);
-			window['allrandomnumbers'].shift();
+			if(window['allrandomnumbers'].length == 0){
+
+			}else{
+				var firstnumber = window['allrandomnumbers'][0];
+				console.log(firstnumber);
+				var buttonarray = [{namn: gyms[firstnumber].namn, todo: 'right'}];
+
+				var wrongbuttons = makerandomnumbers()
+
+				for (var i = 3 - 1; i >= 0; i--) {
+					if(wrongbuttons[i] == firstnumber){
+						var wrongnumber = wrongbuttons[i] + 1;
+					}else{
+						var wrongnumber = wrongbuttons[i];
+					};
+					buttonarray.push({namn: gyms[wrongnumber].namn, todo: 'wrong'});
+				};
+				var buttonshuffled = Shuffle(buttonarray);
+				var wrapper = document.getElementById('answers');
+				while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
+				for (var i = buttonshuffled.length - 1; i >= 0; i--) {
+					answerbutton(buttonshuffled[i].namn, buttonshuffled[i].todo);
+				};
+
+				var todonumber = Math.floor((Math.random() * 2) + 1);
+				if(todonumber == 1){
+					if(gyms[firstnumber].id == ''){
+						karta(gyms[firstnumber].embed);
+					}else{
+						image(gyms[firstnumber].id);
+					};
+				}else{
+					if(gyms[firstnumber].embed == ''){
+						image(gyms[firstnumber].id);
+					}else{
+						karta(gyms[firstnumber].embed);
+					};
+				};
+				window['allrandomnumbers'].shift();
+			};
 		};
 		function answerbutton(text, right){
 			var wrapper = document.getElementById('answers');
@@ -58,10 +85,24 @@
 		};
 		function load(){
 			loadrandomnumbers();
+			var antalgymwrapper = document.getElementById('antalgym');
+			while (antalgymwrapper.hasChildNodes()) {antalgymwrapper.removeChild(antalgymwrapper.firstChild);};
+				var valuetext = document.createTextNode(gyms.length);
+				antalgymwrapper.appendChild(valuetext);
 		};
-		function karta(){
+		function karta(url){
+			var img = document.getElementById('ikon');
+				img.setAttribute('style', 'display: none;');
 			var iframe = document.getElementById('karta');
-				iframe.src = 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.3597498544996!2d13.183088315929163!3d55.717499980543934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzAzLjAiTiAxM8KwMTEnMDcuMCJF!5e0!3m2!1ssv!2sus!4v1507116926264';
+				iframe.removeAttribute('style');
+				iframe.src = url;
+		};
+		function image(id){
+			var iframe = document.getElementById('karta');
+				iframe.setAttribute('style', 'display: none;');
+			var img = document.getElementById('ikon');
+				img.removeAttribute('style');
+				img.setAttribute('src', 'img/gymlund/large/' + id + '.png');
 		};
 	</script>
 	<style type="text/css">
@@ -72,7 +113,8 @@
 		.button{
 			border-radius: 25px;
 			background-color: lightgreen;
-			padding: 7px;
+			padding: 15px;
+			font-size: 20px;
 			display: inline-block;
 			margin: 5px;
 			color: #000;
@@ -102,11 +144,12 @@
 </head>
 <body onload="load();">
 <h2>Gym Quiz</h2>
-<p>Det finns 104 Pokemon Go gym i Lund. Säker på att du vet vilka alla är?</p>
+<p>Det finns <span id="antalgym">XXXXX</span> Pokemon Go gym i Lund. Säker på att du vet vilka alla är?</p>
 <div id="stuffwrapper">
 <span class="button" onclick="startgame();" id="startbutton">Starta!</span>
 <span id="answers"></span>
 <iframe src="" id="karta" frameborder="0"></iframe>
+<div><img src="" id="ikon"></div>
 </div>
 </body>
 </html>
