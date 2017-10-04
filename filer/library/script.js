@@ -29,8 +29,6 @@ function sortgym(data){
 	window['allletters'] = headletters;
 	for (var i = 0; i < headletters.length; i++){
 		var undersorted = gymarray[headletters[i]].sort();
-		console.log(gymarray[headletters[i]]);
-
 		var namearray = [];
 		for (var a = 0; a < gymarray[headletters[i]].length; a++){
 			namearray.push(gymarray[headletters[i]][a].namn.toLowerCase())
@@ -88,26 +86,37 @@ function getDistanceFromLatLonInKm(lat2,lon2) {
 function deg2rad(deg) {
 	return deg * (Math.PI/180)
 };
-function addandraplatser(){
-	var wrapper = document.getElementById('andraplatser');
+function addparagraph(element, text){
+	var info = document.createElement('p');
+		var infotext = document.createTextNode(text);
+		info.appendChild(infotext);
+	element.appendChild(info);
+};
+function addbutton(element, text, url){
+	var span = document.createElement('span');
+		span.setAttribute('class', 'link')
+		var a = document.createElement('a');
+			a.setAttribute('href', url);
+			a.setAttribute('target', '_blank');
+			var textelem = document.createTextNode(text);
+			a.appendChild(textelem);
+		span.appendChild(a);
+	element.appendChild(span);
+};
+function head(){
+	var wrapper = document.getElementById('headcontent');
+	addparagraph(wrapper, 'Klicka på önskat gym för att se var den är på kartan.');
+	addparagraph(wrapper, 'Instruktioner för att installera denna webappen:');
+	addbutton(wrapper, 'iOS', 'http://www.teddyprojekt.tk/manualer/iphone.html');
+	addbutton(wrapper, 'Android', 'http://www.teddyprojekt.tk/manualer/android.html');
+	addparagraph(wrapper, 'Andra hjälpmedel:');
 	for (var i = 0; i < andraplatser.length; i++){
-		//var p = document.createElement('p');
-			var a = document.createElement('a');
-				a.setAttribute('href', andraplatser[i].url);
-				a.setAttribute('class', 'link');
-				a.setAttribute('target', '_blank');
-				var text = document.createTextNode(andraplatser[i].namn);
-				a.appendChild(text);
-		//	p.appendChild(a);
-		//wrapper.appendChild(p);
-		wrapper.appendChild(a);
-		var space = document.createTextNode(' ');
-		wrapper.appendChild(space);
+		addbutton(wrapper, andraplatser[i].namn, andraplatser[i].url);
 	};
 };
 function load(spriteorimg, folder){
 	getLocation();
-	addandraplatser();
+	head();
 	var gymsorted = sortgym(gyms);
 	var wrapper = document.getElementById('wrapper');
 	var table = document.createElement('table');
