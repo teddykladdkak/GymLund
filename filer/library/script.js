@@ -123,7 +123,7 @@ function head(){
 		addbutton(wrapper, andraplatser[i].namn, andraplatser[i].url);
 	};
 	addparagraph(wrapper, 'Gillar du detta?');
-	addbutton(wrapper, 'Donera några Pokémon bollar', 'https://donorbox.org/teddyprojekt-tk', 'custom-dbox-popup');
+	addbutton(wrapper, 'Donera några Pokébollar', 'https://donorbox.org/teddyprojekt-tk', 'custom-dbox-popup');
 	installdonatebutton();
 };
 function installdonatebutton(){
