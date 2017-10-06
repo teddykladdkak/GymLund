@@ -60,11 +60,17 @@
 			};
 			if(sprak == 'sv'){
 				var infotext = 'Genom att skriva in stats från achivements i Pokemon Go, kan detta verktyg räkna ut hur lång tid det kommer ta att uppnå alla mål i spelet.'
+				var donationtext = 'Gillar du detta?';
 			}else if(sprak == 'eng'){
 				var infotext = 'By entering stats from achivements in Pokemon Go, this tool can calculate how long it will take to achieve all goals in the game.'
+				var donationtext = 'Do you like this?';
 			}else{
 				var infotext = 'Valt språk stödjs inte tyvärr.'
+				var donationtext = 'Donera gärna för att jag ska få mer tid att täcka buggar som detta';
 			};
+			var donation = document.getElementById('donationtext');
+				var donationtextelem = document.createTextNode(donationtext);
+				donation.appendChild(donationtextelem);
 			var info = document.getElementById('info');
 				var infotextelem = document.createTextNode(infotext);
 				info.appendChild(infotextelem);
@@ -486,14 +492,36 @@
 			color: #E87600;
 			text-decoration: overline underline;
 		}
+		.donation{
+			border-radius: 25px;
+			background-color: lightgreen;
+			padding: 5px;
+			display: inline-block;
+			margin: 5px;
+			color: #000;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+		}
 	</style>
+	<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+  	<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
 </head>
 <body onload="load();">
 <div id="wrapper">
 	<table>
 		<tr><td width="100%"><h1>PokeTime</h1></td><td style="white-space: nowrap;"><img src="img/sprak/eng.png" onclick="chooselang('eng')" style="margin-right: 5px;"><img src="img/sprak/sv.png" onclick="chooselang('sv')"></td></tr>
 	</table>
-	<p id="info"></p>
+	<p id="info"></p><br/>
+	<p><span id="donationtext"></span> <a href="https://donorbox.org/teddyprojekt-tk" class="donation custom-dbox-popup">Donera några Pokémon bollar<img src="img/donation/pokeball.png"></a></p>
 	<div id="inputs">
 		<h2>Skriv in manuellt</h2>
 	</div>

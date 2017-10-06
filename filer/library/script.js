@@ -98,12 +98,15 @@ function addparagraph(element, text){
 		info.appendChild(infotext);
 	element.appendChild(info);
 };
-function addbutton(element, text, url){
+function addbutton(element, text, url, extraclass){
 	var span = document.createElement('span');
 		span.setAttribute('class', 'link')
 		var a = document.createElement('a');
 			a.setAttribute('href', url);
 			a.setAttribute('target', '_blank');
+			if(!extraclass){}else{
+				a.setAttribute('class', extraclass);
+			};
 			var textelem = document.createTextNode(text);
 			a.appendChild(textelem);
 		span.appendChild(a);
@@ -119,7 +122,22 @@ function head(){
 	for (var i = 0; i < andraplatser.length; i++){
 		addbutton(wrapper, andraplatser[i].namn, andraplatser[i].url);
 	};
+	addparagraph(wrapper, 'Gillar du detta?');
+	addbutton(wrapper, 'Donera några Pokémon bollar', 'https://donorbox.org/teddyprojekt-tk', 'custom-dbox-popup');
+	installdonatebutton();
 };
+function installdonatebutton(){
+	var head = document.getElementsByTagName('head')[0];
+		var firstscript = document.createElement('script');
+			firstscript.setAttribute('src', 'https://donorbox.org/install-popup-button.js');
+			firstscript.setAttribute('type', 'text/javascript');
+			firstscript.setAttribute('defer', '');
+		head.appendChild(firstscript);
+		var secondscript = document.createElement('script');
+			var secondscriptkod = document.createTextNode('window.DonorBox = { widgetLinkClassName: "custom-dbox-popup" }');
+  			secondscript.appendChild(secondscriptkod);
+  		head.appendChild(secondscript);
+}
 function load(spriteorimg, folder){
 	getLocation();
 	head();

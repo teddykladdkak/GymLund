@@ -448,16 +448,48 @@
 		.center, .center img {
 			text-align: center;
 		}
-		#footer {
-			margin-top: 50px;
-			color: gray;
-			font-size: 10px;
+		#footer{
+			font-size:10px!important;
+			text-align: center;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			color:#000;
+		}
+		#footer a{
+			color:#000;
+		}
+		#footer a:hover{
+			color: #E87600;
+			text-decoration: overline underline;
+		}
+		.donation{
+			border-radius: 25px;
+			background-color: lightgreen;
+			padding: 5px;
+			display: inline-block;
+			margin: 5px;
+			color: #000;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			max-width: 300px;
 		}
 	</style>
+	<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+  	<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
 </head>
 <body onload="load();">
 <input type="button" value="Visa bara slututvecklingar" onclick="visadoljpokemon(this)" name="">
 <input type="button" value="Visa information" onclick="visadolj(this);" name="">
+<p>Gillar du detta?<a href="https://donorbox.org/teddyprojekt-tk" class="donation custom-dbox-popup">Donera några Pokémon bollar <img src="img/donation/pokeball.png"></a></p>
 <div id="info" style="display: none;">
 	<h1>Information</h1>
 	<p>Denna applikaitonen skapades då man i samband med raids inte ser vilka attacker ens pokemon har. Visst man kan söka efter dom i nuläget, men finns inget annat sätt. Såg en kille som visade denna tekniken att koda pokemonnamnen för att ge så mycket information som det går. För att förenkla processen gjorde jag detta verktyg till mig själv för att snabbare skapa kodade namnen. Förklaring kan du läsa nedan.</p>
@@ -474,6 +506,8 @@
 <div id="defense"></div>
 <div id="result" onclick="copy(this);"><h1><span id="firstmovepaste"></span><span id="secondmovepaste"></span><span id="energynummer"></span><span id="firstbetygwrapper"></span><span id="secondbetygwrapper"></span><span id="ivpaste">0</span>%</h1></div>
 <input type="text" id="copyinput">
-<div id="footer">Information "lånat" från: <a href="https://pokemon.gameinfo.io/" target="_blank">GameInfo</a>, <a href="http://theartificial.nl/pokemonicons/" target="_blank">theartificial</a></div>
+<div id="footer">
+	Information från: <a href="https://pokemon.gameinfo.io/" target="_blank">GameInfo</a>&nbsp;¦&nbsp;Bilder från: <a href="http://theartificial.nl/pokemonicons/" target="_blank">theartificial</a>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="https://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
+</div>
 </body>
 </html>

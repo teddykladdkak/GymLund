@@ -138,11 +138,47 @@
 			margin-bottom: 5px;
 		}
 		#karta {
-			height: 450px;
+			height: 355px;
 			width: 100%;
 			border: 0;
 		}
+		#footer{
+			font-size:10px!important;
+			text-align: center;
+			padding-top: 40px;
+			padding-bottom: 40px;
+			color:#000;
+		}
+		#footer a{
+			color:#000;
+		}
+		#footer a:hover{
+			color: #E87600;
+			text-decoration: overline underline;
+		}
+		.donation{
+			border-radius: 25px;
+			background-color: lightgreen;
+			padding: 5px;
+			display: inline-block;
+			margin: 5px;
+			color: #000;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			max-width: 300px;
+		}
 	</style>
+	<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+  	<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
 </head>
 <body onload="load();">
 <h2>Gym Quiz</h2>
@@ -152,6 +188,10 @@
 <span id="answers"></span>
 <iframe src="" id="karta" frameborder="0"></iframe>
 <div><img src="" id="ikon"></div>
+</div>
+<p>Gillar du detta?<a href="https://donorbox.org/teddyprojekt-tk" class="donation custom-dbox-popup">Donera några Pokémon bollar<img src="img/donation/pokeball.png"></a></p>
+<div id="footer">
+	2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="https://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
 </div>
 </body>
 </html>

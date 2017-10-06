@@ -78,8 +78,31 @@
 		}
 		.center{
 			text-align: center;
+			min-height: 422px;
+		}
+		.donation{
+			border-radius: 25px;
+			background-color: lightgreen;
+			padding: 5px;
+			display: inline-block;
+			margin: 5px;
+			color: #000;
+			cursor: pointer;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+			user-select: none;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			text-decoration: none;
+			max-width: 300px;
 		}
 	</style>
+	<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
+  	<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
 </head>
 <body onload="load();">
 	<div id="start">
@@ -95,6 +118,7 @@
 			<img src="" id="icon">
 		</div>
 	</div>
+	<p>Gillar du detta?<a href="https://donorbox.org/teddyprojekt-tk" class="donation custom-dbox-popup">Donera några Pokémon bollar<img src="img/donation/pokeball.png"></a></p>
 	<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
