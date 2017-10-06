@@ -23,36 +23,58 @@
 	<script type="text/javascript" src="library/achivements.js"></script>
 	<script type="text/javascript" src="library/levels.js"></script>
 	<script type="text/javascript">
-		var extraelement = ['startdate', 'totalxp', 'rattata', 'magicarp'];
+		var extraelement = [{
+			namn: {
+				sv: 'Start datum',
+				eng: 'Start date'
+			},
+			id: 'startdate',
+			type: 'date',
+			noimage: 'true'
+		},{
+			namn: {
+				sv: 'Totalt införskaffad XP',
+				eng: 'Total obtained XP'
+			},
+			id: 'totalxp',
+			noimage: 'true'
+		},{
+			namn: {
+				sv: 'Fångade Rattata',
+				eng: 'Caught Rattata'
+			},
+			id: 'rattata'
+		}, {
+			namn: {
+				sv: 'Fångade Magikarp',
+				eng: 'Caught Magikarp'
+			},
+			id: 'magicarp'
+		}];
 		var antalpokemonattfanga = 251;
 		function load(){
+			if(!localStorage.getItem('poketimesprak')){
+				var sprak = 'sv';
+			}else{
+				var sprak = localStorage.getItem('poketimesprak');
+			};
+			if(sprak == 'sv'){
+				var infotext = 'Genom att skriva in stats från achivements i Pokemon Go, kan detta verktyg räkna ut hur lång tid det kommer ta att uppnå alla mål i spelet.'
+			}else if(sprak == 'eng'){
+				var infotext = 'By entering stats from achivements in Pokemon Go, this tool can calculate how long it will take to achieve all goals in the game.'
+			}else{
+				var infotext = 'Valt språk stödjs inte tyvärr.'
+			};
+			var info = document.getElementById('info');
+				var infotextelem = document.createTextNode(infotext);
+				info.appendChild(infotextelem);
 			var wrapper = document.getElementById('inputs');
 			var table = document.createElement('table');
+			for (var i = 0; i < extraelement.length; i++){
+				makeinputelem(table, extraelement[i], sprak);
+			};
 			for (var i = 0; i < achivements.length; i++){
-					var tr = document.createElement('tr');
-						var tdinput = document.createElement('td');
-							tdinput.setAttribute('width', '100%');
-							var head = document.createElement('p');
-								var headtext = document.createTextNode(achivements[i].namn);
-								head.appendChild(headtext);
-							tdinput.appendChild(head);
-							var input = document.createElement('input');
-								input.setAttribute('id', achivements[i].id);
-								input.setAttribute('onchange', 'save(this)');
-								input.setAttribute('type', 'number');
-								if(!localStorage.getItem('poketime' + achivements[i].id)){}else{
-									input.setAttribute('value', localStorage.getItem('poketime' + achivements[i].id));
-								};
-							tdinput.appendChild(input);
-						tr.appendChild(tdinput);
-						var tdimg = document.createElement('td');
-							tdimg.setAttribute('class', 'tdimg');
-							var img = document.createElement('img');
-								img.setAttribute('src', 'img/achivements/bilder/' + achivements[i].id + '.png');
-								img.setAttribute('height', '50px');
-							tdimg.appendChild(img);
-						tr.appendChild(tdimg);
-					table.appendChild(tr);
+				makeinputelem(table, achivements[i]);
 			};
 			wrapper.appendChild(table);
 			for (var i = extraelement.length - 1; i >= 0; i--) {
@@ -60,20 +82,69 @@
 					document.getElementById(extraelement[i]).value = localStorage.getItem('poketime' + extraelement[i]);
 				};
 			};
-			
-			
 			printcalc();
 		};
+		function makeinputelem(wrapper, data, sprak){
+			var tr = document.createElement('tr');
+				var tdinput = document.createElement('td');
+					tdinput.setAttribute('width', '100%');
+					var head = document.createElement('p');
+						if(!sprak){
+							var headtext = document.createTextNode(data.namn);
+						}else{
+							var headtext = document.createTextNode(data.namn[sprak]);
+						}
+						head.appendChild(headtext);
+					tdinput.appendChild(head);
+					var input = document.createElement('input');
+						input.setAttribute('id', data.id);
+						input.setAttribute('onchange', 'save(this)');
+						if(!data.type){
+							input.setAttribute('type', 'number');
+						}else{
+							input.setAttribute('type', data.type);
+						};
+						if(!localStorage.getItem('poketime' + data.id)){}else{
+							input.setAttribute('value', localStorage.getItem('poketime' + data.id));
+						};
+					tdinput.appendChild(input);
+				tr.appendChild(tdinput);
+				var tdimg = document.createElement('td');
+					tdimg.setAttribute('class', 'tdimg');
+					if(!data.noimage){
+						var img = document.createElement('img');
+							img.setAttribute('src', 'img/achivements/bilder/' + data.id + '.png');
+							img.setAttribute('height', '50px');
+						tdimg.appendChild(img);
+					};
+				tr.appendChild(tdimg);
+			wrapper.appendChild(tr);
+		};
 		function printcalc(){
+			if(!localStorage.getItem('poketimesprak')){
+				var sprak = 'sv';
+			}else{
+				var sprak = localStorage.getItem('poketimesprak');
+			};
+			if(sprak == 'sv'){
+				printsv();
+			}else if(sprak == 'eng'){
+				printeng();
+			}else{
+				var infotext = 'Valt språk stödjs inte tyvärr.'
+			};
+		};
+		function printsv(){
 			var alldata = getvalues();
-			console.log(alldata);
 			var wrapper = document.getElementById('resultat');
 			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
 				var h = document.createElement('h2');
 					var htext = document.createTextNode('Resultat');
 					h.appendChild(htext);
 				wrapper.appendChild(h);
-			print('Du har nu fångat ' + pokedex(alldata) + ' olika Pokemon, du har ' + (antalpokemonattfanga - pokedex(alldata)) + ' st Pokemon kvar att hitta.');
+			var antalpokemonkvar = (antalpokemonattfanga - pokedex(alldata));
+			if(!antalpokemonkvar){var antalpokemonkvar = '?';};
+			print('Du har nu fångat ' + pokedex(alldata) + ' olika Pokemon, du har ' + antalpokemonkvar + ' st Pokemon kvar att hitta.');
 			print('Du har nu spelat i sammanlagt ' + dagarspelat(alldata) + ' dagar.');
 			print('Du har hittills vandrat ' + gattjordenrunt(alldata) + '% runt jorden.');
 			print('Du har evolvat ' + percentfangaoevolve(alldata) + '% av alla Pokemon du fångat.');
@@ -83,20 +154,22 @@
 			print('- På en kilometer fångar du ' + pokemonperkm(alldata) + ' st pokemon.');
 			print('- Besöker dagligen ' + pokestopperdag(alldata) + ' pokestop.');
 			print('- Införskaffar dig dagligen ' + xpperdag(alldata) + ' XP.');
-			printrubrik('Level:');
-			print('Din level är nu ' + nuvarandelvl(alldata).nuvarande.nr + ' och XP till nästa level är ' + nastalevel(alldata) + '.');
-			print(precentnastalevel(alldata) + '% är avklarat mot nästa level.');
-			print('Det är ' + dagartillnastalvl(alldata) + ' dagar kvar innan du levlar nästa gång.');
-			printrubrik('För att levla behöver du antingen:');
-			print('- Besöka ' + antaltolvl(alldata, 50) + ' st pokestop.');
-			print('- Ta dig till en ny stad/område besöka ' + antaltolvl(alldata, 250) + ' st nya pokestop.');
-			print('- Fånga ' + antaltolvl(alldata, 100) + ' st pokemon.');
-			print('- Evolva ' + antaltolvl(alldata, 500) + ' st pokemon.');
-			print('- Delta i ' + antaltolvl(alldata, 3000) + ' st raider.');
-			print('- Genomföra ' + antaltolvl(alldata, 85000) + ' st powerevolves.');
-			printrubrik('Resan mot level 40:');
-			print('Det är ca ' + daystoforty(alldata) + ' dagar kvar innan du når level 40');
-			print('Du måste genomföra ' + powerevolvetoforty(alldata) + ' st powerevolves för att nå level 40.');
+			if(nuvarandelvl(alldata).nuvarande.nr == '40'){}else{
+				printrubrik('Level:');
+				print('Din level är nu ' + nuvarandelvl(alldata).nuvarande.nr + ' och XP till nästa level är ' + nastalevel(alldata) + '.');
+				print(precentnastalevel(alldata) + '% är avklarat mot nästa level.');
+				print('Det är ' + dagartillnastalvl(alldata) + ' dagar kvar innan du levlar nästa gång.');
+				printrubrik('För att levla behöver du antingen:');
+				print('- Besöka ' + antaltolvl(alldata, 50) + ' st pokestop.');
+				print('- Ta dig till en ny stad/område besöka ' + antaltolvl(alldata, 250) + ' st nya pokestop.');
+				print('- Fånga ' + antaltolvl(alldata, 100) + ' st pokemon.');
+				print('- Evolva ' + antaltolvl(alldata, 500) + ' st pokemon.');
+				print('- Delta i ' + antaltolvl(alldata, 3000) + ' st raider.');
+				print('- Genomföra ' + antaltolvl(alldata, 85000) + ' st powerevolves.');
+				printrubrik('Resan mot level 40:');
+				print('Det är ca ' + daystoforty(alldata) + ' dagar kvar innan du når level 40');
+				print('Du måste genomföra ' + powerevolvetoforty(alldata) + ' st powerevolves för att nå level 40.');
+			};
 			printrubrik('Du har ungefär fått stardust från:');
 			print('- ' + startdustforberry(alldata) + ' stardust av att ge bär till Pokemon i gym.');
 			print('- ' + stardustforpokemon(alldata) + ' stardust från att fånga pokemon.');
@@ -104,12 +177,74 @@
 			printrubrik('Gym:');
 			print('Du har förlorat ' + raidpasslost(alldata) + ' st gratis raidpass ensålänge.');
 			print('Du har försvarat gym i sammanlagt ' + daysdefending(alldata) + ' dagar.');
-			print('Timmar sedan senaste gym uppdateringen du inte försvarat ett gym: ' + hoursnotdefending(alldata) + ' timmar');
-			printrubrik('Vad som krävs för achivements:');
-			print('Du behöver fånga ' + youngster(alldata) + ' st Rattata till, för att få guld i Youngster');
-			print('Du behöver fånga ' + fisherman(alldata) + ' st Magicarp till, för att få guld i Fisherman');
+			print('Sedan senaste gym uppdateringen du inte försvarat gym i ' + hoursnotdefending(alldata) + ' timmar');
+			if(parseInt(youngster(alldata)) >= 1 || parseInt(fisherman(alldata)) >= 1){
+				printrubrik('Vad som krävs för achivements:');
+			};
+			if(parseInt(youngster(alldata)) >= 1){
+				print('Du behöver fånga ' + youngster(alldata) + ' st Rattata till, för att få guld i Youngster');
+			};
+			if(parseInt(fisherman(alldata)) >= 1){
+				print('Du behöver fånga ' + fisherman(alldata) + ' st Magicarp till, för att få guld i Fisherman');
+			};
 			printrubrik('Om du varit med sedan starten:');
 			print('Om du hade börjat spela när Pokemon Go lanserades, skulle du idag fått ihop ' + xpfrombegining(alldata) + ' XP och varit level ' + levelfrombegining(alldata));
+		};
+		function printeng(){
+			var alldata = getvalues();
+			var wrapper = document.getElementById('resultat');
+			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
+				var h = document.createElement('h2');
+					var htext = document.createTextNode('Results');
+					h.appendChild(htext);
+				wrapper.appendChild(h);
+			var antalpokemonkvar = (antalpokemonattfanga - pokedex(alldata));
+			if(!antalpokemonkvar){var antalpokemonkvar = '?';};
+			print('You have now captured ' + pokedex(alldata) + ' different Pokemon, you have ' + antalpokemonkvar + ' Pokemon left to find.');
+			print('You have now played in a total of ' + dagarspelat(alldata) + ' days.');
+			print('You have walked, so far ' + gattjordenrunt(alldata) + '% around the earth.');
+			print('You have evolved ' + percentfangaoevolve(alldata) + '% of all Pokemon you captured.');
+			printrubrik('On average you have:');
+			print('- Walked: ' + genomsnittgattdag(alldata) + ' km/day.');
+			print('- Hatched your eggs every ' + genomsnittgafaragg(alldata) + ' km.');
+			print('- In a kilometer you catch ' + pokemonperkm(alldata) + ' pokemon.');
+			print('- Visiting daily ' + pokestopperdag(alldata) + ' pokestop.');
+			print('- You obtain daily ' + xpperdag(alldata) + ' XP.');
+			if(nuvarandelvl(alldata).nuvarande.nr == '40'){}else{
+				printrubrik('Level:');
+				print('Your level is now ' + nuvarandelvl(alldata).nuvarande.nr + ' and XP to the next level is ' + nastalevel(alldata) + '.');
+				print(precentnastalevel(alldata) + '% progressed to the next level.');
+				print('It\'s ' + dagartillnastalvl(alldata) + ' days left before you level next time.');
+				printrubrik('To level you either need to:');
+				print('- Visit ' + antaltolvl(alldata, 50) + ' pokestop.');
+				print('- Travel to a new city/area and visit ' + antaltolvl(alldata, 250) + ' new pokestop.');
+				print('- Capture ' + antaltolvl(alldata, 100) + ' pokemon.');
+				print('- Evolve ' + antaltolvl(alldata, 500) + ' pokemon.');
+				print('- Participate in ' + antaltolvl(alldata, 3000) + ' raids.');
+				print('- Perform ' + antaltolvl(alldata, 85000) + ' powerevolves.');
+				printrubrik('The journey towards level 40:');
+				print('It\'s about ' + daystoforty(alldata) + ' days left before you reach level 40');
+				print('You must complete ' + powerevolvetoforty(alldata) + ' powerevolves to reach level 40.');
+			};
+			printrubrik('You have roughly got stardust from:');
+			print('- ' + startdustforberry(alldata) + ' stardust by giving berrys to Pokemon in gym.');
+			print('- ' + stardustforpokemon(alldata) + ' stardust from catching pokemon.');
+			print('- ' + stadustforegg(alldata) + ' stardust from hatching eggs.');
+			printrubrik('Gym:');
+			print('You have now lost ' + raidpasslost(alldata) + ' free raidpasses.');
+			print('You have defended gyms in total of ' + daysdefending(alldata) + ' days.');
+			print('Since the latest gym update you have not been defending gyms for ' + hoursnotdefending(alldata) + ' hours');
+			if(parseInt(youngster(alldata)) >= 1 || parseInt(fisherman(alldata)) >= 1){
+				printrubrik('What is required for achivements:');
+			};
+			if(parseInt(youngster(alldata)) >= 1){
+				print('You need to catch ' + youngster(alldata) + ' Ratata, to get gold in Youngster');
+			};
+			if(parseInt(fisherman(alldata)) >= 1){
+				print('You need to catch ' + fisherman(alldata) + ' Magikarp, to get gold in Fisherman');
+			};
+			printrubrik('If you\'ve been playing since the start:');
+			print('If you had started playing when Pokemon Go was launched, you would have now earnd ' + xpfrombegining(alldata) + ' XP and been in level ' + levelfrombegining(alldata));
 		};
 		function printrubrik(text){
 			var wrapper = document.getElementById('resultat');
@@ -119,7 +254,7 @@
 				wrapper.appendChild(p);
 		};
 		function print(text){
-			console.log(text);
+			//console.log(text);
 			var wrapper = document.getElementById('resultat');
 				var p = document.createElement('p');
 					var ptext = document.createTextNode(text);
@@ -134,7 +269,7 @@
 				resultarray[achivements[i].id] = input;
 			};
 			for (var i = extraelement.length - 1; i >= 0; i--) {
-				resultarray[extraelement[i]] = document.getElementById(extraelement[i]).value;
+				resultarray[extraelement[i].id] = document.getElementById(extraelement[i].id).value;
 			};
 			return resultarray;
 		};
@@ -145,6 +280,10 @@
 		};
 		function nuvarandelvl(data){
 			if(data.totalxp == ''){return {"nuvarande": "?", "nasta": "?"};};
+			if(levels[levels.length - 1].totalxp <= data.totalxp){
+				var array = {"nuvarande": {"nr": "40"}, "nasta": {"nr": "?"}};
+				return array;
+			};
 			for(i=0;i<levels.length;i++){
 				if(parseInt(levels[i].totalxp) >= parseInt(data.totalxp)){
 					var array = {"nuvarande": levels[i-1], "nasta": levels[i]};
@@ -290,6 +429,10 @@
 			var nyxp = {"totalxp": xpfrombegining(data)};
 			return nuvarandelvl(nyxp).nuvarande.nr;
 		};
+		function chooselang(sprak){
+			localStorage.setItem('poketimesprak', sprak);
+			location.reload();
+		};
 	</script>
 	<style type="text/css">
 		*{
@@ -333,18 +476,12 @@
 </head>
 <body onload="load();">
 <div id="wrapper">
-	<h1>PokeTime</h1>
-	<p>Genom att skriva in stats från achivements i Pokemon Go, kan detta verktyg räkna ut statistik.</p>
+	<table>
+		<tr><td width="100%"><h1>PokeTime</h1></td><td style="white-space: nowrap;"><img src="img/sprak/eng.png" onclick="chooselang('eng')" style="margin-right: 5px;"><img src="img/sprak/sv.png" onclick="chooselang('sv')"></td></tr>
+	</table>
+	<p id="info"></p>
 	<div id="inputs">
 		<h2>Skriv in manuellt</h2>
-		<p>Start datum</p>
-		<input type="date" id="startdate" onchange="save(this)">
-		<p>Totalt införskaffad XP</p>
-		<input type="number" id="totalxp" onchange="save(this)">
-		<p>Fångade Magicarp</p>
-		<input type="number" id="magicarp" onchange="save(this)">
-		<p>Fångade Rattata</p>
-		<input type="number" id="rattata" onchange="save(this)">
 	</div>
 	<div id="resultat"></div>
 </div>
