@@ -27,6 +27,7 @@
 			return Shuffle(numberofarrays);
 		};
 		function startgame(){
+			startload();
 			document.getElementById('startbutton').setAttribute('style', 'display: none;');
 			if(window['allrandomnumbers'].length == 0){
 
@@ -81,8 +82,10 @@
 		function checkanswer(element, todo){
 			if(todo == 'wrong'){
 				element.setAttribute('style', 'background-color: red;');
+				addscore('fel')
 			}else{
 				startgame();
+				addscore('ratt')
 			};
 		};
 		function load(){
@@ -105,6 +108,24 @@
 			var img = document.getElementById('ikon');
 				img.removeAttribute('style');
 				img.setAttribute('src', 'img/gymlund/large/' + id + '.png');
+			stopload();
+		};
+		function startload(){
+			document.getElementById('content').setAttribute('class', 'loading');
+			var img = document.getElementById('ikon');
+				img.setAttribute('style', 'display: none;');
+			var iframe = document.getElementById('karta');
+				iframe.setAttribute('style', 'display: none;');
+		};
+		function stopload(){
+			document.getElementById('content').removeAttribute('class');
+		};
+		function addscore(what){
+			var wrapper = document.getElementById(what);
+			var oldval = parseInt(wrapper.innerText);
+			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
+				var newval = document.createTextNode(oldval + 1);
+				wrapper.appendChild(newval);
 		};
 	</script>
 	<style type="text/css">
@@ -176,6 +197,30 @@
 			text-decoration: none;
 			max-width: 300px;
 		}
+		#content{
+			height: 355px;
+			background-color: #181b1d;
+		}
+		#scorewrapper {
+			margin-top: 5px;
+			font-size: 20px;
+		}
+		#score {
+			background-color: #181b1d;
+			padding: 5px 20px;
+			color: #FFF;
+		}
+		#ratt{
+			color: lightgreen;
+		}
+		#fel{
+			color: #fb6d6d;
+		}
+		.loading{
+			background-image: url('img/loading.gif');
+			background-repeat: no-repeat;
+			background-position: center;
+		}
 	</style>
 	<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
   	<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
@@ -186,12 +231,15 @@
 <div id="stuffwrapper">
 <span class="button" onclick="startgame();" id="startbutton">Starta!</span>
 <span id="answers"></span>
+<div id="scorewrapper"><span id="score"><span id="ratt">0</span> / <span id="fel">0</span></span></div>
+<div id="content">
 <iframe src="" id="karta" frameborder="0"></iframe>
 <div><img src="" id="ikon"></div>
 </div>
+</div>
 <p>Gillar du detta?<a href="https://donorbox.org/teddyprojekt-tk" class="donation custom-dbox-popup">Donera några Pokébollar<img src="img/donation/pokeball.png"></a></p>
 <div id="footer">
-	2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="https://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
+	Bilder tagna från: <a href="http://www.laughinggif.com/gifs/ex20ynsslr" target="_blank">laughinggif</a>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="https://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
 </div>
 </body>
 </html>
