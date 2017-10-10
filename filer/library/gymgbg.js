@@ -882,7 +882,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Porterkaret Kungens Kanna',
-	id: '',
+	id: 'porterkaret-kungens-kanna',
 	location: {
 		longitud: '57.69037',
 		latitud: '11.906208'
@@ -931,7 +931,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Skating Dome At Röda Sten',
-	id: '',
+	id: 'skating-dome-at-r_da-sten',
 	location: {
 		longitud: '57.688597',
 		latitud: '11.900886'
@@ -945,7 +945,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Röda Sten',
-	id: '',
+	id: 'r_da-sten',
 	location: {
 		longitud: '57.688637',
 		latitud: '11.89885'
@@ -1001,7 +1001,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Anchor Art',
-	id: '',
+	id: 'anchor-art',
 	location: {
 		longitud: '57.685959',
 		latitud: '11.884813'
@@ -2772,7 +2772,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Gamla Ankarberget',
-	id: '',
+	id: 'gamla-ankarberget',
 	location: {
 		longitud: '57.6943',
 		latitud: '11.93109'
@@ -2786,14 +2786,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Skansen Kronan',
-	id: '',
+	id: 'skansen-kronan',
 	location: {
 		longitud: '57.695956',
 		latitud: '11.955466'
 	}
 },{
 	namn: 'Karl Johankyrkan',
-	id: '',
+	id: 'karl-johankyrkan',
 	location: {
 		longitud: '57.696124',
 		latitud: '11.92302'
@@ -2807,14 +2807,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Hagakyrkan',
-	id: '',
+	id: 'hagakyrkan',
 	location: {
 		longitud: '57.699049',
 		latitud: '11.9618'
 	}
 },{
 	namn: 'Gosskörens Hus I Haga',
-	id: '',
+	id: 'gossk_rens-hus-i-haga',
 	location: {
 		longitud: '57.698378',
 		latitud: '11.958734'
@@ -2835,21 +2835,21 @@ var gyms = [{
 	}
 },{
 	namn: 'Lion at Haga',
-	id: '',
+	id: 'lion-at-haga',
 	location: {
 		longitud: '57.698394',
 		latitud: '11.956985'
 	}
 },{
 	namn: 'Viktoriabron.',
-	id: '',
+	id: 'viktoriabron_',
 	location: {
 		longitud: '57.700939',
 		latitud: '11.963872'
 	}
 },{
 	namn: 'Oscar Fredriks kyrka',
-	id: '',
+	id: 'oscar-fredriks-kyrka',
 	location: {
 		longitud: '57.696639',
 		latitud: '11.947321'
@@ -2863,14 +2863,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Kopparmärra',
-	id: '',
+	id: 'kopparm_rra',
 	location: {
 		longitud: '57.704584',
 		latitud: '11.969531'
 	}
 },{
 	namn: 'Klingners Plats',
-	id: '',
+	id: 'klingners-plats',
 	location: {
 		longitud: '57.696532',
 		latitud: '11.941355'
@@ -2884,14 +2884,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Göteborgs Äldsta Landshövdingehus',
-	id: '',
+	id: 'g_teborgs-_ldsta-landsh_vdingehus',
 	location: {
 		longitud: '57.698274',
 		latitud: '11.953867'
 	}
 },{
 	namn: 'Wood Horses',
-	id: '',
+	id: 'wood-horses',
 	location: {
 		longitud: '57.697242',
 		latitud: '11.929575'
@@ -2905,7 +2905,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Matteuskyrkan',
-	id: '',
+	id: 'matteuskyrkan',
 	location: {
 		longitud: '57.697431',
 		latitud: '11.931607'
@@ -2926,7 +2926,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Dan Andersson-statyn',
-	id: '',
+	id: 'dan-andersson-statyn',
 	location: {
 		longitud: '57.699715',
 		latitud: '11.953435'
@@ -2940,28 +2940,28 @@ var gyms = [{
 	}
 },{
 	namn: 'Termometern',
-	id: '',
+	id: 'termometern',
 	location: {
 		longitud: '57.704033',
 		latitud: '11.96407'
 	}
 },{
 	namn: 'Skeppet på Tredje Långgatan',
-	id: '',
+	id: 'skeppet-p_-tredje-l_nggatan',
 	location: {
 		longitud: '57.69856',
 		latitud: '11.945102'
 	}
 },{
 	namn: 'Domkyrkofontänen',
-	id: '',
+	id: 'domkyrkofont_nen',
 	location: {
 		longitud: '57.704379',
 		latitud: '11.963969'
 	}
 },{
 	namn: 'Skulpturen',
-	id: '',
+	id: 'skulpturen',
 	location: {
 		longitud: '57.698982',
 		latitud: '11.943146'
@@ -2975,7 +2975,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Henriksberg',
-	id: '',
+	id: 'henriksberg',
 	location: {
 		longitud: '57.699583',
 		latitud: '11.936389'
@@ -2989,7 +2989,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Kämpebron',
-	id: '',
+	id: 'k_mpebron',
 	location: {
 		longitud: '57.705942',
 		latitud: '11.96308'
@@ -3980,5 +3980,40 @@ var gyms = [{
 	location: {
 		longitud: '57.697291',
 		latitud: '11.979496'
+	}
+},{
+	namn: 'Andstatyn',
+	id: 'andstatyn',
+	location: {
+		longitud: '57.692363',
+		latitud: '11.917167'
+	}
+},{
+	namn: 'Konstnärlig Bro',
+	id: '',
+	location: {
+		longitud: '57.690719',
+		latitud: '11.919929'
+	}
+},{
+	namn: 'Gråbergets Gamla Vattenreservoir',
+	id: '',
+	location: {
+		longitud: '57.690686',
+		latitud: '11.923185'
+	}
+},{
+	namn: 'Klippans Färjeläge',
+	id: 'klippans-f_rjel_ge',
+	location: {
+		longitud: '57.692655',
+		latitud: '11.911751'
+	}
+},{
+	namn: 'Vattningsho För Hästar',
+	id: 'vattningsho-f_r-h_star',
+	location: {
+		longitud: '57.691123',
+		latitud: '11.915593'
 	}
 }];

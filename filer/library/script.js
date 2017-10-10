@@ -139,6 +139,8 @@ function installdonatebutton(){
   		head.appendChild(secondscript);
 }
 function load(spriteorimg, folder){
+	var hittade = 0;
+	var ejhittade = 0;
 	getLocation();
 	head();
 	var gymsorted = sortgym(gyms);
@@ -155,15 +157,19 @@ function load(spriteorimg, folder){
 						var gymimg = document.createElement('i');
 						if(!gymsorted[i].id){
 							gymimg.setAttribute('class', 'sprite sprite-battle-at-lund-monument');
+							++ejhittade;
 						}else{
 							gymimg.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
+							++hittade;
 						};
 					}else if(spriteorimg == 'img'){
 						var gymimg = document.createElement('img');
 						if(!gymsorted[i].id){
 							gymimg.setAttribute('src', 'img/gymlund/mini/battle-at-lund-monument.png');
+							++ejhittade;
 						}else{
 							gymimg.setAttribute('src', 'img/' + folder + '/mini/' + gymsorted[i].id + '.png');
+							++hittade;
 						};
 					};
 					iconbox.appendChild(gymimg);
@@ -177,6 +183,7 @@ function load(spriteorimg, folder){
 		wrapper.appendChild(table);
 	sidemenu();
 	marklistelem('A');
+	console.log(hittade + ' st gym besökta. ' + ejhittade + ' st ej besökta.');
 };
 function sidemenu(){
 	var wrapper = document.getElementById('list-navigation');
