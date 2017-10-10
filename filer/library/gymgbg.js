@@ -875,7 +875,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Tunnel Tales',
-	id: '',
+	id: 'tunnel-tales',
 	location: {
 		longitud: '57.689964',
 		latitud: '11.911375'
@@ -973,7 +973,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Bergsmålningar Kungsten',
-	id: '',
+	id: 'bergsm_lningar-kungsten',
 	location: {
 		longitud: '57.680946',
 		latitud: '11.901206'
@@ -987,14 +987,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Flanking Anchors',
-	id: '',
+	id: 'flanking-anchors',
 	location: {
 		longitud: '57.683909',
 		latitud: '11.89218'
 	}
 },{
 	namn: 'Egyptisk Kvinna',
-	id: '',
+	id: 'egyptisk-kvinna',
 	location: {
 		longitud: '57.678744',
 		latitud: '11.901222'
@@ -1008,7 +1008,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Ofarlig Mina',
-	id: '',
+	id: 'ofarlig-mina',
 	location: {
 		longitud: '57.6837',
 		latitud: '11.890986'
@@ -1022,14 +1022,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Nya Varvsallén',
-	id: '',
+	id: 'nya-varvsall_n',
 	location: {
 		longitud: '57.677883',
 		latitud: '11.894553'
 	}
 },{
 	namn: 'Ankare (Stora Billingen)',
-	id: '',
+	id: 'ankare-_stora-billingen_',
 	location: {
 		longitud: '57.679318',
 		latitud: '11.889764'
@@ -2968,7 +2968,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Sjömanshustrun, Sjöfartsmuseet',
-	id: '',
+	id: 'sj_manshustrun_-sj_fartsmuseet',
 	location: {
 		longitud: '57.699518',
 		latitud: '11.93259'
@@ -3003,7 +3003,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Stena RORO',
-	id: '',
+	id: 'stena-roro',
 	location: {
 		longitud: '57.701125',
 		latitud: '11.945884'
