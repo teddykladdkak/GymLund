@@ -115,7 +115,9 @@ function addbutton(element, text, url, extraclass){
 function head(hittade, ejhittade, antalgym){
 	var wrapper = document.getElementById('headcontent');
 	addparagraph(wrapper, 'Klicka på önskat gym för att se var den är på kartan.');
-	addparagraph(wrapper, 'Besökt ' + hittade + ' gym och har ' + ejhittade + ' gym kvar att besöka.');
+	//addparagraph(wrapper, 100 - ((parseInt(ejhittade) / parseInt(hittade + ejhittade)) * 100)) + '% färdigt, besökt ' + hittade + ' gym och har ' + ejhittade + ' gym kvar att besöka.');
+	var procent = Math.floor(parseInt(hittade)/parseInt(antalgym)*100);
+	addparagraph(wrapper, procent + '% färdigt, besökt ' + hittade + ' gym och har ' + ejhittade + ' gym kvar att besöka.');
 	addparagraph(wrapper, 'Instruktioner för att installera denna webappen:');
 	addbutton(wrapper, 'iOS', 'http://www.teddyprojekt.tk/manualer/iphone.html');
 	addbutton(wrapper, 'Android', 'http://www.teddyprojekt.tk/manualer/android.html');
