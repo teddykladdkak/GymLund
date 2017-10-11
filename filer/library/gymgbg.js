@@ -3619,7 +3619,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Vagnhallen i Gårda',
-	id: '',
+	id: 'vagnhallen-i-g_rda',
 	location: {
 		longitud: '57.709162',
 		latitud: '11.994517'
@@ -3696,7 +3696,7 @@ var gyms = [{
 	}
 },{
 	namn: 'RymdConfetti',
-	id: '',
+	id: 'rymdconfetti',
 	location: {
 		longitud: '57.707665',
 		latitud: '11.990346'
@@ -3724,7 +3724,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Lekplatsen Stampen',
-	id: '',
+	id: 'lekplatsen-stampen',
 	location: {
 		longitud: '57.709318',
 		latitud: '11.986515'
@@ -3773,7 +3773,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Sköldpaddan',
-	id: '',
+	id: 'sk_ldpaddan',
 	location: {
 		longitud: '57.709781',
 		latitud: '11.982385'
@@ -3808,7 +3808,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Sphere in rock',
-	id: '',
+	id: 'sphere-in-rock',
 	location: {
 		longitud: '57.708908',
 		latitud: '11.978579'
