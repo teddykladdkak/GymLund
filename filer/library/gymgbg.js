@@ -3052,7 +3052,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Göteborgsoperan',
-	id: '',
+	id: 'g_teborgsoperan',
 	location: {
 		longitud: '57.711055',
 		latitud: '11.963806'
@@ -3066,7 +3066,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Källan',
-	id: '',
+	id: 'k_llan',
 	location: {
 		longitud: '57.711564',
 		latitud: '11.963721'
@@ -3395,7 +3395,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Ändhållplats linje 3 - Kålltorp',
-	id: '',
+	id: '_ndh_llplats-linje-3---k_lltorp',
 	location: {
 		longitud: '57.710257',
 		latitud: '12.023197'
@@ -3738,7 +3738,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Harvest Wall Art',
-	id: '',
+	id: 'harvest-wall-art',
 	location: {
 		longitud: '57.699202',
 		latitud: '12.00018'
@@ -3857,7 +3857,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Pagoden',
-	id: '',
+	id: 'pagoden',
 	location: {
 		longitud: '57.715649',
 		latitud: '11.973647'
@@ -3892,7 +3892,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Holmens Paviljong',
-	id: '',
+	id: 'holmens-paviljong',
 	location: {
 		longitud: '57.715126',
 		latitud: '11.971893'
@@ -3948,7 +3948,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Läppstiftet',
-	id: '',
+	id: 'l_ppstiftet',
 	location: {
 		longitud: '57.713175',
 		latitud: '11.967753'
@@ -3962,14 +3962,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Non-Violence Statue',
-	id: '',
+	id: 'non-violence-statue',
 	location: {
 		longitud: '57.698703',
 		latitud: '11.977844'
 	}
 },{
 	namn: 'Systembolaget',
-	id: '',
+	id: 'systembolaget',
 	location: {
 		longitud: '57.700388',
 		latitud: '11.97536'

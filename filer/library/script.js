@@ -112,9 +112,10 @@ function addbutton(element, text, url, extraclass){
 		span.appendChild(a);
 	element.appendChild(span);
 };
-function head(){
+function head(hittade, ejhittade){
 	var wrapper = document.getElementById('headcontent');
 	addparagraph(wrapper, 'Klicka på önskat gym för att se var den är på kartan.');
+	addparagraph(wrapper, Math.floor((parseInt(hittade) / parseInt(ejhittade)) * 100) + '% färdigt, besökt ' + hittade + ' gym och har ' + ejhittade + ' gym kvar att besöka.');
 	addparagraph(wrapper, 'Instruktioner för att installera denna webappen:');
 	addbutton(wrapper, 'iOS', 'http://www.teddyprojekt.tk/manualer/iphone.html');
 	addbutton(wrapper, 'Android', 'http://www.teddyprojekt.tk/manualer/android.html');
@@ -142,7 +143,6 @@ function load(spriteorimg, folder){
 	var hittade = 0;
 	var ejhittade = 0;
 	getLocation();
-	head();
 	var gymsorted = sortgym(gyms);
 	var wrapper = document.getElementById('wrapper');
 	var table = document.createElement('table');
@@ -181,9 +181,9 @@ function load(spriteorimg, folder){
 			table.appendChild(line);
 		};
 		wrapper.appendChild(table);
+	head(hittade, ejhittade);
 	sidemenu();
 	marklistelem('A');
-	console.log(hittade + ' st gym besökta. ' + ejhittade + ' st ej besökta. ' + Math.floor((parseInt(hittade) / parseInt(ejhittade)) * 100) + '%');
 };
 function sidemenu(){
 	var wrapper = document.getElementById('list-navigation');
