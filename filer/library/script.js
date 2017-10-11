@@ -183,7 +183,7 @@ function load(spriteorimg, folder){
 		wrapper.appendChild(table);
 	sidemenu();
 	marklistelem('A');
-	console.log(hittade + ' st gym besökta. ' + ejhittade + ' st ej besökta.');
+	console.log(hittade + ' st gym besökta. ' + ejhittade + ' st ej besökta. ' + Math.floor((parseInt(hittade) / parseInt(ejhittade)) * 100) + '%');
 };
 function sidemenu(){
 	var wrapper = document.getElementById('list-navigation');
