@@ -15,6 +15,9 @@ var andraplatser = [{
 	namn: 'GymGbg',
 	url: 'gymgbg.html'
 },{
+	namn: 'GymLandskrona',
+	url: 'gymlandskrona.html'
+},{
 	namn: 'GymQuiz',
 	url: 'quiz.html'
 },{
@@ -156,18 +159,19 @@ function load(spriteorimg, folder){
 				line.setAttribute('class', gymsorted[i].namn.split('')[0].toUpperCase());
 				var iconbox = document.createElement('td');
 					if(spriteorimg == 'sprite'){
-						var gymimg = document.createElement('i');
 						if(!gymsorted[i].id){
-							gymimg.setAttribute('class', 'sprite sprite-battle-at-lund-monument');
+							var gymimg = document.createElement('img');
+								gymimg.setAttribute('src', 'img/okand_mini.png');
 							++ejhittade;
 						}else{
-							gymimg.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
+							var gymimg = document.createElement('i');
+								gymimg.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
 							++hittade;
 						};
 					}else if(spriteorimg == 'img'){
 						var gymimg = document.createElement('img');
 						if(!gymsorted[i].id){
-							gymimg.setAttribute('src', 'img/gymlund/mini/battle-at-lund-monument.png');
+							gymimg.setAttribute('src', 'img/okand_mini.png');
 							++ejhittade;
 						}else{
 							gymimg.setAttribute('src', 'img/' + folder + '/mini/' + gymsorted[i].id + '.png');
