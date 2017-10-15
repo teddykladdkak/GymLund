@@ -65,7 +65,7 @@ table tr {
 	color: #000;
 	text-decoration: none;
 }
-#head {
+#head, #searchwrapper {
 	margin: 0px;
 	padding: 0px;
 	padding-right: 38px;
@@ -80,7 +80,7 @@ table tr {
 h1 img {
 	padding-top: 5px;
 }
-h1 {
+h1, #searchwrapper {
 	margin-top: 0px;
 	text-align: center;
 }
@@ -98,9 +98,14 @@ p {
 	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
 	color: #000;
 }
+#searchbutton {
+	zoom: 1.7;
+}
 #searchinput {
+	zoom: 2;
+}
+#searchinput, #searchbutton {
 	margin: 0px;
 	padding: 0px;
-	zoom: 3;
-	width: 99%;
+	width: 49%;
 }

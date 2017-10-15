@@ -37,35 +37,59 @@ function addserach(){
 };
 
 function showsearch(){
-	var wrapper = document.getElementsByTagName('body')[0];
-	setTimeout(function(){ wrapper.setAttribute('onclick', 'removeinput();'); }, 500);
-		var input = document.createElement('input');
-			input.setAttribute('type', 'text');
-			input.setAttribute('id', 'searchinput');
-			//input.setAttribute('onfocusout', 'removeinput();');
-			input.setAttribute('list', 'searchelements');
-		wrapper.insertBefore(input, wrapper.firstChild);
+	var wrapper = document.getElementById('head');
+		var searchwrapper = document.createElement('div');
+			searchwrapper.setAttribute('id', 'searchwrapper');
+			var input = document.createElement('input');
+				input.setAttribute('type', 'text');
+				input.setAttribute('id', 'searchinput');
+				input.setAttribute('onkeyup', 'isitsearchable(event)');
+				input.setAttribute('onchange', 'isitsearchable(event)');
+				input.setAttribute('onclick', 'isitsearchable(event)');
+				input.setAttribute('list', 'searchelements');
+			searchwrapper.appendChild(input);
+			var button = document.createElement('input');
+				button.setAttribute('type', 'button');
+				button.setAttribute('disabled', 'disabled');
+				button.setAttribute('value', 'Öppna');
+				button.setAttribute('id', 'searchbutton');
+			searchwrapper.appendChild(button);
+		wrapper.insertBefore(searchwrapper, wrapper.firstChild);
 	document.getElementById('searchinput').focus();
 };
 
-function removeinput(){
-	var wrapper = document.getElementsByTagName('body')[0];
-		wrapper.removeAttribute('onclick');
+function isitsearchable(e){
 	var input = document.getElementById('searchinput');
+	var button = document.getElementById('searchbutton');
 	if(!input){}else{
 		var resultarray = [];
 		for (var i = gyms.length - 1; i >= 0; i--) {
 			if(gyms[i].namn.toLowerCase().indexOf(input.value.toLowerCase()) !== -1){
-			//if(gyms[i].namn == input.value){
-				//
 				resultarray.push(gyms[i]);
 			};
 		};
 		if(resultarray.length == 1){
-			window.open('http://maps.google.com/?q=' + resultarray[0].location.longitud + ',' + resultarray[0].location.latitud);
+			button.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + resultarray[0].location.longitud + ',' + resultarray[0].location.latitud + '");removesearch();');
+			button.removeAttribute('disabled');
+		}else{
+			button.setAttribute('disabled', 'disabled');
+			button.removeAttribute('onclick');
 		};
-		input.parentNode.removeChild(input);
 	};
+	e = e || window.event;
+    if (e.keyCode == 13) {
+    	console.log(e.keyCode);
+        button.click();
+    };
+};
+
+function removesearch(){
+	setTimeout(function(){
+		var wrapper = document.getElementById('searchwrapper');
+		if(!wrapper){}else{
+			wrapper.parentNode.removeChild(wrapper);
+		};
+	}, 500);
 };
 
 function sortgym(data){
