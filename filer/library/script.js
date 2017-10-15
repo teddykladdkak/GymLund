@@ -38,16 +38,19 @@ function addserach(){
 
 function showsearch(){
 	var wrapper = document.getElementsByTagName('body')[0];
+	setTimeout(function(){ wrapper.setAttribute('onclick', 'removeinput();'); }, 500);
 		var input = document.createElement('input');
 			input.setAttribute('type', 'text');
 			input.setAttribute('id', 'searchinput');
-			input.setAttribute('onfocusout', 'removeinput();');
+			//input.setAttribute('onfocusout', 'removeinput();');
 			input.setAttribute('list', 'searchelements');
 		wrapper.insertBefore(input, wrapper.firstChild);
 	document.getElementById('searchinput').focus();
 };
 
 function removeinput(){
+	var wrapper = document.getElementsByTagName('body')[0];
+		wrapper.removeAttribute('onclick');
 	var input = document.getElementById('searchinput');
 	if(!input){}else{
 		var resultarray = [];
