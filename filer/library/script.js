@@ -50,10 +50,16 @@ function showsearch(){
 function removeinput(){
 	var input = document.getElementById('searchinput');
 	if(!input){}else{
+		var resultarray = [];
 		for (var i = gyms.length - 1; i >= 0; i--) {
-			if(gyms[i].namn == input.value){
-				window.open('http://maps.google.com/?q=' + gyms[i].location.longitud + ',' + gyms[i].location.latitud);
+			if(gyms[i].namn.toLowerCase().indexOf(input.value.toLowerCase()) !== -1){
+			//if(gyms[i].namn == input.value){
+				//
+				resultarray.push(gyms[i]);
 			};
+		};
+		if(resultarray.length == 1){
+			window.open('http://maps.google.com/?q=' + resultarray[0].location.longitud + ',' + resultarray[0].location.latitud);
 		};
 		input.parentNode.removeChild(input);
 	};
