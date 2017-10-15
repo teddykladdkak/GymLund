@@ -24,6 +24,41 @@ var andraplatser = [{
 	namn: 'RandomGym',
 	url: 'randomgym.html'
 }];
+
+function addserach(){
+	var wrapper = document.getElementById('list-navigation');
+		var li = wrapper.getElementsByTagName('li')[0];
+			var searchelem = document.createElement('p');
+				searchelem.setAttribute('class', 'searchicon');
+				searchelem.setAttribute('onclick', 'showsearch();');
+				var searchicon = document.createTextNode(String.fromCharCode(9740));
+				searchelem.appendChild(searchicon);
+			li.insertBefore(searchelem, li.firstChild);
+};
+
+function showsearch(){
+	var wrapper = document.getElementsByTagName('body')[0];
+		var input = document.createElement('input');
+			input.setAttribute('type', 'text');
+			input.setAttribute('id', 'searchinput');
+			input.setAttribute('onfocusout', 'removeinput();');
+			input.setAttribute('list', 'searchelements');
+		wrapper.insertBefore(input, wrapper.firstChild);
+	document.getElementById('searchinput').focus();
+};
+
+function removeinput(){
+	var input = document.getElementById('searchinput');
+	if(!input){}else{
+		for (var i = gyms.length - 1; i >= 0; i--) {
+			if(gyms[i].namn == input.value){
+				window.open('http://maps.google.com/?q=' + gyms[i].location.longitud + ',' + gyms[i].location.latitud);
+			};
+		};
+		input.parentNode.removeChild(input);
+	};
+};
+
 function sortgym(data){
 	var gymarray = {};
 	for (var i = data.length - 1; i >= 0; i--) {
@@ -151,7 +186,12 @@ function load(spriteorimg, folder){
 	var gymsorted = sortgym(gyms);
 	var wrapper = document.getElementById('wrapper');
 	var table = document.createElement('table');
+	var datalist = document.createElement('datalist');
+		datalist.setAttribute('id', 'searchelements');
 		for (var i = 0; i < gymsorted.length; i++){
+			var searchoption = document.createElement('option');
+				searchoption.setAttribute('value', gymsorted[i].namn);
+			datalist.appendChild(searchoption);
 			var line = document.createElement('tr');
 				line.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + gymsorted[i].location.longitud + ',' + gymsorted[i].location.latitud + '")');
 				line.setAttribute('data-lon', gymsorted[i].location.longitud);
@@ -187,6 +227,7 @@ function load(spriteorimg, folder){
 			table.appendChild(line);
 		};
 		wrapper.appendChild(table);
+		wrapper.appendChild(datalist);
 	head(hittade, ejhittade, gymsorted.length);
 	sidemenu();
 	marklistelem('A');
@@ -206,6 +247,7 @@ function sidemenu(){
 			/*};*/
 		};
 		wrapper.appendChild(li);
+		addserach();
 };
 function scrollToSelected(element){
 	var letter = element.getAttribute('data-letter');
