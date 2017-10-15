@@ -308,7 +308,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Children Watchtower',
-	id: '',
+	id: 'children-watchtower',
 	location: {
 		longitud: '55.58717',
 		latitud: '13.095234'
@@ -336,28 +336,28 @@ var gyms = [{
 	}
 },{
 	namn: 'Fasaddekoration',
-	id: '',
+	id: 'fasaddekoration',
 	location: {
 		longitud: '55.587497',
 		latitud: '13.084519'
 	}
 },{
 	namn: 'Minnessten',
-	id: '',
+	id: 'minnessten',
 	location: {
 		longitud: '55.588116',
 		latitud: '13.085928'
 	}
 },{
 	namn: 'Amfiteater',
-	id: '',
+	id: 'amfiteater',
 	location: {
 		longitud: '55.588972',
 		latitud: '13.088785'
 	}
 },{
 	namn: 'Husie folkhögskola',
-	id: '',
+	id: 'husie-folkh_gskola',
 	location: {
 		longitud: '55.589826',
 		latitud: '13.082057'
@@ -371,21 +371,21 @@ var gyms = [{
 	}
 },{
 	namn: 'Minigris',
-	id: '',
+	id: 'minigris',
 	location: {
 		longitud: '55.589207',
 		latitud: '13.066719'
 	}
 },{
 	namn: 'S:t Knuts Kapell',
-	id: '',
+	id: 's_t-knuts-kapell',
 	location: {
 		longitud: '55.592901',
 		latitud: '13.042326'
 	}
 },{
 	namn: 'Broken Unicorn ',
-	id: '',
+	id: 'broken-unicorn',
 	location: {
 		longitud: '55.589963',
 		latitud: '13.065571'
@@ -399,21 +399,21 @@ var gyms = [{
 	}
 },{
 	namn: 'S:t Birgittas Kapell Fresk',
-	id: '',
+	id: 's_t-birgittas-kapell-fresk',
 	location: {
 		longitud: '55.594697',
 		latitud: '13.047948'
 	}
 },{
 	namn: 'Tre Ingångar Till Rosengård ',
-	id: '',
+	id: 'tre-ing_ngar-till-roseng_rd',
 	location: {
 		longitud: '55.594995',
 		latitud: '13.054099'
 	}
 },{
 	namn: 'Vit Ängel',
-	id: '',
+	id: 'vit-_ngel',
 	location: {
 		longitud: '55.594699',
 		latitud: '13.069453'
@@ -427,21 +427,21 @@ var gyms = [{
 	}
 },{
 	namn: '3 Figurer I En',
-	id: '',
+	id: '_-figurer-i-en',
 	location: {
 		longitud: '55.595848',
 		latitud: '13.068647'
 	}
 },{
 	namn: 'Sallerups Lusthus ',
-	id: '',
+	id: 'sallerups-lusthus',
 	location: {
 		longitud: '55.599241',
 		latitud: '13.044017'
 	}
 },{
 	namn: 'Flygplan',
-	id: '',
+	id: 'flygplan',
 	location: {
 		longitud: '55.597416',
 		latitud: '13.058943'
@@ -455,42 +455,42 @@ var gyms = [{
 	}
 },{
 	namn: 'Giant Chair',
-	id: '',
+	id: 'giant-chair',
 	location: {
 		longitud: '55.602204',
 		latitud: '13.054068'
 	}
 },{
 	namn: 'Kirsebergs Bibliotek',
-	id: '',
+	id: 'kirsebergs-bibliotek',
 	location: {
 		longitud: '55.611301',
 		latitud: '13.043027'
 	}
 },{
 	namn: 'Mölledals Mill',
-	id: '',
+	id: 'm_lledals-mill',
 	location: {
 		longitud: '55.608171',
 		latitud: '13.047796'
 	}
 },{
 	namn: 'Cracked Wooden Bear Statue',
-	id: '',
+	id: 'cracked-wooden-bear-statue',
 	location: {
 		longitud: '55.609719',
 		latitud: '13.047832'
 	}
 },{
 	namn: 'Det Bevingade Ordet av Staffan',
-	id: '',
+	id: 'det-bevingade-ordet-av-staffan',
 	location: {
 		longitud: '55.617696',
 		latitud: '13.047211'
 	}
 },{
 	namn: 'Hjärteblad av Eric Grate',
-	id: '',
+	id: 'hj_rteblad-av-eric-grate',
 	location: {
 		longitud: '55.609175',
 		latitud: '13.036419'
@@ -504,7 +504,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Backaborna Witch and Thief Memorial Stone',
-	id: '',
+	id: 'backaborna-witch-and-thief-memorial-stone',
 	location: {
 		longitud: '55.608266',
 		latitud: '13.034123'
@@ -518,7 +518,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Tuff Tuff Tåg',
-	id: '',
+	id: 'tuff-tuff-t_g',
 	location: {
 		longitud: '55.603063',
 		latitud: '13.033916'
@@ -532,7 +532,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Accumulage',
-	id: '',
+	id: 'accumulage',
 	location: {
 		longitud: '55.601267',
 		latitud: '13.029223'
@@ -1523,5 +1523,19 @@ var gyms = [{
 	location: {
 		longitud: '55.584821',
 		latitud: '13.040457'
+	}
+},{
+	namn: 'Turtlezone',
+	id: 'turtlezone',
+	location: {
+		longitud: '55.587149',
+		latitud: '13.101538'
+	}
+},{
+	namn: 'Memories Of An Airfield',
+	id: 'memories-of-an-airfield',
+	location: {
+		longitud: '55.598367',
+		latitud: '13.052094'
 	}
 }];
