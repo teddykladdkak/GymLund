@@ -174,10 +174,20 @@ var achivements = [{
 	"namn": "Legendary Pokémon",
 	"id": "legendary-pokemon",
 	"levels": {
-		"copper": "1",
-		"silver": "5",
-		"gold": "10",
+		"copper": "10",
+		"silver": "100",
+		"gold": "1000",
 		"varde": "st"
 	},
 	"forklaring": "Antal fångade legendariska Pokemon."
+},{
+	"namn": "Hoenn",
+	"id": "hoenn",
+	"levels": {
+		"copper": "5",
+		"silver": "40",
+		"gold": "90",
+		"varde": "st"
+	},
+	"forklaring": "Hur många olika pokemon du fångat från Gen 2."
 }];

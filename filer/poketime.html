@@ -51,7 +51,7 @@
 			},
 			id: 'magicarp'
 		}];
-		var antalpokemonattfanga = 251;
+		var antalpokemonattfanga = 386;
 		function load(){
 			if(!localStorage.getItem('poketimesprak')){
 				var sprak = 'sv';
@@ -307,8 +307,9 @@
 		function pokedex(data){
 			if(data.kanto == ''){return '?';};
 			if(data.johto == ''){return '?';};
+			if(data.hoenn == ''){return '?';};
 			//Antal olika pokemon sammanlagt personen fångat
-			return parseInt(data.kanto) + parseInt(data.johto);
+			return parseInt(data.kanto) + parseInt(data.johto) + parseInt(data.hoenn);
 		};
 		function dagarspelat(data){
 			if(data.startdate == ''){return '?';};
