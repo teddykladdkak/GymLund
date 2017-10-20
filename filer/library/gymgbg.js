@@ -1,6 +1,6 @@
 var gyms = [{
 	namn: 'Hotel Radisson, Lindholmen',
-	id: '',
+	id: 'hotel-radisson_-lindholmen',
 	location: {
 		longitud: '57.707728',
 		latitud: '11.9410480'
@@ -686,7 +686,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Bräcke Fyr',
-	id: '',
+	id: 'br_cke-fyr',
 	location: {
 		longitud: '57.702443',
 		latitud: '11.894971'
@@ -889,7 +889,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Älvsborgsbron',
-	id: '',
+	id: '_lvsborgsbron',
 	location: {
 		longitud: '57.692442',
 		latitud: '11.900447'
@@ -2716,14 +2716,14 @@ var gyms = [{
 	}
 },{
 	namn: 'HMS Smålands Propellrar',
-	id: '',
+	id: 'hms-sm_lands-propellrar',
 	location: {
 		longitud: '57.697012',
 		latitud: '11.910193'
 	}
 },{
 	namn: 'Klättervägg',
-	id: '',
+	id: 'kl_tterv_gg',
 	location: {
 		longitud: '57.698474',
 		latitud: '11.907298'
@@ -2800,7 +2800,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Ivana Fish of Stone',
-	id: '',
+	id: 'ivana-fish-of-stone',
 	location: {
 		longitud: '57.699308',
 		latitud: '11.912919'
@@ -2821,7 +2821,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Vindmobil',
-	id: '',
+	id: 'vindmobil',
 	location: {
 		longitud: '57.699396',
 		latitud: '11.91606'
@@ -2856,7 +2856,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Jehovas Vittnen Rikets sal Hisingen',
-	id: '',
+	id: 'jehovas-vittnen-rikets-sal-hisingen',
 	location: {
 		longitud: '57.707344',
 		latitud: '11.904236'
@@ -2898,7 +2898,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Fyren på Pir 5',
-	id: '',
+	id: 'fyren-p_-pir-_',
 	location: {
 		longitud: '57.699894',
 		latitud: '11.918336'
@@ -2919,7 +2919,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Labyrinth',
-	id: '',
+	id: 'labyrinth',
 	location: {
 		longitud: '57.701491',
 		latitud: '11.917179'
@@ -3017,28 +3017,28 @@ var gyms = [{
 	}
 },{
 	namn: 'Katt med liten vulkan',
-	id: '',
+	id: 'katt-med-liten-vulkan',
 	location: {
 		longitud: '57.714115',
 		latitud: '11.91043'
 	}
 },{
 	namn: 'Bostadsaktiebolaget Inägogatan',
-	id: '',
+	id: 'bostadsaktiebolaget-in_gogatan',
 	location: {
 		longitud: '57.711485',
 		latitud: '11.911923'
 	}
 },{
 	namn: 'Eketrägatan',
-	id: '',
+	id: 'eketr_gatan',
 	location: {
 		longitud: '57.716171',
 		latitud: '11.910251'
 	}
 },{
 	namn: 'Ankare (Eriksberg)',
-	id: '',
+	id: 'ankare-_eriksberg_',
 	location: {
 		longitud: '57.705661',
 		latitud: '11.920216'
@@ -3059,7 +3059,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Lindholms Mosaik',
-	id: '',
+	id: 'lindholms-mosaik',
 	location: {
 		longitud: '57.702856',
 		latitud: '11.933114'
@@ -3101,7 +3101,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Katten I Lådan',
-	id: '',
+	id: 'katten-i-l_dan',
 	location: {
 		longitud: '57.705749',
 		latitud: '11.927325'
@@ -3115,70 +3115,70 @@ var gyms = [{
 	}
 },{
 	namn: 'Ducks Ashore',
-	id: '',
+	id: 'ducks-ashore',
 	location: {
 		longitud: '57.704934',
 		latitud: '11.942548'
 	}
 },{
 	namn: 'Frihamnen',
-	id: '',
+	id: 'frihamnen',
 	location: {
 		longitud: '57.719202',
 		latitud: '11.960973'
 	}
 },{
 	namn: 'The Hand',
-	id: '',
+	id: 'the-hand',
 	location: {
 		longitud: '57.705033',
 		latitud: '11.936163'
 	}
 },{
 	namn: 'Di-edersekvensen',
-	id: '',
+	id: 'di-edersekvensen',
 	location: {
 		longitud: '57.704984',
 		latitud: '11.938469'
 	}
 },{
 	namn: 'Galeonsfigur',
-	id: '',
+	id: 'galeonsfigur',
 	location: {
 		longitud: '57.706573',
 		latitud: '11.927615'
 	}
 },{
 	namn: 'Rutschkana BK',
-	id: '',
+	id: 'rutschkana-bk',
 	location: {
 		longitud: '57.70941',
 		latitud: '11.921666'
 	}
 },{
 	namn: 'Temple of Doubt and Hope',
-	id: '',
+	id: 'temple-of-doubt-and-hope',
 	location: {
 		longitud: '57.706774',
 		latitud: '11.943447'
 	}
 },{
 	namn: 'Lindholmens Bibliotek',
-	id: '',
+	id: 'lindholmens-bibliotek',
 	location: {
 		longitud: '57.706578',
 		latitud: '11.937134'
 	}
 },{
 	namn: 'Aftonstjärnan',
-	id: '',
+	id: 'aftonstj_rnan',
 	location: {
 		longitud: '57.707057',
 		latitud: '11.932844'
 	}
 },{
 	namn: 'Färgglada Bollar',
-	id: '',
+	id: 'f_rgglada-bollar',
 	location: {
 		longitud: '57.708863',
 		latitud: '11.928187'
@@ -3206,14 +3206,14 @@ var gyms = [{
 	}
 },{
 	namn: 'SVT/SR',
-	id: '',
+	id: 'svt_sr',
 	location: {
 		longitud: '57.711698',
 		latitud: '11.948302'
 	}
 },{
 	namn: 'Reaching Beast',
-	id: '',
+	id: 'reaching-beast',
 	location: {
 		longitud: '57.716417',
 		latitud: '11.92554'
@@ -3227,14 +3227,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Happy Frog',
-	id: '',
+	id: 'happy-frog',
 	location: {
 		longitud: '57.716286',
 		latitud: '11.926356'
 	}
 },{
 	namn: 'LundbyBadet',
-	id: '',
+	id: 'lundbybadet',
 	location: {
 		longitud: '57.719017',
 		latitud: '11.928113'
@@ -3248,7 +3248,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Memorial Stone',
-	id: '',
+	id: 'memorial-stone',
 	location: {
 		longitud: '57.716457',
 		latitud: '11.931014'
@@ -3262,21 +3262,21 @@ var gyms = [{
 	}
 },{
 	namn: 'Göteborgs Moské',
-	id: '',
+	id: 'g_teborgs-mosk_',
 	location: {
 		longitud: '57.714585',
 		latitud: '11.94427'
 	}
 },{
 	namn: 'Keillers Park Vattentornet',
-	id: '',
+	id: 'keillers-park-vattentornet',
 	location: {
 		longitud: '57.713614',
 		latitud: '11.938538'
 	}
 },{
 	namn: 'Keillers Park Köranvisningssten',
-	id: '',
+	id: 'keillers-park-k_ranvisningssten',
 	location: {
 		longitud: '57.715854',
 		latitud: '11.939672'
@@ -4015,5 +4015,19 @@ var gyms = [{
 	location: {
 		longitud: '57.691123',
 		latitud: '11.915593'
+	}
+},{
+	namn: 'Färjenäsparken Ingång Karl IX Väg',
+	id: 'f_rjen_sparken-ingång-karl_ix-v_g',
+	location: {
+		longitud: '57.697143',
+		latitud: '11.899756'
+	}
+},{
+	namn: 'Pölseboskolan Zoo',
+	id: 'p_lseboskolan-zoo',
+	location: {
+		longitud: '57.698977',
+		latitud: '11.902275'
 	}
 }];
