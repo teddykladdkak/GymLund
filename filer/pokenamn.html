@@ -18,8 +18,10 @@
 	<script src="library/quickmoves.js" type="text/javascript"></script>
 	<script src="library/elements.js" type="text/javascript"></script>
 	<script type="text/javascript">
-		var antalpokemon = 251;
-		var pokemontoshow = ['003', '006', '009', '012', '015', '018', '020', '022', '024', '026', '028', '031', '034', '036', '038', '040', '045', '047', '049', '051', '053', '055', '057', '059', '062', '065', '068', '071', '073', '076', '078', '080', '082', '083', '085', '087', '089', '091', '094', '097', '099', '101', '103', '105', '106', '107', '108', '110', '112', '114', '115', '117', '119', '121', '122', '124', '125', '126', '127', '128', '130', '131', '132', '134', '135', '136', '139', '141', '142', '143', '144', '145', '146', '149', '150', '151', '154', '157', '160', '162', '164', '166', '168', '169', '171', '176', '178', '181', '182', '184', '185', '186', '189', '190', '192', '193', '195', '196', '197', '198', '199', '200', '201', '202', '203', '205', '206', '207', '208', '210', '211', '212', '213', '214', '215', '217', '219', '221', '222', '224', '225', '226', '227', '229', '230', '232', '233', '234', '235', '237', '241', '242', '243', '244', '245', '248', '249', '250', '251'];
+		var spritepokemon = 251;
+		var notinsprite = ['302', '353', '354', '355', '356']
+		var antalpokemon = 386;
+		var pokemontoshow = ['003', '006', '009', '012', '015', '018', '020', '022', '024', '026', '028', '031', '034', '036', '038', '040', '045', '047', '049', '051', '053', '055', '057', '059', '062', '065', '068', '071', '073', '076', '078', '080', '082', '083', '085', '087', '089', '091', '094', '097', '099', '101', '103', '105', '106', '107', '108', '110', '112', '114', '115', '117', '119', '121', '122', '124', '125', '126', '127', '128', '130', '131', '132', '134', '135', '136', '139', '141', '142', '143', '144', '145', '146', '149', '150', '151', '154', '157', '160', '162', '164', '166', '168', '169', '171', '176', '178', '181', '182', '184', '185', '186', '189', '190', '192', '193', '195', '196', '197', '198', '199', '200', '201', '202', '203', '205', '206', '207', '208', '210', '211', '212', '213', '214', '215', '217', '219', '221', '222', '224', '225', '226', '227', '229', '230', '232', '233', '234', '235', '237', '241', '242', '243', '244', '245', '248', '249', '250', '251', '302', '354', '356'];
 		function addexplain(){
 			var wrapper = document.getElementById('info');
 				var table = document.createElement('table');
@@ -164,8 +166,9 @@
 			};
 			var wrapper = document.getElementById('pokemon');
 			for (var i = 0; i < orderdpokemon.length; i++){
-				var image = document.createElement('i');
-					image.setAttribute('class', 'sprite sprite-' + parseInt(orderdpokemon[i].nummer, 10));
+				var todo = checkwhatimgtouse(orderdpokemon[i]);
+				var image = document.createElement(todo.type);
+					image.setAttribute(todo.typinfo, todo.info);
 					image.setAttribute('onclick', 'chosepokemon(this);');
 					image.setAttribute('data-nummer', orderdpokemon[i].nummer);
 					image.setAttribute('data-namn', orderdpokemon[i].namn);
@@ -176,6 +179,21 @@
 				wrapper.appendChild(image);
 			};
 		};
+		function checkwhatimgtouse(pokemon){
+			if(spritepokemon >= parseInt(pokemon.nummer)){
+				var answer = {type: 'i', typinfo: 'class', info: 'sprite sprite-' + parseInt(pokemon.nummer, 10)};
+				return answer;
+			}else{
+				for (var i = notinsprite.length - 1; i >= 0; i--) {
+					if(notinsprite[i] == pokemon.nummer){
+						var answer = {type: 'img', typinfo: 'src', info: 'img/pokemon/bilder/' + parseInt(pokemon.nummer, 10) + '.png'};
+						return answer;
+					};
+				};
+				var answer = {type: 'i', typinfo: 'class', info: 'sprite sprite-okand'};
+				return answer;
+			};
+		}
 		function chosepokemon(element){
 			removeall();
 			var allimg = element.parentElement.getElementsByTagName('i');

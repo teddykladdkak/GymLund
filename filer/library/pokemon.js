@@ -1,3 +1,4 @@
+/*https://pokemon.gameinfo.io/*/
 var allpokemon = {
 	a: [{
 		nummer: '460',
@@ -256,9 +257,9 @@ var allpokemon = {
 		nummer: '354',
 		namn: 'Banette',
 		type: ['Ghost'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Shadow Claw', 'Hex', 'Shadow Ball', 'Thunder', 'Dazzling Gleam'],
+		attack: ['Shadow Claw', 'Shadow Ball'],
+		defend: ['Hex', 'Shadow Ball']
 	},{
 		nummer: '689',
 		namn: 'Barbaracle',
@@ -1280,9 +1281,9 @@ var allpokemon = {
 		nummer: '356',
 		namn: 'Dusclops',
 		type: ['Ghost'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Feint Attack', 'Hex', 'Ice Punch', 'Shadow Punch', 'Fire Punch'],
+		attack: ['Feint Attack', 'Shadow Punch'],
+		defend: ['Hex', 'Fire Punch']
 	},{
 		nummer: '477',
 		namn: 'Dusknoir',
@@ -1294,9 +1295,9 @@ var allpokemon = {
 		nummer: '355',
 		namn: 'Duskull',
 		type: ['Ghost'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Astonish', 'Hex', 'Shadow Sneak', 'Ominous Wind', 'Night Shade'],
+		attack: ['Hex', 'Ominous Wind'],
+		defend: ['Hex', 'Ominous Wind']
 	},{
 		nummer: '269',
 		namn: 'Dustox',
@@ -4032,9 +4033,9 @@ var allpokemon = {
 		nummer: '302',
 		namn: 'Sableye',
 		type: ['Dark', 'Ghost'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Shadow Claw', 'Feint Attack', 'Power Gem', 'Shadow Sneak', 'Foul Play'],
+		attack: ['Shadow Claw', 'Foul Play'],
+		defend: ['Feint Attack', 'Foul Play']
 	},{
 		nummer: '373',
 		namn: 'Salamence',
@@ -4326,9 +4327,9 @@ var allpokemon = {
 		nummer: '353',
 		namn: 'Shuppet',
 		type: ['Ghost'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Feint Attack', 'Astonish', 'Shadow Sneak', 'Ominous Wind', 'Night Shade'],
+		attack: ['Feint Attack', 'Ominous Wind'],
+		defend: ['Astonish', 'Ominous Wind']
 	},{
 		nummer: '561',
 		namn: 'Sigilyph',
