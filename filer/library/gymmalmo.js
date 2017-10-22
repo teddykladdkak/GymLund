@@ -868,7 +868,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Kattdykartunneln',
-	id: '',
+	id: 'kattdykartunneln',
 	location: {
 		longitud: '55.565577',
 		latitud: '13.00094'
@@ -1120,7 +1120,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Inre Ringvägen',
-	id: '',
+	id: 'inre-ringv_gen',
 	location: {
 		longitud: '55.564449',
 		latitud: '13.020893'
