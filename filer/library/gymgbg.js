@@ -2016,7 +2016,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Highway Stone',
-	id: '',
+	id: 'highway-stone',
 	location: {
 		longitud: '57.68552',
 		latitud: '12.004062'
@@ -3668,7 +3668,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Skansen Lejonet',
-	id: '',
+	id: 'skansen-lejonet',
 	location: {
 		longitud: '57.714404',
 		latitud: '11.989364'
@@ -3822,7 +3822,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Giant pots of Orgryte',
-	id: '',
+	id: 'giant-pots-of-orgryte',
 	location: {
 		longitud: '57.694733',
 		latitud: '11.997449'
