@@ -70,21 +70,21 @@ var gyms = [{
 	}
 },{
 	namn: 'Skeppssättning Från Vikingatiden',
-	id: '',
+	id: 'skeppss_ttning-fr_n-vikingatiden',
 	location: {
 		longitud: '55.59153',
 		latitud: '12.922094'
 	}
 },{
 	namn: 'Red Olympia ',
-	id: '',
+	id: 'red-olympia',
 	location: {
 		longitud: '55.589659',
 		latitud: '12.918173'
 	}
 },{
-	namn: 'Åns Ankare',
-	id: '',
+	namn: 'Öns Ankare',
+	id: '_ns-ankare',
 	location: {
 		longitud: '55.59065',
 		latitud: '12.924665'
@@ -98,14 +98,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Stolpar',
-	id: '',
+	id: 'stolpar',
 	location: {
 		longitud: '55.587275',
 		latitud: '12.916129'
 	}
 },{
 	namn: 'Vattenhålet ',
-	id: '',
+	id: 'vattenh_let',
 	location: {
 		longitud: '55.588028',
 		latitud: '12.920572'
@@ -119,14 +119,14 @@ var gyms = [{
 	}
 },{
 	namn: 'MSS Signalmast',
-	id: '',
+	id: 'mss-signalmast',
 	location: {
 		longitud: '55.581881',
 		latitud: '12.91595'
 	}
 },{
 	namn: 'The Anchor',
-	id: '',
+	id: 'the-anchor',
 	location: {
 		longitud: '55.581994',
 		latitud: '12.916499'
@@ -168,7 +168,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Limhamns Miljöförening ',
-	id: '',
+	id: 'limhamns-milj_f_rening',
 	location: {
 		longitud: '55.5819',
 		latitud: '12.931178'
@@ -602,7 +602,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Happy Rooster',
-	id: '',
+	id: 'happy-rooster',
 	location: {
 		longitud: '55.600983',
 		latitud: '12.97678'
@@ -1477,7 +1477,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Passionsblomman',
-	id: '',
+	id: 'passionsblomman',
 	location: {
 		longitud: '55.598798',
 		latitud: '12.971372'
