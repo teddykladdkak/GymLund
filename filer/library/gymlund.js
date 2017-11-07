@@ -1,4 +1,12 @@
 var gyms = [{
+	namn: 'Rävshög',
+	id: '',
+	location: {
+		longitud: '55.726071',
+		latitud: '13.161614'
+	},
+	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.866568888509!2d13.159425315929496!3d55.7260709805462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMzLjkiTiAxM8KwMDknNDEuOCJF!5e0!3m2!1ssv!2sse!4v1510032265800'
+},{
 	namn: 'Lunds Akademiska Golfklubb',
 	id: '',
 	location: {
