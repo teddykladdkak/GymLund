@@ -1554,7 +1554,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Marklandsgatan Spårvagn Och Bus Station',
-	id: '',
+	id: 'marklandsgatan-sp_rvagn-och-bus-station',
 	location: {
 		longitud: '57.674367',
 		latitud: '11.935796'
@@ -2779,7 +2779,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Krokus',
-	id: '',
+	id: 'krokus',
 	location: {
 		longitud: '57.700619',
 		latitud: '11.968774'
