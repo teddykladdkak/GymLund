@@ -4018,7 +4018,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Färjenäsparken Ingång Karl IX Väg',
-	id: 'f_rjen_sparken-ingång-karl_ix-v_g',
+	id: 'f_rjen_sparken-inga_ng-karl_ix-v_g',
 	location: {
 		longitud: '57.697143',
 		latitud: '11.899756'
