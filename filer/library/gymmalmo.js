@@ -861,7 +861,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Horses in Sofieholm Parken',
-	id: '',
+	id: 'horses-in-sofieholm-parken',
 	location: {
 		longitud: '55.563914',
 		latitud: '12.991862'
@@ -882,14 +882,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Worshipper of the Sun',
-	id: '',
+	id: 'worshipper-of-the-sun',
 	location: {
 		longitud: '55.569587',
 		latitud: '13.006668'
 	}
 },{
 	namn: 'Hyllie Vattentorn',
-	id: '',
+	id: 'hyllie-vattentorn',
 	location: {
 		longitud: '55.565314',
 		latitud: '12.979257'
@@ -917,7 +917,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Födelse i Rymden',
-	id: '',
+	id: 'f_delse-i-rymden',
 	location: {
 		longitud: '55.566831',
 		latitud: '13.007011'
@@ -938,7 +938,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Broken Glass',
-	id: '',
+	id: 'broken-glass',
 	location: {
 		longitud: '55.567383',
 		latitud: '13.010575'
@@ -973,7 +973,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Tålmodigheten ',
-	id: '',
+	id: 't_lmodigheten',
 	location: {
 		longitud: '55.55909',
 		latitud: '12.987115'
@@ -1001,7 +1001,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Tre elefanter',
-	id: '',
+	id: 'tre-elefanter',
 	location: {
 		longitud: '55.572912',
 		latitud: '13.015565'
@@ -1015,7 +1015,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Dimman Fontän',
-	id: '',
+	id: 'dimman-font_n',
 	location: {
 		longitud: '55.561608',
 		latitud: '13.01159'
@@ -1043,14 +1043,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Waves',
-	id: '',
+	id: 'waves',
 	location: {
 		longitud: '55.56181',
 		latitud: '13.014387'
 	}
 },{
 	namn: 'Parts',
-	id: '',
+	id: 'parts',
 	location: {
 		longitud: '55.567151',
 		latitud: '13.018821'
@@ -1064,7 +1064,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Pippitroll',
-	id: '',
+	id: 'pippitroll',
 	location: {
 		longitud: '55.57279',
 		latitud: '13.020505'
@@ -1078,14 +1078,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Headless Dog',
-	id: '',
+	id: 'headless-dog',
 	location: {
 		longitud: '55.582341',
 		latitud: '13.014085'
 	}
 },{
 	namn: 'Duvor',
-	id: '',
+	id: 'duvor',
 	location: {
 		longitud: '55.571054',
 		latitud: '13.022143'
@@ -1113,7 +1113,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Outdoor Ping Pong',
-	id: '',
+	id: 'outdoor-ping-pong',
 	location: {
 		longitud: '55.582909',
 		latitud: '13.014783'
@@ -1134,7 +1134,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Människa Och Häst',
-	id: '',
+	id: 'm_nniska-och-h_st',
 	location: {
 		longitud: '55.57695',
 		latitud: '13.023513'
@@ -1148,7 +1148,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Urtidsmänniskor ',
-	id: '',
+	id: 'urtidsm_nniskor',
 	location: {
 		longitud: '55.566959',
 		latitud: '13.024887'
@@ -1176,7 +1176,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Empty Grafitti Lot',
-	id: '',
+	id: 'empty-grafitti-lot',
 	location: {
 		longitud: '55.586129',
 		latitud: '13.013939'
@@ -1190,7 +1190,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Fosie Kyrka',
-	id: '',
+	id: 'fosie-kyrka',
 	location: {
 		longitud: '55.56266',
 		latitud: '13.024845'
@@ -1204,14 +1204,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Droppkrona',
-	id: '',
+	id: 'droppkrona',
 	location: {
 		longitud: '55.580715',
 		latitud: '13.024652'
 	}
 },{
 	namn: 'Fountain (Katrinetorp)',
-	id: '',
+	id: 'fountain-_katrinetorp_',
 	location: {
 		longitud: '55.550959',
 		latitud: '13.004287'
@@ -1225,21 +1225,21 @@ var gyms = [{
 	}
 },{
 	namn: 'Bunkeflo Gamla Kyrkogård',
-	id: '',
+	id: 'bunkeflo-gamla-kyrkog_rd',
 	location: {
 		longitud: '55.556265',
 		latitud: '12.961588'
 	}
 },{
 	namn: 'Svågertorp Sculpture',
-	id: '',
+	id: 'sv_gertorp-sculpture',
 	location: {
 		longitud: '55.548253',
 		latitud: '12.990354'
 	}
 },{
 	namn: 'Svågertorp Station ',
-	id: '',
+	id: 'sv_gertorp-station',
 	location: {
 		longitud: '55.548031',
 		latitud: '12.991002'
@@ -1288,7 +1288,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Small Horse',
-	id: '',
+	id: 'small-horse',
 	location: {
 		longitud: '55.552796',
 		latitud: '13.023724'
