@@ -1,6 +1,6 @@
 var gyms = [{
 	namn: 'Rävshög',
-	id: '',
+	id: 'r_vsh_g',
 	location: {
 		longitud: '55.726071',
 		latitud: '13.161614'
