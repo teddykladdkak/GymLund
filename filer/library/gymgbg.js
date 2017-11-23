@@ -903,7 +903,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Arken Hotell',
-	id: '',
+	id: 'arken-hotell',
 	location: {
 		longitud: '57.696716',
 		latitud: '11.829121'
@@ -1897,7 +1897,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Fässbergs Kyrka',
-	id: '',
+	id: 'f_ssbergs-kyrka',
 	location: {
 		longitud: '57.656061',
 		latitud: '12.010039'
@@ -1918,7 +1918,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Two Stones At Mölndal Citypark',
-	id: '',
+	id: 'two-stones-at-m_lndal-citypark',
 	location: {
 		longitud: '57.657106',
 		latitud: '12.01254'
@@ -1939,7 +1939,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Torgskulptur',
-	id: '',
+	id: 'torgskulptur',
 	location: {
 		longitud: '57.657428',
 		latitud: '12.015108'
@@ -1974,7 +1974,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Bolle',
-	id: '',
+	id: 'bolle',
 	location: {
 		longitud: '57.657815',
 		latitud: '12.015202'
@@ -2002,7 +2002,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Brick Relief',
-	id: '',
+	id: 'brick-relief',
 	location: {
 		longitud: '57.660376',
 		latitud: '12.013676'
@@ -2030,7 +2030,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Stone',
-	id: '',
+	id: 'stone',
 	location: {
 		longitud: '57.661606',
 		latitud: '12.014102'
@@ -3087,7 +3087,7 @@ var gyms = [{
 	}
 },{
 	namn: 'City Arena',
-	id: '',
+	id: 'city-arena',
 	location: {
 		longitud: '57.716502',
 		latitud: '11.963735'
@@ -3192,7 +3192,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Cykelpumpen',
-	id: '',
+	id: 'cykelpumpen',
 	location: {
 		longitud: '57.720855',
 		latitud: '11.952977'
@@ -3220,7 +3220,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Discothèque Fire Monument',
-	id: '',
+	id: 'discoth_que-fire-monument',
 	location: {
 		longitud: '57.720546',
 		latitud: '11.949819'
