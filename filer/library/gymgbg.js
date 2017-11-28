@@ -1,4 +1,11 @@
 var gyms = [{
+	namn: 'Knappnål vid Wavrinskys plats',
+	id: 'knappn_l-vid-wavrinskys-plats',
+	location: {
+		longitud: '57.688814',
+		latitud: '11.968257'
+	}
+},{
 	namn: 'Hotel Radisson, Lindholmen',
 	id: 'hotel-radisson_-lindholmen',
 	location: {
@@ -1302,7 +1309,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Sahlgrenska Huvudentré',
-	id: '',
+	id: 'sahlgrenska-huvudentr_',
 	location: {
 		longitud: '57.682755',
 		latitud: '11.962053'
@@ -1316,7 +1323,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Awesome Archers',
-	id: '',
+	id: 'awsome-archers',
 	location: {
 		longitud: '57.682697',
 		latitud: '11.960189'
@@ -1344,14 +1351,14 @@ var gyms = [{
 	}
 },{
 	namn: 'Black Swan',
-	id: '',
+	id: 'black-swan',
 	location: {
 		longitud: '57.680461',
 		latitud: '11.965523'
 	}
 },{
 	namn: 'Gyckelspel',
-	id: '',
+	id: 'gyckelspel',
 	location: {
 		longitud: '57.681049',
 		latitud: '11.962567'
