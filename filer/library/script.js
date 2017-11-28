@@ -6,9 +6,6 @@ var andraplatser = [{
 	namn: 'PokeTime',
 	url: 'poketime.html'
 },{
-	namn: 'RaidCounter',
-	url: 'raidcounter.html'
-},{
 	namn: 'GymMalmo',
 	url: 'gymmalmo.html'
 },{
