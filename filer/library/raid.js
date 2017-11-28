@@ -554,25 +554,25 @@ var raid = [{
 	"level": "5",
 	"counters": [{
 		"pokemon": "139",
-		"element": ["Rock"]
+		"element": ["Rock", "Water"]
 	},{
 		"pokemon": "76",
 		"element": ["Rock"]
 	},{
-		"pokemon": "248",
-		"element": ["Rock"]
-	},{
-		"pokemon": "185",
-		"element": ["Rock"]
-	},{
-		"pokemon": "141",
-		"element": ["Rock"]
-	},{
-		"pokemon": "135",
+		"pokemon": "243",
 		"element": ["Electric"]
 	},{
-		"pokemon": "121",
+		"pokemon": "248",
+		"element": ["Dark", "Rock"]
+	},{
+		"pokemon": "145",
+		"element": ["Electric"]
+	},{
+		"pokemon": "134",
 		"element": ["Water"]
+	},{
+		"pokemon": "130",
+		"element": ["Dragon", "Water"]
 	}]
 },{
 	"pokemon": "249",
