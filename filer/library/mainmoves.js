@@ -1,4 +1,3 @@
-/*https://pokemongo.gamepress.gg/charge-moves*/
 var mainmoves = [{
 	id: 'aerial-ace',
 	namn: 'Aerial Ace',
@@ -45,7 +44,7 @@ var mainmoves = [{
 	energi: '2',
 	element: 'Ice',
 	cooldown: '3.55',
-	damage: '>80',
+	damage: '80',
 	movehits: '3.35'
 },{
 	id: 'avalanche',
@@ -140,7 +139,7 @@ var mainmoves = [{
 	namn: 'Cross Chop',
 	energi: '2',
 	element: 'Fighting',
-	cooldown: '>1.50',
+	cooldown: '1.50',
 	damage: '50',
 	movehits: '0.80'
 },{
@@ -199,6 +198,22 @@ var mainmoves = [{
 	cooldown: '2.50',
 	damage: '65',
 	movehits: '1.70'
+},{
+	id: 'doom-desire',
+	namn: 'Doom Desire',
+	energi: '2',
+	element: 'Steel',
+	cooldown: '1.70',
+	damage: '80',
+	movehits: '1.40'
+},{
+	id: 'draco-meteor',
+	namn: 'Draco Meteor',
+	energi: '1',
+	element: 'Dragon',
+	cooldown: '3.60',
+	damage: '150',
+	movehits: '3.00'
 },{
 	id: 'dragon-claw',
 	namn: 'Dragon Claw',
@@ -278,7 +293,7 @@ var mainmoves = [{
 	element: 'Fire',
 	cooldown: '2.20',
 	damage: '55',
-	movehits:' 1.50'
+	movehits: '1.50'
 },{
 	id: 'flame-burst',
 	namn: 'Flame Burst',
@@ -632,6 +647,14 @@ var mainmoves = [{
 	damage: '100',
 	movehits: '1.30'
 },{
+	id: 'psycho-boost',
+	namn: 'Psycho Boost',
+	energi: '2',
+	element: 'Psychic',
+	cooldown: '4.00',
+	damage: '70',
+	movehits: '3.50'
+},{
 	id: 'psyshock',
 	namn: 'Psyshock',
 	energi: '3',
@@ -815,6 +838,14 @@ var mainmoves = [{
 	cooldown: '2.20',
 	damage: '60',
 	movehits: '1.80'
+},{
+	id: 'surf',
+	namn: 'Surf',
+	energi: '2',
+	element: 'Water',
+	cooldown: '1.70',
+	damage: '65',
+	movehits: '1.40'
 },{
 	id: 'swift',
 	namn: 'Swift',

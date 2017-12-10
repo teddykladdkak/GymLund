@@ -18,9 +18,9 @@ var allpokemon = {
 		nummer: '359',
 		namn: 'Absol',
 		type: ['Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Psycho Cut', 'Snarl', 'Dark Pulse', 'Megahorn', 'Thunder'],
+		attack: ['Snarl', 'Dark Pulse'],
+		defend: ['Snarl', 'Dark Pulse']
 	},{
 		nummer: '617',
 		namn: 'Accelgor',
@@ -46,9 +46,9 @@ var allpokemon = {
 		nummer: '306',
 		namn: 'Aggron',
 		type: ['Steel', 'Rock'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Tail', 'Iron Tail', 'Stone Edge', 'Thunder', 'Heavy Slam'],
+		attack: ['Iron Tail', 'Heavy Slam'],
+		defend: ['Iron Tail', 'Stone Edge']
 	},{
 		nummer: '190',
 		namn: 'Aipom',
@@ -74,9 +74,9 @@ var allpokemon = {
 		nummer: '334',
 		namn: 'Altaria',
 		type: ['Dragon', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Breath', 'Peck', 'Dragon Pulse', 'Dazzling Gleam', 'Sky Attack'],
+		attack: ['Dragon Breath', 'Sky Attack'],
+		defend: ['Peck', 'Dragon Pulse']
 	},{
 		nummer: '698',
 		namn: 'Amaura',
@@ -109,9 +109,9 @@ var allpokemon = {
 		nummer: '347',
 		namn: 'Anorith',
 		type: ['Rock', 'Bug'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Scratch', 'Struggle Bug', 'Aqua Jet', 'Ancient Power', 'Cross Poison'],
+		attack: ['Struggle Bug', 'Ancient Power'],
+		defend: ['Struggle Bug', 'Ancient Power']
 	},{
 		nummer: '752',
 		namn: 'Araquanid',
@@ -165,9 +165,9 @@ var allpokemon = {
 		nummer: '348',
 		namn: 'Armaldo',
 		type: ['Rock', 'Bug'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Fury Cutter', 'Struggle Bug', 'Cross Poison', 'Water Pulse', 'Rock Blast'],
+		attack: ['Struggle Bug', 'Rock Blast'],
+		defend: ['Struggle Bug', 'Rock Blast']
 	},{
 		nummer: '683',
 		namn: 'Aromatisse',
@@ -179,9 +179,9 @@ var allpokemon = {
 		nummer: '304',
 		namn: 'Aron',
 		type: ['Steel', 'Rock'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Metal Claw', 'Rock Tomb', 'Iron Head', 'Body Slam'],
+		attack: ['Metal Claw', 'Iron Head'],
+		defend: ['Metal Claw', 'Rock Tomb']
 	},{
 		nummer: '144',
 		namn: 'Articuno',
@@ -235,24 +235,24 @@ var allpokemon = {
 		nummer: '298',
 		namn: 'Azurill',
 		type: ['Normal', 'Fairy'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Splash', 'Bubble', 'Ice Beam', 'Bubble Beam', 'Body Slam'],
+		attack: ['Bubble', 'Body Slam'],
+		defend: ['Bubble', 'Ice Beam']
 	}],
 	b: [{
 		nummer: '371',
 		namn: 'Bagon',
 		type: ['Dragon'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Ember', 'Flamethrower', 'Twister', 'Crunch'],
+		attack: ['Bite', 'Flamethrower'],
+		defend: ['Ember', 'Crunch']
 	},{
 		nummer: '343',
 		namn: 'Baltoy',
 		type: ['Ground', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Extrasensory', 'Dig', 'Psybeam', 'Gyro Ball'],
+		attack: ['Confusion', 'Dig'],
+		defend: ['Confusion', 'Dig']
 	},{
 		nummer: '354',
 		namn: 'Banette',
@@ -271,9 +271,9 @@ var allpokemon = {
 		nummer: '339',
 		namn: 'Barboach',
 		type: ['Water', 'Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Mud Shot', 'Water Gun', 'Ice Beam', 'Aqua Tail', 'Mud Bomb'],
+		attack: ['Water Gun', 'Aqua Tail'],
+		defend: ['Mud Shot', 'Mud Bomb']
 	},{
 		nummer: '550',
 		namn: 'Basculin',
@@ -306,9 +306,9 @@ var allpokemon = {
 		nummer: '267',
 		namn: 'Beautifly',
 		type: ['Bug', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Infestation', 'Struggle Bug', 'Bug Buzz', 'Air Cutter', 'Silver Wind'],
+		attack: ['Infestation', 'Bug Buzz'],
+		defend: ['Struggle Bug', 'Bug Buzz']
 	},{
 		nummer: '015',
 		namn: 'Beedrill',
@@ -327,9 +327,9 @@ var allpokemon = {
 		nummer: '374',
 		namn: 'Beldum',
 		type: ['Steel', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Take Down', 'Struggle'],
+		attack: ['Take Down', 'Struggle'],
+		defend: ['Take Down', 'Struggle']
 	},{
 		nummer: '182',
 		namn: 'Bellossom',
@@ -397,9 +397,9 @@ var allpokemon = {
 		nummer: '257',
 		namn: 'Blaziken',
 		type: ['Fire', 'Fighting'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Counter', 'Fire Spin', 'Stone Edge', 'Brave Bird', 'Overheat'],
+		attack: ['Counter', 'Overheat'],
+		defend: ['Fire Spin', 'Overheat']
 	},{
 		nummer: '242',
 		namn: 'Blissey',
@@ -460,9 +460,9 @@ var allpokemon = {
 		nummer: '286',
 		namn: 'Breloom',
 		type: ['Grass', 'Fighting'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Counter', 'Bullet Seed', 'Seed Bomb', 'Sludge Bomb', 'Dynamic Punch'],
+		attack: ['Counter', 'Dynamic Punch'],
+		defend: ['Bullet Seed', 'Dynamic Punch']
 	},{
 		nummer: '729',
 		namn: 'Brionne',
@@ -552,23 +552,23 @@ var allpokemon = {
 		nummer: '331',
 		namn: 'Cacnea',
 		type: ['Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Sucker Punch', 'Poison Sting', 'Seed Bomb', 'Brick Break', 'Grass Knot'],
+		attack: ['Sucker Punch', 'Grass Knot'],
+		defend: ['Sucker Punch', 'Grass Knot']
 	},{
 		nummer: '332',
 		namn: 'Cacturne',
 		type: ['Grass', 'Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Sucker Punch', 'Poison Jab', 'Dark Pulse', 'Dynamic Punch', 'Grass Knot'],
+		attack: ['Sucker Punch', 'Grass Knot'],
+		defend: ['Poison Jab', 'Grass Knot']
 	},{
 		nummer: '323',
 		namn: 'Camerupt',
 		type: ['Fire', 'Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Ember', 'Rock Smash', 'Earthquake', 'Solar Beam', 'Overheat'],
+		attack: ['Ember', 'Overheat'],
+		defend: ['Rock Smash', 'Overheat']
 	},{
 		nummer: '703',
 		namn: 'Carbink',
@@ -594,23 +594,23 @@ var allpokemon = {
 		nummer: '318',
 		namn: 'Carvanha',
 		type: ['Water', 'Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Snarl', 'Poison Fang', 'Aqua Jet', 'Crunch'],
+		attack: ['Snarl', 'Crunch'],
+		defend: ['Snarl', 'Crunch']
 	},{
 		nummer: '268',
 		namn: 'Cascoon',
 		type: ['Bug'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bug Bite', 'Poison Sting', 'Struggle'],
+		attack: ['Bug Bite', 'Struggle'],
+		defend: ['Bug Bite', 'Struggle']
 	},{
 		nummer: '351',
 		namn: 'Castform',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Rock Smash', 'Ancient Power', 'Stomp', 'Crunch'],
+		attack: ['Bite', 'Stomp'],
+		defend: ['Rock Smash', 'Crunch']
 	},{
 		nummer: '010',
 		namn: 'Caterpie',
@@ -727,9 +727,9 @@ var allpokemon = {
 		nummer: '358',
 		namn: 'Chimecho',
 		type: ['Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Astonish', 'Extrasensory', 'Psyshock', 'Shadow Ball', 'Energy Ball'],
+		attack: ['Extrasensory', 'Shadow Ball'],
+		defend: ['Extrasensory', 'Psyshock']
 	},{
 		nummer: '170',
 		namn: 'Chinchou',
@@ -755,9 +755,9 @@ var allpokemon = {
 		nummer: '366',
 		namn: 'Clamperl',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Ice Beam', 'Water Pulse', 'Body Slam'],
+		attack: ['Water Gun', 'Ice Beam'],
+		defend: ['Water Gun', 'Ice Beam']
 	},{
 		nummer: '692',
 		namn: 'Clauncher',
@@ -776,9 +776,9 @@ var allpokemon = {
 		nummer: '344',
 		namn: 'Claydol',
 		type: ['Ground', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Extrasensory', 'Earthquake', 'Psychic', 'Gyro Ball'],
+		attack: ['Confusion', 'Earthquake'],
+		defend: ['Confusion', 'Earthquake']
 	},{
 		nummer: '036',
 		namn: 'Clefable',
@@ -832,9 +832,9 @@ var allpokemon = {
 		nummer: '256',
 		namn: 'Combusken',
 		type: ['Fire', 'Fighting'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Ember', 'Peck', 'Flamethrower', 'Rock Slide', 'Flame Charge'],
+		attack: ['Ember', 'Flamethrower'],
+		defend: ['Ember', 'Flame Charge']
 	},{
 		nummer: '764',
 		namn: 'Comfey',
@@ -853,9 +853,9 @@ var allpokemon = {
 		nummer: '341',
 		namn: 'Corphish',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bubble', 'Rock Smash', 'Vice Grip', 'Bubble Beam', 'Aqua Jet'],
+		attack: ['Bubble', 'Bubble Beam'],
+		defend: ['Bubble', 'Bubble Beam']
 	},{
 		nummer: '222',
 		namn: 'Corsola',
@@ -902,9 +902,9 @@ var allpokemon = {
 		nummer: '346',
 		namn: 'Cradily',
 		type: ['Rock', 'Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Acid', 'Infestation', 'Stone Edge', 'Bulldoze', 'Grass Knot'],
+		attack: ['Infestation', 'Grass Knot'],
+		defend: ['Infestation', 'Grass Knot']
 	},{
 		nummer: '408',
 		namn: 'Cranidos',
@@ -916,9 +916,9 @@ var allpokemon = {
 		nummer: '342',
 		namn: 'Crawdaunt',
 		type: ['Water', 'Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Snarl', 'Waterfall', 'Vice Grip', 'Night Slash', 'Bubble Beam'],
+		attack: ['Waterfall', 'Night Slash'],
+		defend: ['Waterfall', 'Night Slash']
 	},{
 		nummer: '488',
 		namn: 'Cresselia',
@@ -1050,9 +1050,9 @@ var allpokemon = {
 		nummer: '301',
 		namn: 'Delcatty',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Zen Headbutt', 'Feint Attack', 'Disarming Voice', 'Play Rough', 'Wild Charge'],
+		attack: ['Feint Attack', 'Wild Charge'],
+		defend: ['Zen Headbutt', 'Wild Charge']
 	},{
 		nummer: '225',
 		namn: 'Delibird',
@@ -1071,9 +1071,9 @@ var allpokemon = {
 		nummer: '386',
 		namn: 'Deoxys',
 		type: ['Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Zen Headbutt', 'Counter', 'Swift', 'Zap Cannon', 'Psycho Boost'],
+		attack: ['Counter', 'Zap Cannon'],
+		defend: ['Zen Headbutt', 'Psycho Boost']
 	},{
 		nummer: '087',
 		namn: 'Dewgong',
@@ -1302,9 +1302,9 @@ var allpokemon = {
 		nummer: '269',
 		namn: 'Dustox',
 		type: ['Bug', 'Poison'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Struggle Bug', 'Bug Buzz', 'Sludge Bomb', 'Silver Wind'],
+		attack: ['Confusion', 'Sludge Bomb'],
+		defend: ['Confusion', 'Bug Buzz']
 	},{
 		nummer: '557',
 		namn: 'Dwebble',
@@ -1359,9 +1359,9 @@ var allpokemon = {
 		nummer: '309',
 		namn: 'Electrike',
 		type: ['Electric'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Spark', 'Quick Attack', 'Discharge', 'Thunderbolt', 'Swift'],
+		attack: ['Spark', 'Thunderbolt'],
+		defend: ['Quick Attack', 'Discharge']
 	},{
 		nummer: '101',
 		namn: 'Electrode',
@@ -1457,9 +1457,9 @@ var allpokemon = {
 		nummer: '295',
 		namn: 'Exploud',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Astonish', 'Disarming Voice', 'Fire Blast', 'Crunch'],
+		attack: ['Bite', 'Fire Blast'],
+		defend: ['Astonish', 'Crunch']
 	}],
 	f: [{
 		nummer: '083',
@@ -1479,9 +1479,9 @@ var allpokemon = {
 		nummer: '349',
 		namn: 'Feebas',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Splash', 'Mirror Coat'],
+		attack: ['Tackle', 'Mirror Coat'],
+		defend: ['Splash', 'Mirror Coat']
 	},{
 		nummer: '653',
 		namn: 'Fennekin',
@@ -1577,9 +1577,9 @@ var allpokemon = {
 		nummer: '330',
 		namn: 'Flygon',
 		type: ['Ground', 'Dragon'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Mud Shot', 'Dragon Tail', 'Earthquake', 'Stone Edge', 'Dragon Claw'],
+		attack: ['Dragon Tail', 'Earthquake'],
+		defend: ['Dragon Tail', 'Dragon Claw']
 	},{
 		nummer: '753',
 		namn: 'Fomantis',
@@ -1690,9 +1690,9 @@ var allpokemon = {
 		nummer: '282',
 		namn: 'Gardevoir',
 		type: ['Psychic', 'Fairy'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Charge Beam', 'Shadow Ball', 'Dazzling Gleam', 'Psychic'],
+		attack: ['Confusion', 'Dazzling Gleam'],
+		defend: ['Confusion', 'Dazzling Gleam']
 	},{
 		nummer: '092',
 		namn: 'Gastly',
@@ -1767,9 +1767,9 @@ var allpokemon = {
 		nummer: '362',
 		namn: 'Glalie',
 		type: ['Ice'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Ice Shard', 'Frost Breath', 'Shadow Ball', 'Avalanche', 'Gyro Ball'],
+		attack: ['Frost Breath', 'Avalanche'],
+		defend: ['Ice Shard', 'Avalanche']
 	},{
 		nummer: '431',
 		namn: 'Glameow',
@@ -1872,9 +1872,9 @@ var allpokemon = {
 		nummer: '368',
 		namn: 'Gorebyss',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Confusion', 'Draining Kiss', 'Water Pulse', 'Psychic'],
+		attack: ['Confusion', 'Water Pulse'],
+		defend: ['Confusion', 'Water Pulse']
 	},{
 		nummer: '574',
 		namn: 'Gothita',
@@ -1942,16 +1942,16 @@ var allpokemon = {
 		nummer: '383',
 		namn: 'Groudon',
 		type: ['Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Mud Shot', 'Dragon Tail', 'Earthquake', 'Fire Blast', 'Solar Beam'],
+		attack: ['Dragon Tail', 'Solar Beam'],
+		defend: ['Dragon Tail', 'Solar Beam']
 	},{
 		nummer: '253',
 		namn: 'Grovyle',
 		type: ['Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Quick Attack', 'Bullet Seed', 'Aerial Ace', 'Leaf Blade', 'Grass Knot'],
+		attack: ['Quick Attack', 'Grass Knot'],
+		defend: ['Bullet Seed', 'Leaf Blade']
 	},{
 		nummer: '058',
 		namn: 'Growlithe',
@@ -1970,16 +1970,16 @@ var allpokemon = {
 		nummer: '326',
 		namn: 'Grumpig',
 		type: ['Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Charge Beam', 'Extrasensory', 'Shadow Ball', 'Psychic', 'Mirror Coat'],
+		attack: ['Extrasensory', 'Shadow Ball'],
+		defend: ['Extrasensory', 'Shadow Ball']
 	},{
 		nummer: '316',
 		namn: 'Gulpin',
 		type: ['Poison'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Pound', 'Rock Smash', 'Sludge', 'Ice Beam', 'Gunk Shot'],
+		attack: ['Pound', 'Gunk Shot'],
+		defend: ['Rock Smash', 'Gunk Shot']
 	},{
 		nummer: '735',
 		namn: 'Gumshoos',
@@ -2027,9 +2027,9 @@ var allpokemon = {
 		nummer: '297',
 		namn: 'Hariyama',
 		type: ['Fighting'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bullet Punch', 'Counter', 'Close Combat', 'Dynamic Punch', 'Heavy Slam'],
+		attack: ['Counter', 'Dynamic Punch'],
+		defend: ['Counter', 'Dynamic Punch']
 	},{
 		nummer: '093',
 		namn: 'Haunter',
@@ -2195,9 +2195,9 @@ var allpokemon = {
 		nummer: '367',
 		namn: 'Huntail',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Water Gun', 'Ice Beam', 'Aqua Tail', 'Crunch'],
+		attack: ['Water Gun', 'Aqua Tail'],
+		defend: ['Water Gun', 'Aqua Tail']
 	},{
 		nummer: '635',
 		namn: 'Hydreigon',
@@ -2224,9 +2224,9 @@ var allpokemon = {
 		nummer: '314',
 		namn: 'Illumise',
 		type: ['Bug'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Struggle Bug', 'Bug Buzz', 'Dazzling Gleam', 'Silver Wind'],
+		attack: ['Struggle Bug', 'Bug Buzz'],
+		defend: ['Struggle Bug', 'Bug Buzz']
 	},{
 		nummer: '727',
 		namn: 'Incineroar',
@@ -2281,9 +2281,9 @@ var allpokemon = {
 		nummer: '385',
 		namn: 'Jirachi',
 		type: ['Steel', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Charge Beam', 'Dazzling Gleam', 'Psychic', 'Doom Desire'],
+		attack: ['Confusion', 'Doom Desire'],
+		defend: ['Confusion', 'Doom Desire']
 	},{
 		nummer: '135',
 		namn: 'Jolteon',
@@ -2366,9 +2366,9 @@ var allpokemon = {
 		nummer: '352',
 		namn: 'Kecleon',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Sucker Punch', 'Lick', 'Flamethrower', 'Ice Beam', 'Aerial Ace', 'Shadow Sneak', 'Thunder', 'Foul Play'],
+		attack: ['Lick', 'Foul Play'],
+		defend: ['Sucker Punch', 'Ice Beam']
 	},{
 		nummer: '647',
 		namn: 'Keldeo',
@@ -2394,9 +2394,9 @@ var allpokemon = {
 		nummer: '281',
 		namn: 'Kirlia',
 		type: ['Psychic', 'Fairy'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Charge Beam', 'Shadow Sneak', 'Disarming Voice', 'Psychic'],
+		attack: ['Confusion', 'Psychic'],
+		defend: ['Confusion', 'Disarming Voice']
 	},{
 		nummer: '600',
 		namn: 'Klang',
@@ -2485,9 +2485,9 @@ var allpokemon = {
 		nummer: '382',
 		namn: 'Kyogre',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Tail', 'Waterfall', 'Blizzard', 'Thunder', 'Hydro Pump'],
+		attack: ['Waterfall', 'Hydro Pump'],
+		defend: ['Waterfall', 'Hydro Pump']
 	},{
 		nummer: '646',
 		namn: 'Kyurem',
@@ -2500,9 +2500,9 @@ var allpokemon = {
 		nummer: '305',
 		namn: 'Lairon',
 		type: ['Steel', 'Rock'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Metal Claw', 'Iron Tail', 'Rock Slide', 'Body Slam', 'Heavy Slam'],
+		attack: ['Iron Tail', 'Rock Slide'],
+		defend: ['Iron Tail', 'Rock Slide']
 	},{
 		nummer: '608',
 		namn: 'Lampent',
@@ -2549,16 +2549,16 @@ var allpokemon = {
 		nummer: '380',
 		namn: 'Latias',
 		type: ['Dragon', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Breath', 'Zen Headbutt', 'Thunder', 'Dragon Claw', 'Psychic'],
+		attack: ['Dragon Breath', 'Psychic'],
+		defend: ['Zen Headbutt', 'Dragon Claw']
 	},{
 		nummer: '381',
 		namn: 'Latios',
 		type: ['Dragon', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Breath', 'Zen Headbutt', 'Dragon Claw', 'Psychic', 'Solar Beam'],
+		attack: ['Zen Headbutt', 'Solar Beam'],
+		defend: ['Zen Headbutt', 'Dragon Claw']
 	},{
 		nummer: '470',
 		namn: 'Leafeon',
@@ -2612,9 +2612,9 @@ var allpokemon = {
 		nummer: '345',
 		namn: 'Lileep',
 		type: ['Rock', 'Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Acid', 'Infestation', 'Ancient Power', 'Grass Knot', 'Mirror Coat'],
+		attack: ['Infestation', 'Grass Knot'],
+		defend: ['Infestation', 'Grass Knot']
 	},{
 		nummer: '549',
 		namn: 'Lilligant',
@@ -2633,9 +2633,9 @@ var allpokemon = {
 		nummer: '264',
 		namn: 'Linoone',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Shadow Claw', 'Tackle', 'Dig', 'Thunder', 'Grass Knot'],
+		attack: ['Shadow Claw', 'Grass Knot'],
+		defend: ['Shadow Claw', 'Dig']
 	},{
 		nummer: '667',
 		namn: 'Litleo',
@@ -2661,9 +2661,9 @@ var allpokemon = {
 		nummer: '271',
 		namn: 'Lombre',
 		type: ['Water', 'Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Razor Leaf', 'Bubble', 'Ice Beam', 'Bubble Beam', 'Grass Knot'],
+		attack: ['Bubble', 'Grass Knot'],
+		defend: ['Bubble', 'Grass Knot']
 	},{
 		nummer: '428',
 		namn: 'Lopunny',
@@ -2675,16 +2675,16 @@ var allpokemon = {
 		nummer: '270',
 		namn: 'Lotad',
 		type: ['Water', 'Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Razor Leaf', 'Water Gun', 'Bubble Beam', 'Energy Ball'],
+		attack: ['Razor Leaf', 'Energy Ball'],
+		defend: ['Razor Leaf', 'Energy Ball']
 	},{
 		nummer: '294',
 		namn: 'Loudred',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Rock Smash', 'Flamethrower', 'Disarming Voice', 'Crunch'],
+		attack: ['Bite', 'Flamethrower'],
+		defend: ['Rock Smash', 'Crunch']
 	},{
 		nummer: '448',
 		namn: 'Lucario',
@@ -2696,9 +2696,9 @@ var allpokemon = {
 		nummer: '272',
 		namn: 'Ludicolo',
 		type: ['Water', 'Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Razor Leaf', 'Bubble', 'Blizzard', 'Hydro Pump', 'Solar Beam'],
+		attack: ['Razor Leaf', 'Solar Beam'],
+		defend: ['Bubble', 'Solar Beam']
 	},{
 		nummer: '249',
 		namn: 'Lugia',
@@ -2724,9 +2724,9 @@ var allpokemon = {
 		nummer: '337',
 		namn: 'Lunatone',
 		type: ['Rock', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Rock Throw', 'Confusion', 'Rock Slide', 'Moonblast', 'Psychic'],
+		attack: ['Rock Throw', 'Rock Slide'],
+		defend: ['Confusion', 'Rock Slide']
 	},{
 		nummer: '754',
 		namn: 'Lurantis',
@@ -2738,9 +2738,9 @@ var allpokemon = {
 		nummer: '370',
 		namn: 'Luvdisc',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Splash', 'Aqua Jet', 'Draining Kiss', 'Water Pulse'],
+		attack: ['Water Gun', 'Water Pulse'],
+		defend: ['Splash', 'Water Pulse']
 	},{
 		nummer: '404',
 		namn: 'Luxio',
@@ -2851,9 +2851,9 @@ var allpokemon = {
 		nummer: '296',
 		namn: 'Makuhita',
 		type: ['Fighting'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Rock Smash', 'Cross Chop', 'Low Sweep', 'Heavy Slam'],
+		attack: ['Rock Smash', 'Heavy Slam'],
+		defend: ['Rock Smash', 'Heavy Slam']
 	},{
 		nummer: '687',
 		namn: 'Malamar',
@@ -2886,9 +2886,9 @@ var allpokemon = {
 		nummer: '310',
 		namn: 'Manectric',
 		type: ['Electric'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Charge Beam', 'Snarl', 'Thunder', 'Flame Burst', 'Wild Charge'],
+		attack: ['Charge Beam', 'Wild Charge'],
+		defend: ['Charge Beam', 'Wild Charge']
 	},{
 		nummer: '056',
 		namn: 'Mankey',
@@ -2956,37 +2956,37 @@ var allpokemon = {
 		nummer: '259',
 		namn: 'Marshtomp',
 		type: ['Water', 'Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Mud Shot', 'Water Gun', 'Sludge', 'Mud Bomb', 'Surf'],
+		attack: ['Water Gun', 'Surf'],
+		defend: ['Mud Shot', 'Mud Bomb']
 	},{
 		nummer: '284',
 		namn: 'Masquerain',
 		type: ['Bug', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Air Slash', 'Infestation', 'Ominous Wind', 'Air Cutter', 'Silver Wind'],
+		attack: ['Air Slash', 'Silver Wind'],
+		defend: ['Infestation', 'Silver Wind']
 	},{
 		nummer: '303',
 		namn: 'Mawile',
 		type: ['Steel', 'Fairy'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Astonish', 'Vice Grip', 'Iron Head', 'Play Rough'],
+		attack: ['Bite', 'Play Rough'],
+		defend: ['Astonish', 'Play Rough']
 	},{
 		nummer: '308',
 		namn: 'Medicham',
 		type: ['Fighting', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Psycho Cut', 'Counter', 'Ice Punch', 'Psychic', 'Dynamic Punch'],
+		attack: ['Counter', 'Dynamic Punch'],
+		defend: ['Counter', 'Dynamic Punch']
 	},{
 		nummer: '307',
 		namn: 'Meditite',
 		type: ['Fighting', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Rock Smash', 'Ice Punch', 'Low Sweep', 'Psyshock'],
+		attack: ['Confusion', 'Psyshock'],
+		defend: ['Confusion', 'Psyshock']
 	},{
 		nummer: '154',
 		namn: 'Meganium',
@@ -3026,16 +3026,16 @@ var allpokemon = {
 		nummer: '376',
 		namn: 'Metagross',
 		type: ['Steel', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bullet Punch', 'Zen Headbutt', 'Earthquake', 'Flash Cannon', 'Psychic'],
+		attack: ['Zen Headbutt', 'Flash Cannon'],
+		defend: ['Bullet Punch', 'Flash Cannon']
 	},{
 		nummer: '375',
 		namn: 'Metang',
 		type: ['Steel', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Metal Claw', 'Zen Headbutt', 'Psyshock', 'Psychic', 'Gyro Ball'],
+		attack: ['Metal Claw', 'Psychic'],
+		defend: ['Zen Headbutt', 'Gyro Ball']
 	},{
 		nummer: '011',
 		namn: 'Metapod',
@@ -3075,16 +3075,16 @@ var allpokemon = {
 		nummer: '262',
 		namn: 'Mightyena',
 		type: ['Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Fire Fang', 'Poison Fang', 'Play Rough', 'Crunch'],
+		attack: ['Bite', 'Play Rough'],
+		defend: ['Fire Fang', 'Crunch']
 	},{
 		nummer: '350',
 		namn: 'Milotic',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Tail', 'Waterfall', 'Water Gun (old)', 'Hyper Beam', 'Blizzard', 'Surf'],
+		attack: ['Waterfall', 'Surf'],
+		defend: ['Waterfall', 'Hyper Beam']
 	},{
 		nummer: '241',
 		namn: 'Miltank',
@@ -3124,9 +3124,9 @@ var allpokemon = {
 		nummer: '312',
 		namn: 'Minun',
 		type: ['Electric'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Spark', 'Quick Attack', 'Discharge', 'Thunderbolt', 'Swift'],
+		attack: ['Spark', 'Thunderbolt'],
+		defend: ['Quick Attack', 'Discharge']
 	},{
 		nummer: '200',
 		namn: 'Misdreavus',
@@ -3187,9 +3187,9 @@ var allpokemon = {
 		nummer: '258',
 		namn: 'Mudkip',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Water Gun', 'Sludge', 'Dig', 'Stomp'],
+		attack: ['Water Gun', 'Stomp'],
+		defend: ['Water Gun', 'Dig']
 	},{
 		nummer: '750',
 		namn: 'Mudsdale',
@@ -3300,9 +3300,9 @@ var allpokemon = {
 		nummer: '290',
 		namn: 'Nincada',
 		type: ['Bug', 'Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bug Bite', 'Scratch', 'Aerial Ace', 'Bug Buzz', 'Night Slash'],
+		attack: ['Bug Bite', 'Bug Buzz'],
+		defend: ['Bug Bite', 'Bug Buzz']
 	},{
 		nummer: '038',
 		namn: 'Ninetales',
@@ -3314,9 +3314,9 @@ var allpokemon = {
 		nummer: '291',
 		namn: 'Ninjask',
 		type: ['Bug', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Fury Cutter', 'Metal Claw', 'Aerial Ace', 'Bug Buzz', 'Shadow Ball'],
+		attack: ['Fury Cutter', 'Shadow Ball'],
+		defend: ['Metal Claw', 'Bug Buzz']
 	},{
 		nummer: '164',
 		namn: 'Noctowl',
@@ -3342,23 +3342,23 @@ var allpokemon = {
 		nummer: '299',
 		namn: 'Nosepass',
 		type: ['Rock'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Spark', 'Rock Throw', 'Rock Slide', 'Thunderbolt', 'Rock Blast'],
+		attack: ['Rock Throw', 'Rock Slide'],
+		defend: ['Rock Throw', 'Rock Slide']
 	},{
 		nummer: '322',
 		namn: 'Numel',
 		type: ['Fire', 'Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Ember', 'Tackle', 'Heat Wave', 'Bulldoze', 'Stomp'],
+		attack: ['Ember', 'Bulldoze'],
+		defend: ['Ember', 'Bulldoze']
 	},{
 		nummer: '274',
 		namn: 'Nuzleaf',
 		type: ['Grass', 'Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Razor Leaf', 'Feint Attack', 'Leaf Blade', 'Grass Knot', 'Foul Play'],
+		attack: ['Feint Attack', 'Grass Knot'],
+		defend: ['Feint Attack', 'Leaf Blade']
 	}],
 	o: [{
 		nummer: '224',
@@ -3519,9 +3519,9 @@ var allpokemon = {
 		nummer: '279',
 		namn: 'Pelipper',
 		type: ['Water', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Wing Attack', 'Water Gun', 'Blizzard', 'Hydro Pump', 'Hurricane'],
+		attack: ['Water Gun', 'Hydro Pump'],
+		defend: ['Wing Attack', 'Hydro Pump']
 	},{
 		nummer: '053',
 		namn: 'Persian',
@@ -3652,9 +3652,9 @@ var allpokemon = {
 		nummer: '311',
 		namn: 'Plusle',
 		type: ['Electric'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Spark', 'Quick Attack', 'Discharge', 'Thunderbolt', 'Swift'],
+		attack: ['Spark', 'Thunderbolt'],
+		defend: ['Quick Attack', 'Discharge']
 	},{
 		nummer: '186',
 		namn: 'Politoed',
@@ -3694,9 +3694,9 @@ var allpokemon = {
 		nummer: '261',
 		namn: 'Poochyena',
 		type: ['Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Snarl', 'Dig', 'Poison Fang', 'Crunch'],
+		attack: ['Snarl', 'Crunch'],
+		defend: ['Snarl', 'Crunch']
 	},{
 		nummer: '728',
 		namn: 'Popplio',
@@ -3850,9 +3850,9 @@ var allpokemon = {
 		nummer: '280',
 		namn: 'Ralts',
 		type: ['Psychic', 'Fairy'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Confusion', 'Charge Beam', 'Psyshock', 'Shadow Sneak', 'Disarming Voice'],
+		attack: ['Confusion', 'Psyshock'],
+		defend: ['Confusion', 'Psyshock']
 	},{
 		nummer: '409',
 		namn: 'Rampardos',
@@ -3885,16 +3885,16 @@ var allpokemon = {
 		nummer: '384',
 		namn: 'Rayquaza',
 		type: ['Dragon', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Tail', 'Air Slash', 'Aerial Ace', 'Ancient Power', 'Outrage'],
+		attack: ['Dragon Tail', 'Outrage'],
+		defend: ['Dragon Tail', 'Outrage']
 	},{
 		nummer: '378',
 		namn: 'Regice',
 		type: ['Ice'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Frost Breath', 'Rock Smash', 'Earthquake', 'Blizzard', 'Focus Blast'],
+		attack: ['Frost Breath', 'Blizzard'],
+		defend: ['Rock Smash', 'Blizzard']
 	},{
 		nummer: '486',
 		namn: 'Regigigas',
@@ -3906,23 +3906,23 @@ var allpokemon = {
 		nummer: '377',
 		namn: 'Regirock',
 		type: ['Rock'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Rock Throw', 'Rock Smash', 'Stone Edge', 'Focus Blast', 'Zap Cannon'],
+		attack: ['Rock Throw', 'Stone Edge'],
+		defend: ['Rock Throw', 'Focus Blast']
 	},{
 		nummer: '379',
 		namn: 'Registeel',
 		type: ['Steel'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Metal Claw', 'Rock Smash', 'Hyper Beam', 'Flash Cannon', 'Focus Blast'],
+		attack: ['Metal Claw', 'Focus Blast'],
+		defend: ['Rock Smash', 'Hyper Beam']
 	},{
 		nummer: '369',
 		namn: 'Relicanth',
 		type: ['Water', 'Rock'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Zen Headbutt', 'Aqua Tail', 'Ancient Power', 'Hydro Pump'],
+		attack: ['Water Gun', 'Hydro Pump'],
+		defend: ['Zen Headbutt', 'Ancient Power']
 	},{
 		nummer: '223',
 		namn: 'Remoraid',
@@ -3997,9 +3997,9 @@ var allpokemon = {
 		nummer: '315',
 		namn: 'Roselia',
 		type: ['Grass', 'Poison'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Razor Leaf', 'Poison Jab', 'Petal Blizzard', 'Dazzling Gleam', 'Sludge Bomb'],
+		attack: ['Poison Jab', 'Sludge Bomb'],
+		defend: ['Razor Leaf', 'Sludge Bomb']
 	},{
 		nummer: '407',
 		namn: 'Roserade',
@@ -4040,9 +4040,9 @@ var allpokemon = {
 		nummer: '373',
 		namn: 'Salamence',
 		type: ['Dragon', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Fire Fang', 'Dragon Tail', 'Fire Blast', 'Hydro Pump', 'Draco Meteor'],
+		attack: ['Dragon Tail', 'Draco Meteor'],
+		defend: ['Dragon Tail', 'Draco Meteor']
 	},{
 		nummer: '757',
 		namn: 'Salandit',
@@ -4117,9 +4117,9 @@ var allpokemon = {
 		nummer: '254',
 		namn: 'Sceptile',
 		type: ['Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Fury Cutter', 'Bullet Seed', 'Earthquake', 'Aerial Ace', 'Leaf Blade'],
+		attack: ['Fury Cutter', 'Leaf Blade'],
+		defend: ['Bullet Seed', 'Leaf Blade']
 	},{
 		nummer: '212',
 		namn: 'Scizor',
@@ -4173,16 +4173,16 @@ var allpokemon = {
 		nummer: '364',
 		namn: 'Sealeo',
 		type: ['Ice', 'Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Powder Snow', 'Water Pulse', 'Body Slam', 'Aurora Beam'],
+		attack: ['Water Gun', 'Aurora Beam'],
+		defend: ['Powder Snow', 'Aurora Beam']
 	},{
 		nummer: '273',
 		namn: 'Seedot',
 		type: ['Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Quick Attack', 'Bullet Seed', 'Grass Knot', 'Energy Ball', 'Foul Play'],
+		attack: ['Quick Attack', 'Grass Knot'],
+		defend: ['Bullet Seed', 'Grass Knot']
 	},{
 		nummer: '086',
 		namn: 'Seel',
@@ -4222,9 +4222,9 @@ var allpokemon = {
 		nummer: '336',
 		namn: 'Seviper',
 		type: ['Poison'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Poison Jab', 'Iron Tail', 'Wrap', 'Poison Fang', 'Crunch'],
+		attack: ['Poison Jab', 'Crunch'],
+		defend: ['Iron Tail', 'Crunch']
 	},{
 		nummer: '540',
 		namn: 'Sewaddle',
@@ -4236,9 +4236,9 @@ var allpokemon = {
 		nummer: '319',
 		namn: 'Sharpedo',
 		type: ['Water', 'Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Waterfall', 'Poison Fang', 'Hydro Pump', 'Crunch'],
+		attack: ['Waterfall', 'Hydro Pump'],
+		defend: ['Waterfall', 'Crunch']
 	},{
 		nummer: '492',
 		namn: 'Shaymin',
@@ -4250,16 +4250,16 @@ var allpokemon = {
 		nummer: '292',
 		namn: 'Shedinja',
 		type: ['Bug', 'Ghost'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bite', 'Struggle Bug', 'Dig', 'Aerial Ace', 'Shadow Sneak'],
+		attack: ['Struggle Bug', 'Dig'],
+		defend: ['Struggle Bug', 'Dig']
 	},{
 		nummer: '372',
 		namn: 'Shelgon',
 		type: ['Dragon'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Breath', 'Ember', 'Flamethrower', 'Twister', 'Dragon Pulse'],
+		attack: ['Dragon Breath', 'Dragon Pulse'],
+		defend: ['Ember', 'Dragon Pulse']
 	},{
 		nummer: '090',
 		namn: 'Shellder',
@@ -4292,9 +4292,9 @@ var allpokemon = {
 		nummer: '275',
 		namn: 'Shiftry',
 		type: ['Grass', 'Dark'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Razor Leaf', 'Feint Attack', 'Leaf Blade', 'Hurricane', 'Foul Play'],
+		attack: ['Razor Leaf', 'Leaf Blade'],
+		defend: ['Feint Attack', 'Leaf Blade']
 	},{
 		nummer: '756',
 		namn: 'Shiinotic',
@@ -4313,9 +4313,9 @@ var allpokemon = {
 		nummer: '285',
 		namn: 'Shroomish',
 		type: ['Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Bullet Seed', 'Seed Bomb', 'Grass Knot', 'Energy Ball'],
+		attack: ['Bullet Seed', 'Grass Knot'],
+		defend: ['Bullet Seed', 'Grass Knot']
 	},{
 		nummer: '213',
 		namn: 'Shuckle',
@@ -4341,9 +4341,9 @@ var allpokemon = {
 		nummer: '266',
 		namn: 'Silcoon',
 		type: ['Bug'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bug Bite', 'Poison Sting', 'Struggle'],
+		attack: ['Bug Bite', 'Struggle'],
+		defend: ['Bug Bite', 'Struggle']
 	},{
 		nummer: '773',
 		namn: 'Silvally',
@@ -4397,9 +4397,9 @@ var allpokemon = {
 		nummer: '300',
 		namn: 'Skitty',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Feint Attack', 'Dig', 'Disarming Voice', 'Wild Charge'],
+		attack: ['Tackle', 'Wild Charge'],
+		defend: ['Feint Attack', 'Wild Charge']
 	},{
 		nummer: '451',
 		namn: 'Skorupi',
@@ -4425,16 +4425,16 @@ var allpokemon = {
 		nummer: '289',
 		namn: 'Slaking',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Yawn', 'Hyper Beam', 'Earthquake', 'Play Rough'],
+		attack: ['Yawn', 'Hyper Beam'],
+		defend: ['Yawn', 'Play Rough']
 	},{
 		nummer: '287',
 		namn: 'Slakoth',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Yawn', 'Night Slash', 'Brick Break', 'Body Slam'],
+		attack: ['Yawn', 'Body Slam'],
+		defend: ['Yawn', 'Body Slam']
 	},{
 		nummer: '705',
 		namn: 'Sliggoo',
@@ -4516,9 +4516,9 @@ var allpokemon = {
 		nummer: '361',
 		namn: 'Snorunt',
 		type: ['Ice'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Powder Snow', 'Hex', 'Shadow Ball', 'Icy Wind', 'Avalanche'],
+		attack: ['Powder Snow', 'Avalanche'],
+		defend: ['Powder Snow', 'Avalanche']
 	},{
 		nummer: '459',
 		namn: 'Snover',
@@ -4551,9 +4551,9 @@ var allpokemon = {
 		nummer: '338',
 		namn: 'Solrock',
 		type: ['Rock', 'Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Rock Throw', 'Confusion', 'Rock Slide', 'Psychic', 'Solar Beam'],
+		attack: ['Confusion', 'Solar Beam'],
+		defend: ['Confusion', 'Solar Beam']
 	},{
 		nummer: '021',
 		namn: 'Spearow',
@@ -4572,9 +4572,9 @@ var allpokemon = {
 		nummer: '363',
 		namn: 'Spheal',
 		type: ['Ice', 'Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Rock Smash', 'Water Pulse', 'Body Slam', 'Aurora Beam'],
+		attack: ['Water Gun', 'Aurora Beam'],
+		defend: ['Rock Smash', 'Aurora Beam']
 	},{
 		nummer: '167',
 		namn: 'Spinarak',
@@ -4586,9 +4586,9 @@ var allpokemon = {
 		nummer: '327',
 		namn: 'Spinda',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Sucker Punch', 'Psycho Cut', 'Dig', 'Rock Tomb', 'Icy Wind'],
+		attack: ['Sucker Punch', 'Dig'],
+		defend: ['Sucker Punch', 'Dig']
 	},{
 		nummer: '442',
 		namn: 'Spiritomb',
@@ -4600,9 +4600,9 @@ var allpokemon = {
 		nummer: '325',
 		namn: 'Spoink',
 		type: ['Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Splash', 'Zen Headbutt', 'Psybeam', 'Shadow Ball', 'Mirror Coat'],
+		attack: ['Zen Headbutt', 'Shadow Ball'],
+		defend: ['Zen Headbutt', 'Shadow Ball']
 	},{
 		nummer: '682',
 		namn: 'Spritzee',
@@ -4733,16 +4733,16 @@ var allpokemon = {
 		nummer: '283',
 		namn: 'Surskit',
 		type: ['Bug', 'Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bug Bite', 'Bubble', 'Bubble Beam', 'Aqua Jet', 'Signal Beam'],
+		attack: ['Bug Bite', 'Signal Beam'],
+		defend: ['Bubble', 'Signal Beam']
 	},{
 		nummer: '333',
 		namn: 'Swablu',
 		type: ['Normal', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Peck', 'Astonish', 'Ice Beam', 'Aerial Ace', 'Disarming Voice'],
+		attack: ['Peck', 'Aerial Ace'],
+		defend: ['Peck', 'Aerial Ace']
 	},{
 		nummer: '541',
 		namn: 'Swadloon',
@@ -4754,16 +4754,16 @@ var allpokemon = {
 		nummer: '317',
 		namn: 'Swalot',
 		type: ['Poison'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Rock Smash', 'Infestation', 'Ice Beam', 'Sludge Bomb', 'Gunk Shot'],
+		attack: ['Infestation', 'Sludge Bomb'],
+		defend: ['Rock Smash', 'Sludge Bomb']
 	},{
 		nummer: '260',
 		namn: 'Swampert',
 		type: ['Water', 'Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Mud Shot', 'Water Gun', 'Earthquake', 'Sludge Wave', 'Surf'],
+		attack: ['Water Gun', 'Surf'],
+		defend: ['Mud Shot', 'Surf']
 	},{
 		nummer: '581',
 		namn: 'Swanna',
@@ -4775,9 +4775,9 @@ var allpokemon = {
 		nummer: '277',
 		namn: 'Swellow',
 		type: ['Normal', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Wing Attack', 'Steel Wing', 'Aerial Ace', 'Brave Bird', 'Sky Attack'],
+		attack: ['Wing Attack', 'Sky Attack'],
+		defend: ['Wing Attack', 'Aerial Ace']
 	},{
 		nummer: '220',
 		namn: 'Swinub',
@@ -4811,9 +4811,9 @@ var allpokemon = {
 		nummer: '276',
 		namn: 'Taillow',
 		type: ['Normal', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Peck', 'Quick Attack', 'Aerial Ace'],
+		attack: ['Quick Attack', 'Aerial Ace'],
+		defend: ['Peck', 'Aerial Ace']
 	},{
 		nummer: '663',
 		namn: 'Talonflame',
@@ -4965,16 +4965,16 @@ var allpokemon = {
 		nummer: '255',
 		namn: 'Torchic',
 		type: ['Fire'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Ember', 'Scratch', 'Flamethrower', 'Rock Tomb', 'Flame Charge'],
+		attack: ['Ember', 'Flamethrower'],
+		defend: ['Ember', 'Flame Charge']
 	},{
 		nummer: '324',
 		namn: 'Torkoal',
 		type: ['Fire'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Ember', 'Fire Spin', 'Earthquake', 'Solar Beam', 'Overheat'],
+		attack: ['Fire Spin', 'Overheat'],
+		defend: ['Fire Spin', 'Overheat']
 	},{
 		nummer: '641',
 		namn: 'Tornadus',
@@ -5035,16 +5035,16 @@ var allpokemon = {
 		nummer: '328',
 		namn: 'Trapinch',
 		type: ['Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Mud Shot', 'Struggle Bug', 'Dig', 'Sand Tomb', 'Crunch'],
+		attack: ['Mud Shot', 'Dig'],
+		defend: ['Struggle Bug', 'Dig']
 	},{
 		nummer: '252',
 		namn: 'Treecko',
 		type: ['Grass'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Pound', 'Bullet Seed', 'Aerial Ace', 'Grass Knot', 'Energy Ball'],
+		attack: ['Pound', 'Grass Knot'],
+		defend: ['Bullet Seed', 'Grass Knot']
 	},{
 		nummer: '709',
 		namn: 'Trevenant',
@@ -5056,9 +5056,9 @@ var allpokemon = {
 		nummer: '357',
 		namn: 'Tropius',
 		type: ['Grass', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Razor Leaf', 'Air Slash', 'Aerial Ace', 'Leaf Blade', 'Stomp'],
+		attack: ['Razor Leaf', 'Leaf Blade'],
+		defend: ['Air Slash', 'Leaf Blade']
 	},{
 		nummer: '568',
 		namn: 'Trubbish',
@@ -5254,9 +5254,9 @@ var allpokemon = {
 		nummer: '329',
 		namn: 'Vibrava',
 		type: ['Ground', 'Dragon'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Dragon Breath', 'Mud Shot', 'Bug Buzz', 'Bulldoze', 'Sand Tomb'],
+		attack: ['Dragon Breath', 'Bulldoze'],
+		defend: ['Mud Shot', 'Bulldoze']
 	},{
 		nummer: '494',
 		namn: 'Victini',
@@ -5275,9 +5275,9 @@ var allpokemon = {
 		nummer: '288',
 		namn: 'Vigoroth',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Scratch', 'Counter', 'Bulldoze', 'Brick Break', 'Body Slam'],
+		attack: ['Scratch', 'Body Slam'],
+		defend: ['Counter', 'Body Slam']
 	},{
 		nummer: '738',
 		namn: 'Vikavolt',
@@ -5310,9 +5310,9 @@ var allpokemon = {
 		nummer: '313',
 		namn: 'Volbeat',
 		type: ['Bug'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Struggle Bug', 'Bug Buzz', 'Thunderbolt', 'Signal Beam'],
+		attack: ['Struggle Bug', 'Bug Buzz'],
+		defend: ['Struggle Bug', 'Bug Buzz']
 	},{
 		nummer: '721',
 		namn: 'Volcanion',
@@ -5353,23 +5353,23 @@ var allpokemon = {
 		nummer: '320',
 		namn: 'Wailmer',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Splash', 'Water Pulse', 'Body Slam', 'Heavy Slam'],
+		attack: ['Water Gun', 'Heavy Slam'],
+		defend: ['Splash', 'Water Pulse']
 	},{
 		nummer: '321',
 		namn: 'Wailord',
 		type: ['Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Water Gun', 'Zen Headbutt', 'Hyper Beam', 'Blizzard', 'Surf'],
+		attack: ['Water Gun', 'Surf'],
+		defend: ['Zen Headbutt', 'Surf']
 	},{
 		nummer: '365',
 		namn: 'Walrein',
 		type: ['Ice', 'Water'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Frost Breath', 'Waterfall', 'Earthquake', 'Blizzard', 'Water Pulse'],
+		attack: ['Waterfall', 'Blizzard'],
+		defend: ['Waterfall', 'Blizzard']
 	},{
 		nummer: '008',
 		namn: 'Wartortle',
@@ -5430,16 +5430,16 @@ var allpokemon = {
 		nummer: '340',
 		namn: 'Whiscash',
 		type: ['Water', 'Ground'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Mud Shot', 'Water Gun', 'Blizzard', 'Mud Bomb', 'Water Pulse'],
+		attack: ['Water Gun', 'Blizzard'],
+		defend: ['Mud Shot', 'Mud Bomb']
 	},{
 		nummer: '293',
 		namn: 'Whismur',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Pound', 'Astonish', 'Flamethrower', 'Disarming Voice', 'Stomp'],
+		attack: ['Pound', 'Stomp'],
+		defend: ['Astonish', 'Disarming Voice']
 	},{
 		nummer: '040',
 		namn: 'Wigglytuff',
@@ -5458,9 +5458,9 @@ var allpokemon = {
 		nummer: '278',
 		namn: 'Wingull',
 		type: ['Water', 'Flying'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Quick Attack', 'Water Gun', 'Ice Beam', 'Water Pulse', 'Air Cutter'],
+		attack: ['Water Gun', 'Ice Beam'],
+		defend: ['Quick Attack', 'Ice Beam']
 	},{
 		nummer: '746',
 		namn: 'Wishiwashi',
@@ -5514,16 +5514,16 @@ var allpokemon = {
 		nummer: '265',
 		namn: 'Wurmple',
 		type: ['Bug'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Bug Bite', 'Tackle', 'Struggle'],
+		attack: ['Bug Bite', 'Struggle'],
+		defend: ['Bug Bite', 'Struggle']
 	},{
 		nummer: '360',
 		namn: 'Wynaut',
 		type: ['Psychic'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Splash', 'Counter', 'Mirror Coat'],
+		attack: ['Counter', 'Mirror Coat'],
+		defend: ['Counter', 'Mirror Coat']
 	}],
 	x: [{
 		nummer: '178',
@@ -5587,9 +5587,9 @@ var allpokemon = {
 		nummer: '335',
 		namn: 'Zangoose',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Fury Cutter', 'Shadow Claw', 'Dig', 'Night Slash', 'Close Combat'],
+		attack: ['Shadow Claw', 'Close Combat'],
+		defend: ['Shadow Claw', 'Dig']
 	},{
 		nummer: '145',
 		namn: 'Zapdos',
@@ -5615,9 +5615,9 @@ var allpokemon = {
 		nummer: '263',
 		namn: 'Zigzagoon',
 		type: ['Normal'],
-		moves: [],
-		attack: ['', ''],
-		defend: ['', '']
+		moves: ['Tackle', 'Rock Smash', 'Dig', 'Thunderbolt', 'Grass Knot'],
+		attack: ['Tackle', 'Grass Knot'],
+		defend: ['Rock Smash', 'Grass Knot']
 	},{
 		nummer: '571',
 		namn: 'Zoroark',

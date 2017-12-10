@@ -1,296 +1,311 @@
 var quickmoves = [{
-	element: 'Poison',
 	namn: 'Acid',
+	element: 'Poison',
 	damage: '9',
-	dps: '11.3'
+	dps: '11.25'
 },{
-	element: 'Flying',
 	namn: 'Air Slash',
+	element: 'Flying',
 	damage: '14',
-	dps: '11.7'
+	dps: '11.67'
 },{
-	element: 'Ghost',
 	namn: 'Astonish',
+	element: 'Ghost',
 	damage: '8',
-	dps: '7.3'
+	dps: '7.27'
 },{
-	element: 'Dark',
 	namn: 'Bite',
+	element: 'Dark',
 	damage: '6',
-	dps: '12'
+	dps: '12.00'
 },{
-	element: 'Water',
 	namn: 'Bubble',
+	element: 'Water',
 	damage: '12',
-	dps: '10'
+	dps: '10.00'
 },{
-	element: 'Bug',
 	namn: 'Bug Bite',
+	element: 'Bug',
 	damage: '5',
-	dps: '10'
+	dps: '10.00'
 },{
-	element: 'Steel',
 	namn: 'Bullet Punch',
+	element: 'Steel',
 	damage: '9',
-	dps: '10'
+	dps: '10.00'
 },{
-	element: 'Grass',
 	namn: 'Bullet Seed',
+	element: 'Grass',
 	damage: '8',
-	dps: '7.3'
+	dps: '7.27'
 },{
-	element: 'Electric',
 	namn: 'Charge Beam',
+	element: 'Electric',
 	damage: '8',
-	dps: '7.3'
+	dps: '7.27'
 },{
-	element: 'Psychic',
 	namn: 'Confusion',
+	element: 'Psychic',
 	damage: '20',
-	dps: '12.5'
+	dps: '12.50'
 },{
-	element: 'Fighting',
 	namn: 'Counter',
+	element: 'Fighting',
 	damage: '12',
-	dps: '13.3'
+	dps: '13.33'
 },{
-	element: 'Normal',
 	namn: 'Cut',
+	element: 'Normal',
 	damage: '5',
-	dps: '10'
+	dps: '10.00'
 },{
-	element: 'Dragon',
 	namn: 'Dragon Breath',
-	damage: '6',
-	dps: '12'
-},{
 	element: 'Dragon',
+	damage: '6',
+	dps: '12.00'
+},{
 	namn: 'Dragon Tail',
+	element: 'Dragon',
 	damage: '15',
-	dps: '13.6'
+	dps: '13.64'
 },{
-	element: 'Fire',
 	namn: 'Ember',
+	element: 'Fire',
 	damage: '10',
-	dps: '10'
+	dps: '10.00'
 },{
-	element: 'Psychic',
 	namn: 'Extrasensory',
+	element: 'Psychic',
 	damage: '12',
-	dps: '10.9'
+	dps: '10.91'
 },{
-	element: 'Dark',
 	namn: 'Feint Attack',
+	element: 'Dark',
 	damage: '10',
-	dps: '11.1'
+	dps: '11.11'
 },{
-	element: 'Fire',
 	namn: 'Fire Fang',
-	damage: '11',
-	dps: '12.2'
-},{
 	element: 'Fire',
-	namn: 'Fire Spin',
-	damage: '14',
-	dps: '12.7'
-},{
-	element: 'Ice',
-	namn: 'Frost Breath',
-	damage: '10',
-	dps: '11.1'
-},{
-	element: 'Bug',
-	namn: 'Fury Cutter',
-	damage: '3',
-	dps: '7.5'
-},{
-	element: 'Ghost',
-	namn: 'Hex',
-	damage: '10',
-	dps: '8.3'
-},{
-	element: 'Normal',
-	namn: 'Hidden Power',
-	damage: '15',
-	dps: '10'
-},{
-	element: 'Ice',
-	namn: 'Ice Shard',
-	damage: '12',
-	dps: '10'
-},{
-	element: 'Bug',
-	namn: 'Infestation',
-	damage: '10',
-	dps: '9.1'
-},{
-	element: 'Steel',
-	namn: 'Iron Tail',
-	damage: '15',
-	dps: '13.6'
-},{
-	element: 'Fighting',
-	namn: 'Karate Chop',
-	damage: '8',
-	dps: '10'
-},{
-	element: 'Ghost',
-	namn: 'Lick',
-	damage: '5',
-	dps: '10'
-},{
-	element: 'Fighting',
-	namn: 'Low Kick',
-	damage: '6',
-	dps: '10'
-},{
-	element: 'Steel',
-	namn: 'Metal Claw',
-	damage: '8',
-	dps: '11.4'
-},{
-	element: 'Ground',
-	namn: 'Mud Shot',
-	damage: '5',
-	dps: '8.3'
-},{
-	element: 'Ground',
-	namn: 'Mud Slap',
-	damage: '15',
-	dps: '10.7'
-},{
-	element: 'Flying',
-	namn: 'Peck',
-	damage: '10',
-	dps: '10'
-},{
-	element: 'Poison',
-	namn: 'Poison Jab',
-	damage: '10',
-	dps: '12.5'
-},{
-	element: 'Poison',
-	namn: 'Poison Sting',
-	damage: '5',
-	dps: '8.3'
-},{
-	element: 'Normal',
-	namn: 'Pound',
-	damage: '7',
-	dps: '11.7'
-},{
-	element: 'Ice',
-	namn: 'Powder Snow',
-	damage: '6',
-	dps: '6'
-},{
-	element: 'Psychic',
-	namn: 'Psycho Cut',
-	damage: '5',
-	dps: '8.3'
-},{
-	element: 'Normal',
-	namn: 'Quick Attack',
-	damage: '8',
-	dps: '10'
-},{
-	element: 'Grass',
-	namn: 'Razor Leaf',
-	damage: '13',
-	dps: '13'
-},{
-	element: 'Fighting',
-	namn: 'Rock Smash',
-	damage: '15',
-	dps: '11.5'
-},{
-	element: 'Rock',
-	namn: 'Rock Throw',
-	damage: '12',
-	dps: '13.3'
-},{
-	element: 'Normal',
-	namn: 'Scratch',
-	damage: '6',
-	dps: '12'
-},{
-	element: 'Ghost',
-	namn: 'Shadow Claw',
-	damage: '9',
-	dps: '12.9'
-},{
-	element: 'Dark',
-	namn: 'Snarl',
-	damage: '12',
-	dps: '10.9'
-},{
-	element: 'Electric',
-	namn: 'Spark',
-	damage: '6',
-	dps: '8.6'
-},{
-	element: 'Water',
-	namn: 'Splash',
-	damage: '0',
-	dps: '0'
-},{
-	element: 'Steel',
-	namn: 'Steel Wing',
 	damage: '11',
-	dps: '13.8'
+	dps: '12.22'
 },{
-	element: 'Normal',
-	namn: 'Struggle',
-	damage: '35',
-	dps: '13'
+	namn: 'Fire Spin',
+	element: 'Fire',
+	damage: '14',
+	dps: '12.73'
 },{
+	namn: 'Frost Breath',
+	element: 'Ice',
+	damage: '10',
+	dps: '11.11'
+},{
+	namn: 'Fury Cutter',
 	element: 'Bug',
-	namn: 'Struggle Bug',
+	damage: '3',
+	dps: '7.50'
+},{
+	namn: 'Hex',
+	element: 'Ghost',
+	damage: '10',
+	dps: '8.33'
+},{
+	namn: 'Hidden Power',
+	element: 'Normal',
 	damage: '15',
-	dps: '10'
+	dps: '10.00'
 },{
-	element: 'Dark',
-	namn: 'Sucker Punch',
-	damage: '7',
-	dps: '10'
-},{
-	element: 'Normal',
-	namn: 'Tackle',
-	damage: '5',
-	dps: '10'
-},{
-	element: 'Electric',
-	namn: 'Thunder Shock',
-	damage: '5',
-	dps: '8.3'
-},{
-	element: 'Normal',
-	namn: 'Transform',
-	damage: '0',
-	dps: '0'
-},{
-	element: 'Grass',
-	namn: 'Vine Whip',
-	damage: '7',
-	dps: '11.7'
-},{
-	element: 'Electric',
-	namn: 'Volt Switch',
-	damage: '20',
-	dps: '8.7'
-},{
-	element: 'Water',
-	namn: 'Water Gun',
-	damage: '5',
-	dps: '10'
-},{
-	element: 'Flying',
-	namn: 'Wing Attack',
-	damage: '8',
-	dps: '10'
-},{
-	element: 'Psychic',
-	namn: 'Zen Headbutt',
+	namn: 'Ice Shard',
+	element: 'Ice',
 	damage: '12',
-	dps: '10.9'
+	dps: '10.00'
+},{
+	namn: 'Infestation',
+	element: 'Bug',
+	damage: '10',
+	dps: '9.09'
+},{
+	namn: 'Iron Tail',
+	element: 'Steel',
+	damage: '15',
+	dps: '13.64'
+},{
+	namn: 'Karate Chop',
+	element: 'Fighting',
+	damage: '8',
+	dps: '10.00'
+},{
+	namn: 'Lick',
+	element: 'Ghost',
+	damage: '5',
+	dps: '10.00'
+},{
+	namn: 'Low Kick',
+	element: 'Fighting',
+	damage: '6',
+	dps: '10.00'
+},{
+	namn: 'Metal Claw',
+	element: 'Steel',
+	damage: '8',
+	dps: '11.43'
+},{
+	namn: 'Mud Shot',
+	element: 'Ground',
+	damage: '5',
+	dps: '8.33'
+},{
+	namn: 'Mud Slap',
+	element: 'Ground',
+	damage: '15',
+	dps: '10.71'
+},{
+	namn: 'Peck',
+	element: 'Flying',
+	damage: '10',
+	dps: '10.00'
+},{
+	namn: 'Poison Jab',
+	element: 'Poison',
+	damage: '10',
+	dps: '12.50'
+},{
+	namn: 'Poison Sting',
+	element: 'Poison',
+	damage: '5',
+	dps: '8.33'
+},{
+	namn: 'Pound',
+	element: 'Normal',
+	damage: '7',
+	dps: '11.67'
+},{
+	namn: 'Powder Snow',
+	element: 'Ice',
+	damage: '6',
+	dps: '6.00'
+},{
+	namn: 'Present',
+	element: 'Normal',
+	damage: '0',
+	dps: '0.00'
+},{
+	namn: 'Psycho Cut',
+	element: 'Psychic',
+	damage: '5',
+	dps: '8.33'
+},{
+	namn: 'Quick Attack',
+	element: 'Normal',
+	damage: '8',
+	dps: '10.00'
+},{
+	namn: 'Razor Leaf',
+	element: 'Grass',
+	damage: '13',
+	dps: '13.00'
+},{
+	namn: 'Rock Smash',
+	element: 'Fighting',
+	damage: '15',
+	dps: '11.54'
+},{
+	namn: 'Rock Throw',
+	element: 'Rock',
+	damage: '12',
+	dps: '13.33'
+},{
+	namn: 'Scratch',
+	element: 'Normal',
+	damage: '6',
+	dps: '12.00'
+},{
+	namn: 'Shadow Claw',
+	element: 'Ghost',
+	damage: '9',
+	dps: '12.86'
+},{
+	namn: 'Snarl',
+	element: 'Dark',
+	damage: '12',
+	dps: '10.91'
+},{
+	namn: 'Spark',
+	element: 'Electric',
+	damage: '6',
+	dps: '8.57'
+},{
+	namn: 'Splash',
+	element: 'Water',
+	damage: '0',
+	dps: '0.00'
+},{
+	namn: 'Steel Wing',
+	element: 'Steel',
+	damage: '11',
+	dps: '13.75'
+},{
+	namn: 'Struggle Bug',
+	element: 'Bug',
+	damage: '15',
+	dps: '10.00'
+},{
+	namn: 'Sucker Punch',
+	element: 'Dark',
+	damage: '7',
+	dps: '10.00'
+},{
+	namn: 'Tackle',
+	element: 'Normal',
+	damage: '5',
+	dps: '10.00'
+},{
+	namn: 'Take Down',
+	element: 'Normal',
+	damage: '8',
+	dps: '6.67'
+},{
+	namn: 'Thunder Shock',
+	element: 'Electric',
+	damage: '5',
+	dps: '8.33'
+},{
+	namn: 'Transform',
+	element: 'Normal',
+	damage: '0',
+	dps: '0.00'
+},{
+	namn: 'Vine Whip',
+	element: 'Grass',
+	damage: '7',
+	dps: '11.67'
+},{
+	namn: 'Volt Switch',
+	element: 'Electric',
+	damage: '20',
+	dps: '8.70'
+},{
+	namn: 'Water Gun',
+	element: 'Water',
+	damage: '5',
+	dps: '10.00'
+},{
+	namn: 'Waterfall',
+	element: 'Water',
+	damage: '16',
+	dps: '13.33'
+},{
+	namn: 'Wing Attack',
+	element: 'Flying',
+	damage: '8',
+	dps: '10.00'
+},{
+	namn: 'Yawn',
+	element: 'Normal',
+	damage: '0',
+	dps: '0.00'
+},{
+	namn: 'Zen Headbutt',
+	element: 'Psychic',
+	damage: '12',
+	dps: '10.91'
 }];
