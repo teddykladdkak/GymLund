@@ -8,9 +8,27 @@
 	<meta content="yes" name="mobile-web-app-capable" />
 	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+	<link rel="stylesheet" type="text/css" href="img/pokemon/sprite.css">
+
 	<script type="text/javascript">
-		function addimages(antal, collumner, stil, startnummer, size){
-			var rader = Math.ceil(antal / collumner);
+		var spritepokemon = 386;
+		function addimages(){
+			var wrapper = document.getElementById('bilder');
+			for (var i = 1; i < spritepokemon + 1; i++){
+				var elem = document.createElement('i');
+					if(localStorage.getItem('pokeselect' + i)){
+						elem.setAttribute('class', 'sprite sprite-' + i + ' marked');
+						elem.setAttribute('data-chosen', true);
+					}else{
+						elem.setAttribute('class', 'sprite sprite-' + i);
+					};
+					elem.setAttribute('onclick', 'mark(this)');
+					elem.setAttribute('data-number', i);
+					elem.setAttribute('data-class', 'sprite sprite-' + i);
+				wrapper.appendChild(elem);
+			};
+			/*var rader = Math.ceil(antal / collumner);
 			var arrayrader = [];for (var i = rader - 1; i >= 0; i--) {for (var y = collumner - 1; y >= 0; y--) {arrayrader.push(i * size);};};arrayrader.reverse();
 			var arraycol = [];for (var i = rader - 1; i >= 0; i--) {for (var y = collumner - 1; y >= 0; y--) {arraycol.push(y * size);};};arraycol.reverse();
 			var wrapper = document.getElementById('bilder');
@@ -30,8 +48,8 @@
 					var spantext = document.createTextNode(startnummer + i + 1);
 					span.appendChild(spantext);
 				wrapper.insertBefore(span, wrapper.firstChild);
-			};
-		}
+			};*/
+		};
 		function onload(){
 			var meny = document.getElementById('meny');
 			if(!localStorage.getItem('remember_select_exclude')){}else{
@@ -44,8 +62,9 @@
 					localStorage.setItem('pokeselect' + elementstosave[i], true);
 				};
 			};
-			addimages(100, 16, 'gentva', 151, 50);
-			addimages(151, 5, 'genett', 0, 50);
+			// addimages(100, 16, 'gentva', 151, 50);
+			// addimages(151, 5, 'genett', 0, 50);
+			addimages();
 		};
 		function mark(element){
 			if(!element.getAttribute('data-chosen')){
@@ -107,7 +126,7 @@
 			
 		};
 		function valj(todo){
-			var allspan = document.getElementById('bilder').getElementsByTagName('span');
+			var allspan = document.getElementById('bilder').getElementsByTagName('i');
 			for (var i = allspan.length - 1; i >= 0; i--) {
 				if(todo == 'alla'){
 					allspan[i].setAttribute('class', allspan[i].getAttribute('data-class'));
@@ -122,7 +141,7 @@
 		};
 	</script>
 	<style type="text/css">
-		body{
+		#meny{
 			zoom: 2;
 		}
 		.genett{
