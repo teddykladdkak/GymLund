@@ -189,7 +189,7 @@ function head(hittade, ejhittade, antalgym){
 	addparagraph(wrapper, 'Instruktioner för att installera denna webappen:');
 	addbutton(wrapper, 'iOS', 'http://www.teddyprojekt.tk/manualer/iphone.html');
 	addbutton(wrapper, 'Android', 'http://www.teddyprojekt.tk/manualer/android.html');
-	addparagraph(wrapper, 'Andra hjälpmedel:');
+	addparagraph(wrapper, 'Andra projekt:');
 	for (var i = 0; i < andraplatser.length; i++){
 		addbutton(wrapper, andraplatser[i].namn, andraplatser[i].url);
 	};
