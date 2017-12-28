@@ -1493,9 +1493,9 @@ var allpokemon = {
 		nummer: '160',
 		namn: 'Feraligatr',
 		type: ['Water'],
-		moves: ['Bite', 'Water Gun', 'Hydro Pump', 'Ice Beam', 'Crunch'],
-		attack: ['Water Gun', 'Hydro Pump'],
-		defend: ['Water Gun', 'Ice Beam']
+		moves: ['Waterfall', 'Bite', 'Water Gun', 'Hydro Pump', 'Ice Beam', 'Crunch'],
+		attack: ['Waterfall', 'Hydro Pump'],
+		defend: ['Waterfall', 'Hydro Pump']
 	},{
 		nummer: '597',
 		namn: 'Ferroseed',
@@ -2005,9 +2005,9 @@ var allpokemon = {
 		nummer: '130',
 		namn: 'Gyarados',
 		type: ['Water', 'Flying'],
-		moves: ['Dragon Tail', 'Bite', 'Dragon Breath', 'Hydro Pump', 'Outrage', 'Dragon Pulse', 'Crunch', 'Twister'],
-		attack: ['Dragon Tail', 'Hydro Pump'],
-		defend: ['Dragon Tail', 'Outrage']
+		moves: ['Waterfall', 'Dragon Tail', 'Bite', 'Dragon Breath', 'Hydro Pump', 'Outrage', 'Dragon Pulse', 'Crunch', 'Twister'],
+		attack: ['Waterfall', 'Hydro Pump'],
+		defend: ['Waterfall', 'Outrage']
 	}],
 	h: [{
 		nummer: '783',
@@ -2380,9 +2380,9 @@ var allpokemon = {
 		nummer: '230',
 		namn: 'Kingdra',
 		type: ['Water', 'Dragon'],
-		moves: ['Dragon Breath', 'Water Gun', 'Hydro Pump', 'Blizzard', 'Outrage'],
-		attack: ['Dragon Breath', 'Outrage'],
-		defend: ['Water Gun', 'Outrage']
+		moves: ['Waterfall', 'Dragon Breath', 'Water Gun', 'Hydro Pump', 'Blizzard', 'Outrage'],
+		attack: ['Waterfall', 'Outrage'],
+		defend: ['Waterfall', 'Outrage']
 	},{
 		nummer: '099',
 		namn: 'Kingler',
@@ -2528,7 +2528,7 @@ var allpokemon = {
 		nummer: '131',
 		namn: 'Lapras',
 		type: ['Water', 'Ice'],
-		moves: ['Frost Breath', 'Ice Shard', 'Water Gun', 'Blizzard', 'Hydro Pump', 'Ice Beam', 'Dragon Pulse'],
+		moves: ['Frost Breath', 'Ice Shard', 'Water Gun', 'Blizzard', 'Hydro Pump', 'Ice Beam', 'Dragon Pulse', 'Surf'],
 		attack: ['Water Gun', 'Blizzard'],
 		defend: ['Frost Breath', 'Ice Beam']
 	},{
@@ -3659,8 +3659,8 @@ var allpokemon = {
 		nummer: '186',
 		namn: 'Politoed',
 		type: ['Water'],
-		moves: ['Bubble', 'Mud Shot', 'Hydro Pump', 'Blizzard', 'Earthquake'],
-		attack: ['Bubble', 'Hydro Pump'],
+		moves: ['Bubble', 'Mud Shot', 'Hydro Pump', 'Blizzard', 'Earthquake', 'Surf'],
+		attack: ['Bubble', 'Surf'],
 		defend: ['Bubble', 'Hydro Pump']
 	},{
 		nummer: '060',
@@ -3948,7 +3948,7 @@ var allpokemon = {
 		nummer: '112',
 		namn: 'Rhydon',
 		type: ['Ground', 'Rock'],
-		moves: ['Mud Slap', 'Rock Smash', 'Stone Edge', 'Megahorn', 'Earthquake'],
+		moves: ['Mud Slap', 'Rock Smash', 'Stone Edge', 'Megahorn', 'Earthquake', 'Surf'],
 		attack: ['Mud Slap', 'Earthquake'],
 		defend: ['Mud Slap', 'Earthquake']
 	},{
@@ -4166,9 +4166,9 @@ var allpokemon = {
 		nummer: '119',
 		namn: 'Seaking',
 		type: ['Water'],
-		moves: ['Poison Jab', 'Peck', 'Megahorn', 'Drill Run', 'Ice Beam', 'Water Pulse', 'Icy Wind'],
-		attack: ['Poison Jab', 'Ice Beam'],
-		defend: ['Peck', 'Ice Beam']
+		moves: ['Waterfall', 'Poison Jab', 'Peck', 'Megahorn', 'Drill Run', 'Ice Beam', 'Water Pulse', 'Icy Wind'],
+		attack: ['Waterfall', 'Ice Beam'],
+		defend: ['Waterfall', 'Ice Beam']
 	},{
 		nummer: '364',
 		namn: 'Sealeo',
