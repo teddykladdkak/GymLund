@@ -1,4 +1,12 @@
 var gyms = [{
+	namn: 'Elefant',
+	id: '',
+	location: {
+		longitud: '55.725213',
+		latitud: '13.1769730'
+	},
+	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9157671968437!2d13.174784316074962!3d55.725216001586524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMwLjgiTiAxM8KwMTAnMzcuMSJF!5e0!3m2!1ssv!2sse!4v1515530517318'
+},{
 	namn: 'Rävshög',
 	id: 'r_vsh_g',
 	location: {
