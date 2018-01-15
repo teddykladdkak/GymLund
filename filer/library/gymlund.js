@@ -1,4 +1,12 @@
 var gyms = [{
+	namn: 'Bag Turtle',
+	id: '',
+	location: {
+		longitud: '55.728472',
+		latitud: '13.1604520'
+	},
+	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d10686.855383042923!2d13.165531297672919!3d55.730102147956494!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzQyLjUiTiAxM8KwMDknMzcuNiJF!5e0!3m2!1ssv!2sse!4v1516045214528'
+},{
 	namn: 'Elefant',
 	id: '',
 	location: {
