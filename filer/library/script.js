@@ -254,6 +254,16 @@ function load(spriteorimg, folder){
 					var linktext = document.createTextNode(gymsorted[i].namn);
 					textbox.appendChild(linktext);
 				line.appendChild(textbox);
+				var exraidwrapper = document.createElement('td');
+				if(!gymsorted[i].exraid){}else{
+						var exraidimg = document.createElement('img');
+							exraidimg.setAttribute('src', 'img/exraid.png');
+							exraidimg.setAttribute('height', '30px');
+							exraidimg.setAttribute('style', 'padding-right: 35px;');
+						exraidwrapper.appendChild(exraidimg);
+					
+				};
+				line.appendChild(exraidwrapper);
 			table.appendChild(line);
 		};
 		wrapper.appendChild(table);
