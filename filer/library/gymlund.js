@@ -357,7 +357,7 @@ var gyms = [{
 		latitud: '13.1828280'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.826588400426!2d13.180639315928861!3d55.709385980541825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzMzLjgiTiAxM8KwMTAnNTguMiJF!5e0!3m2!1ssv!2sus!4v1507118776742',
-	exraid: false
+	exraid: true
 },{
 	namn: 'Totem',
 	id: 'totem',
@@ -573,7 +573,7 @@ var gyms = [{
 		latitud: '13.1719800'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.8842347383074!2d13.169791315929505!3d55.72576398054618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMyLjgiTiAxM8KwMTAnMTkuMSJF!5e0!3m2!1ssv!2sus!4v1507119153683',
-	exraid: false
+	exraid: true
 },{
 	namn: 'The Wood Throne',
 	id: 'the-wood-throne',
@@ -780,7 +780,7 @@ var gyms = [{
 		latitud: '13.1887850'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9608243703337!2d13.18659631592944!3d55.7244329805458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzI4LjAiTiAxM8KwMTEnMTkuNiJF!5e0!3m2!1ssv!2sus!4v1507119532818',
-	exraid: false
+	exraid: true
 },{
 	namn: 'QlikView Obelisk',
 	id: 'qlikview-obelisk',
