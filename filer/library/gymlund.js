@@ -1,4 +1,13 @@
 var gyms = [{
+	namn: 'Stadsodling Brunnshög',
+	id: '',
+	location: {
+		longitud: '55.719406',
+		latitud: '13.239881'
+	},
+	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8989.443057882605!2d13.240935809499433!3d55.71748234661251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzA5LjkiTiAxM8KwMTQnMjMuNiJF!5e0!3m2!1ssv!2sse!4v1516619735851',
+	exraid: 'possible'
+},{
 	namn: 'Bag Turtle',
 	id: '',
 	location: {
@@ -15,7 +24,7 @@ var gyms = [{
 		latitud: '13.1769730'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9157671968437!2d13.174784316074962!3d55.725216001586524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMwLjgiTiAxM8KwMTAnMzcuMSJF!5e0!3m2!1ssv!2sse!4v1515530517318',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Rävshög',
 	id: 'r_vsh_g',
@@ -24,7 +33,7 @@ var gyms = [{
 		latitud: '13.161614'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.866568888509!2d13.159425315929496!3d55.7260709805462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMzLjkiTiAxM8KwMDknNDEuOCJF!5e0!3m2!1ssv!2sse!4v1510032265800',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Lunds Akademiska Golfklubb',
 	id: '',
@@ -42,7 +51,7 @@ var gyms = [{
 		latitud: '13.234166'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.594064105796!2d13.23197731592834!3d55.69604498053831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzQ1LjgiTiAxM8KwMTQnMDMuMCJF!5e0!3m2!1ssv!2sus!4v1507117511566',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Gömd Helig Plats',
 	id: 'g_md-helig-plats',
@@ -60,7 +69,7 @@ var gyms = [{
 		latitud: '13.186326'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.101678179965!2d13.184137315928027!3d55.68721998053584!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzE0LjAiTiAxM8KwMTEnMTAuOCJF!5e0!3m2!1ssv!2sus!4v1507117618048',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Höjeådalen',
 	id: 'h_je_dalen',
@@ -69,7 +78,7 @@ var gyms = [{
 		latitud: '13.1768580'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2249.226028301511!2d13.174669315927943!3d55.685057980535326!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzA2LjIiTiAxM8KwMTAnMzYuNyJF!5e0!3m2!1ssv!2sus!4v1507117695439',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Flackarps mölla',
 	id: 'flackarps-m_lla',
@@ -87,7 +96,7 @@ var gyms = [{
 		latitud: '13.1843270'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.148815329868!2d13.182138315928663!3d55.703784980540306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzEzLjYiTiAxM8KwMTEnMDMuNiJF!5e0!3m2!1ssv!2sus!4v1507117773560',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Plaskdammen',
 	id: 'plaskdammen',
@@ -168,7 +177,7 @@ var gyms = [{
 		latitud: '13.1974880'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.80171778441!2d13.195299315928173!3d55.692434980537264!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzMyLjgiTiAxM8KwMTEnNTEuMCJF!5e0!3m2!1ssv!2sus!4v1507118444029',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Fountain',
 	id: 'fountain',
@@ -177,7 +186,7 @@ var gyms = [{
 		latitud: '13.1850550'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.4178678487274!2d13.182866315928475!3d55.69910798053902!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzU2LjgiTiAxM8KwMTEnMDYuMiJF!5e0!3m2!1ssv!2sus!4v1507118464449',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Fontänen Vid stadsparken',
 	id: 'font_nen-vid-stadsparken',
@@ -186,7 +195,7 @@ var gyms = [{
 		latitud: '13.1861260'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.32950844268!2d13.183937315928533!3d55.700643980539496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzAyLjMiTiAxM8KwMTEnMTAuMSJF!5e0!3m2!1ssv!2sus!4v1507118476681',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Utomhusscen',
 	id: 'utomhusscen',
@@ -195,7 +204,7 @@ var gyms = [{
 		latitud: '13.1841300'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.4704455305186!2d13.181941315928462!3d55.698193980538846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzUzLjUiTiAxM8KwMTEnMDIuOSJF!5e0!3m2!1ssv!2sus!4v1507118496092',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Smålands',
 	id: 'sm_lands',
@@ -249,7 +258,7 @@ var gyms = [{
 		latitud: '13.2042700'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.0426168619997!2d13.202081315928714!3d55.70563098054074!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzIwLjMiTiAxM8KwMTInMTUuNCJF!5e0!3m2!1ssv!2sus!4v1507118600789',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Metal Swirl',
 	id: 'metal-swirl',
@@ -258,7 +267,7 @@ var gyms = [{
 		latitud: '13.1633260'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.8298677328676!2d13.161137315928888!3d55.70932898054173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzMzLjYiTiAxM8KwMDknNDguMCJF!5e0!3m2!1ssv!2sus!4v1507118615302',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Afrodite',
 	id: 'afrodite',
@@ -285,7 +294,7 @@ var gyms = [{
 		latitud: '13.2040720'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.179995585276!2d13.20188331592853!3d55.70324298054011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzExLjciTiAxM8KwMTInMTQuNyJF!5e0!3m2!1ssv!2sus!4v1507118657199',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Lund Sk8 Spot',
 	id: 'lund-sk8-spot',
@@ -357,7 +366,7 @@ var gyms = [{
 		latitud: '13.1828280'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.826588400426!2d13.180639315928861!3d55.709385980541825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzMzLjgiTiAxM8KwMTAnNTguMiJF!5e0!3m2!1ssv!2sus!4v1507118776742',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Totem',
 	id: 'totem',
@@ -366,7 +375,7 @@ var gyms = [{
 		latitud: '13.1911490'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.9631103060374!2d13.18896031592877!3d55.70701298054109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzI1LjMiTiAxM8KwMTEnMjguMSJF!5e0!3m2!1ssv!2sus!4v1507118794572',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Kapitalet',
 	id: 'kapitalet',
@@ -375,7 +384,7 @@ var gyms = [{
 		latitud: '13.2094180'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.801504310306!2d13.207229315928865!3d55.709821980541896!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzM1LjQiTiAxM8KwMTInMzMuOSJF!5e0!3m2!1ssv!2sus!4v1507118808040',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Skorsten',
 	id: 'skorsten',
@@ -411,7 +420,7 @@ var gyms = [{
 		latitud: '13.1970750'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.8587487750947!2d13.19488631592878!3d55.708826980541595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzMxLjgiTiAxM8KwMTEnNDkuNSJF!5e0!3m2!1ssv!2sus!4v1507118871803',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Lundagård Fountain',
 	id: 'lundag_rd-fountain',
@@ -420,7 +429,7 @@ var gyms = [{
 		latitud: '13.1942780'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.0418689771896!2d13.192089315928731!3d55.70564398054075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzIwLjMiTiAxM8KwMTEnMzkuNCJF!5e0!3m2!1ssv!2sus!4v1507118885295',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Botaniska Trädgården',
 	id: 'botaniska-tr_dg_rden',
@@ -429,7 +438,7 @@ var gyms = [{
 		latitud: '13.2013650'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.1856908500545!2d13.199176315928614!3d55.703143980540034!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzExLjMiTiAxM8KwMTInMDQuOSJF!5e0!3m2!1ssv!2sus!4v1507118899817',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Giant Lion',
 	id: 'giant-lion',
@@ -483,7 +492,7 @@ var gyms = [{
 		latitud: '13.1575270'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.8921170950816!2d13.155338315928793!3d55.70824698054145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzI5LjciTiAxM8KwMDknMjcuMSJF!5e0!3m2!1ssv!2sus!4v1507118993023',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Pencil',
 	id: 'pencil',
@@ -492,7 +501,7 @@ var gyms = [{
 		latitud: '13.2116750'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.546341089617!2d13.209486315929023!3d55.714256980543006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzUxLjMiTiAxM8KwMTInNDIuMCJF!5e0!3m2!1ssv!2sus!4v1507119004684',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Bjärredsparken Amfiteater',
 	id: 'bj_rredsparken-amfiteater',
@@ -501,7 +510,7 @@ var gyms = [{
 		latitud: '13.1847240'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.934747665307!2d13.182535315928815!3d55.70750598054129!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzI3LjAiTiAxM8KwMTEnMDUuMCJF!5e0!3m2!1ssv!2sus!4v1507119028088',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Saturnushuset',
 	id: 'saturnushuset',
@@ -555,7 +564,7 @@ var gyms = [{
 		latitud: '13.1786150'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.294213944144!2d13.176426315929234!3d55.718638980544235!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzA3LjEiTiAxM8KwMTAnNDMuMCJF!5e0!3m2!1ssv!2sus!4v1507119119708',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Gunnesbo Station Norrgående',
 	id: 'gunnesbo-station-norrg_ende',
@@ -573,7 +582,7 @@ var gyms = [{
 		latitud: '13.1719800'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.8842347383074!2d13.169791315929505!3d55.72576398054618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMyLjgiTiAxM8KwMTAnMTkuMSJF!5e0!3m2!1ssv!2sus!4v1507119153683',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'The Wood Throne',
 	id: 'the-wood-throne',
@@ -582,7 +591,7 @@ var gyms = [{
 		latitud: '13.1935690'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.922213219797!2d13.191380315929452!3d55.72510398054597!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMwLjQiTiAxM8KwMTEnMzYuOSJF!5e0!3m2!1ssv!2sus!4v1507119167074',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Fyrklöverns Trädgård',
 	id: 'fyrkl_verns-tr_dg_rd',
@@ -600,7 +609,7 @@ var gyms = [{
 		latitud: '13.2162800'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.694395404478!2d13.214091315929616!3d55.72906298054701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzQ0LjYiTiAxM8KwMTInNTguNiJF!5e0!3m2!1ssv!2sus!4v1507119232396',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Forntid',
 	id: 'forntid',
@@ -663,7 +672,7 @@ var gyms = [{
 		latitud: '13.2253880'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.3226954190377!2d13.223199315929229!3d55.718143980544156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzA1LjMiTiAxM8KwMTMnMzEuNCJF!5e0!3m2!1ssv!2sus!4v1507119329576',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'The Round Playground',
 	id: 'the-round-playground',
@@ -672,7 +681,7 @@ var gyms = [{
 		latitud: '13.1793940'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.253518193328!2d13.177205315929989!3d55.73672398054908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQ0JzEyLjIiTiAxM8KwMTAnNDUuOCJF!5e0!3m2!1ssv!2sus!4v1507119345114',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Yellow Horse',
 	id: 'yellow-horse',
@@ -681,7 +690,7 @@ var gyms = [{
 		latitud: '13.1582750'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.8894711830244!2d13.1560863159295!3d55.725672980546086!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzMyLjQiTiAxM8KwMDknMjkuOCJF!5e0!3m2!1ssv!2sus!4v1507119359934',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Intermodal Nexus',
 	id: 'intermodal-nexus',
@@ -690,7 +699,7 @@ var gyms = [{
 		latitud: '13.2141920'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.47821857462!2d13.212003315929122!3d55.71544098054352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzU1LjYiTiAxM8KwMTInNTEuMSJF!5e0!3m2!1ssv!2sus!4v1507119376304',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Framtidsvandring',
 	id: 'framtidsvandring',
@@ -726,7 +735,7 @@ var gyms = [{
 		latitud: '13.1770260'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.1335637768957!2d13.17483731592934!3d55.721430980544895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzE3LjIiTiAxM8KwMTAnMzcuMyJF!5e0!3m2!1ssv!2sus!4v1507119428482',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Underground Painting - Lund',
 	id: 'underground-painting---lund',
@@ -744,7 +753,7 @@ var gyms = [{
 		latitud: '13.1932950'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.2413357712194!2d13.191106315929236!3d55.71955798054448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzEwLjQiTiAxM8KwMTEnMzUuOSJF!5e0!3m2!1ssv!2sus!4v1507119461589',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Horsey',
 	id: 'horsey',
@@ -753,7 +762,7 @@ var gyms = [{
 		latitud: '13.2281120'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.641964149387!2d13.225923315928986!3d55.712594980542605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzQ1LjMiTiAxM8KwMTMnNDEuMiJF!5e0!3m2!1ssv!2sus!4v1507119475237',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'X Marks the Spot',
 	id: 'x-marks-the-spot',
@@ -780,7 +789,7 @@ var gyms = [{
 		latitud: '13.1887850'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.9608243703337!2d13.18659631592944!3d55.7244329805458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzI4LjAiTiAxM8KwMTEnMTkuNiJF!5e0!3m2!1ssv!2sus!4v1507119532818',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'QlikView Obelisk',
 	id: 'qlikview-obelisk',
@@ -807,7 +816,7 @@ var gyms = [{
 		latitud: '13.2089190'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.016927951916!2d13.206730315929397!3d55.72345798054546!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzI0LjUiTiAxM8KwMTInMzIuMSJF!5e0!3m2!1ssv!2sus!4v1507119572004',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Informationdesk Lund East',
 	id: 'informationdesk-lund-east',
@@ -834,7 +843,7 @@ var gyms = [{
 		latitud: '13.1852520'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.6198156835217!2d13.183063315929681!3d55.73035898054741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzQ5LjMiTiAxM8KwMTEnMDYuOSJF!5e0!3m2!1ssv!2sus!4v1507119612949',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Battle at Lund Monument',
 	id: 'battle-at-lund-monument',
@@ -843,7 +852,7 @@ var gyms = [{
 		latitud: '13.1845240'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.2531312788233!2d13.182335315929258!3d55.71935298054448!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzA5LjciTiAxM8KwMTEnMDQuMyJF!5e0!3m2!1ssv!2sus!4v1507119624797',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Top of the Hill',
 	id: 'top-of-the-hill',
@@ -852,7 +861,7 @@ var gyms = [{
 		latitud: '13.1886970'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.094781382514!2d13.186508315929336!3d55.7221049805452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzE5LjYiTiAxM8KwMTEnMTkuMyJF!5e0!3m2!1ssv!2sus!4v1507119638966',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Solbjer',
 	id: 'solbjer',
@@ -888,7 +897,7 @@ var gyms = [{
 		latitud: '13.1954830'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.014338570163!2d13.193294315929393!3d55.72350298054552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzI0LjYiTiAxM8KwMTEnNDMuNyJF!5e0!3m2!1ssv!2sus!4v1507119701683',
-	exraid: false
+	exraid: 'possible'
 },{
 	namn: 'Accordion Kerub',
 	id: 'accordion-kerub',
@@ -897,7 +906,7 @@ var gyms = [{
 		latitud: '13.1852770'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.3597498544996!2d13.183088315929163!3d55.717499980543934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzAzLjAiTiAxM8KwMTEnMDcuMCJF!5e0!3m2!1ssv!2sus!4v1507119715682',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Monkey Statue',
 	id: 'monkey-statue',
@@ -960,7 +969,7 @@ var gyms = [{
 		latitud: '13.2405100'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.7677805358476!2d13.238321315928246!3d55.69302498053738!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzM0LjkiTiAxM8KwMTQnMjUuOCJF!5e0!3m2!1ssv!2sus!4v1507119822657',
-	exraid: true
+	exraid: 'confirmed'
 },{
 	namn: 'Toolgate',
 	id: 'toolgate',

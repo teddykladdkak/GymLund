@@ -257,7 +257,13 @@ function load(spriteorimg, folder){
 				var exraidwrapper = document.createElement('td');
 				if(!gymsorted[i].exraid){}else{
 						var exraidimg = document.createElement('img');
-							exraidimg.setAttribute('src', 'img/exraid.png');
+						if(gymsorted[i].exraid == 'confirmed'){
+							exraidimg.setAttribute('src', 'img/exraid-confirmed.png');
+						}else if(gymsorted[i].exraid == 'possible'){
+							exraidimg.setAttribute('src', 'img/exraid-possible.png');
+						}else{
+							console.log(gymsorted[i].namn + ' kunde inte läsas status för ex-raid.');
+						};
 							exraidimg.setAttribute('height', '30px');
 							exraidimg.setAttribute('style', 'padding-right: 35px;');
 						exraidwrapper.appendChild(exraidimg);
