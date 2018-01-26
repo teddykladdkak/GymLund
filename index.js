@@ -1,31 +1,51 @@
-var http = require('http')
-var url = require('url')
-var fs = require('fs')
-var path = require('path')
-var baseDirectory = __dirname + '/filer'  // or whatever base directory you want
-var startcount = 0;
+var http = require('http');var fs = require('fs');var path = require('path');
 var port = 9615
 
-http.createServer(function (request, response) {
-   try {
-     var requestUrl = url.parse(request.url)
-     // need to use path.normalize so people can't access directories underneath baseDirectory
-    if(requestUrl.pathname == '/'){var filelink = '/gymlist.html';++startcount;console.log(startcount + ' st har använt sidan!');}else{var filelink = requestUrl.pathname;};
-    var fsPath = baseDirectory+path.normalize(filelink)
-
-
-     response.writeHead(200)
-     var fileStream = fs.createReadStream(fsPath)
-     fileStream.pipe(response)
-     fileStream.on('error',function(e) {
-         response.writeHead(404)     // assume the file doesn't exist
-         response.end()
-     })
-   } catch(e) {
-     response.writeHead(500)
-     response.end()     // end the response so browsers don't hang
-     console.log(e.stack)
-   }
-}).listen(port)
-
-console.log("listening on port "+port)
+var server = http.createServer(function (request, response) {
+   var filePath = '.' + request.url;
+   if (filePath == './'){
+         filePath = 'index.html'
+   };
+   var extname = path.extname(filePath);
+   var contentType = 'text/html';
+   switch (extname) {
+      case '.js':
+         contentType = 'text/javascript';
+         break;
+      case '.css':
+         contentType = 'text/css';
+         break;
+      case '.json':
+         contentType = 'application/json';
+         break;
+      case '.png':
+         contentType = 'image/png';
+         break;
+      case '.jpg':
+         contentType = 'image/jpg';
+         break;
+      case '.wav':
+         contentType = 'audio/wav';
+         break;
+   };
+   fs.readFile('./filer/' + filePath, function(error, content) {
+      if (error) {
+         if(error.code == 'ENOENT'){
+            fs.readFile('./404.html', function(error, content) {
+               response.writeHead(200, { 'Content-Type': contentType });
+               response.end(content, 'utf-8');
+            });
+         }
+         else {
+            response.writeHead(500);
+            response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
+            response.end();
+         }
+      }
+      else {
+         response.writeHead(200, { 'Content-Type': contentType });
+         response.end(content, 'utf-8');
+      }
+   });
+});
+server.listen(port);
