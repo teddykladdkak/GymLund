@@ -6,7 +6,7 @@ var port = 9615;
 var server = http.createServer(function (request, response) {
    var filePath = '.' + request.url;
    if (filePath == './'){
-         filePath = 'index.html'
+         filePath = 'gymlist.html'
    };
    console.log(filePath);
    var extname = path.extname(filePath);
@@ -32,8 +32,11 @@ var server = http.createServer(function (request, response) {
          break;
    };
    console.log(contentType);
-   fs.readFile('./filer/' + filePath, function(error, content) {
+   var filename = filePath.replace('./', '');
+   console.log('./filer/' + filename);
+   fs.readFile('./filer/' + filename, function(error, content) {
       if (error) {
+         console.log(error);
          if(error.code == 'ENOENT'){
             fs.readFile('./404.html', function(error, content) {
                response.writeHead(200, { 'Content-Type': contentType });
