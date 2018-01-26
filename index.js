@@ -1,11 +1,14 @@
-var http = require('http');var fs = require('fs');var path = require('path');
-var port = 9615
+var http = require('http');
+var fs = require('fs');
+var path = require('path');
+var port = 9615;
 
 var server = http.createServer(function (request, response) {
    var filePath = '.' + request.url;
    if (filePath == './'){
          filePath = 'index.html'
    };
+   console.log(filePath);
    var extname = path.extname(filePath);
    var contentType = 'text/html';
    switch (extname) {
@@ -28,6 +31,7 @@ var server = http.createServer(function (request, response) {
          contentType = 'audio/wav';
          break;
    };
+   console.log(contentType);
    fs.readFile('./filer/' + filePath, function(error, content) {
       if (error) {
          if(error.code == 'ENOENT'){
@@ -41,8 +45,7 @@ var server = http.createServer(function (request, response) {
             response.end('Sorry, check with the site admin for error: '+error.code+' ..\n');
             response.end();
          }
-      }
-      else {
+      }else {
          response.writeHead(200, { 'Content-Type': contentType });
          response.end(content, 'utf-8');
       }
