@@ -51,7 +51,7 @@ var gyms = [{
 		latitud: '13.234166'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.594064105796!2d13.23197731592834!3d55.69604498053831!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQxJzQ1LjgiTiAxM8KwMTQnMDMuMCJF!5e0!3m2!1ssv!2sus!4v1507117511566',
-	exraid: 'possible'
+	exraid: false
 },{
 	namn: 'Gömd Helig Plats',
 	id: 'g_md-helig-plats',
@@ -609,7 +609,7 @@ var gyms = [{
 		latitud: '13.2162800'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2246.694395404478!2d13.214091315929616!3d55.72906298054701!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzQ0LjYiTiAxM8KwMTInNTguNiJF!5e0!3m2!1ssv!2sus!4v1507119232396',
-	exraid: 'possible'
+	exraid: false
 },{
 	namn: 'Forntid',
 	id: 'forntid',
@@ -672,7 +672,7 @@ var gyms = [{
 		latitud: '13.2253880'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.3226954190377!2d13.223199315929229!3d55.718143980544156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzA1LjMiTiAxM8KwMTMnMzEuNCJF!5e0!3m2!1ssv!2sus!4v1507119329576',
-	exraid: 'possible'
+	exraid: false
 },{
 	namn: 'The Round Playground',
 	id: 'the-round-playground',
