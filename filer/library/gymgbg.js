@@ -1,4 +1,11 @@
 var gyms = [{
+	namn: 'Container Art',
+	id: 'container-art',
+	location: {
+		longitud: '57.71789',
+		latitud: '11.959088'
+	}
+},{
 	namn: 'Knappnål vid Wavrinskys plats',
 	id: 'knappn_l-vid-wavrinskys-plats',
 	location: {
@@ -3892,7 +3899,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Liseberg',
-	id: '',
+	id: 'liseberg',
 	location: {
 		longitud: '57.696595',
 		latitud: '11.987922'
@@ -3948,7 +3955,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Världskulturmuseet',
-	id: '',
+	id: 'v_rldskulturmuseet',
 	location: {
 		longitud: '57.694793',
 		latitud: '11.989147'

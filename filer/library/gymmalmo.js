@@ -826,7 +826,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Per Albins Hem',
-	id: '',
+	id: 'per-albins-hem',
 	location: {
 		longitud: '55.573063',
 		latitud: '12.998236'
