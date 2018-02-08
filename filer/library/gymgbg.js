@@ -3339,7 +3339,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Solnedgång',
-	id: '',
+	id: 'solnedg_ng',
 	location: {
 		longitud: '57.690877',
 		latitud: '11.992537'
@@ -3913,7 +3913,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Korsvägen',
-	id: '',
+	id: 'korsv_gen',
 	location: {
 		longitud: '57.696616',
 		latitud: '11.986737'
@@ -3941,7 +3941,7 @@ var gyms = [{
 	}
 },{
 	namn: 'Diskussion',
-	id: '',
+	id: 'diskussion',
 	location: {
 		longitud: '57.696083',
 		latitud: '11.986462'
