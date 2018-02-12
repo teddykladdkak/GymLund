@@ -9,7 +9,7 @@ var gyms = [{
 	exraid: 'possible'
 },{
 	namn: 'Bag Turtle',
-	id: '',
+	id: 'bag-turtle',
 	location: {
 		longitud: '55.728472',
 		latitud: '13.1604520'
@@ -18,7 +18,7 @@ var gyms = [{
 	exraid: false
 },{
 	namn: 'Elefant',
-	id: '',
+	id: 'elefant',
 	location: {
 		longitud: '55.725213',
 		latitud: '13.1769730'
