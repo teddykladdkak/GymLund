@@ -1,4 +1,24 @@
 var gyms = [{
+	namn: 'Kullarna',
+	id: '',
+	location: {
+		longitud: '55.575019',
+		latitud: '12.97867'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
+	namn: 'Torgbrunn',
+	id: '',
+	location: {
+		longitud: '55.606475',
+		latitud: '13.000624'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
 	namn: 'Solsil - Berith Lindfeldt',
 	id: '',
 	location: {
@@ -405,7 +425,7 @@ var gyms = [{
 		latitud: '13.047948'
 	}
 },{
-	namn: 'Tre Ingångar Till Rosengård ',
+	namn: 'Tre Ingångar Till Rosengård',
 	id: 'tre-ing_ngar-till-roseng_rd',
 	location: {
 		longitud: '55.594995',
@@ -433,7 +453,7 @@ var gyms = [{
 		latitud: '13.068647'
 	}
 },{
-	namn: 'Sallerups Lusthus ',
+	namn: 'Sallerups Lusthus',
 	id: 'sallerups-lusthus',
 	location: {
 		longitud: '55.599241',
@@ -734,7 +754,7 @@ var gyms = [{
 		latitud: '13.00939'
 	}
 },{
-	namn: 'Spectral Self Container  ',
+	namn: 'Spectral Self Container',
 	id: 'spectral-self-container',
 	location: {
 		longitud: '55.609359',
@@ -797,7 +817,7 @@ var gyms = [{
 		latitud: '13.00081'
 	}
 },{
-	namn: 'Octopus ',
+	namn: 'Octopus',
 	id: 'octopus',
 	location: {
 		longitud: '55.603747',
@@ -832,7 +852,7 @@ var gyms = [{
 		latitud: '12.998236'
 	}
 },{
-	namn: 'Above ',
+	namn: 'Above',
 	id: 'above',
 	location: {
 		longitud: '55.570991',
@@ -1147,7 +1167,7 @@ var gyms = [{
 		latitud: '13.00443'
 	}
 },{
-	namn: 'Urtidsmänniskor ',
+	namn: 'Urtidsmänniskor',
 	id: 'urtidsm_nniskor',
 	location: {
 		longitud: '55.566959',
@@ -1322,7 +1342,7 @@ var gyms = [{
 		latitud: '12.976428'
 	}
 },{
-	namn: 'Ostra Rönneholmsvägen',
+	namn: 'Östra Rönneholmsvägen',
 	id: 'ostra-r_nneholmsv_gen',
 	location: {
 		longitud: '55.596791',
