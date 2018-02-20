@@ -137,8 +137,10 @@ function uppdateDistance(){
 	for (var i = allines.length - 1; i >= 0; i--) {
 		var km = Math.round(getDistanceFromLatLonInKm(allines[i].getAttribute('data-lon'),allines[i].getAttribute('data-lat')) * 10) / 10;
 		var text = allines[i].getElementsByTagName('td')[1];
-			var nytext = document.createTextNode(text.innerText + ' (' + km + ' km)');
-		while (text.hasChildNodes()) {text.removeChild(text.firstChild);};
+		//	var nytext = document.createTextNode(text.innerText + '(' + km + ' km)');
+		//while (text.hasChildNodes()) {text.removeChild(text.firstChild);};
+		var nytext = document.createTextNode('(' + km + ' km)');
+			text.appendChild(document.createElement('br'));
 			text.appendChild(nytext);
 	};
 };
@@ -267,7 +269,13 @@ function load(spriteorimg, folder){
 							exraidimg.setAttribute('height', '30px');
 							exraidimg.setAttribute('style', 'padding-right: 35px;');
 						exraidwrapper.appendChild(exraidimg);
-					
+				};
+				if(!gymsorted[i].rip){}else{
+					var ripp = document.createElement('span');
+						var riptext = document.createTextNode('[RIP]');
+						ripp.appendChild(riptext);
+					exraidwrapper.appendChild(ripp);
+					line.setAttribute('class', 'rip ' + line.getAttribute('class'));
 				};
 				line.appendChild(exraidwrapper);
 			table.appendChild(line);
