@@ -232,8 +232,12 @@ function load(spriteorimg, folder){
 				var iconbox = document.createElement('td');
 					if(spriteorimg == 'sprite'){
 						if(!gymsorted[i].id){
+							/*
 							var gymimg = document.createElement('img');
 								gymimg.setAttribute('src', 'img/okand_mini.png');
+							*/
+							var gymimg = document.createElement('i');
+								gymimg.setAttribute('class', 'sprite sprite-okand_mini');
 							++ejhittade;
 						}else{
 							var gymimg = document.createElement('i');
@@ -258,14 +262,19 @@ function load(spriteorimg, folder){
 				line.appendChild(textbox);
 				var exraidwrapper = document.createElement('td');
 				if(!gymsorted[i].exraid){}else{
-						var exraidimg = document.createElement('img');
+						//var exraidimg = document.createElement('img');
+						var exraidimg = document.createElement('span');
+							var exicon = document.createElement('i');
 						if(gymsorted[i].exraid == 'confirmed'){
-							exraidimg.setAttribute('src', 'img/exraid-confirmed.png');
+							//exraidimg.setAttribute('src', 'img/exraid-confirmed.png');
+							exicon.setAttribute('class', 'sprite sprite-exraid-confirmed');
 						}else if(gymsorted[i].exraid == 'possible'){
-							exraidimg.setAttribute('src', 'img/exraid-possible.png');
+							//exraidimg.setAttribute('src', 'img/exraid-possible.png');
+							exicon.setAttribute('class', 'sprite sprite-exraid-possible');
 						}else{
 							console.log(gymsorted[i].namn + ' kunde inte läsas status för ex-raid.');
 						};
+							exraidimg.appendChild(exicon);
 							exraidimg.setAttribute('height', '30px');
 							exraidimg.setAttribute('style', 'padding-right: 35px;');
 						exraidwrapper.appendChild(exraidimg);

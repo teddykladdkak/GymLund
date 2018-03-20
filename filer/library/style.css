@@ -126,6 +126,9 @@ table td:nth-child(3) img, .rip span {
 	color: red;
 	text-decoration: none;
 }
-.rip img {
+.rip img, .rip i {
 	opacity: 0.5;
+}
+#head i {
+	display: inline-block;
 }

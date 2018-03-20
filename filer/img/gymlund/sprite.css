@@ -34,40 +34,46 @@
     background-position: -334px -5px;
 }
 
-.sprite-battle-at-lund-monument {
+.sprite-bag-turtle {
     width: 73px;
     height: 100px;
     background-position: -416px -5px;
 }
 
+.sprite-battle-at-lund-monument {
+    width: 73px;
+    height: 100px;
+    background-position: -499px -5px;
+}
+
 .sprite-bird-tower {
     width: 72px;
     height: 100px;
-    background-position: -499px -5px;
+    background-position: -582px -5px;
 }
 
 .sprite-bird-village {
     width: 72px;
     height: 100px;
-    background-position: -581px -5px;
+    background-position: -664px -5px;
 }
 
 .sprite-bj_rredsparken-amfiteater {
     width: 72px;
     height: 100px;
-    background-position: -663px -5px;
+    background-position: -746px -5px;
 }
 
 .sprite-borgarparken-fountain {
     width: 72px;
     height: 100px;
-    background-position: -745px -5px;
+    background-position: -828px -5px;
 }
 
 .sprite-botaniska-tr_dg_rden {
     width: 72px;
     height: 100px;
-    background-position: -827px -5px;
+    background-position: -910px -5px;
 }
 
 .sprite-dangerous-tilter {
@@ -94,112 +100,130 @@
     background-position: -251px -115px;
 }
 
+.sprite-elefant {
+    width: 73px;
+    height: 100px;
+    background-position: -333px -115px;
+}
+
 .sprite-energy-swing {
     width: 72px;
     height: 100px;
-    background-position: -333px -115px;
+    background-position: -416px -115px;
 }
 
 .sprite-environmental-engineering-w {
     width: 72px;
     height: 100px;
-    background-position: -415px -115px;
+    background-position: -498px -115px;
 }
 
 .sprite-eos-hallen {
     width: 72px;
     height: 100px;
-    background-position: -497px -115px;
+    background-position: -580px -115px;
+}
+
+.sprite-exraid-confirmed {
+    width: 35px;
+    height: 30px;
+    background-position: -662px -115px;
+}
+
+.sprite-exraid-possible {
+    width: 32px;
+    height: 30px;
+    background-position: -707px -115px;
 }
 
 .sprite-flackarps-m_lla {
     width: 72px;
     height: 100px;
-    background-position: -579px -115px;
+    background-position: -749px -115px;
 }
 
 .sprite-font_nen-bakom-stationen {
     width: 72px;
     height: 100px;
-    background-position: -661px -115px;
+    background-position: -831px -115px;
 }
 
 .sprite-font_nen-vid-stadsparken {
     width: 72px;
     height: 100px;
-    background-position: -743px -115px;
+    background-position: -913px -115px;
 }
 
 .sprite-forntid {
     width: 72px;
     height: 100px;
-    background-position: -825px -115px;
+    background-position: -5px -225px;
 }
 
 .sprite-forrest-siluette {
     width: 72px;
     height: 100px;
-    background-position: -5px -225px;
+    background-position: -87px -225px;
 }
 
 .sprite-fountain {
     width: 72px;
     height: 100px;
-    background-position: -87px -225px;
+    background-position: -169px -225px;
 }
 
 .sprite-framtidsvandring {
     width: 72px;
     height: 100px;
-    background-position: -169px -225px;
+    background-position: -251px -225px;
 }
 
 .sprite-freedom {
     width: 72px;
     height: 100px;
-    background-position: -251px -225px;
+    background-position: -333px -225px;
 }
 
 .sprite-fyrkl_verns-tr_dg_rd {
     width: 72px;
     height: 100px;
-    background-position: -333px -225px;
+    background-position: -415px -225px;
 }
 
 .sprite-g_md-helig-plats {
     width: 72px;
     height: 100px;
-    background-position: -415px -225px;
+    background-position: -497px -225px;
 }
 
 .sprite-giant-lion {
     width: 72px;
     height: 100px;
-    background-position: -497px -225px;
+    background-position: -579px -225px;
 }
 
 .sprite-golden-arch {
     width: 72px;
     height: 100px;
-    background-position: -579px -225px;
+    background-position: -661px -225px;
 }
 
 .sprite-gunnesbo-station-norrg_ende {
     width: 72px;
     height: 100px;
-    background-position: -661px -225px;
+    background-position: -743px -225px;
 }
 
 .sprite-h_je_dalen {
     width: 72px;
     height: 100px;
-    background-position: -743px -225px;
+    background-position: -825px -225px;
 }
 
 .sprite-hallands-nations-salmon {
     width: 72px;
     height: 100px;
-    background-position: -825px -225px;
+    background-position: -907px -225px;
 }
 
 .sprite-hg-spaceship {
@@ -271,365 +295,371 @@
 .sprite-litet-kapell {
     width: 72px;
     height: 100px;
-    background-position: -5px -445px;
+    background-position: -907px -335px;
 }
 
 .sprite-lund-sk8-spot {
     width: 72px;
     height: 100px;
-    background-position: -87px -445px;
+    background-position: -5px -445px;
 }
 
 .sprite-lund-university-main-library {
     width: 72px;
     height: 100px;
-    background-position: -169px -445px;
+    background-position: -87px -445px;
 }
 
 .sprite-lundag_rd-fountain {
     width: 72px;
     height: 100px;
-    background-position: -251px -445px;
+    background-position: -169px -445px;
 }
 
 .sprite-m_rke-_ke-hans {
     width: 72px;
     height: 100px;
-    background-position: -333px -445px;
+    background-position: -251px -445px;
 }
 
 .sprite-metal-swirl {
     width: 72px;
     height: 100px;
-    background-position: -415px -445px;
+    background-position: -333px -445px;
 }
 
 .sprite-monkey-statue {
     width: 72px;
     height: 100px;
-    background-position: -497px -445px;
+    background-position: -415px -445px;
 }
 
 .sprite-museum-wall-art {
     width: 72px;
     height: 100px;
-    background-position: -579px -445px;
+    background-position: -497px -445px;
 }
 
 .sprite-n_bbel_v-bridge {
     width: 72px;
     height: 100px;
-    background-position: -661px -445px;
+    background-position: -579px -445px;
 }
 
 .sprite-narrow-slide {
     width: 72px;
     height: 100px;
-    background-position: -743px -445px;
+    background-position: -661px -445px;
 }
 
 .sprite-netto-park {
     width: 72px;
     height: 100px;
-    background-position: -825px -445px;
+    background-position: -743px -445px;
 }
 
 .sprite-norra-n_bel_vs-kyrka {
     width: 72px;
     height: 100px;
-    background-position: -5px -555px;
+    background-position: -825px -445px;
 }
 
 .sprite-northern-information-plaque {
     width: 72px;
     height: 100px;
-    background-position: -87px -555px;
+    background-position: -907px -445px;
+}
+
+.sprite-okand_mini {
+    width: 73px;
+    height: 100px;
+    background-position: -5px -555px;
 }
 
 .sprite-olika-stenar {
     width: 72px;
     height: 100px;
-    background-position: -169px -555px;
+    background-position: -88px -555px;
 }
 
 .sprite-pencil {
     width: 72px;
     height: 100px;
-    background-position: -251px -555px;
+    background-position: -170px -555px;
 }
 
 .sprite-petersg_rden {
     width: 72px;
     height: 100px;
-    background-position: -333px -555px;
+    background-position: -252px -555px;
 }
 
 .sprite-plaskdammen {
     width: 72px;
     height: 100px;
-    background-position: -415px -555px;
+    background-position: -334px -555px;
 }
 
 .sprite-play-boat {
     width: 72px;
     height: 100px;
-    background-position: -497px -555px;
+    background-position: -416px -555px;
 }
 
 .sprite-qlikview-obelisk {
     width: 72px;
     height: 100px;
-    background-position: -579px -555px;
+    background-position: -498px -555px;
 }
 
 .sprite-r_vsh_g {
     width: 73px;
     height: 100px;
-    background-position: -661px -555px;
+    background-position: -580px -555px;
 }
 
 .sprite-rinneb_cksravinen {
     width: 72px;
     height: 100px;
-    background-position: -744px -555px;
+    background-position: -663px -555px;
 }
 
 .sprite-rosa-ansiktet {
     width: 72px;
     height: 100px;
-    background-position: -826px -555px;
+    background-position: -745px -555px;
 }
 
 .sprite-rymdskeppet {
     width: 73px;
     height: 100px;
-    background-position: -5px -665px;
+    background-position: -827px -555px;
 }
 
 .sprite-sankt-lars-torn {
     width: 72px;
     height: 100px;
-    background-position: -88px -665px;
+    background-position: -910px -555px;
 }
 
 .sprite-saturnushuset {
     width: 72px;
     height: 100px;
-    background-position: -170px -665px;
+    background-position: -5px -665px;
 }
 
 .sprite-security-man-statue {
     width: 72px;
     height: 100px;
-    background-position: -252px -665px;
+    background-position: -87px -665px;
 }
 
 .sprite-sheet-of-power {
     width: 72px;
     height: 100px;
-    background-position: -334px -665px;
+    background-position: -169px -665px;
 }
 
 .sprite-skorsten {
     width: 72px;
     height: 100px;
-    background-position: -416px -665px;
+    background-position: -251px -665px;
 }
 
 .sprite-sm_lands {
     width: 72px;
     height: 100px;
-    background-position: -498px -665px;
+    background-position: -333px -665px;
 }
 
 .sprite-small-fountain {
     width: 72px;
     height: 100px;
-    background-position: -580px -665px;
+    background-position: -415px -665px;
 }
 
 .sprite-solbjer {
     width: 72px;
     height: 100px;
-    background-position: -662px -665px;
+    background-position: -497px -665px;
 }
 
 .sprite-sorgen {
     width: 72px;
     height: 100px;
-    background-position: -744px -665px;
+    background-position: -579px -665px;
 }
 
 .sprite-spyken {
     width: 72px;
     height: 100px;
-    background-position: -826px -665px;
+    background-position: -661px -665px;
 }
 
 .sprite-square-church {
     width: 73px;
     height: 100px;
-    background-position: -5px -775px;
+    background-position: -743px -665px;
 }
 
 .sprite-stensvamp {
     width: 72px;
     height: 100px;
-    background-position: -88px -775px;
+    background-position: -826px -665px;
 }
 
 .sprite-strand-p_-v_gg {
     width: 72px;
     height: 100px;
-    background-position: -170px -775px;
+    background-position: -908px -665px;
 }
 
 .sprite-swing-it {
     width: 72px;
     height: 100px;
-    background-position: -252px -775px;
+    background-position: -5px -775px;
 }
 
 .sprite-tetra-pak-circle {
     width: 72px;
     height: 100px;
-    background-position: -334px -775px;
+    background-position: -87px -775px;
 }
 
 .sprite-the-dead-fountain {
     width: 72px;
     height: 100px;
-    background-position: -416px -775px;
+    background-position: -169px -775px;
 }
 
 .sprite-the-round-playground {
     width: 72px;
     height: 100px;
-    background-position: -498px -775px;
+    background-position: -251px -775px;
 }
 
 .sprite-the-spider-web {
     width: 72px;
     height: 100px;
-    background-position: -580px -775px;
+    background-position: -333px -775px;
 }
 
 .sprite-the-wood-throne {
     width: 72px;
     height: 100px;
-    background-position: -662px -775px;
+    background-position: -415px -775px;
 }
 
 .sprite-toolgate {
     width: 72px;
     height: 100px;
-    background-position: -744px -775px;
+    background-position: -497px -775px;
 }
 
 .sprite-top-of-the-hill {
     width: 72px;
     height: 100px;
-    background-position: -826px -775px;
+    background-position: -579px -775px;
 }
 
 .sprite-totem {
     width: 72px;
     height: 100px;
-    background-position: -909px -5px;
+    background-position: -661px -775px;
 }
 
 .sprite-tre-h_gar {
     width: 72px;
     height: 100px;
-    background-position: -907px -115px;
+    background-position: -743px -775px;
 }
 
 .sprite-tree-of-pacifiers {
     width: 72px;
     height: 100px;
-    background-position: -907px -225px;
+    background-position: -825px -775px;
 }
 
 .sprite-tunnelm_lning-polhem {
     width: 72px;
     height: 100px;
-    background-position: -907px -335px;
+    background-position: -907px -775px;
 }
 
 .sprite-twin-tower-hill {
     width: 72px;
     height: 100px;
-    background-position: -907px -445px;
+    background-position: -5px -885px;
 }
 
 .sprite-uarda-akademin {
     width: 72px;
     height: 100px;
-    background-position: -908px -555px;
+    background-position: -87px -885px;
 }
 
 .sprite-underground-painting---lund {
     width: 72px;
     height: 100px;
-    background-position: -908px -665px;
+    background-position: -169px -885px;
 }
 
 .sprite-utomhusscen {
     width: 72px;
     height: 100px;
-    background-position: -908px -775px;
+    background-position: -251px -885px;
 }
 
 .sprite-vattenfigur {
     width: 72px;
     height: 100px;
-    background-position: -5px -885px;
+    background-position: -333px -885px;
 }
 
 .sprite-victoriastadion {
     width: 72px;
     height: 100px;
-    background-position: -87px -885px;
+    background-position: -415px -885px;
 }
 
 .sprite-vind {
     width: 72px;
     height: 100px;
-    background-position: -169px -885px;
+    background-position: -497px -885px;
 }
 
 .sprite-wall-statue {
     width: 72px;
     height: 100px;
-    background-position: -251px -885px;
+    background-position: -579px -885px;
 }
 
 .sprite-wallmire-cross {
     width: 72px;
     height: 100px;
-    background-position: -333px -885px;
+    background-position: -661px -885px;
 }
 
 .sprite-water-stone {
     width: 72px;
     height: 100px;
-    background-position: -415px -885px;
+    background-position: -743px -885px;
 }
 
 .sprite-web {
     width: 72px;
     height: 100px;
-    background-position: -497px -885px;
+    background-position: -825px -885px;
 }
 
 .sprite-x-marks-the-spot {
     width: 72px;
     height: 100px;
-    background-position: -579px -885px;
+    background-position: -907px -885px;
 }
 
 .sprite-yellow-horse {
     width: 72px;
     height: 100px;
-    background-position: -661px -885px;
+    background-position: -992px -5px;
 }
