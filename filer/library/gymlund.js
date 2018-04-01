@@ -10,7 +10,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Lunds vattentorn',
-	id: '',
+	id: 'lunds-vattentorn',
 	location: {
 		longitud: '55.717758',
 		latitud: '13.226621'
@@ -20,7 +20,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Stadsodling Brunnshög',
-	id: '',
+	id: 'stadsodling-brunnsh_g',
 	location: {
 		longitud: '55.719406',
 		latitud: '13.239881'
