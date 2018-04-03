@@ -236,7 +236,7 @@ var gyms = [{
 		latitud: '13.1861260'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.32950844268!2d13.183937315928533!3d55.700643980539496!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzAyLjMiTiAxM8KwMTEnMTAuMSJF!5e0!3m2!1ssv!2sus!4v1507118476681',
-	exraid: 'possible',
+	exraid: 'confirmed',
 	rip: false
 },{
 	namn: 'Utomhusscen',
@@ -346,7 +346,7 @@ var gyms = [{
 		latitud: '13.2040720'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2248.179995585276!2d13.20188331592853!3d55.70324298054011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzExLjciTiAxM8KwMTInMTQuNyJF!5e0!3m2!1ssv!2sus!4v1507118657199',
-	exraid: 'possible',
+	exraid: 'confirmed',
 	rip: false
 },{
 	namn: 'Lund Sk8 Spot',
@@ -436,7 +436,7 @@ var gyms = [{
 		latitud: '13.1911490'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.9631103060374!2d13.18896031592877!3d55.70701298054109!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzI1LjMiTiAxM8KwMTEnMjguMSJF!5e0!3m2!1ssv!2sus!4v1507118794572',
-	exraid: 'possible',
+	exraid: 'confirmed',
 	rip: false
 },{
 	namn: 'Kapitalet',
@@ -486,7 +486,7 @@ var gyms = [{
 		latitud: '13.1970750'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2247.8587487750947!2d13.19488631592878!3d55.708826980541595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQyJzMxLjgiTiAxM8KwMTEnNDkuNSJF!5e0!3m2!1ssv!2sus!4v1507118871803',
-	exraid: 'possible',
+	exraid: 'confirmed',
 	rip: false
 },{
 	namn: 'Lundagård Fountain',
