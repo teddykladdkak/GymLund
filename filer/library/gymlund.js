@@ -1,6 +1,6 @@
 var gyms = [{
 	namn: 'Linero IP',
-	id: '',
+	id: 'linero-ip',
 	location: {
 		longitud: '55.700637',
 		latitud: '13.245339'
@@ -60,7 +60,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Lunds Akademiska Golfklubb',
-	id: '',
+	id: 'lunds-akademiska-golfklubb',
 	location: {
 		longitud: '55.712638',
 		latitud: '13.275641'
