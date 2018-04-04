@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Quest Notifier</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<script src="library/quests.js" type="text/javascript"></script>
+	<script src="library/pokestop_malmo.js" type="text/javascript"></script>
+	<script type="text/javascript">
+		function load() {
+			addpokestop();
+			addquest();
+		};
+		function removechilds(parent){while (parent.hasChildNodes()) {parent.removeChild(parent.firstChild);};};
+		function addquest() {
+			var select = document.getElementById('questtyp');
+			for (var i = quests.length - 1; i >= 0; i--) {
+				var option = document.createElement('option');
+					option.setAttribute('value', i);
+					var optiontext = document.createTextNode(quests[i].namn);
+					option.appendChild(optiontext);
+				select.appendChild(option);
+			};
+		};
+		function addpokestop() {
+			var orderarray = [];
+			for (var i = pokestop.length - 1; i >= 0; i--) {
+				orderarray.push(pokestop[i].namn + '|||' + i + '|||' + pokestop[i].latitude + '|||' + pokestop[i].longitude);
+			};
+			orderarray.sort().reverse();
+			var select = document.getElementById('addpokestop');
+			for (var i = orderarray.length - 1; i >= 0; i--) {
+				var option = document.createElement('option');
+					option.setAttribute('value', orderarray[i].split('|||')[1]);
+					option.setAttribute('data-latitude', orderarray[i].split('|||')[2]);
+					option.setAttribute('data-longitude', orderarray[i].split('|||')[3]);
+					var optiontext = document.createTextNode(orderarray[i].split('|||')[0]);
+					option.appendChild(optiontext);
+				select.appendChild(option);
+			};
+		};
+		function loadquest(element) {
+			var questelem = quests[parseInt(element.value)];
+			var wrapper = document.getElementById('reward');
+				removechilds(wrapper);
+			if(questelem.reward.length == 0){
+				console.log('Finns inga reward ännu för denna quest');
+				var info = document.createTextNode('Finns inga reward ännu för denna quest');
+				wrapper.appendChild(info);
+			}else{
+				if(questelem.number){
+					var numberinput = document.createElement('input');
+						numberinput.setAttribute('type', 'number');
+						numberinput.setAttribute('placeholder', 'Antal');
+					wrapper.appendChild(numberinput);
+				}else{};
+				var table = document.createElement('table');
+					var overtr = document.createElement('tr');
+					var undertr = document.createElement('tr');
+					for (var i = questelem.reward.length - 1; i >= 0; i--) {
+						var overtd = document.createElement('td');
+							overtd.setAttribute('onclick', 'mark(this);');
+							var typ = questelem.reward[i].typ.split('.');
+								var icon = document.createElement('img');
+								if(typ.length == 1){
+									icon.setAttribute('src', 'img/' + rewards[typ[0]]);
+								}else{
+									icon.setAttribute('src', 'img/' + rewards[typ[0]][typ[1]]);
+								};
+							overtd.appendChild(icon);
+						overtr.appendChild(overtd);
+						var undertd = document.createElement('td');
+							var antal = document.createTextNode(questelem.reward[i].antal);
+							undertd.appendChild(antal);
+						undertr.appendChild(undertd);
+					};
+					table.appendChild(overtr);
+					table.appendChild(undertr);
+				wrapper.appendChild(table);
+			};
+		};
+		function mark(element){
+			var alltd = document.getElementById('reward').getElementsByTagName('td');
+			for (var i = alltd.length - 1; i >= 0; i--) {
+				alltd[i].removeAttribute('class');
+			}
+			element.setAttribute('class', 'blue');
+		};
+	</script>
+	<style type="text/css">
+		body, select, input {
+			font-size: 1.5em;
+		}
+		select, input {
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			margin-bottom: 10px;
+		}
+		#reward table {
+			text-align: center;
+		}
+		#reward table, #reward tr {
+			width: 100%;
+		}
+		#reward tr:nth-child(1) td:hover {
+			background-color: green;
+		}
+		#reward img {
+			width: 100%;
+			max-width: 129px;
+		}
+		.blue {
+			background-color: blue;
+		}
+	</style>
+</head>
+<body onload="load();">
+	<div id="add">
+		<select id="addpokestop"><option value="">Välj vilket Pokestop</option></select>
+		<select id="questtyp" onchange="loadquest(this);"><option value="">Välj typ av Quest</option></select>
+		<div id="reward"></div>
+		<input type="button" value="Registrera">
+	</div>
+</body>
+</html>
