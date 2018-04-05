@@ -253,6 +253,7 @@
 				navigator.geolocation.getCurrentPosition(showPosition);
 			} else {
 				//setTimeout(function(){ getLocation(); }, 3000);
+				console.log('Något gick fel...');
 			};
 		};
 		function showPosition(position) {
@@ -264,12 +265,14 @@
 			var allines = document.getElementById('wrapper').getElementsByClassName('tr');
 			for (var i = allines.length - 1; i >= 0; i--) {
 				console.log(allines[i]);
-				var km = Math.round(getDistanceFromLatLonInKm(allines[i].getAttribute('data-longitude'),allines[i].getAttribute('data-latitude')) * 10) / 10;
-				var text = allines[i].getElementsByClassName('km')[0];
-					removechilds(text);
-				console.log(km);
-				var nytext = document.createTextNode(km);
-					text.appendChild(nytext);
+				if(i == 0){}else{
+					var km = Math.round(getDistanceFromLatLonInKm(allines[i].getAttribute('data-longitude'),allines[i].getAttribute('data-latitude')) * 10) / 10;
+					var text = allines[i].getElementsByClassName('km')[0];
+						removechilds(text);
+					console.log(km);
+					var nytext = document.createTextNode(km);
+						text.appendChild(nytext);
+				};
 			};
 		};
 		function getDistanceFromLatLonInKm(lat2,lon2) {
