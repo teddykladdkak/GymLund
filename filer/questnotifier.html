@@ -292,7 +292,7 @@
 			};
 			removechilds(document.getElementById('wrapper'));
 			addhead();
-			for (var i = 0; i < nyordning.length; i++){
+			for (var i = nyordning.length - 1; i >= 0; i--) {
 				addexample({"namn": nyordning[i].namn, "latitude": nyordning[i].latitude, "longitude": nyordning[i].longitude}, nyordning[i].itemnamn, nyordning[i].itemplats, nyordning[i].questvalue, nyordning[i].questantal, nyordning[i].km);
 			};
 		};
