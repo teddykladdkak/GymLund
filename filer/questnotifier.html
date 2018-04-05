@@ -230,7 +230,9 @@
 					tr.setAttribute('data-itemplats', itemplats);
 					tr.setAttribute('data-questvalue', questvalue);
 					tr.setAttribute('data-questantal', questantal);
-					if(!km){}else{
+					if(!givenkm){
+						tr.setAttribute('data-km', 'X');
+					}else{
 						tr.setAttribute('data-km', givenkm);
 					};
 					var km = document.createElement('div');
@@ -499,9 +501,9 @@
 		</div>
 		
 		
-		<div class="tr" data-namn="Bunker 427" data-longitude="12.899978" data-latitude="55.572132" data-itemnamn="berry_pin" data-itemplats="img/stuff/berry_pin.png" data-questvalue="Spin 4 PokéStops." data-questantal="1" data-km="23">
+		<div class="tr" data-namn="Bunker 427" data-longitude="12.899978" data-latitude="55.572132" data-itemnamn="berry_pin" data-itemplats="img/stuff/berry_pin.png" data-questvalue="Spin 4 PokéStops." data-questantal="1" data-km="X">
 			<div class="td">
-				<p class="km">23</p>
+				<p class="km">X</p>
 			</div>
 			<div class="td">
 				<img src="img/stuff/berry_pin.png">
@@ -513,9 +515,9 @@
 				<p>Spin 4 PokéStops.<br>Bunker 427</p>
 			</div>
 		</div>
-		<div class="tr" data-namn="Burlövs gamla kyrka " data-longitude="13.11322" data-latitude="55.636805" data-itemnamn="berry_raz" data-itemplats="img/stuff/berry_raz.png" data-questvalue="Hatch an Egg." data-questantal="3" data-km="9">
+		<div class="tr" data-namn="Burlövs gamla kyrka " data-longitude="13.11322" data-latitude="55.636805" data-itemnamn="berry_raz" data-itemplats="img/stuff/berry_raz.png" data-questvalue="Hatch an Egg." data-questantal="3" data-km="X">
 			<div class="td">
-				<p class="km">9</p>
+				<p class="km">X</p>
 			</div>
 			<div class="td">
 				<img src="img/stuff/berry_raz.png">
@@ -527,9 +529,9 @@
 				<p>Hatch an Egg.<br>Burlövs gamla kyrka </p>
 			</div>
 		</div>
-		<div class="tr" data-namn="Sibbarp" data-longitude="12.903928" data-latitude="55.572507" data-itemnamn="stardust" data-itemplats="img/stuff/stardust.png" data-questvalue="Hatch an Egg." data-questantal="400" data-km="23">
+		<div class="tr" data-namn="Sibbarp" data-longitude="12.903928" data-latitude="55.572507" data-itemnamn="stardust" data-itemplats="img/stuff/stardust.png" data-questvalue="Hatch an Egg." data-questantal="400" data-km="X">
 			<div class="td">
-				<p class="km">23</p>
+				<p class="km">X</p>
 			</div>
 			<div class="td">
 				<img src="img/stuff/stardust.png">
