@@ -30,6 +30,7 @@
 			adddataliststop();
 			additems();
 			getLocation();
+			sortbykm();
 		};
 		function removechilds(parent){while (parent.hasChildNodes()) {parent.removeChild(parent.firstChild);};};
 		function adddataliststop(){
@@ -207,7 +208,8 @@
 			console.log(questantal);
 			if(pokestop == ''){return false};
 			if(!pokestopobj){return false};
-			addexample(pokestopobj, itemnamn, itemplats, questvalue, questantal)
+			addexample(pokestopobj, itemnamn, itemplats, questvalue, questantal);
+			getLocation();
 			angra();
 		};
 		function getpokestopobjekt(pokestopnamn){
@@ -217,7 +219,7 @@
 				};
 			};
 		};
-		function addexample(pokestopobj, itemnamn, itemplats, questvalue, questantal){
+		function addexample(pokestopobj, itemnamn, itemplats, questvalue, questantal, givenkm){
 			var wrapper = document.getElementById('wrapper');
 				var tr = document.createElement('div');
 					tr.setAttribute('class', 'tr');
@@ -228,11 +230,19 @@
 					tr.setAttribute('data-itemplats', itemplats);
 					tr.setAttribute('data-questvalue', questvalue);
 					tr.setAttribute('data-questantal', questantal);
+					if(!km){}else{
+						tr.setAttribute('data-km', givenkm);
+					};
 					var km = document.createElement('div');
 						km.setAttribute('class', 'td');
 						var kmp = document.createElement('p');
 							kmp.setAttribute('class', 'km');
-							var kmtext = document.createTextNode('X');
+							console.log(!km);
+							if(!givenkm){
+								var kmtext = document.createTextNode('X');
+							}else{
+								var kmtext = document.createTextNode(givenkm);
+							};
 							kmp.appendChild(kmtext);
 						km.appendChild(kmp);
 					tr.appendChild(km);
@@ -260,10 +270,64 @@
 						task.appendChild(taskp);
 					tr.appendChild(task);
 				wrapper.appendChild(tr);
-				uppdateDistance();
+		};
+		function sortbykm(){
+			var alllines = document.getElementById('wrapper').getElementsByClassName('tr');
+			var data = [];
+			var num = [];
+			for (var i = alllines.length - 1; i >= 0; i--) {
+				if(i == 0){}else{
+					num.push(alllines[i].getAttribute('data-km') + '|||' + alllines[i].getAttribute('data-namn'));
+					data.push({"km": alllines[i].getAttribute('data-km'), "namn": alllines[i].getAttribute('data-namn'), "longitude": alllines[i].getAttribute('data-longitude'), "latitude": alllines[i].getAttribute('data-latitude'), "itemnamn": alllines[i].getAttribute('data-itemnamn'), "itemplats": alllines[i].getAttribute('data-itemplats'), "questvalue": alllines[i].getAttribute('data-questvalue'), "questantal": alllines[i].getAttribute('data-questantal')})
+				};
+			};
+			num.sort();
+			var nyordning = [];
+			for (var i = num.length - 1; i >= 0; i--) {
+				for (var a = data.length - 1; a >= 0; a--) {
+					if(num[i] == data[a].km + '|||' + data[a].namn){
+						nyordning.push(data[a]);
+					};
+				};
+			};
+			removechilds(document.getElementById('wrapper'));
+			addhead();
+			for (var i = 0; i < nyordning.length; i++){
+				addexample({"namn": nyordning[i].namn, "latitude": nyordning[i].latitude, "longitude": nyordning[i].longitude}, nyordning[i].itemnamn, nyordning[i].itemplats, nyordning[i].questvalue, nyordning[i].questantal, nyordning[i].km);
+			};
 		};
 
 
+		function addhead(){
+			var wrapper = document.getElementById('wrapper');
+				var tr = document.createElement('div');
+					tr.setAttribute('class', 'tr');
+					var km = document.createElement('div');
+						km.setAttribute('class', 'td');
+						var kmp = document.createElement('p');
+							var kmtext = document.createTextNode('Km');
+							kmp.appendChild(kmtext);
+						km.appendChild(kmp);
+					tr.appendChild(km);
+					var imgwrp = document.createElement('div');
+						imgwrp.setAttribute('class', 'td');
+					tr.appendChild(imgwrp);
+					var st = document.createElement('div');
+						st.setAttribute('class', 'td');
+						var stp = document.createElement('p');
+							var sttext = document.createTextNode('St');
+							stp.appendChild(sttext);
+						st.appendChild(stp);
+					tr.appendChild(st);
+					var task = document.createElement('div');
+						task.setAttribute('class', 'td');
+						var taskp = document.createElement('p');
+							var tasktext = document.createTextNode('Quest');
+							taskp.appendChild(tasktext);
+						task.appendChild(taskp);
+					tr.appendChild(task);
+				wrapper.appendChild(tr);
+		};
 
 
 
@@ -285,16 +349,19 @@
 		function uppdateDistance(){
 			var allines = document.getElementById('wrapper').getElementsByClassName('tr');
 			for (var i = allines.length - 1; i >= 0; i--) {
-				console.log(allines[i]);
 				if(i == 0){}else{
-					var km = Math.round(getDistanceFromLatLonInKm(allines[i].getAttribute('data-latitude'),allines[i].getAttribute('data-longitude')) * 10) / 10;
-					var text = allines[i].getElementsByClassName('km')[0];
-						removechilds(text);
-					console.log(km);
-					var nytext = document.createTextNode(km);
-						text.appendChild(nytext);
+					var km = Math.round(getDistanceFromLatLonInKm(allines[i].getAttribute('data-latitude'),allines[i].getAttribute('data-longitude')));
+					if(km == NaN){}else{
+						allines[i].setAttribute('data-km', km);
+						var text = allines[i].getElementsByClassName('km')[0];
+							removechilds(text);
+						console.log(km);
+						var nytext = document.createTextNode(km);
+							text.appendChild(nytext);
+					};
 				};
 			};
+			sortbykm();
 		};
 		function getDistanceFromLatLonInKm(lat2,lon2) {
 			var lat1 = window['lat'];
@@ -430,9 +497,25 @@
 				<p>Quest</p><p>
 			</p></div>
 		</div>
-		<div class="tr" data-namn="Burlövs gamla kyrka " data-longitude="13.11322" data-latitude="55.636805" data-itemnamn="berry_raz" data-itemplats="img/stuff/berry_raz.png" data-questvalue="Hatch an Egg." data-questantal="3">
+		
+		
+		<div class="tr" data-namn="Bunker 427" data-longitude="12.899978" data-latitude="55.572132" data-itemnamn="berry_pin" data-itemplats="img/stuff/berry_pin.png" data-questvalue="Spin 4 PokéStops." data-questantal="1" data-km="23">
 			<div class="td">
-				<p class="km">X</p>
+				<p class="km">23</p>
+			</div>
+			<div class="td">
+				<img src="img/stuff/berry_pin.png">
+			</div>
+			<div class="td">
+				<p>1</p>
+			</div>
+			<div class="td">
+				<p>Spin 4 PokéStops.<br>Bunker 427</p>
+			</div>
+		</div>
+		<div class="tr" data-namn="Burlövs gamla kyrka " data-longitude="13.11322" data-latitude="55.636805" data-itemnamn="berry_raz" data-itemplats="img/stuff/berry_raz.png" data-questvalue="Hatch an Egg." data-questantal="3" data-km="9">
+			<div class="td">
+				<p class="km">9</p>
 			</div>
 			<div class="td">
 				<img src="img/stuff/berry_raz.png">
@@ -444,9 +527,9 @@
 				<p>Hatch an Egg.<br>Burlövs gamla kyrka </p>
 			</div>
 		</div>
-		<div class="tr" data-namn="Sibbarp" data-longitude="12.903928" data-latitude="55.572507" data-itemnamn="stardust" data-itemplats="img/stuff/stardust.png" data-questvalue="Hatch an Egg." data-questantal="400">
+		<div class="tr" data-namn="Sibbarp" data-longitude="12.903928" data-latitude="55.572507" data-itemnamn="stardust" data-itemplats="img/stuff/stardust.png" data-questvalue="Hatch an Egg." data-questantal="400" data-km="23">
 			<div class="td">
-				<p class="km">X</p>
+				<p class="km">23</p>
 			</div>
 			<div class="td">
 				<img src="img/stuff/stardust.png">
@@ -456,20 +539,6 @@
 			</div>
 			<div class="td">
 				<p>Hatch an Egg.<br>Sibbarp</p>
-			</div>
-		</div>
-		<div class="tr" data-namn="Bunker 427" data-longitude="12.899978" data-latitude="55.572132" data-itemnamn="berry_pin" data-itemplats="img/stuff/berry_pin.png" data-questvalue="Spin 4 PokéStops." data-questantal="1">
-			<div class="td">
-				<p class="km">X</p>
-			</div>
-			<div class="td">
-				<img src="img/stuff/berry_pin.png">
-			</div>
-			<div class="td">
-				<p>1</p>
-			</div>
-			<div class="td">
-				<p>Spin 4 PokéStops.<br>Bunker 427</p>
 			</div>
 		</div>
 	</div>
