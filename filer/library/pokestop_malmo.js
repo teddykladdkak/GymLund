@@ -3659,3 +3659,5 @@ var pokestop = [{
 	"latitude":55.63695,
 	"longitude":13.086841
 }];
+
+//Source: https://pogbg.se/
