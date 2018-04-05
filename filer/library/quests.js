@@ -1,29 +1,47 @@
-var rewards = {
-	"stardust": "stuff/stardust.png",
-	"candy": "stuff/candy.png",
+/*var rewards = {
+	"stardust": "img/stuff/stardust.png",
+	"candy": "img/stuff/candy.png",
 	"berry": {
-		"pin": "stuff/berry_pin.png",
-		"raz": "stuff/berry_raz.png",
-		"nan": "stuff/berry_nan.png",
-		"gol": "stuff/berry_gol.png",
+		"pin": "img/stuff/berry_pin.png",
+		"raz": "img/stuff/berry_raz.png",
+		"nan": "img/stuff/berry_nan.png",
+		"gol": "img/stuff/berry_gol.png",
 	},
 	"ball": {
-		"nor": "stuff/ball_nor.png",
-		"gr": "stuff/ball_gr.png",
-		"ult": "stuff/ball_ult.png",
+		"nor": "img/stuff/ball_nor.png",
+		"gr": "img/stuff/ball_gr.png",
+		"ult": "img/stuff/ball_ult.png",
 	},
 	"revive": {
-		"nor": "stuff/revive_nor.png",
-		"max": "stuff/revive_max.png"
+		"nor": "img/stuff/revive_nor.png",
+		"max": "img/stuff/revive_max.png"
 	},
 	"potion": {
-		"nor": "stuff/potion_nor.png",
-		"super": "stuff/potion_super.png",
-		"hyper": "stuff/potion_hyper.png",
-		"max": "stuff/potion_max.png",
+		"nor": "img/stuff/potion_nor.png",
+		"super": "img/stuff/potion_super.png",
+		"hyper": "img/stuff/potion_hyper.png",
+		"max": "img/stuff/potion_max.png",
 	},
-	"pokemon": "stuff/pokemon.png"
-};
+	"pokemon": "img/stuff/pokemon.png"
+};*/
+var rewards = [
+	{namn: "stardust", plats: "img/stuff/stardust.png"},
+	{namn: "candy", plats: "img/stuff/candy.png"},
+	{namn: "berry_raz", plats: "img/stuff/berry_raz.png"},
+	{namn: "berry_nan", plats: "img/stuff/berry_nan.png"},
+	{namn: "berry_pin", plats: "img/stuff/berry_pin.png"},
+	{namn: "berry_gol", plats: "img/stuff/berry_gol.png"},
+	{namn: "ball_nor", plats: "img/stuff/ball_nor.png"},
+	{namn: "ball_gr", plats: "img/stuff/ball_gr.png"},
+	{namn: "ball_ult", plats: "img/stuff/ball_ult.png"},
+	{namn: "revive_nor", plats: "img/stuff/revive_nor.png"},
+	{namn: "revive_max", plats: "img/stuff/revive_max.png"},
+	{namn: "potion_nor", plats: "img/stuff/potion_nor.png"},
+	{namn: "potion_super", plats: "img/stuff/potion_super.png"},
+	{namn: "potion_hyper", plats: "img/stuff/potion_hyper.png"},
+	{namn: "potion_max", plats: "img/stuff/potion_max.png"},
+	{namn: "pokemon", plats: "img/stuff/pokemon.png"}
+];
 var quests = [{
 	"namn": "Use {?} Berries to help catch Pokémon.",
 	"number": true,

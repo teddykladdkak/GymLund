@@ -1019,10 +1019,6 @@ var pokestop = [{
 	"latitude":55.59291,
 	"longitude":13.015477
 },{
-	"namn":null,
-	"latitude":55.592912,
-	"longitude":13.001353
-},{
 	"namn":"Big Bird Sculpture",
 	"latitude":55.592944,
 	"longitude":13.014291
