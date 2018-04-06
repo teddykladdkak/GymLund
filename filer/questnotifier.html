@@ -61,12 +61,35 @@
 					resultat.push(pokestop[i].namn);
 				};
 			};
+			var alternativ = document.getElementById('alternativ');
 			if(resultat.length == 1){
 				element.value = resultat[0];
-			};
-			if(resultat.length == 0){
+				element.blur()
+				removechilds(alternativ);
+			}else if(resultat.length == 0){
 				element.setAttribute('style', 'color: red;');
+				removechilds(alternativ);
+			}else{
+				addalternativ(alternativ, resultat);
 			};
+		};
+		function addalternativ(wrapper, data){
+			removechilds(wrapper);
+			for (var i = 0; i < data.length; i++){
+				var tr = document.createElement('tr');
+					tr.setAttribute('onclick', 'insertpokestop("' + data[i] + '")')
+					var td = document.createElement('td');
+						var tdtext = document.createTextNode(data[i]);
+						td.appendChild(tdtext);
+					tr.appendChild(td);
+				wrapper.appendChild(tr);
+				if(i === 5){var i = data.length + 1;};
+			};
+		};
+		function insertpokestop(namn){
+			var input = document.getElementById('pokestopnamn');
+				input.value = namn;
+			searchstop(input, event)
 		};
 		function additems(){
 			var wrapper = document.getElementById('items').getElementsByTagName('tbody')[0];
@@ -174,6 +197,7 @@
 			document.getElementById('addbutton').setAttribute('style', 'display: none;');
 			document.getElementById('add').removeAttribute('style');
 			document.getElementById('wrapper').setAttribute('style', 'display: none;');
+			document.getElementById('pokestopnamn').focus();
 		};
 		function angra(){
 			var alltd = document.getElementById('items').getElementsByTagName('img');
@@ -209,11 +233,6 @@
 				var questvalue = questvalue.replace('{?}', nummer);
 			};
 			var pokestopobj = getpokestopobjekt(pokestop);
-			console.log(pokestopobj);
-			console.log(itemnamn);
-			console.log(itemplats);
-			console.log(questvalue);
-			console.log(questantal);
 			if(pokestop == ''){return false};
 			if(!pokestopobj){return false};
 			addexample(pokestopobj, itemnamn, itemplats, questvalue, questantal);
@@ -247,7 +266,6 @@
 						km.setAttribute('class', 'td');
 						var kmp = document.createElement('p');
 							kmp.setAttribute('class', 'km');
-							console.log(!km);
 							if(!givenkm){
 								var kmtext = document.createTextNode('X');
 							}else{
@@ -369,7 +387,6 @@
 						allines[i].setAttribute('data-km', km);
 						var text = allines[i].getElementsByClassName('km')[0];
 							removechilds(text);
-						console.log(km);
 						var nytext = document.createTextNode(km);
 							text.appendChild(nytext);
 					};
@@ -411,12 +428,14 @@
 			display: block;
 			width: 100%;
 			max-width: 100%;
-			margin-bottom: 10px;
+		}
+		button {
+			margin-top: 10px;
 		}
 		#items {
 			text-align: center;
 		}
-		#add table, #add tr {
+		#items, #buttons table, #items tr, #buttons tr {
 			width: 100%;
 		}
 		#items img:hover {
@@ -473,14 +492,22 @@
 			width: 20px!important;
 			min-width: 20px;
 		}
+		.popupalt {border-collapse: collapse;}
+		.popupalt td {border: solid 2px #000;}
+		.popupalt tr:nth-child(even) {background: #CCC}
+		.popupalt tr:nth-child(odd) {background: #FFF}
 	</style>
 </head>
 <body onload="load();">
 	<img src="img/addbutton.png" id="addbutton" onclick="showreg();">
 	<h1>Quest Notifier Malmö</h1>
+	<p>OBS! Sidan är ännu inte igång, utan visar snarare ett koncept, ännu inte kopplad till en server.</p>
 	<div id="add" style="display: none;">
 		<p>1. Välj Pokéstop</p>
-		<input type="text" onkeyup="searchstop(this, event)" onchange="searchstop(this)" list="pokestopdata" id="pokestopnamn" placeholder="Pokestopets namn">
+		<input type="text" onkeyup="searchstop(this, event)" onchange="searchstop(this)" id="pokestopnamn" placeholder="Pokestopets namn"><!-- list="pokestopdata" -->
+		<table class="popupalt">
+			<tbody id="alternativ"></tbody>
+		</table>
 		<p>2. Välj vilket item man får</p>
 		<table id="items">
 			<tbody></tbody>
@@ -489,7 +516,7 @@
 		<select id="quests" disabled="disabled"></select>
 		<p>3,5. Ev antal gånger det måste genomföras</p>
 		<input type="number" id="num" onkeyup="checknum(this);" onchange="checknum(this);" disabled="disabled">
-		<table>
+		<table id="buttons">
 			<tr>
 				<td>
 					<button onclick="angra();">Ångra</button><!-- <input type="button" value="Ångra" onclick="angra();"> -->
@@ -529,7 +556,7 @@
 				<p>1</p>
 			</div>
 			<div class="td">
-				<p>Spin 4 PokéStops.<br>Bunker 427</p>
+				<p>>Spin 4 PokéStops.<br>Bunker 427</p>
 			</div>
 		</div>
 		<div class="tr" data-namn="Burlövs gamla kyrka " data-longitude="13.11322" data-latitude="55.636805" data-itemnamn="berry_raz" data-itemplats="img/stuff/berry_raz.png" data-questvalue="Hatch an Egg." data-questantal="3" data-km="X">
