@@ -1,29 +1,5 @@
-/*var rewards = {
-	"stardust": "img/stuff/stardust.png",
-	"candy": "img/stuff/candy.png",
-	"berry": {
-		"pin": "img/stuff/berry_pin.png",
-		"raz": "img/stuff/berry_raz.png",
-		"nan": "img/stuff/berry_nan.png",
-		"gol": "img/stuff/berry_gol.png",
-	},
-	"ball": {
-		"nor": "img/stuff/ball_nor.png",
-		"gr": "img/stuff/ball_gr.png",
-		"ult": "img/stuff/ball_ult.png",
-	},
-	"revive": {
-		"nor": "img/stuff/revive_nor.png",
-		"max": "img/stuff/revive_max.png"
-	},
-	"potion": {
-		"nor": "img/stuff/potion_nor.png",
-		"super": "img/stuff/potion_super.png",
-		"hyper": "img/stuff/potion_hyper.png",
-		"max": "img/stuff/potion_max.png",
-	},
-	"pokemon": "img/stuff/pokemon.png"
-};*/
+//Source: https://pokemongohub.net/post/guide/field-research-missions-list/
+
 var rewards = [
 	{namn: "stardust", plats: "img/stuff/stardust.png"},
 	{namn: "candy", plats: "img/stuff/candy.png"},
@@ -632,4 +608,3 @@ var quests = [{
 }]
 
 //{"typ": "", "antal": ""}
-//Source: https://pokemongohub.net/post/guide/field-research-missions-list/

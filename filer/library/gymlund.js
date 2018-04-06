@@ -26,7 +26,7 @@ var gyms = [{
 		latitud: '13.239881'
 	},
 	embed: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8989.443057882605!2d13.240935809499433!3d55.71748234661251!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTXCsDQzJzA5LjkiTiAxM8KwMTQnMjMuNiJF!5e0!3m2!1ssv!2sse!4v1516619735851',
-	exraid: 'possible',
+	exraid: 'confirmed',
 	rip: false
 },{
 	namn: 'Bag Turtle',

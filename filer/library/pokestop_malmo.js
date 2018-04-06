@@ -1,3 +1,4 @@
+//Source: https://pogbg.se/
 var pokestop = [{
 	"namn":"Cemented #2",
 	"latitude":55.5622,
@@ -3659,5 +3660,3 @@ var pokestop = [{
 	"latitude":55.63695,
 	"longitude":13.086841
 }];
-
-//Source: https://pogbg.se/
