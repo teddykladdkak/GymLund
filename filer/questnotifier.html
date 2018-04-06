@@ -49,7 +49,12 @@
 			element.setAttribute('class', 'blue');
 			getquests(id);
 		};
-		function searchstop(element){
+		function searchstop(element, event){
+			element.setAttribute('style', 'color: black;');
+			if(!event){}else{
+				var key = event.keyCode || event.charCode;
+				if( key == 8 || key == 46 ){return false;}
+			};
 			var resultat = [];
 			for (var i = pokestop.length - 1; i >= 0; i--) {
 				if(pokestop[i].namn.toLowerCase().indexOf(element.value.toLowerCase()) == -1){}else{
@@ -58,6 +63,9 @@
 			};
 			if(resultat.length == 1){
 				element.value = resultat[0];
+			};
+			if(resultat.length == 0){
+				element.setAttribute('style', 'color: red;');
 			};
 		};
 		function additems(){
@@ -267,6 +275,10 @@
 							var tasktext = document.createTextNode(questvalue);
 							taskp.appendChild(tasktext);
 							taskp.appendChild(document.createElement('br'));
+							var pokestopimg = document.createElement('img');
+								pokestopimg.setAttribute('src', 'img/pokestop.png');
+								pokestopimg.setAttribute('class', 'pokestop');
+							taskp.appendChild(pokestopimg);
 							var pokestopnamn = document.createTextNode(pokestopobj.namn);
 							taskp.appendChild(pokestopnamn);
 						task.appendChild(taskp);
@@ -392,10 +404,10 @@
 			background-image: -webkit-linear-gradient(315deg, hsla(0, 0%, 100%, .95), rgba(174, 254, 158, .99));
 			background-image: linear-gradient(135deg, hsla(0, 0%, 100%, .95), rgba(174, 254, 158, .99));
 		}
-		body, select, input {
-			font-size: 1.5em;
+		body, select, input, button {
+			font-size: 30px;
 		}
-		select, input {
+		select, input, button {
 			display: block;
 			width: 100%;
 			max-width: 100%;
@@ -435,6 +447,7 @@
 			width: 100%;
 			max-width: 60px;
 			min-width: 40px;
+			vertical-align:middle;
 		}
 		#addbutton {
 			position: fixed;
@@ -456,14 +469,18 @@
 			font-size: 1.5em;
 			text-align: center;
 		}
+		.pokestop {
+			width: 20px!important;
+			min-width: 20px;
+		}
 	</style>
 </head>
 <body onload="load();">
-	<div id="addbutton" onclick="showreg();">+</div>
+	<img src="img/addbutton.png" id="addbutton" onclick="showreg();">
 	<h1>Quest Notifier Malmö</h1>
 	<div id="add" style="display: none;">
 		<p>1. Välj Pokéstop</p>
-		<input type="text" onkeyup="searchstop(this)" onchange="searchstop(this)" list="pokestopdata" id="pokestopnamn" placeholder="Pokestopets namn">
+		<input type="text" onkeyup="searchstop(this, event)" onchange="searchstop(this)" list="pokestopdata" id="pokestopnamn" placeholder="Pokestopets namn">
 		<p>2. Välj vilket item man får</p>
 		<table id="items">
 			<tbody></tbody>
@@ -475,10 +492,10 @@
 		<table>
 			<tr>
 				<td>
-					<input type="button" value="Ångra" onclick="angra();">
+					<button onclick="angra();">Ångra</button><!-- <input type="button" value="Ångra" onclick="angra();"> -->
 				</td>
 				<td>
-					<input type="button" value="Registrera" disabled="disabled" id="regbutton" onclick="registrera();">
+					<button disabled="disabled" id="regbutton" onclick="registrera();">Registrera</button>
 				</td>
 			</tr>
 		</table>
