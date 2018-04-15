@@ -21,7 +21,13 @@ var andraplatser = [{
 	namn: 'RandomGym',
 	url: 'randomgym.html'
 }];
-
+function removechilds(parent){
+	if(parent.hasChildNodes()){
+		while (parent.hasChildNodes()) {
+			parent.removeChild(parent.firstChild);
+		};
+	};
+};
 function addserach(){
 	var wrapper = document.getElementById('list-navigation');
 		var li = wrapper.getElementsByTagName('li')[0];
@@ -182,12 +188,9 @@ function addbutton(element, text, url, extraclass){
 		span.appendChild(a);
 	element.appendChild(span);
 };
-function head(hittade, ejhittade, antalgym){
+function head(){
 	var wrapper = document.getElementById('headcontent');
 	addparagraph(wrapper, 'Klicka på önskat gym för att se var den är på kartan.');
-	//addparagraph(wrapper, 100 - ((parseInt(ejhittade) / parseInt(hittade + ejhittade)) * 100)) + '% färdigt, besökt ' + hittade + ' gym och har ' + ejhittade + ' gym kvar att besöka.');
-	var procent = Math.floor(parseInt(hittade)/parseInt(antalgym)*100);
-	addparagraph(wrapper, procent + '% färdigt, besökt ' + hittade + ' gym och har ' + ejhittade + ' gym kvar att besöka.');
 	addparagraph(wrapper, 'Instruktioner för att installera denna webappen:');
 	addbutton(wrapper, 'iOS', 'http://www.teddyprojekt.tk/manualer/iphone.html');
 	addbutton(wrapper, 'Android', 'http://www.teddyprojekt.tk/manualer/android.html');
@@ -211,89 +214,113 @@ function installdonatebutton(){
   			secondscript.appendChild(secondscriptkod);
   		head.appendChild(secondscript);
 }
-function load(spriteorimg, folder){
+function load(spriteorimg, folder, showrip, showex){
+	getLocation();
+	makelist(spriteorimg, folder, showrip, showex)
+	head();
+	sidemenu();
+	marklistelem('A');
+};
+function andralista(spriteorimg, folder){
+	var ex = document.getElementById('visaex');
+	if(ex.checked){
+		var visaex = true;
+	}else{
+		var visaex = false;
+	};
+	var rip = document.getElementById('visarip');
+	if(rip.checked){
+		var visarip = true;
+	}else{
+		var visarip = false;
+	};
+	makelist(spriteorimg, folder, visarip, visaex);
+};
+function makelist(spriteorimg, folder, showrip, showex){
 	var hittade = 0;
 	var ejhittade = 0;
-	getLocation();
 	var gymsorted = sortgym(gyms);
 	var wrapper = document.getElementById('wrapper');
+		removechilds(wrapper);
 	var table = document.createElement('table');
 	var datalist = document.createElement('datalist');
 		datalist.setAttribute('id', 'searchelements');
 		for (var i = 0; i < gymsorted.length; i++){
-			var searchoption = document.createElement('option');
-				searchoption.setAttribute('value', gymsorted[i].namn);
-			datalist.appendChild(searchoption);
-			var line = document.createElement('tr');
-				line.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + gymsorted[i].location.longitud + ',' + gymsorted[i].location.latitud + '")');
-				line.setAttribute('data-lon', gymsorted[i].location.longitud);
-				line.setAttribute('data-lat', gymsorted[i].location.latitud);
-				line.setAttribute('class', gymsorted[i].namn.split('')[0].toUpperCase());
-				var iconbox = document.createElement('td');
-					if(spriteorimg == 'sprite'){
-						if(!gymsorted[i].id){
-							/*
-							var gymimg = document.createElement('img');
-								gymimg.setAttribute('src', 'img/okand_mini.png');
-							*/
-							var gymimg = document.createElement('i');
-								gymimg.setAttribute('class', 'sprite sprite-okand_mini');
-							++ejhittade;
-						}else{
-							var gymimg = document.createElement('i');
-								gymimg.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
-							++hittade;
+			if(!gymsorted[i].rip || showrip){
+				if(!gymsorted[i].exraid && showex){}else{
+					var searchoption = document.createElement('option');
+						searchoption.setAttribute('value', gymsorted[i].namn);
+					datalist.appendChild(searchoption);
+					var line = document.createElement('tr');
+						line.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + gymsorted[i].location.longitud + ',' + gymsorted[i].location.latitud + '")');
+						line.setAttribute('data-lon', gymsorted[i].location.longitud);
+						line.setAttribute('data-lat', gymsorted[i].location.latitud);
+						line.setAttribute('class', gymsorted[i].namn.split('')[0].toUpperCase());
+						var iconbox = document.createElement('td');
+							if(spriteorimg == 'sprite'){
+								if(!gymsorted[i].id){
+									/*
+									var gymimg = document.createElement('img');
+										gymimg.setAttribute('src', 'img/okand_mini.png');
+									*/
+									var gymimg = document.createElement('i');
+										gymimg.setAttribute('class', 'sprite sprite-okand_mini');
+									++ejhittade;
+								}else{
+									var gymimg = document.createElement('i');
+										gymimg.setAttribute('class', 'sprite sprite-' + gymsorted[i].id);
+									++hittade;
+								};
+							}else if(spriteorimg == 'img'){
+								var gymimg = document.createElement('img');
+								if(!gymsorted[i].id){
+									gymimg.setAttribute('src', 'img/okand_mini.png');
+									++ejhittade;
+								}else{
+									gymimg.setAttribute('src', 'img/' + folder + '/mini/' + gymsorted[i].id + '.png');
+									++hittade;
+								};
+							};
+							iconbox.appendChild(gymimg);
+						line.appendChild(iconbox);
+						var textbox = document.createElement('td');
+							var linktext = document.createTextNode(gymsorted[i].namn);
+							textbox.appendChild(linktext);
+						line.appendChild(textbox);
+						var exraidwrapper = document.createElement('td');
+							exraidwrapper.setAttribute('class', 'extd');
+						if(!gymsorted[i].exraid){}else{
+								//var exraidimg = document.createElement('img');
+								var exraidimg = document.createElement('span');
+									var exicon = document.createElement('i');
+								if(gymsorted[i].exraid == 'confirmed'){
+									//exraidimg.setAttribute('src', 'img/exraid-confirmed.png');
+									exicon.setAttribute('class', 'sprite sprite-exraid-confirmed');
+								}else if(gymsorted[i].exraid == 'possible'){
+									//exraidimg.setAttribute('src', 'img/exraid-possible.png');
+									exicon.setAttribute('class', 'sprite sprite-exraid-possible');
+								}else{
+									console.log(gymsorted[i].namn + ' kunde inte läsas status för ex-raid.');
+								};
+									exraidimg.appendChild(exicon);
+									exraidimg.setAttribute('height', '30px');
+									exraidimg.setAttribute('style', 'padding-right: 35px;');
+								exraidwrapper.appendChild(exraidimg);
 						};
-					}else if(spriteorimg == 'img'){
-						var gymimg = document.createElement('img');
-						if(!gymsorted[i].id){
-							gymimg.setAttribute('src', 'img/okand_mini.png');
-							++ejhittade;
-						}else{
-							gymimg.setAttribute('src', 'img/' + folder + '/mini/' + gymsorted[i].id + '.png');
-							++hittade;
+						if(!gymsorted[i].rip){}else{
+							var ripp = document.createElement('span');
+								var riptext = document.createTextNode('[RIP]');
+								ripp.appendChild(riptext);
+							exraidwrapper.appendChild(ripp);
+							line.setAttribute('class', 'rip ' + line.getAttribute('class'));
 						};
-					};
-					iconbox.appendChild(gymimg);
-				line.appendChild(iconbox);
-				var textbox = document.createElement('td');
-					var linktext = document.createTextNode(gymsorted[i].namn);
-					textbox.appendChild(linktext);
-				line.appendChild(textbox);
-				var exraidwrapper = document.createElement('td');
-				if(!gymsorted[i].exraid){}else{
-						//var exraidimg = document.createElement('img');
-						var exraidimg = document.createElement('span');
-							var exicon = document.createElement('i');
-						if(gymsorted[i].exraid == 'confirmed'){
-							//exraidimg.setAttribute('src', 'img/exraid-confirmed.png');
-							exicon.setAttribute('class', 'sprite sprite-exraid-confirmed');
-						}else if(gymsorted[i].exraid == 'possible'){
-							//exraidimg.setAttribute('src', 'img/exraid-possible.png');
-							exicon.setAttribute('class', 'sprite sprite-exraid-possible');
-						}else{
-							console.log(gymsorted[i].namn + ' kunde inte läsas status för ex-raid.');
-						};
-							exraidimg.appendChild(exicon);
-							exraidimg.setAttribute('height', '30px');
-							exraidimg.setAttribute('style', 'padding-right: 35px;');
-						exraidwrapper.appendChild(exraidimg);
+						line.appendChild(exraidwrapper);
+					table.appendChild(line);
 				};
-				if(!gymsorted[i].rip){}else{
-					var ripp = document.createElement('span');
-						var riptext = document.createTextNode('[RIP]');
-						ripp.appendChild(riptext);
-					exraidwrapper.appendChild(ripp);
-					line.setAttribute('class', 'rip ' + line.getAttribute('class'));
-				};
-				line.appendChild(exraidwrapper);
-			table.appendChild(line);
+			};
 		};
 		wrapper.appendChild(table);
 		wrapper.appendChild(datalist);
-	head(hittade, ejhittade, gymsorted.length);
-	sidemenu();
-	marklistelem('A');
 };
 function sidemenu(){
 	var wrapper = document.getElementById('list-navigation');

@@ -117,7 +117,7 @@ p {
 	color: gray;
 	text-decoration: line-through;
 }
-table td:nth-child(3) img, .rip span {
+.extd {
 	margin: 0px;
 	padding: 0px 40px 0px 0px;
 }
@@ -131,4 +131,7 @@ table td:nth-child(3) img, .rip span {
 }
 #head i {
 	display: inline-block;
+}
+.disabled {
+	color: gray;
 }
