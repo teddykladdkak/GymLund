@@ -94,7 +94,29 @@ function removesearch(){
 		};
 	}, 500);
 };
-
+function pad (str, max) {
+	str = str.toString();
+	return str.length < max ? pad("0" + str, max) : str;
+};
+function sortgymbykm(){
+	var lat1 = window['lat'];
+	var lon1 = window['lon'];
+	var gymbykm = [];
+	if(lat1 == '0' && lon1 == '0'){
+		return sortgym(gyms);
+	}else{
+		for (var i = gyms.length - 1; i >= 0; i--) {
+			gymbykm.push(pad(Math.round(getDistanceFromLatLonInKm(gyms[i].location.longitud,gyms[i].location.latitud) * 10), 10) + '|||' + i);
+		};
+		gymbykm.sort();
+		var gymstoreturn = [];
+		for (var i = 0; i < gymbykm.length; i++){
+			var datasplit = gymbykm[i].split('|||')[1];
+			gymstoreturn.push(gyms[datasplit]);
+		};
+		return gymstoreturn;
+	};
+};
 function sortgym(data){
 	var gymarray = {};
 	for (var i = data.length - 1; i >= 0; i--) {
@@ -136,6 +158,9 @@ function getLocation() {
 function showPosition(position) {
 	window['lat'] = position.coords.latitude;
 	window['lon'] = position.coords.longitude;
+	var kmwrapper = document.getElementById('sortkm');
+	kmwrapper.removeAttribute('disabled');
+	kmwrapper.parentElement.removeAttribute('class');
 	uppdateDistance();
 };
 function uppdateDistance(){
@@ -234,12 +259,22 @@ function andralista(spriteorimg, folder){
 	}else{
 		var visarip = false;
 	};
-	makelist(spriteorimg, folder, visarip, visaex);
+	var km = document.getElementById('sortkm');
+	if(km.checked){
+		var sortbykm = true;
+	}else{
+		var sortbykm = false;
+	};
+	makelist(spriteorimg, folder, visarip, visaex, sortbykm);
 };
-function makelist(spriteorimg, folder, showrip, showex){
+function makelist(spriteorimg, folder, showrip, showex, sortbykm){
 	var hittade = 0;
 	var ejhittade = 0;
-	var gymsorted = sortgym(gyms);
+	if(sortbykm){
+		var gymsorted = sortgymbykm();
+	}else{
+		var gymsorted = sortgym(gyms);
+	};
 	var wrapper = document.getElementById('wrapper');
 		removechilds(wrapper);
 	var table = document.createElement('table');
@@ -321,6 +356,11 @@ function makelist(spriteorimg, folder, showrip, showex){
 		};
 		wrapper.appendChild(table);
 		wrapper.appendChild(datalist);
+	var lat1 = window['lat'];
+	var lon1 = window['lon'];
+	if(lat1 == '0' && lon1 == '0'){}else{
+		uppdateDistance();
+	};
 };
 function sidemenu(){
 	var wrapper = document.getElementById('list-navigation');
