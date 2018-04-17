@@ -1240,7 +1240,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Jättegrytor',
-	id: '',
+	id: 'j_ttegrytor',
 	location: {
 		longitud: '57.687742',
 		latitud: '11.938495'
@@ -1320,7 +1320,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Pater Noster Kyrkan',
-	id: '',
+	id: 'pater-noster-kyrkan',
 	location: {
 		longitud: '57.69001',
 		latitud: '11.932668'
@@ -2480,7 +2480,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Plaskis',
-	id: '',
+	id: 'plaskis',
 	location: {
 		longitud: '57.685727',
 		latitud: '11.91983'
@@ -2552,7 +2552,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Sannaparkens Lekplats',
-	id: '',
+	id: 'sannaparkens-lekplats',
 	location: {
 		longitud: '57.684853',
 		latitud: '11.910162'
@@ -2568,7 +2568,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Sanna Konditori',
-	id: '',
+	id: 'sanna-konditori',
 	location: {
 		longitud: '57.683021',
 		latitud: '11.910435'
@@ -2696,7 +2696,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Vattenmonument',
-	id: '',
+	id: 'vattenmonument',
 	location: {
 		longitud: '57.679046',
 		latitud: '11.883819'
@@ -2760,7 +2760,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'The Lion of Majvallen',
-	id: '',
+	id: 'the-lion-of-majvallen',
 	location: {
 		longitud: '57.688825',
 		latitud: '11.933848'
@@ -2768,7 +2768,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Mot Utsikten',
-	id: '',
+	id: 'mot-utsikten',
 	location: {
 		longitud: '57.689532',
 		latitud: '11.943368'
@@ -2776,7 +2776,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Merkurius',
-	id: '',
+	id: 'merkurius',
 	location: {
 		longitud: '57.689408',
 		latitud: '11.949544'
@@ -2784,7 +2784,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Boll',
-	id: '',
+	id: 'boll',
 	location: {
 		longitud: '57.685202',
 		latitud: '11.920228'
@@ -2792,7 +2792,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Drips',
-	id: '',
+	id: 'drips',
 	location: {
 		longitud: '57.689058',
 		latitud: '11.953826'
@@ -2800,7 +2800,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Yin Yang Corner',
-	id: '',
+	id: 'yin-yang-corner',
 	location: {
 		longitud: '57.686974',
 		latitud: '11.927707'
@@ -2814,14 +2814,6 @@ var gyms = [{
 		latitud: '11.900087'
 	},
 	rip: false
-},{
-	namn: 'Väggmålning',
-	id: '',
-	location: {
-		longitud: '57.687642',
-		latitud: '11.932609'
-	},
-	rip: true
 },{
 	namn: 'Änggårdskolonin',
 	id: '',
@@ -2840,7 +2832,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Knölsvan',
-	id: '',
+	id: 'kn_lsvan',
 	location: {
 		longitud: '57.687916',
 		latitud: '11.939449'
@@ -2848,7 +2840,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Star on Roof',
-	id: '',
+	id: 'star-on-roof',
 	location: {
 		longitud: '57.684795',
 		latitud: '11.925269'
@@ -2872,7 +2864,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Klockstapel (Slottsskogen)',
-	id: '',
+	id: 'klockstapel-_slottsskogen_',
 	location: {
 		longitud: '57.686417',
 		latitud: '11.948804'
@@ -2920,7 +2912,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Karlsrofältets minnessten',
-	id: '',
+	id: 'karlsrof_ltets-minnessten',
 	location: {
 		longitud: '57.685305',
 		latitud: '11.952765'
@@ -2928,7 +2920,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Slottsskogen',
-	id: '',
+	id: 'slottsskogen',
 	location: {
 		longitud: '57.68514',
 		latitud: '11.950728'
@@ -2936,7 +2928,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Ponnyridning',
-	id: '',
+	id: 'ponnyridning',
 	location: {
 		longitud: '57.684936',
 		latitud: '11.943081'
@@ -2952,7 +2944,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Duscharna I Slottsskogen',
-	id: '',
+	id: 'duscharna-i-slottsskogen',
 	location: {
 		longitud: '57.684833',
 		latitud: '11.946273'
@@ -3024,7 +3016,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Utsiktstornet',
-	id: '',
+	id: 'utsiktstornet',
 	location: {
 		longitud: '57.682442',
 		latitud: '11.939428'
@@ -4592,7 +4584,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Observatoriet',
-	id: '',
+	id: 'observatoriet',
 	location: {
 		longitud: '57.691352',
 		latitud: '11.943332'
@@ -4616,7 +4608,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Djurgårdskyrkogården',
-	id: '',
+	id: 'djurg_rdskyrkog_rden',
 	location: {
 		longitud: '57.692198',
 		latitud: '11.936722'
