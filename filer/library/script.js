@@ -20,6 +20,9 @@ var andraplatser = [{
 },{
 	namn: 'RandomGym',
 	url: 'randomgym.html'
+},{
+	namn: 'PoGoQuest',
+	url: 'https://www.pogoquest.tk/'
 }];
 function removechilds(parent){
 	if(parent.hasChildNodes()){
@@ -223,25 +226,16 @@ function head(){
 	for (var i = 0; i < andraplatser.length; i++){
 		addbutton(wrapper, andraplatser[i].namn, andraplatser[i].url);
 	};
-	addparagraph(wrapper, 'Gillar du detta?');
-	addbutton(wrapper, 'Donera några Pokébollar', 'https://donorbox.org/teddyprojekt-tk', 'custom-dbox-popup');
-	installdonatebutton();
 };
-function installdonatebutton(){
-	var head = document.getElementsByTagName('head')[0];
-		var firstscript = document.createElement('script');
-			firstscript.setAttribute('src', 'https://donorbox.org/install-popup-button.js');
-			firstscript.setAttribute('type', 'text/javascript');
-			firstscript.setAttribute('defer', '');
-		head.appendChild(firstscript);
-		var secondscript = document.createElement('script');
-			var secondscriptkod = document.createTextNode('window.DonorBox = { widgetLinkClassName: "custom-dbox-popup" }');
-  			secondscript.appendChild(secondscriptkod);
-  		head.appendChild(secondscript);
-}
 function load(spriteorimg, folder, showrip, showex){
 	getLocation();
-	makelist(spriteorimg, folder, showrip, showex)
+	var visasmek = document.getElementById('visasmek');
+	if(!visasmek){
+		var visasmektodo = true;
+	}else{
+		var visasmektodo = false;
+	};
+	makelist(spriteorimg, folder, showrip, showex, false, visasmektodo);
 	head();
 	sidemenu();
 	marklistelem('A');
@@ -265,9 +259,15 @@ function andralista(spriteorimg, folder){
 	}else{
 		var sortbykm = false;
 	};
-	makelist(spriteorimg, folder, visarip, visaex, sortbykm);
+	var visasmek = document.getElementById('visasmek');
+	if(visasmek.checked){
+		var smeknamn = true;
+	}else{
+		var smeknamn = false;
+	};
+	makelist(spriteorimg, folder, visarip, visaex, sortbykm, smeknamn);
 };
-function makelist(spriteorimg, folder, showrip, showex, sortbykm){
+function makelist(spriteorimg, folder, showrip, showex, sortbykm, smeknamn){
 	var hittade = 0;
 	var ejhittade = 0;
 	if(sortbykm){
@@ -294,10 +294,6 @@ function makelist(spriteorimg, folder, showrip, showex, sortbykm){
 						var iconbox = document.createElement('td');
 							if(spriteorimg == 'sprite'){
 								if(!gymsorted[i].id){
-									/*
-									var gymimg = document.createElement('img');
-										gymimg.setAttribute('src', 'img/okand_mini.png');
-									*/
 									var gymimg = document.createElement('i');
 										gymimg.setAttribute('class', 'sprite sprite-okand_mini');
 									++ejhittade;
@@ -321,18 +317,21 @@ function makelist(spriteorimg, folder, showrip, showex, sortbykm){
 						var textbox = document.createElement('td');
 							var linktext = document.createTextNode(gymsorted[i].namn);
 							textbox.appendChild(linktext);
+							if(!smeknamn){
+								if(gymsorted[i].smeknamn == ''){}else{
+									var smektext = document.createTextNode(' ("' + gymsorted[i].smeknamn + '")');
+									textbox.appendChild(smektext);
+								};
+							};
 						line.appendChild(textbox);
 						var exraidwrapper = document.createElement('td');
 							exraidwrapper.setAttribute('class', 'extd');
 						if(!gymsorted[i].exraid){}else{
-								//var exraidimg = document.createElement('img');
 								var exraidimg = document.createElement('span');
 									var exicon = document.createElement('i');
 								if(gymsorted[i].exraid == 'confirmed'){
-									//exraidimg.setAttribute('src', 'img/exraid-confirmed.png');
 									exicon.setAttribute('class', 'sprite sprite-exraid-confirmed');
 								}else if(gymsorted[i].exraid == 'possible'){
-									//exraidimg.setAttribute('src', 'img/exraid-possible.png');
 									exicon.setAttribute('class', 'sprite sprite-exraid-possible');
 								}else{
 									console.log(gymsorted[i].namn + ' kunde inte läsas status för ex-raid.');
@@ -366,15 +365,12 @@ function sidemenu(){
 	var wrapper = document.getElementById('list-navigation');
 		var li = document.createElement('li');
 		for (var i = 0; i < allletters.length; i++){
-			/*var fisrtelement = document.getElementsByClassName(allletters[i])[0];
-			if(!fisrtelement){}else{*/
-				var p = document.createElement('p');
-					p.setAttribute('data-letter', allletters[i].toUpperCase());
-					p.setAttribute('onclick', 'scrollToSelected(this);');
-					var ptext = document.createTextNode(allletters[i].toUpperCase());
-					p.appendChild(ptext);
-				li.appendChild(p);
-			/*};*/
+			var p = document.createElement('p');
+				p.setAttribute('data-letter', allletters[i].toUpperCase());
+				p.setAttribute('onclick', 'scrollToSelected(this);');
+				var ptext = document.createTextNode(allletters[i].toUpperCase());
+				p.appendChild(ptext);
+			li.appendChild(p);
 		};
 		wrapper.appendChild(li);
 		addserach();
