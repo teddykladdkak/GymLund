@@ -3082,7 +3082,7 @@ var allpokemon = {
 		nummer: '350',
 		namn: 'Milotic',
 		type: ['Water'],
-		moves: ['Dragon Tail', 'Waterfall', 'Water Gun (old)', 'Hyper Beam', 'Blizzard', 'Surf'],
+		moves: ['Dragon Tail', 'Waterfall', 'Water Gun', 'Hyper Beam', 'Blizzard', 'Surf'],
 		attack: ['Waterfall', 'Surf'],
 		defend: ['Waterfall', 'Hyper Beam']
 	},{
