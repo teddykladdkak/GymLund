@@ -153,6 +153,7 @@
 		};
 		function pasteiv(element){
 			document.getElementById('ivpaste').innerText = element.value;
+			document.getElementById('ivpastetwo').innerText = pad (element.value, 3);
 		};
 		function addpokemon(){
 			var orderdpokemon = new Array(antalpokemon);
@@ -256,6 +257,10 @@
 				var defensewrappertext = document.createTextNode('Bäst moveset för defense: ' + defense.split('###').join(', ') + '.')
 				defensewrapper.appendChild(defensewrappertext);
 		};
+		function pad (str, max) {
+			str = str.toString();
+			return str.length < max ? pad("0" + str, max) : str;
+		};
 		function checkattacks(element){
 			//console.log(element);
 			var firstmovepaste = document.getElementById('firstmovepaste');
@@ -268,10 +273,18 @@
 			while (firstbetygwrapper.hasChildNodes()) {firstbetygwrapper.removeChild(firstbetygwrapper.firstChild);};
 			var secondbetygwrapper = document.getElementById('secondbetygwrapper');
 			while (secondbetygwrapper.hasChildNodes()) {secondbetygwrapper.removeChild(secondbetygwrapper.firstChild);};
+			var firstbetygwrappertwo = document.getElementById('firstbetygwrappertwo');
+			while (firstbetygwrappertwo.hasChildNodes()) {firstbetygwrappertwo.removeChild(firstbetygwrappertwo.firstChild);};
+			var secondbetygwrappertwo = document.getElementById('secondbetygwrappertwo');
+			while (secondbetygwrappertwo.hasChildNodes()) {secondbetygwrappertwo.removeChild(secondbetygwrappertwo.firstChild);};
+			var energynummertwo = document.getElementById('energynummertwo');
+			while (energynummertwo.hasChildNodes()) {energynummertwo.removeChild(energynummertwo.firstChild);};
+			
 			var selectedimg = document.getElementsByClassName('selected')[0];
 			var allcheckbox = document.getElementById('attacker').getElementsByTagName('input');
 			var m = 'none';
 			var q = 'none';
+			//firstbetygwrappertwo secondbetygwrappertwo energynummertwo ivpastetwo
 			for (var i = 0; i < allcheckbox.length; i++){
 				if(!allcheckbox[i].checked){}else{
 					var moveinfo = findmoves(allcheckbox[i].value);
@@ -279,12 +292,16 @@
 						var wrapper = document.getElementById('firstmovepaste');
 						while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
 						var betygwrapper = document.getElementById('firstbetygwrapper');
+						var betygwrappertwo = document.getElementById('firstbetygwrappertwo');
 					}else if(allcheckbox[i].getAttribute('data-type') == 'main'){
 						var wrapper = document.getElementById('secondmovepaste');
 						while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
 						var energynummertext = document.createTextNode(nummertoicon(allcheckbox[i].getAttribute('data-energi')));
 						energynummer.appendChild(energynummertext);
+						var energynummertexttwo = document.createTextNode(nummertoicon(allcheckbox[i].getAttribute('data-energi')));
+						energynummertwo.appendChild(energynummertexttwo);
 						var betygwrapper = document.getElementById('secondbetygwrapper');
+						var betygwrappertwo = document.getElementById('secondbetygwrappertwo');
 					};
 					for (var a = elements.length - 1; a >= 0; a--) {
 						if(elements[a].namn == allcheckbox[i].getAttribute('data-element')){
@@ -294,6 +311,7 @@
 					};
 					var betygwrappertext = document.createTextNode(findmovestats(allcheckbox[i].value));
 					betygwrapper.appendChild(betygwrappertext);
+					betygwrappertwo.appendChild(betygwrappertext);
 				};
 			};
 		};
@@ -374,9 +392,19 @@
 			while (firstbetygwrapper.hasChildNodes()) {firstbetygwrapper.removeChild(firstbetygwrapper.firstChild);};
 			var secondbetygwrapper = document.getElementById('secondbetygwrapper');
 			while (secondbetygwrapper.hasChildNodes()) {secondbetygwrapper.removeChild(secondbetygwrapper.firstChild);};
+			var firstbetygwrappertwo = document.getElementById('firstbetygwrappertwo');
+			while (firstbetygwrappertwo.hasChildNodes()) {firstbetygwrappertwo.removeChild(firstbetygwrappertwo.firstChild);};
+			var secondbetygwrappertwo = document.getElementById('secondbetygwrappertwo');
+			while (secondbetygwrappertwo.hasChildNodes()) {secondbetygwrappertwo.removeChild(secondbetygwrappertwo.firstChild);};
+			var energynummertwo = document.getElementById('energynummertwo');
+			while (energynummertwo.hasChildNodes()) {energynummertwo.removeChild(energynummertwo.firstChild);};
 			var ivpaste = document.getElementById('ivpaste');
 			while (ivpaste.hasChildNodes()) {ivpaste.removeChild(ivpaste.firstChild);};
 				ivpaste.appendChild(document.createTextNode("0"));
+			var ivpastetwo = document.getElementById('ivpastetwo');
+			while (ivpastetwo.hasChildNodes()) {ivpastetwo.removeChild(ivpastetwo.firstChild);};
+				ivpastetwo.appendChild(document.createTextNode("000"));
+			//firstbetygwrappertwo secondbetygwrappertwo energynummertwo ivpastetwo
 		};
 		function nummertoicon(nummer){
 			if(nummer == '1'){
@@ -530,6 +558,7 @@
 <div id="attack"></div>
 <div id="defense"></div>
 <div id="result" onclick="copy(this);"><h1><span id="firstmovepaste"></span><span id="secondmovepaste"></span><span id="energynummer"></span><span id="firstbetygwrapper"></span><span id="secondbetygwrapper"></span><span id="ivpaste">0</span>%</h1></div>
+<div id="resulttwo" onclick="copy(this);"><h1><span id="firstbetygwrappertwo"></span><span id="secondbetygwrappertwo"></span><span id="energynummertwo"></span><span id="ivpastetwo">000</span></h1></div>
 <input type="text" id="copyinput">
 <div id="footer">
 	Information från: <a href="https://pokemon.gameinfo.io/" target="_blank">GameInfo</a> & <a href="https://pokemongo.gamepress.gg/pokemon-moves" target="_blank">GamePress</a>&nbsp;¦&nbsp;Bilder från: <a href="http://theartificial.nl/pokemonicons/" target="_blank">theartificial</a>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="http://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
