@@ -1,4 +1,15 @@
 var gyms = [{
+	namn: 'Wooden Squirrel',
+	id: '',
+	smeknamn: '',
+	location: {
+		longitud: '55.686299',
+		latitud: '13.175972'
+	},
+	embed: '',
+	exraid: 'confirmed',
+	rip: false
+},{
 	namn: 'Linero IP',
 	id: 'linero-ip',
 	smeknamn: '',
