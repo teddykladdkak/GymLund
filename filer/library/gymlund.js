@@ -1,4 +1,15 @@
 var gyms = [{
+	namn: 'Sälen',
+	id: 's_len',
+	smeknamn: '',
+	location: {
+		longitud: '55.709177',
+		latitud: '13.243905'
+	},
+	embed: '',
+	exraid: 'confirmed',
+	rip: false
+},{
 	namn: 'Wooden Squirrel',
 	id: '',
 	smeknamn: '',
