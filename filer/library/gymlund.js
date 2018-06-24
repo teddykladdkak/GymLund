@@ -1,4 +1,15 @@
 var gyms = [{
+	namn: 'Fountain at Helgeands church',
+	id: '',
+	smeknamn: '',
+	location: {
+		longitud: '55.693649',
+		latitud: '13.179212'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
 	namn: 'Sälen',
 	id: 's_len',
 	smeknamn: '',
