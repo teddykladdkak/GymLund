@@ -19,10 +19,9 @@
 	<script src="library/elements.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		var spritepokemon = 386;
-		var notinsprite = [];
+		var notinsprite = ['028b'];
 		var insprite = [];
 		var antalpokemon = 386;
-		var pokemontoshow = ['003', '006', '009', '012', '015', '018', '020', '022', '024', '026', '028', '031', '034', '036', '038', '040', '045', '047', '049', '051', '053', '055', '057', '059', '062', '065', '068', '071', '073', '076', '078', '080', '082', '083', '085', '087', '089', '091', '094', '097', '099', '101', '103', '105', '106', '107', '108', '110', '112', '114', '115', '117', '119', '121', '122', '124', '125', '126', '127', '128', '130', '131', '132', '134', '135', '136', '139', '141', '142', '143', '144', '145', '146', '149', '150', '151', '154', '157', '160', '162', '164', '166', '168', '169', '171', '176', '178', '181', '182', '184', '185', '186', '189', '190', '192', '193', '195', '196', '197', '198', '199', '200', '201', '202', '203', '205', '206', '207', '208', '210', '211', '212', '213', '214', '215', '217', '219', '221', '222', '224', '225', '226', '227', '229', '230', '232', '233', '234', '235', '237', '241', '242', '243', '244', '245', '248', '249', '250', '251', '254', '257', '260', '262', '264', '267', '269', '272', '275', '277', '279', '282', '284', '286', '289', '291', '292', '295', '297', '299', '301', '302', '303', '306', '308', '310', '311', '312', '313', '314', '315', '317', '319', '321', '323', '324', '326', '327', '330', '332', '334', '335', '336', '337', '338', '340', '342', '344', '346', '348', '350', '351', '352',  '354', '356', '357', '358', '359', '362', '365', '367', '368', '369', '370', '373', '376', '377', '378', '379', '380', '381', '382', '383', '384', '385', '386'];
 		function addexplain(){
 			var wrapper = document.getElementById('info');
 				var table = document.createElement('table');
@@ -119,14 +118,8 @@
 		function hidepokemon(){
 			var allimages = document.getElementById('pokemon').getElementsByTagName('i');
 			for (var i = allimages.length - 1; i >= 0; i--) {
-				var dolj = true;
-				for (var a = pokemontoshow.length - 1; a >= 0; a--) {
-					if(pokemontoshow[a] == allimages[i].getAttribute('data-nummer')){
-						var dolj = false;
-					};
-				};
-				if(dolj){
-					allimages[i].setAttribute('style', 'display: none;')
+				if(allimages[i].getAttribute('data-lastevolve') == 'false'){
+					allimages[i].setAttribute('style', 'display: none;');
 				};
 			};
 		};
@@ -156,52 +149,37 @@
 			document.getElementById('ivpastetwo').innerText = pad (element.value, 3);
 		};
 		function addpokemon(){
-			var orderdpokemon = new Array(antalpokemon);
-			var characters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'];
-			for (var i = 0; i < characters.length; i++){
-				for (var a = 0; a < allpokemon[characters[i]].length; a++){
-					var number = parseInt(allpokemon[characters[i]][a].nummer);
-					if(number <= antalpokemon){
-						orderdpokemon[number - 1] = allpokemon[characters[i]][a];
-					};
-				};
-			};
 			var wrapper = document.getElementById('pokemon');
-			for (var i = 0; i < orderdpokemon.length; i++){
-				var todo = checkwhatimgtouse(orderdpokemon[i]);
-				var image = document.createElement(todo.type);
-					image.setAttribute(todo.typinfo, todo.info);
-					image.setAttribute('onclick', 'chosepokemon(this);');
-					image.setAttribute('data-nummer', orderdpokemon[i].nummer);
-					image.setAttribute('data-namn', orderdpokemon[i].namn);
-					image.setAttribute('data-type', orderdpokemon[i].type.join('###'));
-					image.setAttribute('data-moves', orderdpokemon[i].moves.join('###'));
-					image.setAttribute('data-defend', orderdpokemon[i].defend.join('###'));
-					image.setAttribute('data-attack', orderdpokemon[i].attack.join('###'));
-				wrapper.appendChild(image);
+			for (var i = 0; i < allpokemon.length; i++){
+				if(parseInt(allpokemon[i].nummer) > antalpokemon){
+					break;
+				}else{
+					var todo = checkwhatimgtouse(allpokemon[i]);
+					var image = document.createElement(todo.type);
+						image.setAttribute(todo.typinfo, todo.info);
+						image.setAttribute('onclick', 'chosepokemon(this);');
+						image.setAttribute('data-nummer', allpokemon[i].nummer);
+						image.setAttribute('data-namn', allpokemon[i].namn);
+						image.setAttribute('data-type', allpokemon[i].type.join('###'));
+						image.setAttribute('data-moves', allpokemon[i].moves.join('###'));
+						image.setAttribute('data-defend', allpokemon[i].defend.join('###'));
+						image.setAttribute('data-attack', allpokemon[i].attack.join('###'));
+						image.setAttribute('data-lastevolve', allpokemon[i].lastevolve);
+					wrapper.appendChild(image);
+				};
 			};
 		};
 		function checkwhatimgtouse(pokemon){
-			if(spritepokemon >= parseInt(pokemon.nummer)){
-				var answer = {type: 'i', typinfo: 'class', info: 'sprite sprite-' + parseInt(pokemon.nummer, 10)};
-				return answer;
-			}else{
-				for (var i = notinsprite.length - 1; i >= 0; i--) {
-					if(notinsprite[i] == pokemon.nummer){
-						var answer = {type: 'img', typinfo: 'src', info: 'img/pokemon/bilder/' + parseInt(pokemon.nummer, 10) + '.png'};
-						return answer;
-					};
+			for (var i = notinsprite.length - 1; i >= 0; i--) {
+				if(notinsprite[i] == pokemon.nummer){
+					var answer = {type: 'img', typinfo: 'src', info: 'img/pokemon/bilder/' + pokemon.nummer + '.png'};
+					console.log(answer)
+					return answer;
 				};
-				for (var i = insprite.length - 1; i >= 0; i--) {
-					if(insprite[i] == pokemon.nummer){
-						var answer = {type: 'i', typinfo: 'class', info: 'sprite sprite-' + parseInt(pokemon.nummer, 10)};
-						return answer;
-					};
-				};
-				var answer = {type: 'i', typinfo: 'class', info: 'sprite sprite-okand'};
-				return answer;
 			};
-		}
+			var answer = {type: 'i', typinfo: 'class', info: 'sprite sprite-' + pokemon.nummer};
+			return answer;
+		};
 		function chosepokemon(element){
 			removeall();
 			var allimg = element.parentElement.getElementsByTagName('i');
@@ -478,12 +456,12 @@
 		#firstmove, #secondmove {
 			max-width: 671px;
 		}
-		i {
-			width: 50px;
-			height: 50px;
+		#pokemon i, #pokemon img {
+			width: 64px;
+			height: 64px;
 			opacity: 0.4;
 		}
-		i:hover, .selected, #attacker img, #info img {
+		#pokemon i:hover, #pokemon img:hover, .selected, #attacker img, #info img {
 			opacity: 1;
 		}
 		#attacker img, #info img {
@@ -536,13 +514,10 @@
 			max-width: 300px;
 		}
 	</style>
-	<script src="https://donorbox.org/install-popup-button.js" type="text/javascript" defer></script>
-  	<script> window.DonorBox = { widgetLinkClassName: 'custom-dbox-popup' } </script>
 </head>
 <body onload="load();">
 <input type="button" value="Visa bara slututvecklingar" onclick="visadoljpokemon(this)" name="">
 <input type="button" value="Visa information" onclick="visadolj(this);" name="">
-<p>Gillar du detta?<a href="https://donorbox.org/teddyprojekt-tk" class="donation custom-dbox-popup">Donera några Pokébollar <img src="img/donation/pokeball.png"></a></p>
 <div id="info" style="display: none;">
 	<h1>Information</h1>
 	<p>Denna applikaitonen skapades då man i samband med raids inte ser vilka attacker ens pokemon har. Visst man kan söka efter dom i nuläget, men finns inget annat sätt. Såg en kille som visade denna tekniken att koda pokemonnamnen för att ge så mycket information som det går. För att förenkla processen gjorde jag detta verktyg till mig själv för att snabbare skapa kodade namnen. Förklaring kan du läsa nedan.</p>
@@ -557,7 +532,7 @@
 <input type="tel" id="ivinput" name="" onchange="pasteiv(this)" onkeyup="pasteiv(this)">
 <div id="attack"></div>
 <div id="defense"></div>
-<div id="result" onclick="copy(this);"><h1><span id="firstmovepaste"></span><span id="secondmovepaste"></span><span id="energynummer"></span><span id="firstbetygwrapper"></span><span id="secondbetygwrapper"></span><span id="ivpaste">0</span>%</h1></div>
+<div id="result" onclick="copy(this);"><h1 style="display: none;"><span id="firstmovepaste"></span><span id="secondmovepaste"></span><span id="energynummer"></span><span id="firstbetygwrapper"></span><span id="secondbetygwrapper"></span><span id="ivpaste">0</span>%</h1></div>
 <div id="resulttwo" onclick="copy(this);"><h1><span id="firstbetygwrappertwo"></span><span id="secondbetygwrappertwo"></span><span id="energynummertwo"></span><span id="ivpastetwo">000</span></h1></div>
 <input type="text" id="copyinput">
 <div id="footer">
