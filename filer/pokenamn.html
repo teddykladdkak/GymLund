@@ -11,7 +11,7 @@
 	<meta content="minimum-scale=1.0, width=device-width, maximum-scale=0.6667, user-scalable=no" name="viewport" />
 	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-	<link rel="stylesheet" type="text/css" href="img/pokemon/sprite.css">
+	<!-- <link rel="stylesheet" type="text/css" href="img/pokemon/sprite.css"> -->
 
 	<script src="library/pokemon.js" type="text/javascript"></script>
 	<script src="library/mainmoves.js" type="text/javascript"></script>
@@ -19,29 +19,26 @@
 	<script src="library/elements.js" type="text/javascript"></script>
 	<script type="text/javascript">
 		var antalpokemon = 386;
+		var alltags = ['i', 'img', 'span'];
 		function addexplain(){
 			var wrapper = document.getElementById('info');
 				var table = document.createElement('table');
 					var exempelline = document.createElement('tr');
 						exempelline.setAttribute('class', 'center');
-						exempelline.appendChild(maketd('Fi'));
-						exempelline.appendChild(maketd('S'));
-						exempelline.appendChild(maketd('➋'));
 						exempelline.appendChild(maketd('B'));
 						exempelline.appendChild(maketd('X'));
-						exempelline.appendChild(maketd('98%'));
+						exempelline.appendChild(maketd('➋'));
+						exempelline.appendChild(maketd('098'));
 					table.appendChild(exempelline);
 					var forklaringline = document.createElement('tr');
-						forklaringline.appendChild(maketd('Elementet för snabb attacken.'));
-						forklaringline.appendChild(maketd('Elementet för laddade attacken.'));
-						forklaringline.appendChild(maketd('Hur mycket uppdelad energin är.'));
 						forklaringline.appendChild(maketd('Gradering av snabbattacken.'));
 						forklaringline.appendChild(maketd('Gradering av laddade attacken.'));
+						forklaringline.appendChild(maketd('Hur mycket uppdelad energin är.'));
 						forklaringline.appendChild(maketd('IV.'));
 					table.appendChild(forklaringline);
 				wrapper.appendChild(table);
 			addgradering();
-			addelements();
+			/*addelements();*/
 		};
 		function maketd(text){
 			var td = document.createElement('td');
@@ -79,7 +76,7 @@
 					table.appendChild(x);
 				wrapper.appendChild(table);
 		};
-		function addelements(){
+		/*function addelements(){
 			var wrapper = document.getElementById('info');
 			var elementtable = document.createElement('table');
 				var head = document.createElement('thead');
@@ -111,7 +108,7 @@
 				elementtable.appendChild(elemline);
 			};
 			wrapper.appendChild(elementtable);
-		};
+		};*/
 		function hidepokemon(){
 			var allimages = document.getElementById('pokemon').getElementsByTagName('i');
 			for (var i = allimages.length - 1; i >= 0; i--) {
@@ -140,16 +137,21 @@
 			addexplain();
 		};
 		function markimg(element){
-			var allimg = element.parentElement.getElementsByTagName('i');
-			for (var i = allimg.length - 1; i >= 0; i--) {
-				allimg[i].setAttribute('class', allimg[i].getAttribute('class').replace(' selected', ''));
-			}
+			for (var a = alltags.length - 1; a >= 0; a--) {
+				var allimg = element.parentElement.getElementsByTagName(alltags[a]);
+				for (var i = allimg.length - 1; i >= 0; i--) {
+					if(!allimg[i].getAttribute('class')){}else{
+						allimg[i].setAttribute('class', allimg[i].getAttribute('class').replace(' selected', ''));
+					};
+				};
+			};
 			element.setAttribute('class', element.getAttribute('class') + ' selected');
 			document.getElementById(element.parentElement.getAttribute('id') + 'paste').innerText = element.getAttribute('data-id');
 		};
 		function pasteiv(element){
 			document.getElementById('ivpaste').innerText = element.value;
 			document.getElementById('ivpastetwo').innerText = pad (element.value, 3);
+			document.getElementById('ivpastethree').innerText = pad (element.value, 3);
 		};
 		function addpokemon(){
 			var wrapper = document.getElementById('pokemon');
@@ -169,6 +171,7 @@
 							image.setAttribute('data-defend', allpokemon[i].defend.join('###'));
 							image.setAttribute('data-attack', allpokemon[i].attack.join('###'));
 							image.setAttribute('data-lastevolve', allpokemon[i].lastevolve);
+							image.setAttribute('data-index', i);
 						wrapper.appendChild(image);
 					}else{
 						var image = document.createElement('span');
@@ -181,6 +184,7 @@
 							image.setAttribute('data-attack', allpokemon[i].attack.join('###'));
 							image.setAttribute('data-lastevolve', allpokemon[i].lastevolve);
 							image.setAttribute('id', allpokemon[i].nummer);
+							image.setAttribute('data-index', i);
 						wrapper.appendChild(image);
 						document.getElementById(allpokemon[i].nummer).innerHTML = todo.kod;
 					};
@@ -197,15 +201,19 @@
 		};
 		function chosepokemon(element){
 			removeall();
-			var allimg = element.parentElement.getElementsByTagName('i');
-			for (var i = allimg.length - 1; i >= 0; i--) {
-				allimg[i].setAttribute('class', allimg[i].getAttribute('class').replace(' selected', ''));
-			}
+			for (var a = alltags.length - 1; a >= 0; a--) {
+				var allimg = element.parentElement.getElementsByTagName(alltags[a]);
+				for (var i = allimg.length - 1; i >= 0; i--) {
+					if(!allimg[i].getAttribute('class')){}else{
+						allimg[i].setAttribute('class', allimg[i].getAttribute('class').replace(' selected', ''));
+					};
+				};
+			};
 			var pokemonnamn = document.getElementById('pokemonnamn');
 				var pokemonnamntext = document.createTextNode(element.getAttribute('data-namn'));
 				pokemonnamn.appendChild(pokemonnamntext);
 			element.setAttribute('class', element.getAttribute('class') + ' selected');
-			addradio(element.getAttribute('data-moves'), 'attacker');
+			addradio(element.getAttribute('data-moves'), 'attacker', element.getAttribute('data-index'));
 			addbeststats(element.getAttribute('data-attack'), element.getAttribute('data-defend'));
 			pokemonnamn.scrollIntoView();
 		};
@@ -213,9 +221,9 @@
 			var e = document.getElementById(eleID);
 			if (!!e && e.scrollIntoView) {
 				e.scrollIntoView();
-			}
-		}
-		function addradio(array, id){
+			};
+		};
+		function addradio(array, id, index){
 			var allelements = array.split('###');
 			var wrapper = document.getElementById(id);
 			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
@@ -228,6 +236,7 @@
 					radio.setAttribute('data-element', attackinfo.info.element);
 					radio.setAttribute('data-type', attackinfo.type);
 					radio.setAttribute('data-energi', attackinfo.info.energi);
+					radio.setAttribute('data-index', index);
 				wrapper.appendChild(radio);
 				var label = document.createElement('label');
 					var img = document.createElement('img');
@@ -254,30 +263,77 @@
 			str = str.toString();
 			return str.length < max ? pad("0" + str, max) : str;
 		};
+		function seepercent(index){
+			var wrapper = document.getElementById('attacker');
+			var allinput = document.getElementsByTagName('input');
+			var quick = '';
+			var main = '';
+			var energy = '';
+			var countelem = 0;
+			for (var i = allinput.length - 1; i >= 0; i--) {
+				if(!allinput[i].checked){}else{
+					++countelem;
+					if(allinput[i].getAttribute('data-type') == 'main'){
+						var main = allinput[i].getAttribute('value');
+						var energy = nummertoicon(allinput[i].getAttribute('data-energi'));
+					}else if(allinput[i].getAttribute('data-type') == 'quick'){
+						var quick = allinput[i].getAttribute('value');
+					}else{
+						console.log('Något gick fel i "seepercent();"');
+					};
+				};
+			};
+			console.log(countelem)
+			if(countelem == 2){
+				var pokemondata = allpokemon[index];
+				var defensescore = 0;
+				for (var i = pokemondata.defense.length - 1; i >= 0; i--) {
+					if(pokemondata.defense[i][0] == quick){
+						if(pokemondata.defense[i][1] == main){
+							var defensescore = pokemondata.defense[i][2];
+						};
+					};
+				};
+				var offensescore = 0;
+				for (var i = pokemondata.offense.length - 1; i >= 0; i--) {
+					if(pokemondata.offense[i][0] == quick){
+						if(pokemondata.offense[i][1] == main){
+							var offensescore = pokemondata.offense[i][2];
+						};
+					};
+				};
+				if(defensescore == offensescore){
+					//console.log('B d: ' + defensescore + ' a: ' + offensescore);
+					return 'Ⓑ' + pad(offensescore, 3) + energy;
+				}else if(defensescore < offensescore){
+					//console.log('A d: ' + defensescore + ' a: ' + offensescore);
+					return 'Ⓐ' + pad(offensescore, 3) + energy;
+				}else if(defensescore > offensescore){
+					//console.log('D d: ' + defensescore + ' a: ' + offensescore);
+					return 'Ⓓ' + pad(defensescore, 3) + energy;
+				}else{
+					conosle.log('Något gick fel i seepercent(); selektering.')
+					return 'Ⓧ000Ⓧ' + energy;
+				};
+			}else{
+				return 'Ⓧ000Ⓧ';
+			};
+		};
 		function checkattacks(element){
-			//console.log(element);
-			var firstmovepaste = document.getElementById('firstmovepaste');
-			while (firstmovepaste.hasChildNodes()) {firstmovepaste.removeChild(firstmovepaste.firstChild);};
-			var secondmovepaste = document.getElementById('secondmovepaste');
-			while (secondmovepaste.hasChildNodes()) {secondmovepaste.removeChild(secondmovepaste.firstChild);};
-			var energynummer = document.getElementById('energynummer');
-			while (energynummer.hasChildNodes()) {energynummer.removeChild(energynummer.firstChild);};
-			var firstbetygwrapper = document.getElementById('firstbetygwrapper');
-			while (firstbetygwrapper.hasChildNodes()) {firstbetygwrapper.removeChild(firstbetygwrapper.firstChild);};
-			var secondbetygwrapper = document.getElementById('secondbetygwrapper');
-			while (secondbetygwrapper.hasChildNodes()) {secondbetygwrapper.removeChild(secondbetygwrapper.firstChild);};
-			var firstbetygwrappertwo = document.getElementById('firstbetygwrappertwo');
-			while (firstbetygwrappertwo.hasChildNodes()) {firstbetygwrappertwo.removeChild(firstbetygwrappertwo.firstChild);};
-			var secondbetygwrappertwo = document.getElementById('secondbetygwrappertwo');
-			while (secondbetygwrappertwo.hasChildNodes()) {secondbetygwrappertwo.removeChild(secondbetygwrappertwo.firstChild);};
-			var energynummertwo = document.getElementById('energynummertwo');
-			while (energynummertwo.hasChildNodes()) {energynummertwo.removeChild(energynummertwo.firstChild);};
-			
+			var movepercent = seepercent(element.getAttribute('data-index'));
+			console.log(movepercent);
+			var elementtoerase = ['firstmovepaste', 'secondmovepaste', 'energynummer', 'firstbetygwrapper', 'secondbetygwrapper', 'firstbetygwrappertwo', 'secondbetygwrappertwo', 'energynummertwo', 'firstbetygwrapperthree'];
+			for (var i = elementtoerase.length - 1; i >= 0; i--) {
+				var elem = document.getElementById(elementtoerase[i]);
+				while (elem.hasChildNodes()) {elem.removeChild(elem.firstChild);};
+			};
+			var threelem = document.getElementById('firstbetygwrapperthree');
+				var threelemtext = document.createTextNode(movepercent);
+				threelem.appendChild(threelemtext);
 			var selectedimg = document.getElementsByClassName('selected')[0];
 			var allcheckbox = document.getElementById('attacker').getElementsByTagName('input');
 			var m = 'none';
 			var q = 'none';
-			//firstbetygwrappertwo secondbetygwrappertwo energynummertwo ivpastetwo
 			for (var i = 0; i < allcheckbox.length; i++){
 				if(!allcheckbox[i].checked){}else{
 					var moveinfo = findmoves(allcheckbox[i].value);
@@ -332,7 +388,6 @@
 			if(tosend == ''){
 				var tosend = 'X';
 			};
-			console.log(tosend);
 			return capitalizeFirstLetter(tosend);
 		};
 		function capitalizeFirstLetter(string) {
@@ -370,34 +425,19 @@
 			return 'none';
 		};
 		function removeall(){
-			console.log('1');
 			document.getElementById('ivinput').setAttribute('value', '');
 			document.getElementById('ivinput').value = '0';
-			var pokemonnamn = document.getElementById('pokemonnamn');
-			while (pokemonnamn.hasChildNodes()) {pokemonnamn.removeChild(pokemonnamn.firstChild);};
-			var firstmovepaste = document.getElementById('firstmovepaste');
-			while (firstmovepaste.hasChildNodes()) {firstmovepaste.removeChild(firstmovepaste.firstChild);};
-			var secondmovepaste = document.getElementById('secondmovepaste');
-			while (secondmovepaste.hasChildNodes()) {secondmovepaste.removeChild(secondmovepaste.firstChild);};
-			var energynummer = document.getElementById('energynummer');
-			while (energynummer.hasChildNodes()) {energynummer.removeChild(energynummer.firstChild);};
-			var firstbetygwrapper = document.getElementById('firstbetygwrapper');
-			while (firstbetygwrapper.hasChildNodes()) {firstbetygwrapper.removeChild(firstbetygwrapper.firstChild);};
-			var secondbetygwrapper = document.getElementById('secondbetygwrapper');
-			while (secondbetygwrapper.hasChildNodes()) {secondbetygwrapper.removeChild(secondbetygwrapper.firstChild);};
-			var firstbetygwrappertwo = document.getElementById('firstbetygwrappertwo');
-			while (firstbetygwrappertwo.hasChildNodes()) {firstbetygwrappertwo.removeChild(firstbetygwrappertwo.firstChild);};
-			var secondbetygwrappertwo = document.getElementById('secondbetygwrappertwo');
-			while (secondbetygwrappertwo.hasChildNodes()) {secondbetygwrappertwo.removeChild(secondbetygwrappertwo.firstChild);};
-			var energynummertwo = document.getElementById('energynummertwo');
-			while (energynummertwo.hasChildNodes()) {energynummertwo.removeChild(energynummertwo.firstChild);};
+			var idtoremove = ['pokemonnamn', 'firstmovepaste', 'secondmovepaste', 'energynummer', 'firstbetygwrapper', 'secondbetygwrapper', 'firstbetygwrappertwo', 'secondbetygwrappertwo', 'energynummertwo'];
+			for (var i = idtoremove.length - 1; i >= 0; i--) {
+				var elem = document.getElementById(idtoremove[i]);
+				while (elem.hasChildNodes()) {elem.removeChild(elem.firstChild);};
+			};
 			var ivpaste = document.getElementById('ivpaste');
 			while (ivpaste.hasChildNodes()) {ivpaste.removeChild(ivpaste.firstChild);};
 				ivpaste.appendChild(document.createTextNode("0"));
 			var ivpastetwo = document.getElementById('ivpastetwo');
 			while (ivpastetwo.hasChildNodes()) {ivpastetwo.removeChild(ivpastetwo.firstChild);};
 				ivpastetwo.appendChild(document.createTextNode("000"));
-			//firstbetygwrappertwo secondbetygwrappertwo energynummertwo ivpastetwo
 		};
 		function nummertoicon(nummer){
 			if(nummer == '1'){
@@ -421,7 +461,7 @@
 			}else if(nummer == '10'){
 				return '➓';
 			};
-			return nummer;
+			return 'Ⓧ';
 		};
 		function copy(element){
 			document.getElementById('copyinput').value = element.innerText;
@@ -431,13 +471,13 @@
 			document.execCommand("copy");
 		};
 		function visaallapokemon(){
-			var allimg = document.getElementById('pokemon').getElementsByTagName('i');
-			for (var i = allimg.length - 1; i >= 0; i--) {
-				allimg[i].removeAttribute('style');
-			};
-			var allimg = document.getElementById('pokemon').getElementsByTagName('span');
-			for (var i = allimg.length - 1; i >= 0; i--) {
-				allimg[i].removeAttribute('style');
+			for (var a = alltags.length - 1; a >= 0; a--) {
+				var allimg = document.getElementById('pokemon').getElementsByTagName(alltags[a]);
+				for (var i = allimg.length - 1; i >= 0; i--) {
+					if(!allimg[i].getAttribute('class')){}else{
+						allimg[i].removeAttribute('style');
+					};
+				};
 			};
 		};
 		function visadolj(element){
@@ -460,6 +500,9 @@
 				element.removeAttribute('data-aktive');
 				visaallapokemon();
 			};
+		};
+		function erase(element){
+			element.value = '';
 		};
 	</script>
 	<style type="text/css">
@@ -549,11 +592,12 @@
 <h2>Välj attacker</h2>
 <div id="attacker"></div>
 <h2>IV</h2>
-<input type="tel" id="ivinput" name="" onchange="pasteiv(this)" onkeyup="pasteiv(this)">
+<input type="tel" id="ivinput" name="" onclick="erase(this)" onchange="pasteiv(this)" onkeyup="pasteiv(this)">
 <div id="attack"></div>
 <div id="defense"></div>
 <div id="result" onclick="copy(this);"><h1 style="display: none;"><span id="firstmovepaste"></span><span id="secondmovepaste"></span><span id="energynummer"></span><span id="firstbetygwrapper"></span><span id="secondbetygwrapper"></span><span id="ivpaste">0</span>%</h1></div>
-<div id="resulttwo" onclick="copy(this);"><h1><span id="firstbetygwrappertwo"></span><span id="secondbetygwrappertwo"></span><span id="energynummertwo"></span><span id="ivpastetwo">000</span></h1></div>
+<div id="resulttwo" onclick="copy(this);"><h1><span id="firstbetygwrappertwo"></span><span id="secondbetygwrappertwo"></span><span id="energynummertwo"></span><span id="ivpastetwo">000</span></h1>
+<div id="resultthree" onclick="copy(this);"><h1><span id="firstbetygwrapperthree">Ⓧ000Ⓧ</span><span id="ivpastethree">000</span></h1></div>
 <input type="text" id="copyinput">
 <div id="footer">
 	Information från: <a href="https://pokemon.gameinfo.io/" target="_blank">GameInfo</a> & <a href="https://pokemongo.gamepress.gg/pokemon-moves" target="_blank">GamePress</a>&nbsp;¦&nbsp;Bilder från: <a href="http://theartificial.nl/pokemonicons/" target="_blank">theartificial</a>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="http://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
