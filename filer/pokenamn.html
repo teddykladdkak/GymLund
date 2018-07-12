@@ -432,12 +432,12 @@
 				var elem = document.getElementById(idtoremove[i]);
 				while (elem.hasChildNodes()) {elem.removeChild(elem.firstChild);};
 			};
-			var ivpaste = document.getElementById('ivpaste');
-			while (ivpaste.hasChildNodes()) {ivpaste.removeChild(ivpaste.firstChild);};
-				ivpaste.appendChild(document.createTextNode("0"));
-			var ivpastetwo = document.getElementById('ivpastetwo');
-			while (ivpastetwo.hasChildNodes()) {ivpastetwo.removeChild(ivpastetwo.firstChild);};
-				ivpastetwo.appendChild(document.createTextNode("000"));
+			var allspecdoremove = [{id: 'ivpaste', text: '0'}, {id: 'ivpastetwo', text: '000'}, {id: 'firstbetygwrapperthree', text: 'Ⓧ000Ⓧ'}, {id: 'ivpastethree', text: '000'}];
+			for (var i = allspecdoremove.length - 1; i >= 0; i--) {
+				var specwrapper = document.getElementById(allspecdoremove[i].id);
+				while (specwrapper.hasChildNodes()) {specwrapper.removeChild(specwrapper.firstChild);};
+					specwrapper.appendChild(document.createTextNode(allspecdoremove[i].text));
+			};
 		};
 		function nummertoicon(nummer){
 			if(nummer == '1'){
@@ -595,8 +595,8 @@
 <input type="tel" id="ivinput" name="" onclick="erase(this)" onchange="pasteiv(this)" onkeyup="pasteiv(this)">
 <div id="attack"></div>
 <div id="defense"></div>
-<div id="result" onclick="copy(this);"><h1 style="display: none;"><span id="firstmovepaste"></span><span id="secondmovepaste"></span><span id="energynummer"></span><span id="firstbetygwrapper"></span><span id="secondbetygwrapper"></span><span id="ivpaste">0</span>%</h1></div>
-<div id="resulttwo" onclick="copy(this);"><h1><span id="firstbetygwrappertwo"></span><span id="secondbetygwrappertwo"></span><span id="energynummertwo"></span><span id="ivpastetwo">000</span></h1>
+<div id="result" onclick="copy(this);"><h1><span id="firstmovepaste"></span><span id="secondmovepaste"></span><span id="energynummer"></span><span id="firstbetygwrapper"></span><span id="secondbetygwrapper"></span><span id="ivpaste">0</span>%</h1></div>
+<div id="resulttwo" onclick="copy(this);"><h1><span id="firstbetygwrappertwo"></span><span id="secondbetygwrappertwo"></span><span id="energynummertwo"></span><span id="ivpastetwo">000</span></h1></div>
 <div id="resultthree" onclick="copy(this);"><h1><span id="firstbetygwrapperthree">Ⓧ000Ⓧ</span><span id="ivpastethree">000</span></h1></div>
 <input type="text" id="copyinput">
 <div id="footer">

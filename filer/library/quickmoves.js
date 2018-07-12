@@ -224,6 +224,11 @@ var quickmoves = [{
 	damage: '9',
 	dps: '12.86'
 },{
+	namn: 'Smack Down',
+	element: 'Rock',
+	damage: '16',
+	dps: '6.70'
+},{
 	namn: 'Smack Down (event)',
 	element: 'Rock',
 	damage: '16',

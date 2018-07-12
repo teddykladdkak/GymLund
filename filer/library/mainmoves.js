@@ -48,6 +48,13 @@ var mainmoves = [{
 	cooldown: '2.70',
 	damage: '90'
 },{
+	id: 'blast-burn',
+	namn: 'Blast Burn',
+	energi: '2',
+	element: 'Fire',
+	cooldown: '3.30',
+	damage: '110'
+},{
 	id: 'blast-burn-(event)',
 	namn: 'Blast Burn (event)',
 	energi: '2',
@@ -327,6 +334,13 @@ var mainmoves = [{
 	element: 'Dark',
 	cooldown: '2.00',
 	damage: '70'
+},{
+	id: 'frenzy-plant',
+	namn: 'Frenzy Plant',
+	energi: '2',
+	element: 'Grass',
+	cooldown: '2.60',
+	damage: '100'
 },{
 	id: 'frenzy-plant-(event)',
 	namn: 'Frenzy Plant (event)',
