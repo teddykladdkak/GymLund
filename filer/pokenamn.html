@@ -325,7 +325,7 @@
 				for (var i = pokemondata.defense.length - 1; i >= 0; i--) {
 					if(pokemondata.defense[i][0] == quick){
 						if(pokemondata.defense[i][1] == main){
-							var defensescore = pokemondata.defense[i][2];
+							var defensescore = parseInt(pokemondata.defense[i][2]);
 						};
 					};
 				};
@@ -333,20 +333,28 @@
 				for (var i = pokemondata.offense.length - 1; i >= 0; i--) {
 					if(pokemondata.offense[i][0] == quick){
 						if(pokemondata.offense[i][1] == main){
-							var offensescore = pokemondata.offense[i][2];
+							var offensescore = parseInt(pokemondata.offense[i][2]);
 						};
 					};
 				};
+				console.log(defensescore + ' - ' + offensescore);
+				console.log('A' + (defensescore < offensescore));
+				console.log('D' + (defensescore > offensescore));
 				if(defensescore == offensescore){
 					return 'Ⓑ' + pad(offensescore, 3) + energy;
-				}else if(defensescore < offensescore){
-					return 'Ⓓ' + pad(defensescore, 3) + energy;
-				}else if(defensescore > offensescore){
-					return 'Ⓐ' + pad(offensescore, 3) + energy;
-				}else{
-					conosle.log('Något gick fel i seepercent(); selektering.')
-					return 'Ⓧ000Ⓧ' + energy;
 				};
+				
+				if(defensescore < offensescore){
+					console.log('A!')
+					return 'Ⓐ' + pad(offensescore, 3) + energy;
+				};
+
+				if(defensescore > offensescore){
+					console.log('D!')
+					return 'Ⓓ' + pad(defensescore, 3) + energy;
+				};
+				conosle.log('Något gick fel i seepercent(); selektering.')
+				return 'Ⓧ000Ⓧ' + energy;
 			}else{
 				return 'Ⓧ000Ⓧ';
 			};
