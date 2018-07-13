@@ -216,6 +216,7 @@
 			addradio(element.getAttribute('data-moves'), 'attacker', element.getAttribute('data-index'));
 			addbeststats(element.getAttribute('data-attack'), element.getAttribute('data-defend'));
 			pokemonnamn.scrollIntoView();
+			addallpercent(element.getAttribute('data-index'));
 		};
 		function scrollIntoView(eleID) {
 			var e = document.getElementById(eleID);
@@ -259,6 +260,41 @@
 				var defensewrappertext = document.createTextNode('Bäst moveset för defense: ' + defense.split('###').join(', ') + '.')
 				defensewrapper.appendChild(defensewrappertext);
 		};
+		function addallpercent(index){
+			var pokemondata = allpokemon[index];
+			var wrapper = document.getElementById('movepercent');
+			while (wrapper.hasChildNodes()) {wrapper.removeChild(wrapper.firstChild);};
+			var table = document.createElement('table');
+				var tbody = document.createElement('tbody');
+				var offdef = [{id: 'offense', text: 'Attack'},{id: 'defense', text: 'Defense'}];
+				for (var a = 0; a < offdef.length; a++){
+					var head = document.createElement('tr');
+						var headbox = document.createElement('td');
+							headbox.setAttribute('colspan', '3');
+							headbox.setAttribute('class', 'percenthead');
+							var headtext = document.createTextNode(offdef[a].text);
+							headbox.appendChild(headtext);
+						head.appendChild(headbox);
+					tbody.appendChild(head);
+					for (var i = 0; i < pokemondata[offdef[a].id].length; i++){
+						var line = document.createElement('tr');
+						for (var b = 0; b < pokemondata[offdef[a].id][i].length; b++){
+							var box = document.createElement('td');
+								if(b == 2){
+									var percent = '%';
+								}else{
+									var percent = '';
+								};
+								var boxtext = document.createTextNode(pokemondata[offdef[a].id][i][b] + percent);
+								box.appendChild(boxtext);
+							line.appendChild(box);
+						};
+						tbody.appendChild(line);
+					};
+				};
+				table.appendChild(tbody);
+			wrapper.appendChild(table);
+		};
 		function pad (str, max) {
 			str = str.toString();
 			return str.length < max ? pad("0" + str, max) : str;
@@ -283,7 +319,6 @@
 					};
 				};
 			};
-			console.log(countelem)
 			if(countelem == 2){
 				var pokemondata = allpokemon[index];
 				var defensescore = 0;
@@ -303,14 +338,11 @@
 					};
 				};
 				if(defensescore == offensescore){
-					//console.log('B d: ' + defensescore + ' a: ' + offensescore);
 					return 'Ⓑ' + pad(offensescore, 3) + energy;
 				}else if(defensescore < offensescore){
-					//console.log('A d: ' + defensescore + ' a: ' + offensescore);
-					return 'Ⓐ' + pad(offensescore, 3) + energy;
-				}else if(defensescore > offensescore){
-					//console.log('D d: ' + defensescore + ' a: ' + offensescore);
 					return 'Ⓓ' + pad(defensescore, 3) + energy;
+				}else if(defensescore > offensescore){
+					return 'Ⓐ' + pad(offensescore, 3) + energy;
 				}else{
 					conosle.log('Något gick fel i seepercent(); selektering.')
 					return 'Ⓧ000Ⓧ' + energy;
@@ -321,7 +353,6 @@
 		};
 		function checkattacks(element){
 			var movepercent = seepercent(element.getAttribute('data-index'));
-			console.log(movepercent);
 			var elementtoerase = ['firstmovepaste', 'secondmovepaste', 'energynummer', 'firstbetygwrapper', 'secondbetygwrapper', 'firstbetygwrappertwo', 'secondbetygwrappertwo', 'energynummertwo', 'firstbetygwrapperthree'];
 			for (var i = elementtoerase.length - 1; i >= 0; i--) {
 				var elem = document.getElementById(elementtoerase[i]);
@@ -576,6 +607,14 @@
 			text-decoration: none;
 			max-width: 300px;
 		}
+		#movepercent table, #movepercent tr, #movepercent td{
+			border-collapse: collapse;
+			border: solid 1px #000;
+		}
+		.percenthead{
+			font-weight: bold;
+			text-align: center;
+		}
 	</style>
 </head>
 <body onload="load();">
@@ -599,6 +638,7 @@
 <div id="resulttwo" onclick="copy(this);"><h1><span id="firstbetygwrappertwo"></span><span id="secondbetygwrappertwo"></span><span id="energynummertwo"></span><span id="ivpastetwo">000</span></h1></div>
 <div id="resultthree" onclick="copy(this);"><h1><span id="firstbetygwrapperthree">Ⓧ000Ⓧ</span><span id="ivpastethree">000</span></h1></div>
 <input type="text" id="copyinput">
+<div id="movepercent"></div>
 <div id="footer">
 	Information från: <a href="https://pokemon.gameinfo.io/" target="_blank">GameInfo</a> & <a href="https://pokemongo.gamepress.gg/pokemon-moves" target="_blank">GamePress</a>&nbsp;¦&nbsp;Bilder från: <a href="http://theartificial.nl/pokemonicons/" target="_blank">theartificial</a>&nbsp;¦&nbsp;2017&nbsp;©&nbsp;Mattias Lidbeck&nbsp;¦&nbsp;{<a href="http://www.teddyprojekt.tk/" target="blank" alt="Länk till denna sida">www.teddyprojekt.tk</a>}</div>
 </div>
