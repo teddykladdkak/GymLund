@@ -341,7 +341,11 @@
 				console.log('A' + (defensescore < offensescore));
 				console.log('D' + (defensescore > offensescore));
 				if(defensescore == offensescore){
-					return 'Ⓑ' + pad(offensescore, 3) + energy;
+					if(defensescore == 0){
+						return 'Ⓧ000' + energy;
+					}else{
+						return 'Ⓑ' + pad(offensescore, 3) + energy;
+					};
 				};
 				
 				if(defensescore < offensescore){
