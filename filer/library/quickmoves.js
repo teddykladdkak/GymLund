@@ -154,7 +154,7 @@ var quickmoves = [{
 	damage: '5',
 	dps: '8.33'
 },{
-	namn: 'Mud Slap',
+	namn: 'Mud-Slap',
 	element: 'Ground',
 	damage: '15',
 	dps: '10.71'
