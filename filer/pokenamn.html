@@ -292,6 +292,18 @@
 						tbody.appendChild(line);
 					};
 				};
+					var linkline = document.createElement('tr');
+						var linkbox = document.createElement('td');
+							linkbox.setAttribute('colspan', '3');
+							linkbox.setAttribute('style', 'text-align: center;');
+							var link = document.createElement('a');
+								link.setAttribute('href', 'https://pokemon.gameinfo.io/en/pokemon/' + pokemondata.nummer.replace(/\D/g,''));
+								link.setAttribute('target', '_blank');
+								var linktext = document.createTextNode('GameInfo.io');
+								link.appendChild(linktext);
+							linkbox.appendChild(link);
+						linkline.appendChild(linkbox);
+					tbody.appendChild(linkline);
 				table.appendChild(tbody);
 			wrapper.appendChild(table);
 		};
@@ -337,9 +349,6 @@
 						};
 					};
 				};
-				console.log(defensescore + ' - ' + offensescore);
-				console.log('A' + (defensescore < offensescore));
-				console.log('D' + (defensescore > offensescore));
 				if(defensescore == offensescore){
 					if(defensescore == 0){
 						return 'Ⓧ000' + energy;
@@ -349,12 +358,10 @@
 				};
 				
 				if(defensescore < offensescore){
-					console.log('A!')
 					return 'Ⓐ' + pad(offensescore, 3) + energy;
 				};
 
 				if(defensescore > offensescore){
-					console.log('D!')
 					return 'Ⓓ' + pad(defensescore, 3) + energy;
 				};
 				conosle.log('Något gick fel i seepercent(); selektering.')
