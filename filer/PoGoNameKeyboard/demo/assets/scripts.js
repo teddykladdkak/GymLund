@@ -7435,6 +7435,11 @@ Email: user.email,
 "Prototype Count": user.prototypeCountForQuota,
 "Over Prototype Limit": (user.prototypeCountForQuota > currentSubscription.maxProjectCount ? "True" : "False")
 }
+if (user.paymentInfo){
+var normalizedPaymentInfo = normalizePaymentTrackingInfo(user.paymentInfo);
+growthTraits["Credit Card Expiration"] = normalizedPaymentInfo.cardExpiryDate || null;
+growthTraits["Credit Card Expiration Remaining Days"] = normalizedPaymentInfo.cardExpiryRemainingDays || null;
+}
 identifyGrowth( user.id, growthTraits );
 var MILLIS_PER_DAY = 60 * 60 * 24 * 1000;
 $window.InvAnalytics = $window.InvAnalytics || {};
@@ -7735,6 +7740,7 @@ var nameParts = traits['Full Name'].split(' ');
 brazeUser.setFirstName(nameParts.shift());
 brazeUser.setLastName(nameParts.join(' '));
 }
+brazeUser.setCustomUserAttribute('User ID', id);
 brazeUser.setCustomUserAttribute('Subdomain', subdomain);
 _.mapKeys(traits, function(val, key){
 brazeUser.setCustomUserAttribute(key, val);
@@ -7763,6 +7769,31 @@ brazeIdentifyGrowthQueue.push([id, traits]);
 function identifyGrowth(id, traits){
 amplitudeIdentify(id, traits);
 brazeIdentify(id, traits);
+}
+function appendGrowthUserAttribute(key, val){
+try {
+if(amplitudeFinishedInit){
+var traits = {};
+traits[key] = val;
+getSafeAmplitudeInstance().setUserProperties(traits);
+}
+if(brazeFinishedInit){
+appboy.getUser().setCustomUserAttribute(key, val);
+}
+} catch (error) {
+errorLogService.exceptionHandler(error);
+}
+}
+function normalizePaymentTrackingInfo(paymentInfo) {
+var normalized = {};
+if (paymentInfo && paymentInfo.cardExpirationYear > 0 && paymentInfo.cardExpirationMonth > 0) {
+var expirationDate = moment(paymentInfo.cardExpirationYear + '-' + paymentInfo.cardExpirationMonth).endOf('month');
+normalized = {
+cardExpiryDate: expirationDate.format(),
+cardExpiryRemainingDays: expirationDate.diff(moment(), 'days')
+};
+}
+return normalized;
 }
 function applyRequiredGrowthProps(props){
 return _.extend({
@@ -7855,6 +7886,8 @@ return {
 activatePageExperiment: activatePageExperiment,
 identifyUser: identifyUser,
 identifyGrowth: identifyGrowth,
+normalizePaymentTrackingInfo: normalizePaymentTrackingInfo,
+appendGrowthUserAttribute: appendGrowthUserAttribute,
 initGrowthAnalytics: initGrowthAnalytics,
 initIntercomMessenger: initIntercomMessenger,
 track: ($window.analytics && $window.analytics.track) || angular.noop,
