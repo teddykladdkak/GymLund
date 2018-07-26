@@ -41,7 +41,7 @@ var gyms = [
 		latitud: '13.1823016'
 	},
 	embed: '',
-	exraid: false,
+	exraid: 'possible',
 	rip: false
 },{
 	namn: 'Fountain at Helgeands church',
