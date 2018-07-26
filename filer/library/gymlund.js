@@ -1,6 +1,39 @@
 var gyms = [{
+	namn: 'Blaeddran',
+	id: 'blaeddran',
+	smeknamn: '',
+	location: {
+		longitud: '55.6912451',
+		latitud: '13.1740052'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
+	namn: 'Forest Duck',
+	id: 'forest-duck',
+	smeknamn: '',
+	location: {
+		longitud: '55.6917394',
+		latitud: '13.1709807'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
+	namn: 'Höje å Utegym',
+	id: 'h_je-_-utegym',
+	smeknamn: '',
+	location: {
+		longitud: '55.6834045',
+		latitud: '13.1823016'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
 	namn: 'Fountain at Helgeands church',
-	id: '',
+	id: 'fountain-at-helgeands-church',
 	smeknamn: '',
 	location: {
 		longitud: '55.693649',
@@ -22,7 +55,7 @@ var gyms = [{
 	rip: false
 },{
 	namn: 'Wooden Squirrel',
-	id: '',
+	id: 'wooden-squirrel',
 	smeknamn: '',
 	location: {
 		longitud: '55.686299',
