@@ -1,4 +1,16 @@
-var gyms = [{
+var gyms = [
+{
+	namn: 'Höjeådalen (norra)',
+	id: '',
+	smeknamn: '',
+	location: {
+		longitud: '55.702427',
+		latitud: '13.14818'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
 	namn: 'Blaeddran',
 	id: 'blaeddran',
 	smeknamn: '',
@@ -175,7 +187,7 @@ var gyms = [{
 	exraid: 'confirmed',
 	rip: false
 },{
-	namn: 'Höjeådalen',
+	namn: 'Höjeådalen (södra)',
 	id: 'h_je_dalen',
 	smeknamn: '',
 	location: {
