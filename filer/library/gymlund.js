@@ -1,5 +1,16 @@
 var gyms = [
 {
+	namn: 'Hängmatta',
+	id: '',
+	smeknamn: '',
+	location: {
+		longitud: '55.712913',
+		latitud: '13.164757'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
 	namn: 'Höjeådalen (norra)',
 	id: '',
 	smeknamn: '',
