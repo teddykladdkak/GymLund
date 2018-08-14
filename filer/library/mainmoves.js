@@ -401,6 +401,12 @@ var mainmoves = [{
 	element: 'Steel',
 	damage: '60'
 },{
+	id: 'last-resort',
+	namn: 'Last Resort',
+	energi: '2',
+	element: 'Normal',
+	damage: '90'
+},{
 	id: 'leaf-blade',
 	namn: 'Leaf Blade',
 	energi: '3',
