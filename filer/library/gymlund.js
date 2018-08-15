@@ -1,5 +1,27 @@
 var gyms = [
 {
+	namn: 'Fyrklöverns Trädgård Main Entrance',
+	id: '',
+	smeknamn: '',
+	location: {
+		longitud: '55.721547',
+		latitud: '13.2189989'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
+	namn: 'Klätterdrömen',
+	id: '',
+	smeknamn: '',
+	location: {
+		longitud: '55.692237',
+		latitud: '13.2286549'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
 	namn: 'Hängmatta',
 	id: '',
 	smeknamn: '',
