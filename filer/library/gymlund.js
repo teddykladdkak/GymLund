@@ -1,5 +1,16 @@
 var gyms = [
 {
+	namn: 'Papegojelyckans lekplats',
+	id: '',
+	smeknamn: '',
+	location: {
+		longitud: '55.705365693215',
+		latitud: '13.169667720795'
+	},
+	embed: '',
+	exraid: false,
+	rip: false
+},{
 	namn: 'Fyrklöverns Trädgård Main Entrance',
 	id: '',
 	smeknamn: '',
