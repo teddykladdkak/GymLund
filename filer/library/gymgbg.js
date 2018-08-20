@@ -3343,14 +3343,6 @@ var gyms = [{
 	},
 	rip: false
 },{
-	namn: 'Änggårdsbergen Syd',
-	id: '',
-	location: {
-		longitud: '57.655801',
-		latitud: '11.968594'
-	},
-	rip: true
-},{
 	namn: '7 Globe',
 	id: '',
 	location: {
