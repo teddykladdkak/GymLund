@@ -12,6 +12,9 @@ var andraplatser = [{
 	namn: 'GymGbg',
 	url: 'gymgbg.html'
 },{
+	namn: 'GymVäxjö',
+	url: 'gymvaxjo.html'
+},{
 	namn: 'GymQuiz',
 	url: 'quiz.html'
 },{
