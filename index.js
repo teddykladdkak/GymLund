@@ -8,7 +8,6 @@ var server = http.createServer(function (request, response) {
    if (filePath == './'){
          filePath = 'gymlist.html'
    };
-   console.log(filePath);
    var extname = path.extname(filePath);
    var contentType = 'text/html';
    switch (extname) {
@@ -31,9 +30,7 @@ var server = http.createServer(function (request, response) {
          contentType = 'audio/wav';
          break;
    };
-   console.log(contentType);
    var filename = filePath.replace('./', '');
-   console.log('./filer/' + filename);
    fs.readFile('./filer/' + filename, function(error, content) {
       if (error) {
          console.log(error);
