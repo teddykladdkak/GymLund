@@ -36,8 +36,8 @@ var gyms = [
 	  namn: 'The Ufo',            //Exempel
 	  id: '',
 	  location: {
-	  	longitud: 57.625,       //Exempel
-	  	latitud: 11.9           //Exempel
+	  	longitud: 57.625,     //Exempel
+	  	latitud: 11.9         //Exempel
   	},
 	  embed: '',
 	  exraid: false,              //Exempel om exraid gym är det true
