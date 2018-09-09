@@ -9044,5 +9044,60 @@ var allpokemon = [
 		lastevolve: false,
 		offense: [],
 		defense: []
+	},{
+		nummer: '803',
+		namn: 'Poipole',
+		type: ['Poison'],
+		moves: [],
+		attack: ['', ''],
+		defend: ['', ''],
+		svg: '',
+		lastevolve: false,
+		offense: [],
+		defense: []
+	},{
+		nummer: '804',
+		namn: 'Naganadel',
+		type: ['Poison', 'Dragon'],
+		moves: [],
+		attack: ['', ''],
+		defend: ['', ''],
+		svg: '',
+		lastevolve: false,
+		offense: [],
+		defense: []
+	},{
+		nummer: '805',
+		namn: 'Stakataka',
+		type: ['Rock', 'Steel'],
+		moves: [],
+		attack: ['', ''],
+		defend: ['', ''],
+		svg: '',
+		lastevolve: false,
+		offense: [],
+		defense: []
+	},{
+		nummer: '806',
+		namn: 'Blacephalon',
+		type: ['Fire', 'Ghost'],
+		moves: [],
+		attack: ['', ''],
+		defend: ['', ''],
+		svg: '',
+		lastevolve: false,
+		offense: [],
+		defense: []
+	},{
+		nummer: '807',
+		namn: 'Zeraora',
+		type: ['Electric'],
+		moves: [],
+		attack: ['', ''],
+		defend: ['', ''],
+		svg: '',
+		lastevolve: false,
+		offense: [],
+		defense: []
 	}
 ];
