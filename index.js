@@ -21,19 +21,19 @@ var param = {
 		},{
 			rubrik: 'Göteborg',
 			id: 'gymgbg',
-			lank: 'https://gymlund.tk/gbg.html'
+			lank: 'https://gymlund.tk/gymgbg.html'
 		},{
 			rubrik: 'Landskrona',
 			id: 'gymlandskrona',
-			lank: 'https://gymlund.tk/landskrona.html'
+			lank: 'https://gymlund.tk/gymlandskrona.html'
 		},{
 			rubrik: 'Malmö',
 			id: 'gymmalmo',
-			lank: 'https://gymlund.tk/malmo.html'
+			lank: 'https://gymlund.tk/gymmalmo.html'
 		},{
 			rubrik: 'Växjö',
 			id: 'gymvaxjo',
-			lank: 'https://gymlund.tk/vaxjo.html'
+			lank: 'https://gymlund.tk/gymvaxjo.html'
 		},
 	],
 	location: {
