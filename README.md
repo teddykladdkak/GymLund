@@ -42,6 +42,7 @@ Exempel:
 
 ### Pokémon information
 Följande parametrar tas mot:
+
 ID | Variabel | Förklaring
 --- | --- | ---
 to | "all" / nummer | Alla Pokémon eller till satt nummer
