@@ -1,0 +1,1100 @@
+[
+{
+	"namn": "Papegojelyckans lekplats",
+	"id": "",
+	"location": {
+		"lat": "55.705365693215",
+		"lon": "13.169667720795"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fyrklöverns Trädgård Main Entrance",
+	"id": "",
+	"location": {
+		"lat": "55.721547",
+		"lon": "13.2189989"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Klätterdrömen",
+	"id": "",
+	"location": {
+		"lat": "55.692237",
+		"lon": "13.2286549"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Hängmatta",
+	"id": "",
+	"location": {
+		"lat": "55.712913",
+		"lon": "13.164757"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Höjeådalen (norra)",
+	"id": "",
+	"location": {
+		"lat": "55.702427",
+		"lon": "13.14818"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Blaeddran",
+	"id": "blaeddran",
+	"location": {
+		"lat": "55.6912451",
+		"lon": "13.1740052"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Forest Duck",
+	"id": "forest-duck",
+	"location": {
+		"lat": "55.6917394",
+		"lon": "13.1709807"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Höje å Utegym",
+	"id": "h_je-_-utegym",
+	"location": {
+		"lat": "55.6834045",
+		"lon": "13.1823016"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Fountain at Helgeands church",
+	"id": "fountain-at-helgeands-church",
+	"location": {
+		"lat": "55.693649",
+		"lon": "13.179212"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sälen",
+	"id": "s_len",
+	"location": {
+		"lat": "55.709177",
+		"lon": "13.243905"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Wooden Squirrel",
+	"id": "wooden-squirrel",
+	"location": {
+		"lat": "55.686299",
+		"lon": "13.175972"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Linero IP",
+	"id": "linero-ip",
+	"location": {
+		"lat": "55.700637",
+		"lon": "13.245339"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Lunds vattentorn",
+	"id": "lunds-vattentorn",
+	"location": {
+		"lat": "55.717758",
+		"lon": "13.226621"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stadsodling Brunnshög",
+	"id": "stadsodling-brunnsh_g",
+	"location": {
+		"lat": "55.719406",
+		"lon": "13.239881"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Bag Turtle",
+	"id": "bag-turtle",
+	"location": {
+		"lat": "55.728472",
+		"lon": "13.1604520"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Elefant",
+	"id": "elefant",
+	"location": {
+		"lat": "55.725213",
+		"lon": "13.1769730"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Rävshög",
+	"id": "r_vsh_g",
+	"location": {
+		"lat": "55.726071",
+		"lon": "13.161614"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Lunds Akademiska Golfklubb",
+	"id": "lunds-akademiska-golfklubb",
+	"location": {
+		"lat": "55.712638",
+		"lon": "13.275641"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Square Church",
+	"id": "square-church",
+	"location": {
+		"lat": "55.696045",
+		"lon": "13.234166"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Gömd Helig Plats",
+	"id": "g_md-helig-plats",
+	"location": {
+		"lat": "55.685989",
+		"lon": "13.1717160"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sankt Lars Torn",
+	"id": "sankt-lars-torn",
+	"location": {
+		"lat": "55.68722",
+		"lon": "13.186326"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Höjeådalen (södra)",
+	"id": "h_je_dalen",
+	"location": {
+		"lat": "55.685058",
+		"lon": "13.1768580"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Flackarps Mölla",
+	"id": "flackarps-m_lla",
+	"location": {
+		"lat": "55.681885",
+		"lon": "13.1677230"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Vattenfigur",
+	"id": "vattenfigur",
+	"location": {
+		"lat": "55.703785",
+		"lon": "13.1843270"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Plaskdammen",
+	"id": "plaskdammen",
+	"location": {
+		"lat": "55.693107",
+		"lon": "13.1778870"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Water Stone",
+	"id": "water-stone",
+	"location": {
+		"lat": "55.701508",
+		"lon": "13.1936180"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Wall Statue",
+	"id": "wall-statue",
+	"location": {
+		"lat": "55.696456",
+		"lon": "13.1889740"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Small Fountain",
+	"id": "small-fountain",
+	"location": {
+		"lat": "55.702010",
+		"lon": "13.1700640"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tunnelmålning Polhem",
+	"id": "tunnelm_lning-polhem",
+	"location": {
+		"lat": "55.700452",
+		"lon": "13.1772350"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Demona the Gargoyle",
+	"id": "demona-the-gargoyle",
+	"location": {
+		"lat": "55.686655",
+		"lon": "13.1872690"
+	},
+	"exraid": false,
+	"rip": true
+},{
+	"namn": "Netto Park",
+	"id": "netto-park",
+	"location": {
+		"lat": "55.703840",
+		"lon": "13.1594460"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Rosa Ansiktet",
+	"id": "rosa-ansiktet",
+	"location": {
+		"lat": "55.698182",
+		"lon": "13.1899020"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Spider Web",
+	"id": "the-spider-web",
+	"location": {
+		"lat": "55.692435",
+		"lon": "13.1974880"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Fountain",
+	"id": "fountain",
+	"location": {
+		"lat": "55.699108",
+		"lon": "13.1850550"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Fontänen Vid stadsparken",
+	"id": "font_nen-vid-stadsparken",
+	"location": {
+		"lat": "55.700644",
+		"lon": "13.1861260"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Utomhusscen",
+	"id": "utomhusscen",
+	"location": {
+		"lat": "55.698194",
+		"lon": "13.1841300"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Smålands",
+	"id": "sm_lands",
+	"location": {
+		"lat": "55.697954",
+		"lon": "13.1984760"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Petersgården",
+	"id": "petersg_rden",
+	"location": {
+		"lat": "55.702455",
+		"lon": "13.1760510"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Security Man Statue",
+	"id": "security-man-statue",
+	"location": {
+		"lat": "55.693159",
+		"lon": "13.1791070"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Domkyrka",
+	"id": "domkyrka",
+	"location": {
+		"lat": "55.704145",
+		"lon": "13.1931110"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tetra Pak Circle",
+	"id": "tetra-pak-circle",
+	"location": {
+		"lat": "55.690127",
+		"lon": "13.1914970"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "UARDA Akademin",
+	"id": "uarda-akademin",
+	"location": {
+		"lat": "55.705631",
+		"lon": "13.2042700"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Metal Swirl",
+	"id": "metal-swirl",
+	"location": {
+		"lat": "55.709329",
+		"lon": "13.1633260"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Afrodite",
+	"id": "afrodite",
+	"location": {
+		"lat": "55.709924",
+		"lon": "13.2165700"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Kosmos Budbärare",
+	"id": "kosmos-budb_rare",
+	"location": {
+		"lat": "55.698746",
+		"lon": "13.2145970"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Olika Stenar",
+	"id": "olika-stenar",
+	"location": {
+		"lat": "55.703243",
+		"lon": "13.2040720"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Lund Sk8 Spot",
+	"id": "lund-sk8-spot",
+	"location": {
+		"lat": "55.694658",
+		"lon": "13.2184590"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Institutionen för Psykologi",
+	"id": "institutionen-f_r-psykologi",
+	"location": {
+		"lat": "55.707106",
+		"lon": "13.1955710"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sorgen",
+	"id": "sorgen",
+	"location": {
+		"lat": "55.714732",
+		"lon": "13.1943720"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Märke Åke Hans",
+	"id": "m_rke-_ke-hans",
+	"location": {
+		"lat": "55.706979",
+		"lon": "13.1925630"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Klätterställning",
+	"id": "kl_tterst_llning",
+	"location": {
+		"lat": "55.711406",
+		"lon": "13.1675540"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Golden Arch",
+	"id": "golden-arch",
+	"location": {
+		"lat": "55.713333",
+		"lon": "13.1997900"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Litet Kapell",
+	"id": "litet-kapell",
+	"location": {
+		"lat": "55.712565",
+		"lon": "13.1930930"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Djur Att Leka Med",
+	"id": "djur-att-leka-med",
+	"location": {
+		"lat": "55.709386",
+		"lon": "13.1828280"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Totem",
+	"id": "totem",
+	"location": {
+		"lat": "55.707013",
+		"lon": "13.1911490"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Kapitalet",
+	"id": "kapitalet",
+	"location": {
+		"lat": "55.709822",
+		"lon": "13.2094180"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Skorsten",
+	"id": "skorsten",
+	"location": {
+		"lat": "55.713930",
+		"lon": "13.2026740"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fontänen Bakom Stationen",
+	"id": "font_nen-bakom-stationen",
+	"location": {
+		"lat": "55.705228",
+		"lon": "13.1854690"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Museum Wall Art",
+	"id": "museum-wall-art",
+	"location": {
+		"lat": "55.707981",
+		"lon": "13.1983670"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Lund University Main Library",
+	"id": "lund-university-main-library",
+	"location": {
+		"lat": "55.708827",
+		"lon": "13.1970750"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Lundagård Fountain",
+	"id": "lundag_rd-fountain",
+	"location": {
+		"lat": "55.705644",
+		"lon": "13.1942780"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Botaniska Trädgården",
+	"id": "botaniska-tr_dg_rden",
+	"location": {
+		"lat": "55.703144",
+		"lon": "13.2013650"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Giant Lion",
+	"id": "giant-lion",
+	"location": {
+		"lat": "55.690295",
+		"lon": "13.2151000"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Freedom",
+	"id": "freedom",
+	"location": {
+		"lat": "55.705348",
+		"lon": "13.1883550"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Environmental Engineering W",
+	"id": "environmental-engineering-w",
+	"location": {
+		"lat": "55.714960",
+		"lon": "13.2095060"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Spyken",
+	"id": "spyken",
+	"location": {
+		"lat": "55.701171",
+		"lon": "13.2009020"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Allhelgonakyrkan",
+	"id": "allhelgonakyrkan",
+	"location": {
+		"lat": "55.709586",
+		"lon": "13.1935820"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Rinnebäcksravinen",
+	"id": "rinneb_cksravinen",
+	"location": {
+		"lat": "55.708247",
+		"lon": "13.1575270"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Pencil",
+	"id": "pencil",
+	"location": {
+		"lat": "55.714257",
+		"lon": "13.2116750"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Bjärredsparken Amfiteater",
+	"id": "bj_rredsparken-amfiteater",
+	"location": {
+		"lat": "55.707506",
+		"lon": "13.1847240"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Saturnushuset",
+	"id": "saturnushuset",
+	"location": {
+		"lat": "55.698437",
+		"lon": "13.2161590"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Öresundsvägens Information Plaque",
+	"id": "_resundsv_gens-information-plaque",
+	"location": {
+		"lat": "55.712290",
+		"lon": "13.1706610"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "EOS Hallen",
+	"id": "eos-hallen",
+	"location": {
+		"lat": "55.696571",
+		"lon": "13.2012840"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Dead Fountain",
+	"id": "the-dead-fountain",
+	"location": {
+		"lat": "55.711115",
+		"lon": "13.2089610"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Hallands Nations Salmon",
+	"id": "hallands-nations-salmon",
+	"location": {
+		"lat": "55.705732",
+		"lon": "13.2111600"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Katt med Blomma",
+	"id": "katt-med-blomma",
+	"location": {
+		"lat": "55.718639",
+		"lon": "13.1786150"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Gunnesbo Station Norrgående",
+	"id": "gunnesbo-station-norrg_ende",
+	"location": {
+		"lat": "55.726534",
+		"lon": "13.1677240"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Swing It",
+	"id": "swing-it",
+	"location": {
+		"lat": "55.725764",
+		"lon": "13.1719800"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "The Wood Throne",
+	"id": "the-wood-throne",
+	"location": {
+		"lat": "55.725104",
+		"lon": "13.1935690"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Fyrklöverns Trädgård",
+	"id": "fyrkl_verns-tr_dg_rd",
+	"location": {
+		"lat": "55.721568",
+		"lon": "13.2175470"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Energy Swing",
+	"id": "energy-swing",
+	"location": {
+		"lat": "55.729063",
+		"lon": "13.2162800"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Forntid",
+	"id": "forntid",
+	"location": {
+		"lat": "55.728790",
+		"lon": "13.2100360"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Wallmire Cross",
+	"id": "wallmire-cross",
+	"location": {
+		"lat": "55.740950",
+		"lon": "13.1702360"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Northern Information Plaque",
+	"id": "northern-information-plaque",
+	"location": {
+		"lat": "55.729023",
+		"lon": "13.2019200"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Victoriastadion",
+	"id": "victoriastadion",
+	"location": {
+		"lat": "55.718740",
+		"lon": "13.2015290"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Vind",
+	"id": "vind",
+	"location": {
+		"lat": "55.724282",
+		"lon": "13.1678860"
+	},
+	"exraid": false,
+	"rip": true
+},{
+	"namn": "HG Spaceship",
+	"id": "hg-spaceship",
+	"location": {
+		"lat": "55.717758",
+		"lon": "13.2266210"
+	},
+	"exraid": false,
+	"rip": true
+},{
+	"namn": "Inaequalis Lacus",
+	"id": "inaequalis-lacus",
+	"location": {
+		"lat": "55.718144",
+		"lon": "13.2253880"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Round Playground",
+	"id": "the-round-playground",
+	"location": {
+		"lat": "55.736724",
+		"lon": "13.1793940"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Yellow Horse",
+	"id": "yellow-horse",
+	"location": {
+		"lat": "55.725673",
+		"lon": "13.1582750"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Intermodal Nexus",
+	"id": "intermodal-nexus",
+	"location": {
+		"lat": "55.715441",
+		"lon": "13.2141920"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Framtidsvandring",
+	"id": "framtidsvandring",
+	"location": {
+		"lat": "55.722334",
+		"lon": "13.2271290"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Forrest Siluette",
+	"id": "forrest-siluette",
+	"location": {
+		"lat": "55.720502",
+		"lon": "13.1930660"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Ideon Gateway",
+	"id": "ideon-gateway",
+	"location": {
+		"lat": "55.717783",
+		"lon": "13.2138940"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Play Boat",
+	"id": "play-boat",
+	"location": {
+		"lat": "55.721431",
+		"lon": "13.1770260"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Underground Painting - Lund",
+	"id": "underground-painting---lund",
+	"location": {
+		"lat": "55.719579",
+		"lon": "13.1793830"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Narrow Slide",
+	"id": "narrow-slide",
+	"location": {
+		"lat": "55.719558",
+		"lon": "13.1932950"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Horsey",
+	"id": "horsey",
+	"location": {
+		"lat": "55.712595",
+		"lon": "13.2281120"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "X Marks the Spot",
+	"id": "x-marks-the-spot",
+	"location": {
+		"lat": "55.723136",
+		"lon": "13.2126580"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stensvamp",
+	"id": "stensvamp",
+	"location": {
+		"lat": "55.727216",
+		"lon": "13.1750650"
+	},
+	"exraid": false,
+	"rip": true
+},{
+	"namn": "Bird Village",
+	"id": "bird-village",
+	"location": {
+		"lat": "55.724433",
+		"lon": "13.1887850"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "QlikView Obelisk",
+	"id": "qlikview-obelisk",
+	"location": {
+		"lat": "55.717067",
+		"lon": "13.2207730"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Nöbbelöv Bridge",
+	"id": "n_bbel_v-bridge",
+	"location": {
+		"lat": "55.722656",
+		"lon": "13.1715820"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Borgarparken Fountain",
+	"id": "borgarparken-fountain",
+	"location": {
+		"lat": "55.723458",
+		"lon": "13.2089190"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Informationdesk Lund East",
+	"id": "informationdesk-lund-east",
+	"location": {
+		"lat": "55.696359",
+		"lon": "13.2265250"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Norra Nöbelövs Kyrka",
+	"id": "norra-n_bel_vs-kyrka",
+	"location": {
+		"lat": "55.732278",
+		"lon": "13.1664900"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Annehems Gård",
+	"id": "annehems-g_rd",
+	"location": {
+		"lat": "55.730359",
+		"lon": "13.1852520"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Battle at Lund Monument",
+	"id": "battle-at-lund-monument",
+	"location": {
+		"lat": "55.719353",
+		"lon": "13.1845240"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Top of the Hill",
+	"id": "top-of-the-hill",
+	"location": {
+		"lat": "55.722105",
+		"lon": "13.1886970"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Solbjer",
+	"id": "solbjer",
+	"location": {
+		"lat": "55.717716",
+		"lon": "13.2349280"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Web",
+	"id": "web",
+	"location": {
+		"lat": "55.722839",
+		"lon": "13.1995230"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Rymdskeppet",
+	"id": "rymdskeppet",
+	"location": {
+		"lat": "55.723224",
+		"lon": "13.2034950"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Bird Tower",
+	"id": "bird-tower",
+	"location": {
+		"lat": "55.723503",
+		"lon": "13.1954830"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Accordion Kerub",
+	"id": "accordion-kerub",
+	"location": {
+		"lat": "55.717500",
+		"lon": "13.1852770"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Monkey Statue",
+	"id": "monkey-statue",
+	"location": {
+		"lat": "55.697213",
+		"lon": "13.2389210"
+	},
+	"exraid": false,
+	"rip": true
+},{
+	"namn": "Twin Tower Hill",
+	"id": "twin-tower-hill",
+	"location": {
+		"lat": "55.706053",
+		"lon": "13.2468540"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Strand På Vägg",
+	"id": "strand-p_-v_gg",
+	"location": {
+		"lat": "55.748228",
+		"lon": "13.2001580"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tree of Pacifiers",
+	"id": "tree-of-pacifiers",
+	"location": {
+		"lat": "55.708007",
+		"lon": "13.2358140"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sheet of Power",
+	"id": "sheet-of-power",
+	"location": {
+		"lat": "55.701612",
+		"lon": "13.2511660"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tre Högar",
+	"id": "tre-h_gar",
+	"location": {
+		"lat": "55.699180",
+		"lon": "13.2426320"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Dangerous Tilter",
+	"id": "dangerous-tilter",
+	"location": {
+		"lat": "55.693025",
+		"lon": "13.2405100"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Toolgate",
+	"id": "toolgate",
+	"location": {
+		"lat": "55.686175",
+		"lon": "13.2219540"
+	},
+	"exraid": false,
+	"rip": false
+}]

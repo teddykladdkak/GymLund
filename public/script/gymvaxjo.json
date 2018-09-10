@@ -1,0 +1,678 @@
+[
+{
+	"namn": "Sagolandet",
+	"id": "sagolandet",
+	"location": {
+		"lat": "56.838821",
+		"lon": "14.807335"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Vattentorn",
+	"id": "vattentorn",
+	"location": {
+		"lat": "56.845006",
+		"lon": "14.826004"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Linne\u0027s Arboretum",
+	"id": "linne_s-arboretum",
+	"location": {
+		"lat": "56.848161",
+		"lon": "14.809703999999998"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Romavallen",
+	"id": "romavallen",
+	"location": {
+		"lat": "56.85206599999999",
+		"lon": "14.815295"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Linnés Arboretum Teleborgsskogen",
+	"id": "linn_s-arboretum-teleborgsskogen",
+	"location": {
+		"lat": "56.852484",
+		"lon": "14.809961"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stenladan",
+	"id": "stenladan",
+	"location": {
+		"lat": "56.850882",
+		"lon": "14.826863"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stenhund",
+	"id": "stenhund",
+	"location": {
+		"lat": "56.855031",
+		"lon": "14.825699999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Letter A",
+	"id": "Letter-A",
+	"location": {
+		"lat": "56.855796",
+		"lon": "14.830046"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Chairs Sculpture",
+	"id": "chairs-sculpture",
+	"location": {
+		"lat": "56.856201",
+		"lon": "14.829375"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Linné I Växjö",
+	"id": "linn_-i-v_xj_",
+	"location": {
+		"lat": "56.856362999999995",
+		"lon": "14.832873999999999"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Teleborg Slott",
+	"id": "teleborg-slott",
+	"location": {
+		"lat": "56.857192",
+		"lon": "14.833982"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Hälsospåret Trummen",
+	"id": "h_lsosp_ret-trummen",
+	"location": {
+		"lat": "56.858701",
+		"lon": "14.827966999999997"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Södra Climate Arena",
+	"id": "s_dra-climate-arena",
+	"location": {
+		"lat": "56.86058899999999",
+		"lon": "14.817923"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Fiskarna på Väggen",
+	"id": "fiskarna-p_-v_ggen",
+	"location": {
+		"lat": "56.861718",
+		"lon": "14.820494"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "BiskopsKolonin",
+	"id": "biskopskolonin",
+	"location": {
+		"lat": "56.86378",
+		"lon": "14.801201999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Bergkvara Ruin",
+	"id": "bergkvara-ruin",
+	"location": {
+		"lat": "56.86784699999999",
+		"lon": "14.724082999999998"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Tidshjulet",
+	"id": "tidshjulet",
+	"location": {
+		"lat": "56.86499",
+		"lon": "14.817609"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fontänfältet Fysk",
+	"id": "font_nf_ltet-fysk",
+	"location": {
+		"lat": "56.86684499999999",
+		"lon": "14.832351999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Italienska Palatset",
+	"id": "italienska-palatset",
+	"location": {
+		"lat": "56.866437",
+		"lon": "14.826963"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Sigfrids Klocktorn",
+	"id": "sigfrids-klocktorn",
+	"location": {
+		"lat": "56.86725299999999",
+		"lon": "14.826549"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Huvudentrén",
+	"id": "huvudentr_n",
+	"location": {
+		"lat": "56.868888",
+		"lon": "14.820908999999999"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Vasen",
+	"id": "vasen",
+	"location": {
+		"lat": "56.868891",
+		"lon": "14.819548"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Spegelbollen",
+	"id": "spegelbollen",
+	"location": {
+		"lat": "56.869715",
+		"lon": "14.806334"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Strandbjörkshallen",
+	"id": "strandbj_rkshallen",
+	"location": {
+		"lat": "56.87111199999999",
+		"lon": "14.803488"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Bokhultet",
+	"id": "bokhultet",
+	"location": {
+		"lat": "56.87273599999999",
+		"lon": "14.780472999999999"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Sten Gungan",
+	"id": "sten-gungan",
+	"location": {
+		"lat": "56.874264",
+		"lon": "14.830259999999997"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Koppar Kotte",
+	"id": "koppar-kotte",
+	"location": {
+		"lat": "56.876235",
+		"lon": "14.850968"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Högstorp Kyrka",
+	"id": "h_gstorp-kyrka",
+	"location": {
+		"lat": "56.877075",
+		"lon": "14.840835"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Hallvars Runsten",
+	"id": "hallvars-runsten",
+	"location": {
+		"lat": "56.87566499999999",
+		"lon": "14.830775"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stensoffan",
+	"id": "stensoffan",
+	"location": {
+		"lat": "56.873716",
+		"lon": "14.816619"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Stone Seat",
+	"id": "stone-seat",
+	"location": {
+		"lat": "56.874125",
+		"lon": "14.815640999999998"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Stone Fountain",
+	"id": "stone-fountain",
+	"location": {
+		"lat": "56.875022",
+		"lon": "14.814773"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Durus och Mollis",
+	"id": "durus-och-mollis",
+	"location": {
+		"lat": "56.875389",
+		"lon": "14.809816"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Linne I Växjö",
+	"id": "linne-i-v_xj_",
+	"location": {
+		"lat": "56.87566699999999",
+		"lon": "14.812445999999998"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Domkyrkan",
+	"id": "domkyrkan",
+	"location": {
+		"lat": "56.877387",
+		"lon": "14.811674"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Ångloket",
+	"id": "_ngloket",
+	"location": {
+		"lat": "56.876794",
+		"lon": "14.793216"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Medicine Doctor",
+	"id": "medicine-doctor",
+	"location": {
+		"lat": "56.877095999999995",
+		"lon": "14.799093999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "City Clock",
+	"id": "city-clock",
+	"location": {
+		"lat": "56.877326",
+		"lon": "14.804896999999999"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Christinas Tomb",
+	"id": "christinas-tomb",
+	"location": {
+		"lat": "56.8775",
+		"lon": "14.802777"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "K-hus",
+	"id": "k_hus",
+	"location": {
+		"lat": "56.879470999999995",
+		"lon": "14.819103"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Bensinstationen Info",
+	"id": "bensinstationen-info",
+	"location": {
+		"lat": "56.879091",
+		"lon": "14.797394"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Arbetskraft",
+	"id": "arbetskraft",
+	"location": {
+		"lat": "56.87974599999999",
+		"lon": "14.810589"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Legend i Glas",
+	"id": "legend-i-glas",
+	"location": {
+		"lat": "56.880358",
+		"lon": "14.80239"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Växjö Kommunhus",
+	"id": "v_xj_-kommunhus",
+	"location": {
+		"lat": "56.88130799999999",
+		"lon": "14.802197"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Växjö Former Prison",
+	"id": "v_xj_-former-prison",
+	"location": {
+		"lat": "56.881893999999996",
+		"lon": "14.805605999999997"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Myresjöhus Arena",
+	"id": "myresj_hus-arena",
+	"location": {
+		"lat": "56.87943099999999",
+		"lon": "14.775884999999999"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Friskt Vågat",
+	"id": "friskt-v_gat",
+	"location": {
+		"lat": "56.879414999999995",
+		"lon": "14.775142"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fortnox Arena",
+	"id": "fortnox-arena",
+	"location": {
+		"lat": "56.882616",
+		"lon": "14.774998999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Telekonsult Arena",
+	"id": "telekonsult-arena",
+	"location": {
+		"lat": "56.882732",
+		"lon": "14.773566"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Växjö Skatepark",
+	"id": "v_xj_-skatepark",
+	"location": {
+		"lat": "56.885078",
+		"lon": "14.800970999999999"
+	},
+	"exraid": "confirmed",
+	"rip": false
+},{
+	"namn": "Big Cross",
+	"id": "big-cross",
+	"location": {
+		"lat": "56.887522",
+		"lon": "14.813422"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Lion Statue",
+	"id": "the-lion-statue",
+	"location": {
+		"lat": "56.88720699999999",
+		"lon": "14.826496999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Skogslyckans Fontän",
+	"id": "skogslyckans-font_n",
+	"location": {
+		"lat": "56.88833799999999",
+		"lon": "14.813042"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Galgelyckans höjd",
+	"id": "galgelyckans-h_jd",
+	"location": {
+		"lat": "56.890601",
+		"lon": "14.819841999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Lady Statue",
+	"id": "the-lady-statue",
+	"location": {
+		"lat": "56.890653",
+		"lon": "14.79633"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Football Wall",
+	"id": "football-wall",
+	"location": {
+		"lat": "56.892157",
+		"lon": "14.791804"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Concrete Greenery",
+	"id": "concrete-greenery",
+	"location": {
+		"lat": "56.894396",
+		"lon": "14.791093999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Pile of Cubes",
+	"id": "pile-of-cubes",
+	"location": {
+		"lat": "56.896680999999994",
+		"lon": "14.790336"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Burial Cairn",
+	"id": "burial-cairn",
+	"location": {
+		"lat": "56.89908799999999",
+		"lon": "14.86731"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fylleryds Naturreservat Norrastugan",
+	"id": "fylleryds-naturreservat-norrastugan",
+	"location": {
+		"lat": "56.900762",
+		"lon": "14.834273"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Öjaby Kyrka",
+	"id": "_jaby-kyrka",
+	"location": {
+		"lat": "56.90708099999999",
+		"lon": "14.740254"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Växjö Älg",
+	"id": "v_xj_-_lg",
+	"location": {
+		"lat": "56.925076",
+		"lon": "14.732533999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Hovshaga Begravningsplats",
+	"id": "hovshaga-begravningsplats",
+	"location": {
+		"lat": "56.90832999999999",
+		"lon": "14.803482"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Hovshaga Bibliotek",
+	"id": "hovshaga-bibliotek",
+	"location": {
+		"lat": "56.909821",
+		"lon": "14.797537"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Johanneskyrkan",
+	"id": "johanneskyrkan",
+	"location": {
+		"lat": "56.913557999999995",
+		"lon": "14.791837"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Solur Villa Vik",
+	"id": "solur-villa-vik",
+	"location": {
+		"lat": "56.921146",
+		"lon": "14.862421"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fake Ironage Grave",
+	"id": "fake-ironage-grave",
+	"location": {
+		"lat": "56.922360999999995",
+		"lon": "14.85947"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Evedals Hopptorn",
+	"id": "evedals-hopptorn",
+	"location": {
+		"lat": "56.921344",
+		"lon": "14.824917"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Minnessten L.J. Brandt",
+	"id": "minnessten-l_j_-brandt",
+	"location": {
+		"lat": "56.920907",
+		"lon": "14.822187"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Gammal Grav",
+	"id": "gammal-grav",
+	"location": {
+		"lat": "56.92351099999999",
+		"lon": "14.794961"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Lokala Naurvårds Satsningen",
+	"id": "lokala-naurv_rds-satsningen",
+	"location": {
+		"lat": "56.923325",
+		"lon": "14.780076"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Grav Från Bronsålder",
+	"id": "grav-fr_n-brons_lder",
+	"location": {
+		"lat": "56.92533199999999",
+		"lon": "14.787992"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Milasten",
+	"id": "milasten",
+	"location": {
+		"lat": "56.92590799999999",
+		"lon": "14.795220999999998"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Klockstapel",
+	"id": "klockstapel",
+	"location": {
+		"lat": "56.933754",
+		"lon": "14.791697"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Kronobergs Slottsruin",
+	"id": "kronobergs-slottsruin",
+	"location": {
+		"lat": "56.94166599999999",
+		"lon": "14.794722"
+	},
+	"exraid": false,
+	"rip": false
+}
+]

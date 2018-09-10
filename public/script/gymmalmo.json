@@ -1,0 +1,2018 @@
+[
+{
+	"namn": "Kompan",
+	"id": "",
+	"location": {
+		"lat": "55.586251",
+		"lon": "12.932234"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Rackarn och Vildtoringen",
+	"id": "",
+	"location": {
+		"lat": "55.602414",
+		"lon": "12.982775"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Kullarna",
+	"id": "",
+	"location": {
+		"lat": "55.575019",
+		"lon": "12.97867"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Torgbrunn",
+	"id": "",
+	"location": {
+		"lat": "55.606475",
+		"lon": "13.000624"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Solsil - Berith Lindfeldt",
+	"id": "",
+	"location": {
+		"lat": "55.658421",
+		"lon": "13.076553"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Treklang",
+	"id": "",
+	"location": {
+		"lat": "55.653663",
+		"lon": "13.112188"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Gamla Brandstationen",
+	"id": "",
+	"location": {
+		"lat": "55.657698",
+		"lon": "13.085073"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Alnarpsgården",
+	"id": "",
+	"location": {
+		"lat": "55.657235",
+		"lon": "13.083767"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Bobos Heart, Alnarp",
+	"id": "",
+	"location": {
+		"lat": "55.656972",
+		"lon": "13.083233"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Paviljongen (Åkarp)",
+	"id": "",
+	"location": {
+		"lat": "55.65078",
+		"lon": "13.115118"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tuve Månssons Minnessten",
+	"id": "",
+	"location": {
+		"lat": "55.649776",
+		"lon": "13.112182"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Utan Titel",
+	"id": "",
+	"location": {
+		"lat": "55.597175",
+		"lon": "12.95711"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Per-Albin Bunker",
+	"id": "",
+	"location": {
+		"lat": "55.595476",
+		"lon": "12.952755"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "The Great Wall Of Ribban",
+	"id": "",
+	"location": {
+		"lat": "55.593928",
+		"lon": "12.948618"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Skeppssättning Från Vikingatiden",
+	"id": "skeppss_ttning-fr_n-vikingatiden",
+	"location": {
+		"lat": "55.59153",
+		"lon": "12.922094"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Red Olympia ",
+	"id": "red-olympia",
+	"location": {
+		"lat": "55.589659",
+		"lon": "12.918173"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Öns Ankare",
+	"id": "_ns-ankare",
+	"location": {
+		"lat": "55.59065",
+		"lon": "12.924665"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Strandhem Posthus",
+	"id": "",
+	"location": {
+		"lat": "55.540417",
+		"lon": "12.914741"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stolpar",
+	"id": "stolpar",
+	"location": {
+		"lat": "55.587275",
+		"lon": "12.916129"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Vattenhålet ",
+	"id": "vattenh_let",
+	"location": {
+		"lat": "55.588028",
+		"lon": "12.920572"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "the bridge",
+	"id": "",
+	"location": {
+		"lat": "55.565812",
+		"lon": "12.892495"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "MSS Signalmast",
+	"id": "mss-signalmast",
+	"location": {
+		"lat": "55.581881",
+		"lon": "12.91595"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Anchor",
+	"id": "the-anchor",
+	"location": {
+		"lat": "55.581994",
+		"lon": "12.916499"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sibbarp",
+	"id": "",
+	"location": {
+		"lat": "55.572683",
+		"lon": "12.901252"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Bunker 329",
+	"id": "",
+	"location": {
+		"lat": "55.574484",
+		"lon": "12.903214"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tufsen ",
+	"id": "",
+	"location": {
+		"lat": "55.582965",
+		"lon": "12.927408"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Little Bear ",
+	"id": "",
+	"location": {
+		"lat": "55.582918",
+		"lon": "12.927093"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Linne Kyrka ",
+	"id": "",
+	"location": {
+		"lat": "55.582756",
+		"lon": "12.938007"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Limhamns Miljöförening ",
+	"id": "limhamns-milj_f_rening",
+	"location": {
+		"lat": "55.5819",
+		"lon": "12.931178"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Skateparken",
+	"id": "",
+	"location": {
+		"lat": "55.574783",
+		"lon": "12.908983"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Konst #2 Vid Bron",
+	"id": "",
+	"location": {
+		"lat": "55.563798",
+		"lon": "12.902671"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Cat",
+	"id": "",
+	"location": {
+		"lat": "55.57827",
+		"lon": "12.93644"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sundbroparken Utegym",
+	"id": "",
+	"location": {
+		"lat": "55.551542",
+		"lon": "12.923172"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Bunkeflostrand Strandkyrka",
+	"id": "",
+	"location": {
+		"lat": "55.55431",
+		"lon": "12.918808"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Piratskepp",
+	"id": "",
+	"location": {
+		"lat": "55.572208",
+		"lon": "12.916792"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Termitemound",
+	"id": "",
+	"location": {
+		"lat": "55.556949",
+		"lon": "12.915426"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Abandoned Tower",
+	"id": "",
+	"location": {
+		"lat": "55.57143",
+		"lon": "12.924262"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Golden Horses",
+	"id": "",
+	"location": {
+		"lat": "55.55789",
+		"lon": "12.928904"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Williams Trädgård - Arboretiumet",
+	"id": "",
+	"location": {
+		"lat": "55.558947",
+		"lon": "12.927732"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Cow statue",
+	"id": "cow-statue",
+	"location": {
+		"lat": "55.539538",
+		"lon": "13.095692"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Oxie  Station ",
+	"id": "oxie-station",
+	"location": {
+		"lat": "55.54161",
+		"lon": "13.096253"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Oxie Football Fields",
+	"id": "oxie-football-fields",
+	"location": {
+		"lat": "55.546287",
+		"lon": "13.095695"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Blomsterskolan Champagneglas",
+	"id": "blomsterskolan-champagneglas",
+	"location": {
+		"lat": "55.544884",
+		"lon": "13.083956"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Dinosaur ",
+	"id": "dinosaur",
+	"location": {
+		"lat": "55.564721",
+		"lon": "13.07042"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Jägersro-Hästar",
+	"id": "j_gersro-h_star",
+	"location": {
+		"lat": "55.571077",
+		"lon": "13.057913"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Skrävlinge Kyrka",
+	"id": "skr_vlinge-kyrka",
+	"location": {
+		"lat": "55.578305",
+		"lon": "13.053928"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Almgården",
+	"id": "almg_rden",
+	"location": {
+		"lat": "55.577978",
+		"lon": "13.061002"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "S:ta Maria Kyrkan",
+	"id": "s_ta-maria-kyrkan",
+	"location": {
+		"lat": "55.579833",
+		"lon": "13.049167"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Children Watchtower",
+	"id": "children-watchtower",
+	"location": {
+		"lat": "55.58717",
+		"lon": "13.095234"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Rosa Flygarn",
+	"id": "rosa-flygarn",
+	"location": {
+		"lat": "55.585458",
+		"lon": "13.042484"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Krukbåge",
+	"id": "krukb_ge",
+	"location": {
+		"lat": "55.584537",
+		"lon": "13.048746"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Emil Och Ida",
+	"id": "emil-och-ida",
+	"location": {
+		"lat": "55.588416",
+		"lon": "13.036743"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fasaddekoration",
+	"id": "fasaddekoration",
+	"location": {
+		"lat": "55.587497",
+		"lon": "13.084519"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Minnessten",
+	"id": "minnessten",
+	"location": {
+		"lat": "55.588116",
+		"lon": "13.085928"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Amfiteater",
+	"id": "amfiteater",
+	"location": {
+		"lat": "55.588972",
+		"lon": "13.088785"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Husie folkhögskola",
+	"id": "husie-folkh_gskola",
+	"location": {
+		"lat": "55.589826",
+		"lon": "13.082057"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Unnamed Twisty Metal Sculpture",
+	"id": "",
+	"location": {
+		"lat": "55.636188",
+		"lon": "13.086734"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Minigris",
+	"id": "minigris",
+	"location": {
+		"lat": "55.589207",
+		"lon": "13.066719"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "S:t Knuts Kapell",
+	"id": "s_t-knuts-kapell",
+	"location": {
+		"lat": "55.592901",
+		"lon": "13.042326"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Broken Unicorn ",
+	"id": "broken-unicorn",
+	"location": {
+		"lat": "55.589963",
+		"lon": "13.065571"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Arlöv Kyrka",
+	"id": "",
+	"location": {
+		"lat": "55.635055",
+		"lon": "13.077783"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "S:t Birgittas Kapell Fresk",
+	"id": "s_t-birgittas-kapell-fresk",
+	"location": {
+		"lat": "55.594697",
+		"lon": "13.047948"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tre Ingångar Till Rosengård",
+	"id": "tre-ing_ngar-till-roseng_rd",
+	"location": {
+		"lat": "55.594995",
+		"lon": "13.054099"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Vit Ängel",
+	"id": "vit-_ngel",
+	"location": {
+		"lat": "55.594699",
+		"lon": "13.069453"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Large Mushrooms",
+	"id": "",
+	"location": {
+		"lat": "55.633066",
+		"lon": "13.072232"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "3 Figurer I En",
+	"id": "_-figurer-i-en",
+	"location": {
+		"lat": "55.595848",
+		"lon": "13.068647"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sallerups Lusthus",
+	"id": "sallerups-lusthus",
+	"location": {
+		"lat": "55.599241",
+		"lon": "13.044017"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Flygplan",
+	"id": "flygplan",
+	"location": {
+		"lat": "55.597416",
+		"lon": "13.058943"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Scientology Church",
+	"id": "",
+	"location": {
+		"lat": "55.629765",
+		"lon": "13.068352"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Giant Chair",
+	"id": "giant-chair",
+	"location": {
+		"lat": "55.602204",
+		"lon": "13.054068"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Kirsebergs Bibliotek",
+	"id": "kirsebergs-bibliotek",
+	"location": {
+		"lat": "55.611301",
+		"lon": "13.043027"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Mölledals Mill",
+	"id": "m_lledals-mill",
+	"location": {
+		"lat": "55.608171",
+		"lon": "13.047796"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Cracked Wooden Bear Statue",
+	"id": "cracked-wooden-bear-statue",
+	"location": {
+		"lat": "55.609719",
+		"lon": "13.047832"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Det Bevingade Ordet av Staffan",
+	"id": "det-bevingade-ordet-av-staffan",
+	"location": {
+		"lat": "55.617696",
+		"lon": "13.047211"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Hjärteblad av Eric Grate",
+	"id": "hj_rteblad-av-eric-grate",
+	"location": {
+		"lat": "55.609175",
+		"lon": "13.036419"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Ribersborgs Kallbadhus",
+	"id": "",
+	"location": {
+		"lat": "55.604855",
+		"lon": "12.965781"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Backaborna Witch and Thief Memorial Stone",
+	"id": "backaborna-witch-and-thief-memorial-stone",
+	"location": {
+		"lat": "55.608266",
+		"lon": "13.034123"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Watchtower",
+	"id": "watchtower",
+	"location": {
+		"lat": "55.616878",
+		"lon": "12.974357"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Tuff Tuff Tåg",
+	"id": "tuff-tuff-t_g",
+	"location": {
+		"lat": "55.603063",
+		"lon": "13.033916"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Beehive",
+	"id": "beehive",
+	"location": {
+		"lat": "55.595203",
+		"lon": "13.028561"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Accumulage",
+	"id": "accumulage",
+	"location": {
+		"lat": "55.601267",
+		"lon": "13.029223"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Eye in the Wall",
+	"id": "eye-in-the-wall",
+	"location": {
+		"lat": "55.613068",
+		"lon": "12.975783"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Cycles  La Francaise",
+	"id": "cycles-la-francaise",
+	"location": {
+		"lat": "55.610177",
+		"lon": "12.973835"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Don Quijote",
+	"id": "don-quijote",
+	"location": {
+		"lat": "55.595784",
+		"lon": "13.024233"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Drakrygg",
+	"id": "drakrygg",
+	"location": {
+		"lat": "55.608968",
+		"lon": "12.973285"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Turning Torso",
+	"id": "turning-torso",
+	"location": {
+		"lat": "55.613172",
+		"lon": "12.976648"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Klätternät",
+	"id": "kl_ttern_t",
+	"location": {
+		"lat": "55.61506",
+		"lon": "12.979105"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Bridge Benches",
+	"id": "bridge-benches",
+	"location": {
+		"lat": "55.615041",
+		"lon": "12.980167"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "The Space Between Yin and Yang Statue",
+	"id": "the-space-between-yin-and-yang-statue",
+	"location": {
+		"lat": "55.598301",
+		"lon": "13.024109"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Triangle",
+	"id": "the-triangle",
+	"location": {
+		"lat": "55.615847",
+		"lon": "12.985264"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Happy Rooster",
+	"id": "happy-rooster",
+	"location": {
+		"lat": "55.600983",
+		"lon": "12.97678"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Dockan Lighthouse",
+	"id": "dockan-lighthouse",
+	"location": {
+		"lat": "55.61642",
+		"lon": "12.991588"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Röda Hund",
+	"id": "r_da-hund",
+	"location": {
+		"lat": "55.609745",
+		"lon": "12.979955"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Region Skåne HK",
+	"id": "region-sk_ne-hk",
+	"location": {
+		"lat": "55.614565",
+		"lon": "12.988468"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Ängeln",
+	"id": "_ngeln",
+	"location": {
+		"lat": "55.598662",
+		"lon": "13.018512"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Bow",
+	"id": "the-bow",
+	"location": {
+		"lat": "55.614664",
+		"lon": "12.9903"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Unnamed Torso",
+	"id": "",
+	"location": {
+		"lat": "55.603646",
+		"lon": "12.980607"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "World Trade Center ",
+	"id": "world-trade-center",
+	"location": {
+		"lat": "55.608256",
+		"lon": "12.981872"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Kula På Pelare",
+	"id": "kula-p_-pelare",
+	"location": {
+		"lat": "55.608632",
+		"lon": "13.018772"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Malmö Harbor",
+	"id": "malm_-harbor",
+	"location": {
+		"lat": "55.614654",
+		"lon": "12.996046"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Ängel och fåglar",
+	"id": "_ngel-och-f_glar",
+	"location": {
+		"lat": "55.601481",
+		"lon": "13.016047"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Silver Square Boxes on Piedestal",
+	"id": "silver-square-boxes-on-pidestal",
+	"location": {
+		"lat": "55.606646",
+		"lon": "13.016275"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Light House",
+	"id": "light-house",
+	"location": {
+		"lat": "55.612495",
+		"lon": "12.995878"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "St. Pauli Church",
+	"id": "st_-pauli_church",
+	"location": {
+		"lat": "55.603166",
+		"lon": "13.014205"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Ghost Castle",
+	"id": "ghost-castle",
+	"location": {
+		"lat": "55.604969",
+		"lon": "12.986804"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Schougens Bro",
+	"id": "schougens-bro",
+	"location": {
+		"lat": "55.608152",
+		"lon": "13.012977"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tower Of Malmoe Castle",
+	"id": "tower-of-malmoe-castle",
+	"location": {
+		"lat": "55.605509",
+		"lon": "12.988547"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Fontän by Alfred Arwidius",
+	"id": "font_n-by-alfred-arwidius",
+	"location": {
+		"lat": "55.608299",
+		"lon": "13.009923"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Flora, Malmö",
+	"id": "flora_-malm_",
+	"location": {
+		"lat": "55.601335",
+		"lon": "13.00939"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Spectral Self Container",
+	"id": "spectral-self-container",
+	"location": {
+		"lat": "55.609359",
+		"lon": "12.996909"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Standbeeld Diana in Kungsparke",
+	"id": "standbeeld-diana-in-kungsparke",
+	"location": {
+		"lat": "55.603259",
+		"lon": "12.992083"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Yellow Bike",
+	"id": "yellow-bike",
+	"location": {
+		"lat": "55.609106",
+		"lon": "13.004678"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Diana",
+	"id": "diana",
+	"location": {
+		"lat": "55.604378",
+		"lon": "12.992635"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Non Violence",
+	"id": "non-violence",
+	"location": {
+		"lat": "55.60877",
+		"lon": "12.997382"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Lampskog",
+	"id": "lampskog",
+	"location": {
+		"lat": "55.605662",
+		"lon": "13.007433"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Petribron",
+	"id": "petribron",
+	"location": {
+		"lat": "55.608456",
+		"lon": "13.002207"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "TACOS",
+	"id": "tacos",
+	"location": {
+		"lat": "55.60622",
+		"lon": "12.995541"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Royal",
+	"id": "royal",
+	"location": {
+		"lat": "55.601645",
+		"lon": "13.00081"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Octopus",
+	"id": "octopus",
+	"location": {
+		"lat": "55.603747",
+		"lon": "12.995948"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tunneln",
+	"id": "tunneln",
+	"location": {
+		"lat": "55.607319",
+		"lon": "13.001862"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fountain (Stortorget)",
+	"id": "fountain-_stortorget_",
+	"location": {
+		"lat": "55.606475",
+		"lon": "13.000624"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Lampan",
+	"id": "lampan",
+	"location": {
+		"lat": "55.605098",
+		"lon": "12.998883"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Per Albins Hem",
+	"id": "per-albins-hem",
+	"location": {
+		"lat": "55.573063",
+		"lon": "12.998236"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Above",
+	"id": "above",
+	"location": {
+		"lat": "55.570991",
+		"lon": "12.983753"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Plockepinn",
+	"id": "plockepinn",
+	"location": {
+		"lat": "55.576498",
+		"lon": "12.990068"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "I Rena Glädjen",
+	"id": "",
+	"location": {
+		"lat": "55.570805",
+		"lon": "13.001913"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Kulladalstorget",
+	"id": "",
+	"location": {
+		"lat": "55.572139",
+		"lon": "13.001919"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Horses in Sofieholm Parken",
+	"id": "horses-in-sofieholm-parken",
+	"location": {
+		"lat": "55.563914",
+		"lon": "12.991862"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Kattdykartunneln",
+	"id": "kattdykartunneln",
+	"location": {
+		"lat": "55.565577",
+		"lon": "13.00094"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Mosaique",
+	"id": "mosaique",
+	"location": {
+		"lat": "55.565799",
+		"lon": "12.979945"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Worshipper of the Sun",
+	"id": "worshipper-of-the-sun",
+	"location": {
+		"lat": "55.569587",
+		"lon": "13.006668"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Hyllie Vattentorn",
+	"id": "hyllie-vattentorn",
+	"location": {
+		"lat": "55.565314",
+		"lon": "12.979257"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Svängom",
+	"id": "sv_ngom",
+	"location": {
+		"lat": "55.579781",
+		"lon": "12.995474"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Wyrmslayer",
+	"id": "",
+	"location": {
+		"lat": "55.576104",
+		"lon": "13.005198"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Blekingsborg Sculpture",
+	"id": "",
+	"location": {
+		"lat": "55.577973",
+		"lon": "13.002993"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Födelse i Rymden",
+	"id": "f_delse-i-rymden",
+	"location": {
+		"lat": "55.566831",
+		"lon": "13.007011"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Malmömässan",
+	"id": "malm_m_ssan",
+	"location": {
+		"lat": "55.566327",
+		"lon": "12.976168"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "tjej med hund",
+	"id": "",
+	"location": {
+		"lat": "55.576992",
+		"lon": "12.977537"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Broken Glass",
+	"id": "broken-glass",
+	"location": {
+		"lat": "55.567383",
+		"lon": "13.010575"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Pojke",
+	"id": "",
+	"location": {
+		"lat": "55.578038",
+		"lon": "12.975896"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fjärde Relationen",
+	"id": "fj_rde-relationen",
+	"location": {
+		"lat": "55.582407",
+		"lon": "12.996872"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stadionkyrkan",
+	"id": "stadionkyrkan",
+	"location": {
+		"lat": "55.581967",
+		"lon": "12.983212"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Emporia",
+	"id": "emporia",
+	"location": {
+		"lat": "55.563515",
+		"lon": "12.97503"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tålmodigheten ",
+	"id": "t_lmodigheten",
+	"location": {
+		"lat": "55.55909",
+		"lon": "12.987115"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Klocktorn",
+	"id": "",
+	"location": {
+		"lat": "55.575723",
+		"lon": "12.970286"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Butterflies",
+	"id": "butterflies",
+	"location": {
+		"lat": "55.562978",
+		"lon": "12.973077"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Facade",
+	"id": "",
+	"location": {
+		"lat": "55.580935",
+		"lon": "13.007192"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tre elefanter",
+	"id": "tre-elefanter",
+	"location": {
+		"lat": "55.572912",
+		"lon": "13.015565"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Walk of Fame Plaque",
+	"id": "walk-of-fame-plaque",
+	"location": {
+		"lat": "55.584528",
+		"lon": "12.988735"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Dimman Fontän",
+	"id": "dimman-font_n",
+	"location": {
+		"lat": "55.561608",
+		"lon": "13.01159"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sfär",
+	"id": "sf_r",
+	"location": {
+		"lat": "55.584574",
+		"lon": "12.98119"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Förgrenad",
+	"id": "f_rgrenad",
+	"location": {
+		"lat": "55.585905",
+		"lon": "12.996465"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Gathering the Crops",
+	"id": "",
+	"location": {
+		"lat": "55.584104",
+		"lon": "13.006438"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Waves",
+	"id": "waves",
+	"location": {
+		"lat": "55.56181",
+		"lon": "13.014387"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Parts",
+	"id": "parts",
+	"location": {
+		"lat": "55.567151",
+		"lon": "13.018821"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Target",
+	"id": "target",
+	"location": {
+		"lat": "55.584351",
+		"lon": "12.975725"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Pippitroll",
+	"id": "pippitroll",
+	"location": {
+		"lat": "55.57279",
+		"lon": "13.020505"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Wickedly Weird Flower Pots",
+	"id": "wickedly-weird-flower-pots",
+	"location": {
+		"lat": "55.586531",
+		"lon": "12.982408"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Headless Dog",
+	"id": "headless-dog",
+	"location": {
+		"lat": "55.582341",
+		"lon": "13.014085"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Duvor",
+	"id": "duvor",
+	"location": {
+		"lat": "55.571054",
+		"lon": "13.022143"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Bell Tower",
+	"id": "",
+	"location": {
+		"lat": "55.580087",
+		"lon": "12.965821"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sea of Love",
+	"id": "sea-of-love",
+	"location": {
+		"lat": "55.558408",
+		"lon": "13.012986"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Paviljongen (Pildammsparken)",
+	"id": "paviljongen-_pildammsparken_",
+	"location": {
+		"lat": "55.588645",
+		"lon": "12.992871"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Outdoor Ping Pong",
+	"id": "outdoor-ping-pong",
+	"location": {
+		"lat": "55.582909",
+		"lon": "13.014783"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Inre Ringvägen",
+	"id": "inre-ringv_gen",
+	"location": {
+		"lat": "55.564449",
+		"lon": "13.020893"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Avd 49",
+	"id": "avd-49",
+	"location": {
+		"lat": "55.589123",
+		"lon": "13.000843"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Människa Och Häst",
+	"id": "m_nniska-och-h_st",
+	"location": {
+		"lat": "55.57695",
+		"lon": "13.023513"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Flicka Med Fågel",
+	"id": "flicka-med-f_gel",
+	"location": {
+		"lat": "55.588752",
+		"lon": "13.00443"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Urtidsmänniskor",
+	"id": "urtidsm_nniskor",
+	"location": {
+		"lat": "55.566959",
+		"lon": "13.024887"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Vattentornet i Pildammsparken",
+	"id": "vattentornet-i-pildammsparken",
+	"location": {
+		"lat": "55.590114",
+		"lon": "12.997212"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "T-stone",
+	"id": "t-stone",
+	"location": {
+		"lat": "55.560589",
+		"lon": "13.020736"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Old Fountain",
+	"id": "old-fountain",
+	"location": {
+		"lat": "55.588231",
+		"lon": "13.008146"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Empty Grafitti Lot",
+	"id": "empty-grafitti-lot",
+	"location": {
+		"lat": "55.586129",
+		"lon": "13.013939"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Margaretavägen",
+	"id": "margaretav_gen",
+	"location": {
+		"lat": "55.591064",
+		"lon": "12.990762"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Fosie Kyrka",
+	"id": "fosie-kyrka",
+	"location": {
+		"lat": "55.56266",
+		"lon": "13.024845"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stukad Mås",
+	"id": "stukad-m_s",
+	"location": {
+		"lat": "55.591587",
+		"lon": "12.985729"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Droppkrona",
+	"id": "droppkrona",
+	"location": {
+		"lat": "55.580715",
+		"lon": "13.024652"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fountain (Katrinetorp)",
+	"id": "fountain-_katrinetorp_",
+	"location": {
+		"lat": "55.550959",
+		"lon": "13.004287"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Violin",
+	"id": "",
+	"location": {
+		"lat": "55.589782",
+		"lon": "12.970915"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Bunkeflo Gamla Kyrkogård",
+	"id": "bunkeflo-gamla-kyrkog_rd",
+	"location": {
+		"lat": "55.556265",
+		"lon": "12.961588"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Svågertorp Sculpture",
+	"id": "sv_gertorp-sculpture",
+	"location": {
+		"lat": "55.548253",
+		"lon": "12.990354"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Svågertorp Station ",
+	"id": "sv_gertorp-station",
+	"location": {
+		"lat": "55.548031",
+		"lon": "12.991002"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Silvertrumpet",
+	"id": "",
+	"location": {
+		"lat": "55.591735",
+		"lon": "12.971717"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Exclamation Mark!",
+	"id": "exclamation-mark_",
+	"location": {
+		"lat": "55.592",
+		"lon": "13.011583"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Chokladstaden ",
+	"id": "chokladstaden",
+	"location": {
+		"lat": "55.593414",
+		"lon": "13.007212"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Butterfly Clocktower",
+	"id": "butterfly-clocktower",
+	"location": {
+		"lat": "55.588866",
+		"lon": "13.020251"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Fontänkar",
+	"id": "font_nkar",
+	"location": {
+		"lat": "55.579983",
+		"lon": "13.03202"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Mural",
+	"id": "mural",
+	"location": {
+		"lat": "55.594826",
+		"lon": "13.006925"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Small Horse",
+	"id": "small-horse",
+	"location": {
+		"lat": "55.552796",
+		"lon": "13.023724"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Tragos Fountain",
+	"id": "tragos-fountain",
+	"location": {
+		"lat": "55.596597",
+		"lon": "12.996254"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Moriskan",
+	"id": "moriskan",
+	"location": {
+		"lat": "55.59364",
+		"lon": "13.013544"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Horse On The Roof",
+	"id": "horse-on-the-roof",
+	"location": {
+		"lat": "55.596667",
+		"lon": "12.986794"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Malmös nappaträd",
+	"id": "",
+	"location": {
+		"lat": "55.595391",
+		"lon": "12.976428"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Östra Rönneholmsvägen",
+	"id": "ostra-r_nneholmsv_gen",
+	"location": {
+		"lat": "55.596791",
+		"lon": "12.998049"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Grävlingstrappa",
+	"id": "gr_vlingstrappa",
+	"location": {
+		"lat": "55.595366",
+		"lon": "13.008166"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Scandic Hotel",
+	"id": "scandic-hotel",
+	"location": {
+		"lat": "55.596517",
+		"lon": "13.001416"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fjättrad i Nuet",
+	"id": "fj_ttrad-i-nuet",
+	"location": {
+		"lat": "55.591524",
+		"lon": "13.020466"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Nobeltorgets Tomma Pool",
+	"id": "nobeltorgets-tomma-pool",
+	"location": {
+		"lat": "55.591694",
+		"lon": "13.020086"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Katolska Kyrkan",
+	"id": "katolska-kyrkan",
+	"location": {
+		"lat": "55.597411",
+		"lon": "12.992401"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Limhamns Kyrka",
+	"id": "",
+	"location": {
+		"lat": "55.574872",
+		"lon": "12.944392"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Zodiakens Tecken",
+	"id": "zodiakens-tecken",
+	"location": {
+		"lat": "55.597159",
+		"lon": "13.003784"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Folkets Park",
+	"id": "folkets-park",
+	"location": {
+		"lat": "55.595284",
+		"lon": "13.013443"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Zlatans Leende",
+	"id": "zlatans-leende",
+	"location": {
+		"lat": "55.587961",
+		"lon": "13.030242"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Kronprinsen",
+	"id": "kronprinsen",
+	"location": {
+		"lat": "55.598697",
+		"lon": "12.985148"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Black Horse",
+	"id": "the-black-horse",
+	"location": {
+		"lat": "55.598558",
+		"lon": "12.982344"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "St knuts torg",
+	"id": "st-knuts-torg",
+	"location": {
+		"lat": "55.596623",
+		"lon": "13.012684"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Trio by Person",
+	"id": "trio-by-person",
+	"location": {
+		"lat": "55.583379",
+		"lon": "13.037158"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Dead Sakura Fountain",
+	"id": "dead-sakura-fountain",
+	"location": {
+		"lat": "55.590776",
+		"lon": "13.028304"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Blue Pillar Art",
+	"id": "blue-pillar-art",
+	"location": {
+		"lat": "55.584212",
+		"lon": "13.037469"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Konserthuset",
+	"id": "konserthuset",
+	"location": {
+		"lat": "55.599033",
+		"lon": "13.007959"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Rädda Människor",
+	"id": "r_dda-m_nniskor",
+	"location": {
+		"lat": "55.588217",
+		"lon": "13.034096"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Under Bridge Art",
+	"id": "under-bridge-art",
+	"location": {
+		"lat": "55.587134",
+		"lon": "13.035529"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Eternal Umbrella",
+	"id": "eternal-umbrella",
+	"location": {
+		"lat": "55.600559",
+		"lon": "12.987264"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Malmö Stadsbibliotek",
+	"id": "malm_-stadsbibliotek",
+	"location": {
+		"lat": "55.600718",
+		"lon": "12.993371"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Jesu Kristi Kyrka av Sista Dagars Heliga",
+	"id": "",
+	"location": {
+		"lat": "55.595102",
+		"lon": "12.960351"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Passionsblomman",
+	"id": "passionsblomman",
+	"location": {
+		"lat": "55.598798",
+		"lon": "12.971372"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Wall Art",
+	"id": "wall-art",
+	"location": {
+		"lat": "55.600564",
+		"lon": "13.001791"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Anna Lisa Fountain",
+	"id": "anna-lisa-fountain",
+	"location": {
+		"lat": "55.601118",
+		"lon": "12.992619"
+	},
+	"exraid": "possible",
+	"rip": false
+},{
+	"namn": "Viking Ship",
+	"id": "",
+	"location": {
+		"lat": "55.596135",
+		"lon": "12.96217"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Eternal Blossom",
+	"id": "eternal-blossom",
+	"location": {
+		"lat": "55.601117",
+		"lon": "12.984872"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "«Gato en el canal»",
+	"id": "_gato-en-el-canal_",
+	"location": {
+		"lat": "55.601147",
+		"lon": "13.000084"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Stage",
+	"id": "stage",
+	"location": {
+		"lat": "55.584821",
+		"lon": "13.040457"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Turtlezone",
+	"id": "turtlezone",
+	"location": {
+		"lat": "55.587149",
+		"lon": "13.101538"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Memories Of An Airfield",
+	"id": "memories-of-an-airfield",
+	"location": {
+		"lat": "55.598367",
+		"lon": "13.052094"
+	},
+	"exraid": "possible",
+	"rip": false
+}]
