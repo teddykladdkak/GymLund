@@ -13,33 +13,29 @@ var param = {
 	port: 9615,
 	url: 'https://gymlund.tk/',
 	keywords: '',
-	area: {
-		lund: {
+	area: [
+		{
 			rubrik: 'Lund',
 			id: 'gymlund',
 			lank: 'https://gymlund.tk/'
-		},
-		gbg: {
+		},{
 			rubrik: 'Göteborg',
 			id: 'gymgbg',
 			lank: 'https://gymlund.tk/gbg.html'
-		},
-		landskrona: {
+		},{
 			rubrik: 'Landskrona',
 			id: 'gymlandskrona',
 			lank: 'https://gymlund.tk/landskrona.html'
-		},
-		malmo: {
+		},{
 			rubrik: 'Malmö',
 			id: 'gymmalmo',
 			lank: 'https://gymlund.tk/malmo.html'
-		},
-		vaxjo: {
+		},{
 			rubrik: 'Växjö',
 			id: 'gymvaxjo',
 			lank: 'https://gymlund.tk/vaxjo.html'
 		},
-	},
+	],
 	location: {
 		script: '/public/script/',
 		img: 'public/img/'
@@ -47,12 +43,18 @@ var param = {
 	antalpokemon: 386
 };
 
+function iIndex(id){
+	for (var i = 0; i < param.area.length; i++){
+		if(id == param.area[i].id){
+			return i;
+		};
+	};
+	return false;
+};
 //####################################################################
 // Start sprite skapare
 //####################################################################
-app.get(['/img/*-sprite.png', '/img/*-sprite.css'], function (req, res) {
-	var area = req.params['0'];
-	var type = req.originalUrl.split('?')[0].split('.');
+function addsprite(area){
 	var images = fs.readdirSync(param.location.img + area + '/mini/');
 	var sprites = [];
 	for (var i = images.length - 1; i >= 0; i--) {
@@ -63,21 +65,31 @@ app.get(['/img/*-sprite.png', '/img/*-sprite.css'], function (req, res) {
 	sprites.push(param.location.img + 'exraid-possible.png');
 	if(sprites.indexOf('.DS_Store') == -1){}else{sprites.splice(sprites.indexOf('.DS_Store'), 1);};
 	Spritesmith.run({src: sprites}, function handleResult (err, result) {
-		if(type[type.length - 1] == 'png'){
-			res.type('image/png');
-			res.send(result.image);
-		}else if(type[type.length - 1] == 'css'){
-			var tohtml = '.sprite {background-image: url(' + area + '-sprite.png);background-repeat: no-repeat;display: block;}'
-			for (var i = sprites.length - 1; i >= 0; i--) {
-				var name = sprites[i].replace('.png', '').split('/');
-				var tohtml = tohtml + ' .sprite-' + name[name.length - 1] + ' {width: ' + result.coordinates[sprites[i]].width + 'px;height: ' + result.coordinates[sprites[i]].height + 'px;background-position: -' + result.coordinates[sprites[i]].x + 'px -' + result.coordinates[sprites[i]].y + 'px;}';
-			}
-			res.type('text/css');
-			res.send(tohtml);
-		}else{
-			res.send('<h1>Något gick fel!</h1>');
-		}
+		param.area[iIndex(area)].result = result
+		param.area[iIndex(area)].sprites = sprites
 	});
+};
+for (var i = param.area.length - 1; i >= 0; i--) {
+	addsprite(param.area[i].id);
+};
+app.get(['/img/*-sprite.png', '/img/*-sprite.css'], function (req, res) {
+	var area = req.params['0'];
+	var type = req.originalUrl.split('?')[0].split('.');
+	var data = param.area[iIndex(area)];
+	if(type[type.length - 1] == 'png'){
+		res.type('image/png');
+		res.send(data.result.image);
+	}else if(type[type.length - 1] == 'css'){
+		var tohtml = '.sprite {background-image: url(' + area + '-sprite.png);background-repeat: no-repeat;display: block;}'
+		for (var i = data.sprites.length - 1; i >= 0; i--) {
+			var name = data.sprites[i].replace('.png', '').split('/');
+			var tohtml = tohtml + ' .sprite-' + name[name.length - 1] + ' {width: ' + data.result.coordinates[data.sprites[i]].width + 'px;height: ' + data.result.coordinates[data.sprites[i]].height + 'px;background-position: -' + data.result.coordinates[data.sprites[i]].x + 'px -' + data.result.coordinates[data.sprites[i]].y + 'px;}';
+		}
+		res.type('text/css');
+		res.send(tohtml);
+	}else{
+		res.send('<h1>Något gick fel!</h1>');
+	}
 });
 //####################################################################
 // Slut sprite skapare
@@ -222,9 +234,9 @@ app.get(['/', '/*.html'], function (req, res) {
 		res.render('poketime', options);
 	}else{
 		if(req.originalUrl == '/' || req.params['0'] == 'index'){
-			var options = param.area.lund;	
+			var options = param.area[iIndex('gymlund')];	
 		}else{
-			var options = param.area[req.params['0']];
+			var options = param.area[iIndex(req.params['0'])];
 		};
 		if(!options){
 			res.send('<h1>Din stad stödjs tyvärr inte i nuläget.</h1>')
