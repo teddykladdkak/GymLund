@@ -22,6 +22,7 @@ Gymmens lokalisation hittar jag dels genom Facebook grupper men även via följa
 GymLund stödjer nu jsonp! Om du vill få information är det bara att skicka en "GET" request enligt följande:
 ### Gym
 Följande parametrar tas mot:
+
 ID | Variabel | Förklaring
 rip | true / false | Om borttagna gym ska visas
 ex | true / false | Om bara ex-raid gym ska visas
@@ -34,9 +35,9 @@ Använd följande variabel:
 https://www.gymlund.tk/script/[area].json?[id]=[variabel]
 ```
 Exempel:
-* [Bra ex-raid: https://www.gymlund.tk/script/gymlund.json?ex=true](https://www.gymlund.tk/script/gymlund.json?ex=true)
-* [Närmast: https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240)
-* [Bokstavsordning men med distans: https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240)
+* Bra ex-raid: [https://www.gymlund.tk/script/gymlund.json?ex=true](https://www.gymlund.tk/script/gymlund.json?ex=true)
+* Närmast: [https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240)
+* Bokstavsordning men med distans: [https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240)
 
 ## Hur får jag GymLund till min stad?
 Lämna en pull request där du skickar "gym" och din stads namn med filformatet ".json". (Exempel gymlund.json)
