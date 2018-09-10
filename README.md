@@ -27,11 +27,11 @@ ID | Variabel | Förklaring
 --- | --- | ---
 rip | true / false | Om borttagna gym ska visas
 ex | true / false | Om bara ex-raid gym ska visas
-lat | num | Var du är i latitud
-lon | num | Var du är i longitud
-todo | km / normal | Vilken ordning gymmen ska ha i listan. OBS om inte lat & lon är med kommer det automatiskt bli "normal"
+lat | nummer | Var du är i latitud
+lon | nummer | Var du är i longitud
+todo | "km" / "normal" | Vilken ordning gymmen ska ha i listan. OBS om inte lat & lon är med kommer det automatiskt bli "normal"
 
-Använd följande variabel:
+Använd följande url struktur:
 ```
 https://www.gymlund.tk/script/[area].json?[id]=[variabel]
 ```
@@ -39,6 +39,24 @@ Exempel:
 * Bra ex-raid: [https://www.gymlund.tk/script/gymlund.json?ex=true](https://www.gymlund.tk/script/gymlund.json?ex=true)
 * Närmast: [https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240)
 * Bokstavsordning men med distans: [https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240)
+
+### Pokémon information
+Följande parametrar tas mot:
+ID | Variabel | Förklaring
+--- | --- | ---
+to | "all" / nummer | Alla Pokémon eller till satt nummer
+spec | nummer | Enbart info från specifik pokemon. Om Pokémonen har fler versioner (Alolan) behöver nummer avslutas med "a" eller "b"
+
+Använd följande url struktur
+```
+https://www.gymlund.tk/script/pokedata/pokemon.json?[id]=[variabel]
+```
+
+Exempel:
+* Alla Pokémon!: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=all](https://www.gymlund.tk/script/pokedata/pokemon.json?to=all)
+* Första 20 Pokémon: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=20](https://www.gymlund.tk/script/pokedata/pokemon.json?to=20)
+* Information om "Ninetales" (Normal) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a)
+* Information om "Ninetales" (Alolan) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b)
 
 ## Hur får jag GymLund till min stad?
 Lämna en pull request där du skickar "gym" och din stads namn med filformatet ".json". (Exempel gymlund.json)
