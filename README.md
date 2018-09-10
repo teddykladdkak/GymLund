@@ -24,6 +24,7 @@ GymLund stödjer nu jsonp! Om du vill få information är det bara att skicka en
 Följande parametrar tas mot:
 
 ID | Variabel | Förklaring
+--- | --- | ---
 rip | true / false | Om borttagna gym ska visas
 ex | true / false | Om bara ex-raid gym ska visas
 lat | num | Var du är i latitud
