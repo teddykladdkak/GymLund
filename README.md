@@ -12,11 +12,11 @@ Gymmens lokalisation hittar jag dels genom Facebook grupper men även via följa
 **OBS! Risk finns att gym saknas, då denna sida inte drivs av bottar utan spelares observationer**
 
 ## Stödjer i nuläget följande städer:
-* Lund
-* Malmö
-* Göteborg
-* Växjö
-* Landskrona
+* Lund [https://www.gymlund.tk/](https://www.gymlund.tk/)
+* Malmö [https://www.gymlund.tk/malmo.html](https://www.gymlund.tk/malmo.html)
+* Göteborg [https://www.gymlund.tk/gbg.html](https://www.gymlund.tk/gbg.html)
+* Växjö [https://www.gymlund.tk/vaxjo.html](https://www.gymlund.tk/vaxjo.html)
+* Landskrona [https://www.gymlund.tk/landskrona.html](https://www.gymlund.tk/landskrona.html)
 
 ## API för GymLund
 GymLund stödjer nu jsonp! Om du vill få information är det bara att skicka en "GET" request enligt följande:
