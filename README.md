@@ -18,7 +18,7 @@ Gymmens lokalisation hittar jag dels genom Facebook grupper men även via följa
 * Växjö
 * Landskrona
 
-## Hur kan jag använda datan?
+## API för GymLund
 GymLund stödjer nu jsonp! Om du vill få information är det bara att skicka en "GET" request enligt följande:
 ### Gym
 Följande parametrar tas mot:
