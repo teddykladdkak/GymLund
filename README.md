@@ -16,33 +16,52 @@ Gymmens lokalisation hittar jag dels genom Facebook grupper men även via följa
 * Malmö
 * Göteborg
 * Växjö
+* Landskrona
+
+## Hur kan jag använda datan?
+GymLund stödjer nu jsonp! Om du vill få information är det bara att skicka en "GET" request enligt följande:
+### Gym
+Följande parametrar tas mot:
+ID | Variabel | Förklaring
+rip | true / false | Om borttagna gym ska visas
+ex | true / false | Om bara ex-raid gym ska visas
+lat | num | Var du är i latitud
+* lon | num | Var du är i longitud
+todo | km / normal | Vilken ordning gymmen ska ha i listan. OBS om inte lat & lon är med kommer det automatiskt bli "normal"
+
+Använd följande variabel:
+```
+https://www.gymlund.tk/script/[area].json?[id]=[variabel]
+```
+Exempel:
+* [Bra ex-raid: https://www.gymlund.tk/script/gymlund.json?ex=true](https://www.gymlund.tk/script/gymlund.json?ex=true)
+* [Närmast: https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240)
+* [Bokstavsordning men med distans: https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240)
 
 ## Hur får jag GymLund till min stad?
-Lämna en pull request där du skickar "gym" och din stads namn med filformatet ".js". (Exempel gymlund.js)
+Lämna en pull request där du skickar "gym" och din stads namn med filformatet ".json". (Exempel gymlund.json)
 Strukturen är följande:
 ```javascript
-var gyms = [
+[
   {
-	  namn: '[Gymmets namn]',
-	  id: '',
-	  location: {
-		  longitud: '[longitude]',
-		  latitud: '[latitude]'
-	  },
-	  embed: '',
-	  exraid: [true eller false],
-	  rip: [true eller false]
+		"namn": "[Gymmets namn]",
+		"id": "",
+		"location": {
+			"lon": "[longitude]",
+			"lat": "[latitude]"
+		},
+		"exraid": [true eller false],
+		"rip": [true eller false]
   },{
-	  namn: 'The Ufo',            //Exempel
-	  id: '',
-	  location: {
-	  	longitud: 57.625,     //Exempel
-	  	latitud: 11.9         //Exempel
-  	},
-	  embed: '',
-	  exraid: false,              //Exempel om exraid gym är det true
-	  rip: false                  //Exempel true om gymmet blivit borttaget
+		"namn": "The Ufo",            //Exempel
+		"id": "",
+		"location": {
+			"lon": "57.625",     //Exempel
+			"lat": "11.9"         //Exempel
+	  	},
+		"exraid": false,              //Exempel om exraid gym är det true
+		"rip": false                  //Exempel true om gymmet blivit borttaget
   },
   ...
-];
+]
 ```
