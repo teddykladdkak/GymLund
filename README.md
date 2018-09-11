@@ -31,7 +31,6 @@ lat | nummer | Var du är i latitud
 lon | nummer | Var du är i longitud
 todo | "km" / "normal" | Vilken ordning gymmen ska ha i listan. OBS om inte lat & lon är med kommer det automatiskt bli "normal"
 question | sökord | Tar bort alla gym som inte innehåller sökningen. Om inga gym matchar retuneras false.
-url | url | Länk till screenshot av raidboss eller ägg, svarar med gymmets information, "base64" format fungerar också men är långsammare.
 
 Använd följande url struktur:
 ```

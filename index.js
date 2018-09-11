@@ -133,30 +133,15 @@ app.get('/script/*.json', function (req, res) {
 		}else{
 			res.jsonp(loadinfo);
 		};
-	}else if(!data.url){
+	}else{
 		var tosend = handleinformation(data, loadinfo);
 		if(tosend){
 			res.jsonp(tosend);
 		}else{
 			res.send('<h1>Något gick fel i ditt anrop.</h1><p>Se till att använda "?todo=" och efter normal eller km (ex. "?todo=km".</p><p>Ifall du använder "km" måste du även dela med dig av dina koordinater och lägga till dom efter ex. "?todo=km&lon=53.2031&lat=12.5642".</p>');
 		};
-	}else{
-		global['imgresultat'] = '';
-		readimg(data.url, 0, loadinfo)
-		clearInterval(working);
-		working = setInterval(function(){
-			if(global['imgresultat'] == ''){}else if(global['imgresultat'] == 'inget'){
-				res.jsonp([false]);
-			}else{
-				console.log(global['imgresultat']);
-				clearInterval(working);
-				res.jsonp(global['imgresultat']);
-			};
-		}, 1000);
 	};
 })
-var imgresultat = '';
-var working;
 //####################################################################
 // Slut json data
 //####################################################################
@@ -399,55 +384,4 @@ function deg2rad(deg) {
 };
 //####################################################################
 // Slut distans
-//####################################################################
-//####################################################################
-// Start img reader
-//####################################################################
-function readimg(url, num, loadinfo){
-	var imgdesaturate = 50 + Number(num);
-	var urlsplit = url.split('/');
-	var name = urlsplit[urlsplit.length - 1];
-	if(name.includes('?')){
-		var name = name.split('?')[0];
-	};
-	Jimp.read(url, function (err, image) {
-		if (err) throw err;
-		image.resize( 750, Jimp.AUTO);
-		image.crop( 150, 50, 600, 100 );
-		image.invert();
-		image.scan(0, 0, image.bitmap.width, image.bitmap.height, function(x, y, idx) {
-			var r = this.bitmap.data[idx + 0];
-			var g = this.bitmap.data[idx + 1];
-			var b = this.bitmap.data[idx + 2];
-			if(r <= imgdesaturate && g <= imgdesaturate && b <= imgdesaturate){}else{
-				this.bitmap.data[idx + 0] = 255;
-				this.bitmap.data[idx + 1] = 255;
-				this.bitmap.data[idx + 2] = 255;
-				this.bitmap.data[idx + 3] = 255;
-			};
-		});
-		image.write('img/' + name, function (err) {
-			fs.readFile('img/' + name, function(error, content) {
-				Tesseract.recognize(content, {
-					lang: 'swe'
-				})
-				.then(function(result){
-					var match = findmatch(result.text, loadinfo);
-					if(match.length == 0){
-						if(Number(num) <= 255){
-							var nynum = Number(num) + 5;
-							readimg(url, nynum, loadinfo)
-						}else{
-							global['imgresultat'] = 'inget';
-						};
-					}else{
-						global['imgresultat'] = match;
-					};
-				})
-			});
-		});
-	});
-};
-//####################################################################
-// Slut img reader
 //####################################################################
