@@ -1,5 +1,5 @@
 {
-  "name": "gymlund2",
+  "name": "gymlund",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,6 +11,8 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.3",
-    "spritesmith": "^3.3.1"
+    "spritesmith": "^3.3.1",
+    "tesseract.js": "^1.0.10",
+    "jimp": "^0.4.0"
   }
 }

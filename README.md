@@ -30,6 +30,8 @@ ex | true / false | Om bara ex-raid gym ska visas
 lat | nummer | Var du är i latitud
 lon | nummer | Var du är i longitud
 todo | "km" / "normal" | Vilken ordning gymmen ska ha i listan. OBS om inte lat & lon är med kommer det automatiskt bli "normal"
+question | sökord | Tar bort alla gym som inte innehåller sökningen. Om inga gym matchar retuneras false.
+url | url | Länk till screenshot av raidboss eller ägg, svarar med gymmets information, "base64" format fungerar också men är långsammare.
 
 Använd följande url struktur:
 ```
@@ -39,6 +41,7 @@ Exempel:
 * Bra ex-raid: [https://www.gymlund.tk/script/gymlund.json?ex=true](https://www.gymlund.tk/script/gymlund.json?ex=true)
 * Närmast: [https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240)
 * Bokstavsordning men med distans: [https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240)
+* Hittar gym som börjar med "Hal": [http://localhost:9615/script/gymlund.json?question=Hal](http://localhost:9615/script/gymlund.json?question=Hal)
 
 ### Pokémon information
 Följande parametrar tas mot:

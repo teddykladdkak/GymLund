@@ -4,6 +4,8 @@ const app = express()
 var fs = require('fs')
 var bodyParser = require('body-parser');
 var Spritesmith = require('spritesmith');
+var Jimp = require('jimp');
+var Tesseract = require('tesseract.js')
 
 // Gör att man kan läsa svar från klient med json
 app.use(bodyParser.json());
@@ -94,16 +96,9 @@ app.get(['/img/*-sprite.png', '/img/*-sprite.css'], function (req, res) {
 //####################################################################
 // Slut sprite skapare
 //####################################################################
+//####################################################################
 // Start json data
 //####################################################################
-//Kontrollerar ifall fil existerar
-function exists(path){
-	if (fs.existsSync(path)) {
-		return true;
-	}else{
-		return false;
-	};
-};
 app.get('/script/*.json', function (req, res) {
 	var data = req.query;
 	var id = req.params[0];
@@ -138,56 +133,89 @@ app.get('/script/*.json', function (req, res) {
 		}else{
 			res.jsonp(loadinfo);
 		};
-	}else{
-		if(data.rip == "false" || !data.rip){
-			var ripedit = [];
-			for (var i = 0; i < loadinfo.length; i++){
-				if(!loadinfo[i].rip){
-					ripedit.push(loadinfo[i]);
-				};
-			};
-			loadinfo = ripedit;
-		};
-		if(data.ex == "true"){
-			var exraidedit = [];
-			for (var i = 0; i < loadinfo.length; i++){
-				if(loadinfo[i].exraid){
-					exraidedit.push(loadinfo[i]);
-				};
-			};
-			loadinfo = exraidedit;
-		};
-		if(data.lat == '0' || data.lon == '0' || !data.lon || !data.lat){}else{
-			var gymbykm = [];
-			for (var i = 0; i < loadinfo.length; i++){
-				var km = Math.round(getDistanceFromLatLonInKm(loadinfo[i].location.lon,loadinfo[i].location.lat,data.lon,data.lat) * 10);
-				gymbykm.push(pad(km, 10) + '|||' + i);
-				loadinfo[i].distans = Number(km / 10);
-			};
-			gymbykm.sort();
-		};
-		if(data.todo == 'normal' || !data.todo || !data.lon || !data.lat){
-			var loadinfo = sortgymbyname(loadinfo);
-			res.jsonp(loadinfo);
-		}else if(data.todo == 'km'){
-			if(data.lat == '0' && data.lon == '0'){
-				var loadinfo = sortgymbyname(loadinfo);
-				res.jsonp(loadinfo);
-			}else{
-				var gymstoreturn = [];
-				for (var i = 0; i < gymbykm.length; i++){
-					var datasplit = gymbykm[i].split('|||');
-					gymstoreturn.push(loadinfo[datasplit[1]]);
-				};
-				res.jsonp(gymstoreturn);
-			};
+	}else if(!data.url){
+		var tosend = handleinformation(data, loadinfo);
+		if(tosend){
+			res.jsonp(tosend);
 		}else{
 			res.send('<h1>Något gick fel i ditt anrop.</h1><p>Se till att använda "?todo=" och efter normal eller km (ex. "?todo=km".</p><p>Ifall du använder "km" måste du även dela med dig av dina koordinater och lägga till dom efter ex. "?todo=km&lon=53.2031&lat=12.5642".</p>');
 		};
+	}else{
+		global['imgresultat'] = '';
+		readimg(data.url, 0, loadinfo)
+		clearInterval(working);
+		working = setInterval(function(){
+			if(global['imgresultat'] == ''){}else if(global['imgresultat'] == 'inget'){
+				res.jsonp([false]);
+			}else{
+				console.log(global['imgresultat']);
+				clearInterval(working);
+				res.jsonp(global['imgresultat']);
+			};
+		}, 1000);
 	};
 })
+var imgresultat = '';
+var working;
 //####################################################################
 // Slut json data
+//####################################################################
+//####################################################################
+// Start bearbetning av info
+//####################################################################
+function handleinformation(data, loadinfo){
+	if(!data.question){}else{
+		loadinfo = findmatch(data.question, loadinfo);
+	};
+	if(data.rip == "false" || !data.rip){
+		var ripedit = [];
+		for (var i = 0; i < loadinfo.length; i++){
+			if(!loadinfo[i].rip){
+				ripedit.push(loadinfo[i]);
+			};
+		};
+		loadinfo = ripedit;
+	};
+	if(data.ex == "true"){
+		var exraidedit = [];
+		for (var i = 0; i < loadinfo.length; i++){
+			if(loadinfo[i].exraid){
+				exraidedit.push(loadinfo[i]);
+			};
+		};
+		loadinfo = exraidedit;
+	};
+	if(data.lat == '0' || data.lon == '0' || !data.lon || !data.lat){}else{
+		var gymbykm = [];
+		for (var i = 0; i < loadinfo.length; i++){
+			var km = Math.round(getDistanceFromLatLonInKm(loadinfo[i].location.lon,loadinfo[i].location.lat,data.lon,data.lat) * 10);
+			gymbykm.push(pad(km, 10) + '|||' + i);
+			loadinfo[i].distans = Number(km / 10);
+		};
+		gymbykm.sort();
+	};
+	if(data.todo == 'normal' || !data.todo || !data.lon || !data.lat){
+		var loadinfo = sortgymbyname(loadinfo);
+		return loadinfo;
+	}else if(data.todo == 'km'){
+		if(data.lat == '0' && data.lon == '0'){
+			var loadinfo = sortgymbyname(loadinfo);
+			return loadinfo;
+		}else{
+			var gymstoreturn = [];
+			for (var i = 0; i < gymbykm.length; i++){
+				var datasplit = gymbykm[i].split('|||');
+				gymstoreturn.push(loadinfo[datasplit[1]]);
+			};
+			return gymstoreturn;
+		};
+	}else{
+		return false;
+	};
+};
+//####################################################################
+// Slut bearbetning av info
+//####################################################################
 //####################################################################
 // Start renderer
 //####################################################################
@@ -214,6 +242,7 @@ app.engine('html', function (filePath, options, callback) {
 }).set('views', './views').set('view engine', 'html').use(express.static('public'))
 //####################################################################
 // Slut renderer
+//####################################################################
 //####################################################################
 // Start infångare av html
 //####################################################################
@@ -249,6 +278,14 @@ app.listen(param.port, () => console.log('Lyssnar på port ' + param.port + '!')
 //####################################################################
 // Slut infångare av html
 //####################################################################
+//####################################################################
+// Start kontrollerar ifall fil existerar
+//####################################################################
+function exists(path){if(fs.existsSync(path)){return true;}else{return false;};};
+//####################################################################
+// Slut kontrollerar ifall fil existerar
+//####################################################################
+//####################################################################
 // Start skapa html för pokenamn
 //####################################################################
 function makepokemon(){
@@ -262,6 +299,24 @@ function makepokemon(){
 };
 //####################################################################
 // Slut skapa html för pokenamn
+//####################################################################
+//####################################################################
+// Start leta upp gymnamn matchningar
+//####################################################################
+function findmatch(wordtoserach, loadinfo){
+	var findgyms = [];
+	for (var i = loadinfo.length - 1; i >= 0; i--) {
+		if(wordtoserach.toLowerCase().includes(loadinfo[i].namn.toLowerCase())){
+			findgyms.push(loadinfo[i]);
+		}else if(loadinfo[i].namn.toLowerCase().includes(wordtoserach.toLowerCase())){
+			findgyms.push(loadinfo[i]);
+		};
+	};
+	return findgyms;
+};
+//####################################################################
+// Slut leta upp gymnamn matchningar
+//####################################################################
 //####################################################################
 // Start sortera gym
 //####################################################################
@@ -281,6 +336,9 @@ function sortgymbyname(loadinfo){
 	};
 	return elementstorender;
 }
+//####################################################################
+// Slut sortera gym
+//####################################################################
 //####################################################################
 // Start HTML för gymlund
 //####################################################################
@@ -318,6 +376,7 @@ function makelist(id){
 //####################################################################
 // Slut HTML för gymlund
 //####################################################################
+//####################################################################
 // Start distans
 //####################################################################
 function pad (str, max) {
@@ -340,4 +399,55 @@ function deg2rad(deg) {
 };
 //####################################################################
 // Slut distans
+//####################################################################
+//####################################################################
+// Start img reader
+//####################################################################
+function readimg(url, num, loadinfo){
+	var imgdesaturate = 50 + Number(num);
+	var urlsplit = url.split('/');
+	var name = urlsplit[urlsplit.length - 1];
+	if(name.includes('?')){
+		var name = name.split('?')[0];
+	};
+	Jimp.read(url, function (err, image) {
+		if (err) throw err;
+		image.resize( 750, Jimp.AUTO);
+		image.crop( 150, 50, 600, 100 );
+		image.invert();
+		image.scan(0, 0, image.bitmap.width, image.bitmap.height, function(x, y, idx) {
+			var r = this.bitmap.data[idx + 0];
+			var g = this.bitmap.data[idx + 1];
+			var b = this.bitmap.data[idx + 2];
+			if(r <= imgdesaturate && g <= imgdesaturate && b <= imgdesaturate){}else{
+				this.bitmap.data[idx + 0] = 255;
+				this.bitmap.data[idx + 1] = 255;
+				this.bitmap.data[idx + 2] = 255;
+				this.bitmap.data[idx + 3] = 255;
+			};
+		});
+		image.write('img/' + name, function (err) {
+			fs.readFile('img/' + name, function(error, content) {
+				Tesseract.recognize(content, {
+					lang: 'swe'
+				})
+				.then(function(result){
+					var match = findmatch(result.text, loadinfo);
+					if(match.length == 0){
+						if(Number(num) <= 255){
+							var nynum = Number(num) + 5;
+							readimg(url, nynum, loadinfo)
+						}else{
+							global['imgresultat'] = 'inget';
+						};
+					}else{
+						global['imgresultat'] = match;
+					};
+				})
+			});
+		});
+	});
+};
+//####################################################################
+// Slut img reader
 //####################################################################
