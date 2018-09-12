@@ -6,6 +6,7 @@ var bodyParser = require('body-parser');
 var Spritesmith = require('spritesmith');
 var Jimp = require('jimp');
 var Tesseract = require('tesseract.js')
+const request = require('request');
 
 // Gör att man kan läsa svar från klient med json
 app.use(bodyParser.json());
@@ -40,9 +41,18 @@ var param = {
 	],
 	location: {
 		script: '/public/script/',
-		img: 'public/img/'
+		img: 'public/img/',
+		facebook: __dirname + '/facebook.json'
 	},
 	antalpokemon: 386
+};
+
+if(!exists(param.location.facebook)){
+	var facebook = {"FACEBOOK_ACCESS_TOKEN": "[Place for facebook access_token]", "FACEBOOK_VERIFY_TOKEN": "[Place for facebook verify_token]"};
+	fs.writeFileSync(param.location.facebook, JSON.stringify(facebook, null, ' '));
+	console.log('Iställningar för Facebook bot hittas inte. Ändra tokens i "' + param.location.facebook + '"');
+}else{
+	var facebook = JSON.parse(fs.readFileSync(param.location.facebook, 'utf8'));	
 };
 
 function iIndex(id){
@@ -95,6 +105,38 @@ app.get(['/img/*-sprite.png', '/img/*-sprite.css'], function (req, res) {
 });
 //####################################################################
 // Slut sprite skapare
+//####################################################################
+//####################################################################
+// Start facebook bot
+//####################################################################
+app.get('/facebook*', function (req, res) {
+	const hubChallenge = req.query['hub.challenge'];
+	const hubMode = req.query['hub.mode'];
+	const verifyTokenMatches = (req.query['hub.verify_token'] === facebook.FACEBOOK_VERIFY_TOKEN);
+	if (hubMode && verifyTokenMatches) {
+		res.status(200).send(hubChallenge);
+	} else {
+		res.status(403).end();
+	};
+})
+app.post('/facebook*', function(req, res) {
+	var loadinfo = JSON.parse(fs.readFileSync(__dirname + param.location.script + 'gymlund.json', 'utf8'));
+	if (req.body.object === 'page') {
+		console.log(req.body.entry);
+		req.body.entry.forEach(entry => {
+			entry.messaging.forEach(event => {
+				if (event.message && event.message.text) {
+					processMessage(event, loadinfo);
+				}else if (event.message && event.message.attachments) {
+					processImage(event, 0, loadinfo);
+				};
+			});
+		});
+	res.status(200).end();
+	}
+});
+//####################################################################
+// Slut facebook bot
 //####################################################################
 //####################################################################
 // Start json data
@@ -150,7 +192,7 @@ app.get('/script/*.json', function (req, res) {
 //####################################################################
 function handleinformation(data, loadinfo){
 	if(!data.question){}else{
-		loadinfo = findmatch(data.question, loadinfo);
+		loadinfo = findmatch(data.question, loadinfo, 'includes');
 	};
 	if(data.rip == "false" || !data.rip){
 		var ripedit = [];
@@ -288,13 +330,21 @@ function makepokemon(){
 //####################################################################
 // Start leta upp gymnamn matchningar
 //####################################################################
-function findmatch(wordtoserach, loadinfo){
+function findmatch(wordtoserach, loadinfo, todo){
 	var findgyms = [];
 	for (var i = loadinfo.length - 1; i >= 0; i--) {
-		if(wordtoserach.toLowerCase().includes(loadinfo[i].namn.toLowerCase())){
-			findgyms.push(loadinfo[i]);
-		}else if(loadinfo[i].namn.toLowerCase().includes(wordtoserach.toLowerCase())){
-			findgyms.push(loadinfo[i]);
+		if(todo == 'includes'){
+			if(wordtoserach.toLowerCase().includes(loadinfo[i].namn.toLowerCase())){
+				findgyms.push(loadinfo[i]);
+			}else if(loadinfo[i].namn.toLowerCase().includes(wordtoserach.toLowerCase())){
+				findgyms.push(loadinfo[i]);
+			};
+		}else if(todo == 'startswith'){
+			if(wordtoserach.toLowerCase().startsWith(loadinfo[i].namn.toLowerCase())){
+				findgyms.push(loadinfo[i]);
+			}else if(loadinfo[i].namn.toLowerCase().startsWith(wordtoserach.toLowerCase())){
+				findgyms.push(loadinfo[i]);
+			};
 		};
 	};
 	return findgyms;
@@ -379,9 +429,144 @@ function getDistanceFromLatLonInKm(lon2,lat2,lon1,lat1) {
 		return d;
 	};
 };
-function deg2rad(deg) {
-	return deg * (Math.PI/180)
-};
+function deg2rad(deg) {return deg * (Math.PI/180)};
 //####################################################################
 // Slut distans
+//####################################################################
+//####################################################################
+// Start facebook bot work
+//####################################################################
+function sendTextMessage(senderId, text) {
+	request({
+		url: 'https://graph.facebook.com/v2.6/me/messages',
+		qs: { access_token: facebook.FACEBOOK_ACCESS_TOKEN },
+		method: 'POST',
+		json: {
+			recipient: { id: senderId },
+			message: { text },
+		}
+	});
+};
+var storedval = [];
+function processMessage(event, loadinfo){
+	console.log(event);
+	const senderId = event.sender.id;
+	var message = event.message.text;
+	var checkforcommand = message.split('');
+	if(checkforcommand.length == 2){
+		if(!global.storedval || global.storedval.length == 0){
+			console.log('Hittade inget som är sparat...');
+		}else{
+			if(checkforcommand[0] == '!'){
+				var number = parseInt(checkforcommand[1]);
+				if(number == ''){}else{
+					var index = (number - 1);
+					console.log(index);
+					var gyminfo = global.storedval[index];
+					console.log(gyminfo);
+					if(gyminfo.exraid){
+						var ps = ' (EX-raid gym!)';
+					}else{
+						var ps = '';
+					};
+					var messagetosend = '"' + gyminfo.namn + '"' + ps + ' hittar du med följande länk: http://maps.google.com/?q=' + gyminfo.location.longitud + ',' + gyminfo.location.latitud;
+					sendTextMessage(senderId, messagetosend);
+				};
+			};
+		};
+	}else{
+		var messagesplit = message.split('"');
+		var messagetosend = 'false';
+		var messagearray = [];
+		if(messagesplit.length == 3){
+			var messagearray = findmatch(wordtoserach, loadinfo, 'startswith');
+			/*for (var a = gyms.length - 1; a >= 0; a--) {
+				if(gyms[a].namn.toLowerCase().startsWith(messagesplit[1].toLowerCase())){
+					console.log(gyms[a].namn)
+					messagearray.push(gyms[a]);
+					//messagetosend = 'Ursäkta om jag tränger mig på, men kunde inte missa att höra att ni pratar om ' + gyms[a].namn + '. Om du inte vet var den finns använd följande länk: http://maps.google.com/?q=' + gyms[a].location.longitud + ',' + gyms[a].location.latitud;
+				};
+			}*/
+		};
+		if(messagearray.length == 1){
+			if(messagearray[0].exraid){
+				var ps = ' (EX-raid gym!)';
+			}else{
+				var ps = '';
+			};
+			messagetosend = 'Ursäkta om jag tränger mig på, men kunde inte missa att höra att ni pratar om "' + messagearray[0].namn + '"' + ps + '. Om du inte vet var den finns använd följande länk: http://maps.google.com/?q=' + messagearray[0].location.longitud + ',' + messagearray[0].location.latitud;
+		}else if(messagearray.length == 0){
+
+		}else{
+			var questiontext = '';
+			global.storedval = messagearray;
+			for (var i = 0; i < messagearray.length; i++){
+				var questiontext = questiontext + '\n' + (i + 1) + '. ' + messagearray[i].namn;
+			}
+			messagetosend = 'Ursäkta om jag tränger mig på, men kunde inte missa att höra att ni pratar om gym. Vilken av följande gym pratar ni om?' + questiontext + '\nOm du vill veta var gymmet är skriv då "!" och nummer (exempel !1).';
+		}
+		if(messagetosend == 'false'){}else{
+			sendTextMessage(senderId, messagetosend);
+		};
+		console.log('Text: ' + message + ' (' + senderId + ')');
+	};
+};
+function processImage(event, num, loadinfo){
+	const url = event.message.attachments
+	const senderId = event.sender.id;
+	var imgdesaturate = 50 + Number(num);
+	var urlsplit = url.split('/');
+	var name = urlsplit[urlsplit.length - 1];
+	if(name.includes('?')){
+		var name = name.split('?')[0];
+	};
+	Jimp.read(url, function (err, image) {
+		if (err) throw err;
+		image.resize( 750, Jimp.AUTO);
+		image.crop( 150, 50, 600, 100 );
+		image.invert();
+		image.scan(0, 0, image.bitmap.width, image.bitmap.height, function(x, y, idx) {
+			var r = this.bitmap.data[idx + 0];
+			var g = this.bitmap.data[idx + 1];
+			var b = this.bitmap.data[idx + 2];
+			if(r <= imgdesaturate && g <= imgdesaturate && b <= imgdesaturate){}else{
+				this.bitmap.data[idx + 0] = 255;
+				this.bitmap.data[idx + 1] = 255;
+				this.bitmap.data[idx + 2] = 255;
+				this.bitmap.data[idx + 3] = 255;
+			};
+		});
+		image.write('facebookimg/' + name, function (err) {
+			fs.readFile('facebookimg/' + name, function(error, content) {
+				Tesseract.recognize(content, {
+					lang: 'swe'
+				})
+				.then(function(result){
+					var find = findmatch(wordtoserach, loadinfo, 'includes');
+					if(find.length == 1){
+						console.log(result.text);
+						console.log(find)
+						if(find[0].exraid){
+							var ps = ' (EX-raid gym!)';
+						}else{
+							var ps = '';
+						};
+						var messagetosend = 'Ursäkta om jag tränger mig på, men kunde inte missa att höra att ni pratar om "' + find[0].namn + '"' + ps + '. Om du inte vet var den finns använd följande länk: http://maps.google.com/?q=' + find[0].location.longitud + ',' + find[0].location.latitud;
+						sendTextMessage(senderId, messagetosend);
+					}else{
+						if(Number(num) <= 255){
+							var nynum = Number(num) + 5;
+							console.log('Kunde inte bestämma mig! Ändrar desat från ' + (50 + Number(num)) + ' till ' + (50 + nynum) + '.');
+							processImage(event, nynum);
+						}else{
+							console.log('Kunde tyvärr inte hitta en matchning...');
+						};
+					};
+				})
+			});
+		});
+	});
+};
+//####################################################################
+// Slut facebook bot work
 //####################################################################
