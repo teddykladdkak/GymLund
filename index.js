@@ -42,7 +42,8 @@ var param = {
 	location: {
 		script: '/public/script/',
 		img: 'public/img/',
-		facebook: __dirname + '/facebook.json'
+		facebook: __dirname + '/facebook.json',
+		facebookimg 'facebookimg/'
 	},
 	antalpokemon: 386
 };
@@ -536,8 +537,8 @@ function processImage(event, num, loadinfo){
 				this.bitmap.data[idx + 3] = 255;
 			};
 		});
-		image.write('facebookimg/' + name, function (err) {
-			fs.readFile('facebookimg/' + name, function(error, content) {
+		image.write(param.location + name, function (err) {
+			fs.readFile(param.location + name, function(error, content) {
 				Tesseract.recognize(content, {
 					lang: 'swe'
 				})
