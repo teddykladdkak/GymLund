@@ -8,23 +8,36 @@ body {
 	margin-top: 0px;
 	margin-bottom: 0px;
 }
-table, td {
+.table {
+	max-width: 100%;
+	display: table;
+}
+.tr {
+	display: table-row;
+}
+.td {
+	display: table-cell;
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	hyphens: auto;
+}
+.table, .td, table, td {
 	border-collapse: collapse;
 	font-size: 1.2em;
 	vertical-align: middle;
 }
-td:nth-child(2) {
+.td:nth-child(2), td:nth-child(2) {
 	width: 100%;
-	padding-right: 38px;
+	padding-right: 10px;
 }
-tr:nth-child(odd) {
+.tr:nth-child(odd), tr:nth-child(odd) {
 	background-color: lightgray;
 }
-table {
+.table, table {
 	width: 100%;
 	border-top: solid #000 4px;
 }
-table tr {
+.table .tr, table tr {
 	cursor:pointer;
 }
 #footer {

@@ -60,15 +60,16 @@ function andralista(){
 		xmlhttp.onreadystatechange = function() {
 			if (this.readyState == 4 && this.status == 200) {
 				var data = JSON.parse(this.responseText);
-				var wrapper = document.getElementById('wrapper').getElementsByTagName('tbody')[0];
+				var wrapper = document.getElementById('wrapper');
 				removechilds(wrapper);
 				for (var i = 0; i < data.length; i++){
-					var line = document.createElement('tr');
+					var line = document.createElement('div');
 						line.setAttribute('onclick', 'window.open("http://maps.google.com/?q=' + data[i].location.lat + ',' + data[i].location.lon + '")');
 						line.setAttribute('data-lon', data[i].location.lon);
 						line.setAttribute('data-lat', data[i].location.lat);
-						line.setAttribute('class', data[i].namn.charAt(0).toUpperCase());
-						var iconbox = document.createElement('td');
+						line.setAttribute('class', 'tr ' + data[i].namn.charAt(0).toUpperCase());
+						var iconbox = document.createElement('div');
+							iconbox.setAttribute('class', 'td');
 							if(!data[i].id){
 								var gymimg = document.createElement('i');
 									gymimg.setAttribute('class', 'sprite sprite-okand_mini');
@@ -78,7 +79,8 @@ function andralista(){
 							};
 							iconbox.appendChild(gymimg);
 						line.appendChild(iconbox);
-						var textbox = document.createElement('td');
+						var textbox = document.createElement('div');
+							textbox.setAttribute('class', 'td');
 							var linktext = document.createTextNode(data[i].namn);
 							textbox.appendChild(linktext);
 							if(!data[i].distans){}else{
@@ -86,8 +88,8 @@ function andralista(){
 								textbox.appendChild(document.createTextNode('(' + data[i].distans + ' km)'));
 							};
 						line.appendChild(textbox);
-						var exraidwrapper = document.createElement('td');
-							exraidwrapper.setAttribute('class', 'extd');
+						var exraidwrapper = document.createElement('div');
+							exraidwrapper.setAttribute('class', 'td extd');
 						if(!data[i].exraid){}else{
 							var exraidimg = document.createElement('span');
 								var exicon = document.createElement('i');
@@ -138,12 +140,17 @@ function getTopElement(){
     scrollTimer = window.setTimeout("scrollFinished()", 100);
 };
 function scrollFinished() {
-    var alllines = document.getElementById('wrapper').getElementsByTagName('tr');
+    var alllines = document.getElementById('wrapper').getElementsByClassName('tr');
+    var done = 'false';
 	for (var i = 0; i < alllines.length; i++){
 		if(isVisible(alllines[i])){
-			marklistelem(alllines[i].getAttribute('class'))
+			marklistelem(alllines[i].getAttribute('class').replace('tr ', ''));
+			done = 'true';
 			break;
 		};
+	};
+	if(done == 'false'){
+		marklistelem('A');
 	};
 };
 function marklistelem(letter){
@@ -174,6 +181,7 @@ function isVisible(elem) {
 	if (elemCenter.y < 0) return false;
 	if (elemCenter.y > (document.documentElement.clientHeight || window.innerHeight)) return false;
 	let pointContainer = document.elementFromPoint(elemCenter.x, elemCenter.y);
+	if(!pointContainer) return false;
 	do {
 	    if (pointContainer === elem) return true;
 	} while (pointContainer = pointContainer.parentNode);

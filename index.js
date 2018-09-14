@@ -43,7 +43,7 @@ var param = {
 		script: '/public/script/',
 		img: 'public/img/',
 		facebook: __dirname + '/facebook.json',
-		facebookimg 'facebookimg/'
+		facebookimg: 'facebookimg/'
 	},
 	antalpokemon: 386
 };
@@ -388,11 +388,13 @@ function makelist(id){
 		if(elementstorender[i].id == ''){
 			elementstorender[i].id = 'okand_mini';
 		};
-		listhtml = listhtml + '<tr onclick="window.open(&quot;http://maps.google.com/?q=' + elementstorender[i].location.lat + ',' + elementstorender[i].location.lon + '&quot;)" data-lon="' + elementstorender[i].location.lon + '" data-lat="' + elementstorender[i].location.lat + '" class="' + elementstorender[i].namn.charAt(0).toUpperCase() + '"><td><i class="sprite sprite-' + elementstorender[i].id + '"></i></td><td>' + elementstorender[i].namn + '</td><td class="extd">';
+		listhtml = listhtml + '<div onclick="window.open(&quot;http://maps.google.com/?q=' + elementstorender[i].location.lat + ',' + elementstorender[i].location.lon + '&quot;)" data-lon="' + elementstorender[i].location.lon + '" data-lat="' + elementstorender[i].location.lat + '" class="tr ' + elementstorender[i].namn.charAt(0).toUpperCase() + '"><div class="td"><i class="sprite sprite-' + elementstorender[i].id + '"></i></div><div class="td">' + elementstorender[i].namn + '</div><div class="td extd">';
 		if(elementstorender[i].exraid){
-			listhtml = listhtml + '<span height="30px" style="padding-right: 35px;"><i class="sprite sprite-exraid-confirmed"></i></span>';
+			listhtml = listhtml + '<span height="30px" style="padding-right: 35px;"><i class="sprite sprite-exraid-confirmed"></i></div>';
+		}else{
+			listhtml = listhtml + '</div>';
 		}
-		listhtml = listhtml + '</td></tr>';
+		listhtml = listhtml + '</div>';
 		if(menuletters.toString().includes(elementstorender[i].namn.charAt(0).toUpperCase())){}else{
 			menuletters.push(elementstorender[i].namn.charAt(0).toUpperCase());
 		};
