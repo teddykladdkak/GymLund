@@ -1,5 +1,14 @@
 [
 {
+	"namn": "Råbylunds Idrottsplats",
+	"id": "",
+	"location": {
+		"lat": "55.690485",
+		"lon": "13.228377"
+	},
+	"exraid": false,
+	"rip": false
+},{
 	"namn": "Papegojelyckans lekplats",
 	"id": "",
 	"location": {
