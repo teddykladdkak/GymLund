@@ -522,8 +522,8 @@
 	"exraid": false,
 	"rip": false
 },{
-	"namn": "Fontänen Bakom Stationen",
-	"id": "font_nen-bakom-stationen",
+	"namn": "Vattenkatedral",
+	"id": "vattenkatedral",
 	"location": {
 		"lat": "55.705228",
 		"lon": "13.1854690"
