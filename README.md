@@ -49,6 +49,7 @@ ID | Variabel | Förklaring
 --- | --- | ---
 to | "all" / nummer | Alla Pokémon eller till satt nummer
 spec | nummer | Enbart info från specifik pokemon. Om Pokémonen har fler versioner (Alolan) behöver nummer avslutas med "a" eller "b"
+fast & charge | text | Attackernas namn
 
 Använd följande url struktur
 ```
@@ -60,6 +61,7 @@ Exempel:
 * Första 20 Pokémon: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=20](https://www.gymlund.tk/script/pokedata/pokemon.json?to=20)
 * Information om "Ninetales" (Normal) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a)
 * Information om "Ninetales" (Alolan) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b)
+* Kontrollerar "Bulbasaurs" moveset: [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip)
 
 ## Hur får jag GymLund till min stad?
 Lämna en pull request där du skickar "gym" och din stads namn med filformatet ".json". (Exempel gymlund.json)

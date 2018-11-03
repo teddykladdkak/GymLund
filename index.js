@@ -43,7 +43,8 @@ var param = {
 		script: '/public/script/',
 		img: 'public/img/',
 		facebook: __dirname + '/facebook.json',
-		facebookimg: 'facebookimg/'
+		facebookimg: 'facebookimg/',
+		mainmoves: '/public/script/pokedata/mainmoves.js'
 	},
 	antalpokemon: 386
 };
@@ -165,11 +166,58 @@ app.get('/script/*.json', function (req, res) {
 			};
 			res.jsonp(tosend);
 		}else if(Number(data.spec.replace(/\D/g,'')) <= loadinfo.length){
-			var tosend = false;
-			for (var i = 0; i < loadinfo.length; i++){
-				if(data.spec == loadinfo[i].nummer){
-					var tosend = loadinfo[i];
-					break;
+			if(!data.charge || !data.fast){
+				var tosend = false;
+				for (var i = 0; i < loadinfo.length; i++){
+					if(data.spec == loadinfo[i].nummer){
+						var tosend = loadinfo[i];
+						break;
+					};
+				};
+			}else{
+				var tosend = 'Kunde inte genomföra processen.';
+				for (var a = 0; a < loadinfo.length; a++){
+					if(data.spec == loadinfo[a].nummer){
+						var offenseprc = false;
+						for (var i = loadinfo[a].offense.length - 1; i >= 0; i--) {
+							if(loadinfo[a].offense[i][0] == data.fast){
+								if(loadinfo[a].offense[i][1] == data.charge){
+									offenseprc = loadinfo[a].offense[i][2];
+								};
+							};
+						};
+						var defenseprc = false;
+						for (var i = loadinfo[a].defense.length - 1; i >= 0; i--) {
+							if(loadinfo[a].defense[i][0] == data.fast){
+								if(loadinfo[a].defense[i][1] == data.charge){
+									defenseprc = loadinfo[a].defense[i][2];
+								};
+							};
+						};
+						var resultat = '';
+						if(offenseprc == false || defenseprc == false){
+							resultat = 'Hittade inte attacker';
+						}else{
+							eval(fs.readFileSync(__dirname + param.location.mainmoves)+'');
+							var energi = '?';
+							for (var i = mainmoves.length - 1; i >= 0; i--) {
+								if(mainmoves[i].namn == data.charge){
+									energi = mainmoves[i].energi;
+									break;
+								};
+							};
+							if(offenseprc == defenseprc){
+								resultat = 'B' + pad(offenseprc, 3);
+							}else if(offenseprc >= defenseprc){
+								resultat = 'A' + pad(offenseprc, 3);
+							}else if(offenseprc <= defenseprc){
+								resultat = 'D' + pad(defenseprc, 3);
+							};
+							resultat = resultat + '(' + energi + ')';
+						};
+						tosend = resultat;
+						break;
+					};
 				};
 			};
 			res.jsonp(tosend);
