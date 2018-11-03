@@ -48,6 +48,7 @@ Följande parametrar tas mot:
 ID | Variabel | Förklaring
 --- | --- | ---
 to | "all" / nummer | Alla Pokémon eller till satt nummer
+from | nummer | Begränsar ovan genom att hoppa över till satt nummer
 spec | nummer | Enbart info från specifik pokemon. Om Pokémonen har fler versioner (Alolan) behöver nummer avslutas med "a" eller "b"
 fast & charge | text | Attackernas namn
 
@@ -59,6 +60,7 @@ https://www.gymlund.tk/script/pokedata/pokemon.json?[id]=[variabel]
 Exempel:
 * Alla Pokémon!: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=all](https://www.gymlund.tk/script/pokedata/pokemon.json?to=all)
 * Första 20 Pokémon: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=20](https://www.gymlund.tk/script/pokedata/pokemon.json?to=20)
+* Pokémon mellan 18 och 20: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=20](https://www.gymlund.tk/script/pokedata/pokemon.json?to=20&from=18)
 * Information om "Ninetales" (Normal) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a)
 * Information om "Ninetales" (Alolan) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b)
 * Kontrollerar "Bulbasaurs" moveset: [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip)
