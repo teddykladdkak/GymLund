@@ -161,6 +161,9 @@ app.get('/script/*.json', function (req, res) {
 				var start = 0;
 			}else{
 				var start = Number(data.from) - 1;
+				if(start <= 0 || !start){
+					start = 0;
+				};
 			};
 			for (var i = (0 + start); i < loadinfo.length; i++){
 				if(Number(data.to) >= Number(loadinfo[i].nummer.replace(/\D/g,''))){
