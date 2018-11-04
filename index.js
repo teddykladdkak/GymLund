@@ -157,20 +157,24 @@ app.get('/script/*.json', function (req, res) {
 			res.jsonp(loadinfo);
 		}else if(Number(data.to) <= loadinfo.length){
 			var tosend = [];
+			console.log(data.from)
 			if(!data.from){
-				var start = 0;
+				var start = 1;
 			}else{
-				var start = Number(data.from) - 1;
+				var start = Number(data.from);
 				if(start <= 0 || !start){
-					start = 0;
+					start = 1;
 				};
 			};
-			for (var i = (0 + start); i < loadinfo.length; i++){
-				if(Number(data.to) >= Number(loadinfo[i].nummer.replace(/\D/g,''))){
-					tosend.push(loadinfo[i]);
-				}else{
-					break;
-				}
+			console.log(start);
+			for (var i = 0; i < loadinfo.length - start; i++){
+				if(Number(data.from) <= Number(loadinfo[i].nummer.replace(/\D/g,''))){
+					if(Number(data.to) >= Number(loadinfo[i].nummer.replace(/\D/g,''))){
+						tosend.push(loadinfo[i]);
+					}else{
+						break;
+					};
+				};
 			};
 			res.jsonp(tosend);
 		}else if(Number(data.spec.replace(/\D/g,'')) <= loadinfo.length){
