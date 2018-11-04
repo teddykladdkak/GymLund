@@ -157,7 +157,6 @@ app.get('/script/*.json', function (req, res) {
 			res.jsonp(loadinfo);
 		}else if(Number(data.to) <= loadinfo.length){
 			var tosend = [];
-			console.log(data.from)
 			if(!data.from){
 				var start = 1;
 			}else{
@@ -166,7 +165,6 @@ app.get('/script/*.json', function (req, res) {
 					start = 1;
 				};
 			};
-			console.log(start);
 			for (var i = 0; i < loadinfo.length - start; i++){
 				if(Number(data.from) <= Number(loadinfo[i].nummer.replace(/\D/g,''))){
 					if(Number(data.to) >= Number(loadinfo[i].nummer.replace(/\D/g,''))){
