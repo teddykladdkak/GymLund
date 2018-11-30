@@ -1,5 +1,13 @@
-[
-{
+[{
+	"namn": "Planetstaden Playground",
+	"id": "",
+	"location": {
+		"lat": "55.697775",
+		"lon": "13.212784"
+	},
+	"exraid": false,
+	"rip": false
+},{
 	"namn": "Råbylunds Idrottsplats",
 	"id": "",
 	"location": {
