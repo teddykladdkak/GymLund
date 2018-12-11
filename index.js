@@ -313,6 +313,8 @@ app.engine('html', function (filePath, options, callback) {
 				.replace(/#lank#/g, options.lank)
 				.replace(/#id#/g, options.rubrik.toLowerCase())
 				.replace(/#pokemonhtml#/g, makepokemon())
+		}else if(options.id == 'tournament'){
+			var rendered = content.toString();
 		}else{
 			var html = makelist(options.id);
 			var rendered = content.toString()
@@ -347,6 +349,13 @@ app.get(['/', '/*.html'], function (req, res) {
 			lank: 'https://gymlund.tk/poketime.html'
 		};
 		res.render('poketime', options);
+	}else if(req.params['0'] == 'tournament'){
+		var options = {
+			rubrik: 'PoGo Tournament',
+			id: 'tournament',
+			lank: 'https://gymlund.tk/tournament.html'
+		};
+		res.render('tournament', options);
 	}else{
 		if(req.originalUrl == '/' || req.params['0'] == 'index'){
 			var options = param.area[iIndex('gymlund')];	
@@ -360,9 +369,35 @@ app.get(['/', '/*.html'], function (req, res) {
 		};
 	};
 })
-app.listen(param.port, () => console.log('Lyssnar på port ' + param.port + '!'))
+//app.use(express.static('public'))
+//app.listen(param.port, () => console.log('Lyssnar på port ' + param.port + '!'))
 //####################################################################
 // Slut infångare av html
+//####################################################################
+//####################################################################
+// Start turnering
+//####################################################################
+var anmalda = [];
+var server = require('http').Server(app);
+var io = require('socket.io')(server);
+	io.sockets.on('connection', function (socket, username) {
+		socket.emit('laggtillanv', anmalda);
+		socket.on('anmal', function (data){
+			anmalda.push(data.toLowerCase() + '####' + data);
+			anmalda.sort();
+			socket.emit('laggtillanv', anmalda);
+			socket.broadcast.emit('laggtillanv', anmalda);
+		});
+	});
+//####################################################################
+// Slut turnering
+//####################################################################
+//####################################################################
+// Start Starta server
+//####################################################################
+server.listen(param.port, () => console.log('Lyssnar på port ' + param.port + '!'))
+//####################################################################
+// Slut Starta server
 //####################################################################
 //####################################################################
 // Start kontrollerar ifall fil existerar

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tournament</title>
+</head>
+<body>
+	<input type="text" id="anv"><input type="button" value="Anmäl!" onclick="anmal();">
+	<table><tbody id="anmalda"></tbody></table>
+<script src="script/socket.io.js"></script>
+<script type="text/javascript">
+	var geturl = window.location.href.replace('http://', '').replace('https://', '').split('/')[0];
+	var socket = io.connect(geturl);
+	socket.on('laggtillanv', function (data) {
+		console.log(data);
+		var wrapper = document.getElementById('anmalda');
+			removechilds(wrapper);
+		for (var i = 0; i < data.length; i++){
+			var tr = document.createElement('tr');
+				var td = document.createElement('td');
+					var anv = document.createTextNode(data[i].split('####')[1])
+					td.appendChild(anv);
+				tr.appendChild(td);
+			wrapper.appendChild(tr);
+		};
+	});
+	function removechilds(parent){
+		if(parent.hasChildNodes()){
+			while (parent.hasChildNodes()) {
+				parent.removeChild(parent.firstChild);
+			};
+		};
+	};
+	function anmal(){
+		var anv = document.getElementById('anv');
+		if(!anv.value || anv.value == ''){}else{
+			socket.emit('anmal', anv.value);
+		};
+		anv.value = '';
+	};
+</script>
+</body>
+</html>
