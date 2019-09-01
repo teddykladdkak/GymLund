@@ -1,6 +1,6 @@
-# GymLund.tk
+# GymLund.teddyprojekt.se
 ## Vad är detta?
-Detta projektet började med att jag själv ville besöka alla Pokémon Go gymmen i min stad. För detta gjorde jag en lista som gick att checka av. Under denna perioden implementerades även Gym Badges i Pokémon Go, så lade till dem på sidan. I olika forum jag deltog i var det ständigt användare som frågade var gymmet befann sig. Jag löste problemet genom att göra lite justeringar och sedan blev GymLund.tk det den är idag!
+Detta projektet började med att jag själv ville besöka alla Pokémon Go gymmen i min stad. För detta gjorde jag en lista som gick att checka av. Under denna perioden implementerades även Gym Badges i Pokémon Go, så lade till dem på sidan. I olika forum jag deltog i var det ständigt användare som frågade var gymmet befann sig. Jag löste problemet genom att göra lite justeringar och sedan blev GymLund.teddyprojekt.se det den är idag!
 
 ## Var kommer informationen ifrån?
 Alla bilder från Gym Badges är från mitt konto. Visas en gymbadge med ett frågetecken innebär det att jag hört att det ska finnas ett gym men ännu inte besökt den.
@@ -34,7 +34,7 @@ question | sökord | Tar bort alla gym som inte innehåller sökningen. Om inga 
 
 Använd följande url struktur:
 ```
-https://www.gymlund.tk/script/[area].json?[id]=[variabel]
+https://www.gymlund.teddyprojekt.se/script/[area].json?[id]=[variabel]
 ```
 Exempel:
 * Bra ex-raid: [https://www.gymlund.teddyprojekt.se/script/gymlund.json?ex=true](https://www.gymlund.teddyprojekt.se/script/gymlund.json?ex=true)
