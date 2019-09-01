@@ -14,29 +14,29 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 var param = {
 	port: 9615,
-	url: 'https://gymlund.tk/',
+	url: 'https://gymlund.teddyprojekt.se/',
 	keywords: '',
 	area: [
 		{
 			rubrik: 'Lund',
 			id: 'gymlund',
-			lank: 'https://gymlund.tk/'
+			lank: 'https://gymlund.teddyprojekt.se/'
 		},{
 			rubrik: 'Göteborg',
 			id: 'gymgbg',
-			lank: 'https://gymlund.tk/gymgbg.html'
+			lank: 'https://gymlund.teddyprojekt.se/gymgbg.html'
 		},{
 			rubrik: 'Landskrona',
 			id: 'gymlandskrona',
-			lank: 'https://gymlund.tk/gymlandskrona.html'
+			lank: 'https://gymlund.teddyprojekt.se/gymlandskrona.html'
 		},{
 			rubrik: 'Malmö',
 			id: 'gymmalmo',
-			lank: 'https://gymlund.tk/gymmalmo.html'
+			lank: 'https://gymlund.teddyprojekt.se/gymmalmo.html'
 		},{
 			rubrik: 'Växjö',
 			id: 'gymvaxjo',
-			lank: 'https://gymlund.tk/gymvaxjo.html'
+			lank: 'https://gymlund.teddyprojekt.se/gymvaxjo.html'
 		},
 	],
 	location: {
@@ -339,21 +339,21 @@ app.get(['/', '/*.html'], function (req, res) {
 		var options = {
 			rubrik: 'Pokénamn',
 			id: 'false',
-			lank: 'https://gymlund.tk/pokenamn.html'
+			lank: 'https://gymlund.teddyprojekt.se/pokenamn.html'
 		};
 		res.render('pokenamn', options);
 	}else if(req.params['0'] == 'poketime'){
 		var options = {
 			rubrik: 'Poké time',
 			id: 'false',
-			lank: 'https://gymlund.tk/poketime.html'
+			lank: 'https://gymlund.teddyprojekt.se/poketime.html'
 		};
 		res.render('poketime', options);
 	}else if(req.params['0'] == 'tournament'){
 		var options = {
 			rubrik: 'PoGo Tournament',
 			id: 'tournament',
-			lank: 'https://gymlund.tk/tournament.html'
+			lank: 'https://gymlund.teddyprojekt.se/tournament.html'
 		};
 		res.render('tournament', options);
 	}else{

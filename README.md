@@ -12,11 +12,11 @@ Gymmens lokalisation hittar jag dels genom Facebook grupper men även via följa
 **OBS! Risk finns att gym saknas, då denna sida inte drivs av bottar utan spelares observationer**
 
 ## Stödjer i nuläget följande städer:
-* Lund [https://www.gymlund.tk/](https://www.gymlund.tk/)
-* Malmö [https://www.gymlund.tk/malmo.html](https://www.gymlund.tk/malmo.html)
-* Göteborg [https://www.gymlund.tk/gbg.html](https://www.gymlund.tk/gbg.html)
-* Växjö [https://www.gymlund.tk/vaxjo.html](https://www.gymlund.tk/vaxjo.html)
-* Landskrona [https://www.gymlund.tk/landskrona.html](https://www.gymlund.tk/landskrona.html)
+* Lund [https://www.gymlund.teddyprojekt.se/](https://www.gymlund.teddyprojekt.se/)
+* Malmö [https://www.gymlund.teddyprojekt.se/malmo.html](https://www.gymlund.teddyprojekt.se/malmo.html)
+* Göteborg [https://www.gymlund.teddyprojekt.se/gbg.html](https://www.gymlund.teddyprojekt.se/gbg.html)
+* Växjö [https://www.gymlund.teddyprojekt.se/vaxjo.html](https://www.gymlund.teddyprojekt.se/vaxjo.html)
+* Landskrona [https://www.gymlund.teddyprojekt.se/landskrona.html](https://www.gymlund.teddyprojekt.se/landskrona.html)
 
 ## API för GymLund
 GymLund stödjer nu jsonp! Om du vill få information är det bara att skicka en "GET" request enligt följande:
@@ -37,10 +37,10 @@ Använd följande url struktur:
 https://www.gymlund.tk/script/[area].json?[id]=[variabel]
 ```
 Exempel:
-* Bra ex-raid: [https://www.gymlund.tk/script/gymlund.json?ex=true](https://www.gymlund.tk/script/gymlund.json?ex=true)
-* Närmast: [https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240)
-* Bokstavsordning men med distans: [https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240](https://www.gymlund.tk/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240)
-* Hittar gym som börjar med "Hal": [http://localhost:9615/script/gymlund.json?question=Hal](http://localhost:9615/script/gymlund.json?question=Hal)
+* Bra ex-raid: [https://www.gymlund.teddyprojekt.se/script/gymlund.json?ex=true](https://www.gymlund.teddyprojekt.se/script/gymlund.json?ex=true)
+* Närmast: [https://www.gymlund.teddyprojekt.se/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240](https://www.gymlund.teddyprojekt.se/script/gymlund.json?todo=km&lat=55.719353&lon=13.1845240)
+* Bokstavsordning men med distans: [https://www.gymlund.teddyprojekt.se/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240](https://www.gymlund.teddyprojekt.se/script/gymlund.json?todo=normal&lat=55.719353&lon=13.1845240)
+* Hittar gym som börjar med "Hal": [https://www.gymlund.teddyprojekt.se/script/gymlund.json?question=Hal](https://www.gymlund.teddyprojekt.se/script/gymlund.json?question=Hal)
 
 ### Pokémon information
 Följande parametrar tas mot:
@@ -54,16 +54,16 @@ fast & charge | text | Attackernas namn
 
 Använd följande url struktur
 ```
-https://www.gymlund.tk/script/pokedata/pokemon.json?[id]=[variabel]
+https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?[id]=[variabel]
 ```
 
 Exempel:
-* Alla Pokémon!: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=all](https://www.gymlund.tk/script/pokedata/pokemon.json?to=all)
-* Första 20 Pokémon: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=20](https://www.gymlund.tk/script/pokedata/pokemon.json?to=20)
-* Pokémon mellan 18 och 20: [https://www.gymlund.tk/script/pokedata/pokemon.json?to=20](https://www.gymlund.tk/script/pokedata/pokemon.json?to=20&from=18)
-* Information om "Ninetales" (Normal) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038a)
-* Information om "Ninetales" (Alolan) : [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=038b)
-* Kontrollerar "Bulbasaurs" moveset: [https://www.gymlund.tk/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip](https://www.gymlund.tk/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip)
+* Alla Pokémon!: [https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?to=all](https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?to=all)
+* Första 20 Pokémon: [https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?to=20](https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?to=20)
+* Pokémon mellan 18 och 20: [https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?to=20](https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?to=20&from=18)
+* Information om "Ninetales" (Normal) : [https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?spec=038a](https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?spec=038a)
+* Information om "Ninetales" (Alolan) : [https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?spec=038b](https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?spec=038b)
+* Kontrollerar "Bulbasaurs" moveset: [https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip](https://www.gymlund.teddyprojekt.se/script/pokedata/pokemon.json?spec=001&fast=Vine%20Whip&charge=Power%20Whip)
 
 ## Hur får jag GymLund till min stad?
 Lämna en pull request där du skickar "gym" och din stads namn med filformatet ".json". (Exempel gymlund.json)
