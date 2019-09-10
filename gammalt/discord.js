@@ -73,20 +73,20 @@ bot.on('message', (message) => {
 				}else{
 					var pokemon = hittapokemon(message.content);
 					if(pokemon == 'okänd'){
-						var imglink = 'http://gymlund.tk/img/pokemon/bilder/okand.png';
+						var imglink = 'https://gymlund.teddyprojekt.se/img/pokemon/bilder/okand.png';
 						var pokemonnamn = 'Okänd';
 					}else{
-						var imglink = 'http://gymlund.tk/img/pokemon/bilder/' + parseInt(pokemon.nummer) + '.png';
+						var imglink = 'https://gymlund.teddyprojekt.se/img/pokemon/bilder/' + parseInt(pokemon.nummer) + '.png';
 						var pokemonnamn = pokemon.namn;
 					};
 					var klocka = hittatid(message.content);
 					if(klocka == 'none'){
 						var klocka = 'ingen tid satt';
-						var imgklocka = 'http://gymlund.tk/img/klocka/okand.gif';
+						var imgklocka = 'https://gymlund.teddyprojekt.se/img/klocka/okand.gif';
 					}else{
-						var imgklocka = 'http://gymlund.tk/img/klocka/' + klocka.replace(':', '-') + '.gif';
+						var imgklocka = 'https://gymlund.teddyprojekt.se/img/klocka/' + klocka.replace(':', '-') + '.gif';
 					};
-					var imggym = 'http://gymlund.tk/img/gym/mini/' + infotosend.id.toLowerCase() + '.png'
+					var imggym = 'https://gymlund.teddyprojekt.se/img/gym/mini/' + infotosend.id.toLowerCase() + '.png'
 					var embed = new Discord.RichEmbed();
 						embed.setImage(imglink, 128, 128);
 						embed.setColor(8888888);
