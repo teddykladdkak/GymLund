@@ -1,0 +1,208 @@
+[{
+	"namn": "Yellow and Green Playground",
+	"id": "yg",
+	"location": {
+		"lat": "55.722350",
+		"lon": "13.3589220"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Fotbollsplan på Assarhusa",
+	"id": "fotboll_assarhusa",
+	"location": {
+		"lat": "55.706441",
+		"lon": "13.3414090"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Snurrelekan",
+	"id": "snurrelekan",
+	"location": {
+		"lat": "55.707304",
+		"lon": "13.3338710"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Lejonskogen Linbana",
+	"id": "lejonskogen_linbana",
+	"location": {
+		"lat": "55.707707",
+		"lon": "13.3284320"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fåglasång",
+	"id": "faglasang",
+	"location": {
+		"lat": "55.711509",
+		"lon": "13.3256510"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Spindel-lekan",
+	"id": "spindellekan",
+	"location": {
+		"lat": "55.711819",
+		"lon": "13.3398950"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Krokodil Lekplats",
+	"id": "krokodil_lekplats",
+	"location": {
+		"lat": "55.712691",
+		"lon": "13.3349640"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Sandbybadet Field Generator",
+	"id": "sandbybadet_field_generator",
+	"location": {
+		"lat": "55.714239",
+		"lon": "13.3479400"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Multisport på gräs",
+	"id": "multisport_pa_gras",
+	"location": {
+		"lat": "55.715049",
+		"lon": "13.3520170"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Old Windmill in Södra Sandby",
+	"id": "the_old_windmill_in_sodra_sandby",
+	"location": {
+		"lat": "55.715505",
+		"lon": "13.3364170"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Lekplats vid Öståkravägen",
+	"id": "lekplats_vid_ostakravagen",
+	"location": {
+		"lat": "55.716792",
+		"lon": "13.3627660"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "P & G Tower in Södra Sandby",
+	"id": "pg_tower_in_sodra_sandby",
+	"location": {
+		"lat": "55.716948",
+		"lon": "13.3487280"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Linbana",
+	"id": "linbana",
+	"location": {
+		"lat": "55.718113",
+		"lon": "13.3593320"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Lekplatsen vid Österskolan",
+	"id": "lekplatsen_vid_osterskolan",
+	"location": {
+		"lat": "55.718256",
+		"lon": "13.3588040"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Alexius 1990",
+	"id": "alexius_1990",
+	"location": {
+		"lat": "55.717683",
+		"lon": "13.3395910"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Minitennisbana",
+	"id": "minitennisbana",
+	"location": {
+		"lat": "55.719217",
+		"lon": "13.3355480"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Fontänen Vid Församlingshemmet",
+	"id": "fontanen_vid_forsamlingshemmet",
+	"location": {
+		"lat": "55.720813",
+		"lon": "13.3422600"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "The Lonely Tower on the Hill",
+	"id": "the_lonely_tower_on_the_hill",
+	"location": {
+		"lat": "55.721599",
+		"lon": "13.3522120"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Södra Sandby Church",
+	"id": "sodra_sandby_church",
+	"location": {
+		"lat": "55.721768",
+		"lon": "13.3409460"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Pytteliten Lekplats",
+	"id": "pytteliten_lekplats",
+	"location": {
+		"lat": "55.722707",
+		"lon": "13.3503700"
+	},
+	"exraid": false,
+	"rip": false
+},{
+	"namn": "Rapsvägens Lekplats",
+	"id": "rapsvagens_lekplats",
+	"location": {
+		"lat": "55.723447",
+		"lon": "13.3363500"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Lekplats Norrevång",
+	"id": "lekplats_norrevang",
+	"location": {
+		"lat": "55.723991",
+		"lon": "13.3421110"
+	},
+	"exraid": true,
+	"rip": false
+},{
+	"namn": "Sofielundsvägens Lekplats",
+	"id": "sofielundsvagens_lekplats",
+	"location": {
+		"lat": "55.724222",
+		"lon": "13.3478810"
+	},
+	"exraid": true,
+	"rip": false
+}]
