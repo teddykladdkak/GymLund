@@ -9,7 +9,7 @@
 	"rip": false
 },{
 	"namn": "Fotbollsplan på Assarhusa",
-	"id": "fotboll_assarhusa",
+	"id": "",
 	"location": {
 		"lat": "55.706441",
 		"lon": "13.3414090"
@@ -18,7 +18,7 @@
 	"rip": false
 },{
 	"namn": "Snurrelekan",
-	"id": "snurrelekan",
+	"id": "",
 	"location": {
 		"lat": "55.707304",
 		"lon": "13.3338710"
@@ -27,7 +27,7 @@
 	"rip": false
 },{
 	"namn": "Lejonskogen Linbana",
-	"id": "lejonskogen_linbana",
+	"id": "",
 	"location": {
 		"lat": "55.707707",
 		"lon": "13.3284320"
@@ -135,7 +135,7 @@
 	"rip": false
 },{
 	"namn": "Minitennisbana",
-	"id": "minitennisbana",
+	"id": "",
 	"location": {
 		"lat": "55.719217",
 		"lon": "13.3355480"
@@ -189,7 +189,7 @@
 	"rip": false
 },{
 	"namn": "Lekplats Norrevång",
-	"id": "lekplats_norrevang",
+	"id": "",
 	"location": {
 		"lat": "55.723991",
 		"lon": "13.3421110"
