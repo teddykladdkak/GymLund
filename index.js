@@ -39,9 +39,9 @@ var param = {
 			lank: 'https://gymlund.teddyprojekt.se/gymvaxjo.html'
 		},{
 			rubrik: 'Södra Sandby',
-			id: 'ssandby',
-			lank: 'https://gymlund.teddyprojekt.se/ssandby.html'
-		},
+			id: 'gymssandby',
+			lank: 'https://gymlund.teddyprojekt.se/gymssandby.html'
+		}
 	],
 	location: {
 		script: '/public/script/',
